@@ -1,7 +1,11 @@
 #summary Sources of Chemical Descriptors
 #labels Phase-Requirements
 
-ChemAxiom:
+
+Handbook of Molecular Descriptors:
+http://www.moleculardescriptors.eu/books/handbook.htm
+
+Chem Axiom:
 http://bitbucket.org/na303/chemaxiomdescriptor/
 
 Blue Obelisk (used by CDK and JOELib):
