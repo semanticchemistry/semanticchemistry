@@ -86,7 +86,7 @@ EW there is a qsar project for this. Ula PHD's here is bout to submit a paper on
 In between the many disjoints its a good data provider. We wanted to describe the dragon descriptors. 
 
 JH wants opinions on using OBO and IAO.
-MD thinks its a good goal but he doesn't think its possible to fit in a realist world.
+MD thinks its a good goal but may be challenging to fit in a realist world.
 Nico agrees with Michel. Nico does not think they are description artifacts. Alot of extra work to align with BFO and IAO.
 EW is the ont you defined have you aligned it with ChemAxiom. NA treats descriptors as property values. Leo thinks that both ontologies are a good compliment.
 Action:  Nico and Egon should look at combining the two. 
