@@ -18,7 +18,7 @@ Consensus structural keys: our visitors Niko and Georg can tell us about their w
 
 = Text mining roles =
 
-Bioactivity and ChEBI "roles". Here are some examples of the ChEMBL descriptions of assays from which we wish to extract (*) has-role assertions. In each case "the compound" is linked in the database to a specific structure. I plan to try out a naive approach here initially: search for a given set of regular expressions ("against *", "* activity", ...) and match on existing ChEBI "role" terms (inhibitor, agonist), and evaluate the percentage successful coverage. Suggestions welcome.
+Bioactivity and ChEBI "roles". Here are some examples of the ChEMBL descriptions of assays from which we wish to extract has-role assertions. In each case "the compound" is linked in the database to a specific structure. I plan to try out a naive approach here initially: search for a given set of regular expressions ("against x", "x activity", ...) and match on existing ChEBI "role" terms (inhibitor, agonist), and evaluate the percentage successful coverage. Suggestions welcome.
 
 
 In vitro effective concentration of the compound against hepatitis B virus was determined in 2.2.15 cells; Not determined
