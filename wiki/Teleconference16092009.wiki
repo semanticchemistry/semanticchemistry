@@ -16,3 +16,4 @@
 
 4. We discussed collaborative editing of a cheminformatics/QSAR/drug discovery ontology. Action point for Nico: send around options for tools other than Protege. It was highlighted that use cases for the ontology are essential to focus development. Action point for Janna: create page on Wiki where we gather use cases. Action point for others: gather use cases.
 
+The page for collecting use cases has now been added here: [UseCasesCheminformaticsOntology]. Please go and add your use cases. 
