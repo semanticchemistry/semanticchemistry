@@ -6,7 +6,7 @@ The semantic chemistry working group aims to coordinate development of a single 
 
 This effort will bring together the previous work of the members of the semantic chemistry working group under a single umbrella, facilitating greater interoperability and creating a stronger unified offering for the scientific community as a whole. 
 
-In order to guide the effort to align previous work under a single umbrella and to 
+In order to guide the effort to align previous work under a single umbrella and to develop this further as a community offering, we need to collect the use cases for the eventual end result. 
 
 = Use Cases for Cheminformatics Ontology =
 
