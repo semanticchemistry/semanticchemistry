@@ -1,0 +1,15 @@
+#summary Use cases for a cheminformatics/QSAR/drug discovery ontology
+
+= Background =
+
+The semantic chemistry working group aims to coordinate development of a single ontology, compatible with BFO and OBO Foundry principles, available in OWL format, for the domain of cheminformatics, QSAR and drug discovery. 
+
+This effort will bring together the previous work of the members of the semantic chemistry working group under a single umbrella, facilitating greater interoperability and creating a stronger unified offering for the scientific community as a whole. 
+
+In order to guide the effort to align previous work under a single umbrella and to 
+
+= Use Cases for Cheminformatics Ontology =
+
+==1. ChEBI automatic classification==
+
+For the project of classifying novel chemicals into ChEBI ontology classes using automated reasoning, we need to extend the vocabulary of properties which are able to assert at the class level. This vocabulary should ultimately allow arbitrary chemical class definitions to be specified logically using necessary and sufficient conditions. At the very least, to accomplish this we will need predicates for common chemical properties such as aromaticity, charge, valence and various constituents. Ideally, these should be defined in an ontology and should be linked to algorithmic implementations (such as in the CDK) which are able to determine these properties from structural representations of molecular entities or parts.
