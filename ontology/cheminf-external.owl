@@ -2147,6 +2147,24 @@ information entity by planning protocol applications included in an overall stud
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000566 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000566">
+        <rdfs:label>NMR instrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0400002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0400002 -->
+
+    <owl:Class rdf:about="&obo;OBI_0400002">
+        <rdfs:label>device</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0500000 -->
 
     <owl:Class rdf:about="&obo;OBI_0500000">

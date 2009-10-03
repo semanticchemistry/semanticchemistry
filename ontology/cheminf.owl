@@ -13,6 +13,7 @@
     <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
+    <!ENTITY resource "http://semanticscience.org/resource/" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -33,6 +34,7 @@
      xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:resource="http://semanticscience.org/resource/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -71,6 +73,531 @@
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
     <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="&obo;IAO_0000136"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000294 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000294"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000297 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000297"/>
+    
+
+
+    <!-- http://purl.org/obo/owl/OBO_REL#bearer_of -->
+
+    <owl:ObjectProperty rdf:about="&OBO_REL;bearer_of"/>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#has_proper_part -->
+
+    <owl:ObjectProperty rdf:about="&ro;has_proper_part"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000009 -->
+
+    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000009">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label
+            >has uncertainty value</rdfs:label>
+        <rdfs:domain rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000012 -->
+
+    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000012">
+        <rdfs:label>has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000100"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000109">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000009"/>
+                <owl:someValuesFrom rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000403 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000403"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000066 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000066"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000566 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000566"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0400002 -->
+
+    <owl:Class rdf:about="&obo;OBI_0400002"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000000 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000000">
+        <rdfs:label>atomic position</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <owl:ObjectProperty>
+                        <owl:inverseOf rdf:resource="&OBO_REL;bearer_of"/>
+                    </owl:ObjectProperty>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Atomic position refers to the spatial position of the atom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000001 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000001">
+        <rdfs:label
+            >three dimensional structure determination using x-ray crystallography</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000002 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000002">
+        <rdfs:label
+            >three dimensional structure determination using nuclear magnetic resonance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000003 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000003">
+        <rdfs:label
+            >three dimensional structure determination</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000066"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000004 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000004">
+        <rdfs:label
+            >three dimensional structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000100"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_proper_part"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000403"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000007 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000007">
+        <rdfs:label>atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000008 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000008">
+        <rdfs:label
+            >X-Ray Diffraction instrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0400002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000010 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000010">
+        <rdfs:label>atomic order</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Atomic order is a label that indicates the position of an atom in a descriptive systems (e.g. SMILES).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000011 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000011">
+        <rdfs:label
+            >mean atomic 3d position</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000403"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000013 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000013">
+        <rdfs:label>chirality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000014 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000014">
+        <rdfs:label
+            >molecular entity specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000017 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000017">
+        <rdfs:label
+            >information about a molecular entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000018 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000018">
+        <rdfs:label
+            >SMILES description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000019 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000019">
+        <rdfs:label
+            >SMARTS description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000020 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000020">
+        <rdfs:label>SMILES</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000022"/>
+        <rdfs:comment
+            >The simplified molecular input line entry specification (SMILES) is a specification for unambiguously describing the structure of chemical molecules using short ASCII strings. SMILES strings can be imported by most molecule editors for conversion back into two-dimensional drawings or three-dimensional models of the molecules (source:wikipedia).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000021 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000021">
+        <rdfs:label>SMARTS</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000022"/>
+        <rdfs:comment
+            >Smiles ARbitrary Target Specification (SMARTS) is a language for specifying substructural patterns in molecules. The SMARTS line notation is expressive and allows extremely precise and transparent substructural specification and atom typing (source:Wikipedia)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000022 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000022">
+        <rdfs:label
+            >molecular structure specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000014"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000023 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000023">
+        <rdfs:label
+            >specification of stereochemistry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000022"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000024 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000024">
+        <rdfs:label
+            >RS stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000028"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000025 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000025">
+        <rdfs:label
+            >molecular structure description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000026 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000026">
+        <rdfs:label
+            >DL stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000028"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000027 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000027">
+        <rdfs:label
+            >stereochemical description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000028 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000028">
+        <rdfs:label
+            >specification of stereochemistry by configuration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000029 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000029">
+        <rdfs:label
+            >specification of stereochemistry by optical activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000030 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000030">
+        <rdfs:label
+            >+/- stereochemistry specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000029"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000031 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000031">
+        <rdfs:label
+            >molecular entity quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000032 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000032">
+        <rdfs:label
+            >molecular entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000033 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000033">
+        <rdfs:label
+            >molecular structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+
+    <owl:Class rdf:about="&snap;MaterialEntity"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Quality -->
+
+    <owl:Class rdf:about="&snap;Quality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000015 -->
+
+    <owl:Thing rdf:about="&resource;CHEMINF_000015">
+        <rdfs:label
+            >SMILES specification</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000016 -->
+
+    <owl:Thing rdf:about="&resource;CHEMINF_000016">
+        <rdfs:label
+            >SMARTS specificaiton</rdfs:label>
+    </owl:Thing>
 </rdf:RDF>
 
 
