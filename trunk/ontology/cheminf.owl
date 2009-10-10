@@ -3,6 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY UO "http://purl.org/obo/owl/UO#" >
+    <!ENTITY purl "http://purl.obofoundry.org/" >
     <!ENTITY PATO "http://purl.org/obo/owl/PATO#" >
     <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
@@ -35,6 +36,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:purl="http://purl.obofoundry.org/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -73,7 +75,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
@@ -175,6 +179,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
     <owl:Class rdf:about="&obo;IAO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000098 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000098"/>
     
 
 
@@ -353,14 +363,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -377,14 +387,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000403"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -412,8 +422,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000014">
         <rdfs:label
-            >molecular entity specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+            >molecular entity information format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000098"/>
+        <obo:IAO_0000115
+            >A molecular entity information format specification is an information content entity which specifies a format in which information about a molecular entity should be encoded.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -430,6 +442,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000014"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000032"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >An information entity which is about a molecular entity. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -492,8 +512,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000022">
         <rdfs:label
-            >molecular structure specification</rdfs:label>
+            >molecular structure encoding format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000014"/>
+        <obo:IAO_0000115
+            >A molecular structure encoding format specification is a molecular entity format specification which specifies a format in which a molecular structure information entity may be encoded. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -502,7 +524,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000023">
         <rdfs:label
-            >specification of stereochemistry</rdfs:label>
+            >molecular stereochemistry format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000022"/>
     </owl:Class>
     
@@ -522,7 +544,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000025">
         <rdfs:label
-            >molecular structure description</rdfs:label>
+            >information about molecular structure </rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -596,6 +618,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >molecular entity quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <obo:IAO_0000115
+            >A molecular entity quality is a quality which inheres in a molecular entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -606,6 +630,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >molecular entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <dc:language>CHEBI:23367</dc:language>
     </owl:Class>
     
 
@@ -619,13 +644,13 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000004"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000025"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000025"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -646,8 +671,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000035">
         <rdfs:label
-            >specification of atomic connectivity</rdfs:label>
+            >atomic connectivity molecular structure encoding format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000022"/>
+        <obo:IAO_0000115
+            >An atomic connectivity molecular structure encoding format specification is a molecular structure encoding format specification which specifies a format in which the connectivity of atoms within a molecule may be specified. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -656,8 +683,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000036">
         <rdfs:label
-            >specification of molecular composition</rdfs:label>
+            >molecular composition format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000014"/>
+        <obo:IAO_0000115
+            >A molecular composition format specification is a molecular entity information format specification which specifies a format in which a molecular composition may be encoded. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -685,8 +714,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000039">
         <rdfs:label
-            >specification of molecule entity name</rdfs:label>
+            >molecular entity name format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000014"/>
+        <obo:IAO_0000115
+            >A molecular entity name format specification is a molecular entity information format specification which specifies a format in which a molecular entity name may be encoded. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -735,8 +766,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000043">
         <rdfs:label
-            >information about chemical name</rdfs:label>
+            >molecular entity name</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000039"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >An information entity about a molecular entity which serves to name that molecular entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -746,6 +785,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000044">
         <rdfs:label>preferred name</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
+        <obo:IAO_0000115
+            >A preferred name is a molecular entity name which is preferred, or recommended, for usage in textual annotations referring to that molecular entity. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -768,6 +809,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >information about an atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >An information entity which is about an atom.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -862,6 +911,72 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000100 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000100">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
+        <purl:IAO_0000111>MOLfile</purl:IAO_0000111>
+        <obo:IAO_0000115
+            >The MOLfile atomic connectivity molecular structure encoding format specification may be found described at http://en.wikipedia.org/wiki/Chemical_table_file#Molfiles. It is composed primarily of a connection table (atoms and bonds); hydrogen may be implicit or explicit.  </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_373349 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_373349">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
+        <purl:IAO_0000111>systematic name</purl:IAO_0000111>
+        <obo:IAO_0000115
+            >A systematic name is a molecular entity name which is formulated systematically from the structure of the molecular entity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_393615 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_393615">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_373349"/>
+        <obo:IAO_0000115
+            >An IUPAC name is a systematic name which is formulated according to the rules and recommendations for chemical nomenclature set out by the International Union of Pure and Applied Chemistry (IUPAC).</obo:IAO_0000115>
+        <purl:IAO_0000111>IUPAC name</purl:IAO_0000111>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_803215 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_803215">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <obo:IAO_0000115
+            >An atomic quality is a molecular entity quality which inheres in an atom.</obo:IAO_0000115>
+        <purl:IAO_0000111>atomic quality</purl:IAO_0000111>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_878506 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_878506">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
+        <obo:IAO_0000115
+            >A trivial name is a molecular entity name that is in common public use and may not be related to the structure of the molecular entity. </obo:IAO_0000115>
+        <purl:IAO_0000111>trivial name</purl:IAO_0000111>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_997978 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_997978">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_803215"/>
+        <obo:IAO_0000115
+            >The element of an atom is a quality that inheres in an atom by virtue of the number of protons it contains. For example, an atom has element Carbon by virtue of containing six protons.</obo:IAO_0000115>
+        <purl:IAO_0000111>element</purl:IAO_0000111>
+    </owl:Class>
+    
+
+
     <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
 
     <owl:Class rdf:about="&snap;MaterialEntity"/>
@@ -910,5 +1025,5 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.1101) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.962) http://owlapi.sourceforge.net -->
 
