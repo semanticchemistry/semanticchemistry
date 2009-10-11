@@ -75,8 +75,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
@@ -124,6 +124,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000047">
         <rdfs:label>conforms to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000106">
+        <rdfs:label>is output of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -182,6 +190,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000096 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000096"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000098 -->
 
     <owl:Class rdf:about="&obo;IAO_0000098"/>
@@ -229,7 +243,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000000">
         <rdfs:label>atomic position</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000046"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
@@ -254,6 +268,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment
             >Atomic position refers to the spatial position of the atom.</rdfs:comment>
+        <rdfs:comment
+            >Comment (JH): the position in three dimensional space is not really a quality that inheres in the atom. It is a so-called &#39;Cambridge&#39; property (if only I could find the original source and definition of that name!). I think it would be better placed under information about an atom.</rdfs:comment>
     </owl:Class>
     
 
@@ -357,6 +373,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000046"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
             </owl:Restriction>
@@ -365,12 +387,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -412,8 +428,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >Chirality is the quality of a molecular enetity in which it is non-superposable on its mirror image.</rdfs:comment>
+        <obo:IAO_0000115
+            >Chirality is a molecular entity quality which inheres in a molecular entity by virtue of the existence of another molecular entity which is the  mirror image of the first one, yet non-superposable on it.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -449,7 +465,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
-            >An information entity which is about a molecular entity. </obo:IAO_0000115>
+            >An information entity which is about a molecular entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -515,7 +531,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             >molecular structure encoding format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000014"/>
         <obo:IAO_0000115
-            >A molecular structure encoding format specification is a molecular entity format specification which specifies a format in which a molecular structure information entity may be encoded. </obo:IAO_0000115>
+            >A molecular structure encoding format specification is a molecular entity format specification which specifies a format in which a molecular structure information entity may be encoded.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -544,7 +560,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000025">
         <rdfs:label
-            >information about molecular structure </rdfs:label>
+            >information about molecular structure</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -653,6 +669,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >Molecular structure is a molecular entity quality that inheres in a molecule by virtue of its shape - the way in which the atoms which constitute the molecule are bonded together and the shape which they therefore form.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -674,7 +692,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             >atomic connectivity molecular structure encoding format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000022"/>
         <obo:IAO_0000115
-            >An atomic connectivity molecular structure encoding format specification is a molecular structure encoding format specification which specifies a format in which the connectivity of atoms within a molecule may be specified. </obo:IAO_0000115>
+            >An atomic connectivity molecular structure encoding format specification is a molecular structure encoding format specification which specifies a format in which the connectivity of atoms within a molecule may be specified.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -686,7 +704,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             >molecular composition format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000014"/>
         <obo:IAO_0000115
-            >A molecular composition format specification is a molecular entity information format specification which specifies a format in which a molecular composition may be encoded. </obo:IAO_0000115>
+            >A molecular composition format specification is a molecular entity information format specification which specifies a format in which a molecular composition may be encoded.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -717,7 +735,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             >molecular entity name format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000014"/>
         <obo:IAO_0000115
-            >A molecular entity name format specification is a molecular entity information format specification which specifies a format in which a molecular entity name may be encoded. </obo:IAO_0000115>
+            >A molecular entity name format specification is a molecular entity information format specification which specifies a format in which a molecular entity name may be encoded.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -786,7 +804,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label>preferred name</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
         <obo:IAO_0000115
-            >A preferred name is a molecular entity name which is preferred, or recommended, for usage in textual annotations referring to that molecular entity. </obo:IAO_0000115>
+            >A preferred name is a molecular entity name which is preferred, or recommended, for usage in textual annotations referring to that molecular entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -907,6 +925,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000041"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >Molecular composition is a molecular entity quality that inheres in a molecule by virtue of the atoms which constitute the molecule.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -914,65 +934,139 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000100 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000100">
+        <rdfs:label>MOLfile</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
-        <purl:IAO_0000111>MOLfile</purl:IAO_0000111>
         <obo:IAO_0000115
-            >The MOLfile atomic connectivity molecular structure encoding format specification may be found described at http://en.wikipedia.org/wiki/Chemical_table_file#Molfiles. It is composed primarily of a connection table (atoms and bonds); hydrogen may be implicit or explicit.  </obo:IAO_0000115>
+            >The MOLfile atomic connectivity molecular structure encoding format specification may be found described at http://en.wikipedia.org/wiki/Chemical_table_file#Molfiles. It is composed primarily of a connection table (atoms and bonds); hydrogen may be implicit or explicit.</obo:IAO_0000115>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_373349 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000101 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_373349">
+    <owl:Class rdf:about="&resource;CHEMINF_000101">
+        <rdfs:label
+            >molecular aggregate quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <obo:IAO_0000115
+            >A molecular aggregate quality is a quality that inheres in an aggregate molecular substance, such as a portion of solid or liquid matter.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000102 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000102">
+        <rdfs:label
+            >crystal structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
+        <obo:IAO_0000115
+            >A crystal structure is a molecular aggregate quality which inheres in a crystalline solid or liquid crystal substance by virtue of the way the molecules are ordered within the crystal.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000103 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000103">
+        <rdfs:label
+            >molecular descriptor calculation implementation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000096"/>
+        <obo:IAO_0000115
+            >A chemical descriptor calculation implementation is a source code module which implements an algorithm which calculates a descriptor value for a chemical entity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000104 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000104">
+        <rdfs:label
+            >molecular QSAR descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000106"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000103"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >A molecular QSAR descriptor is an information about a molecular entity which gives a quantitative structure-activity relationship value. Quantitative structure-activity relationships relate a molecular structure to a measure of biological activity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000105 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000105">
+        <rdfs:label>isotope</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000108"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000106">
+        <rdfs:label>systematic name</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
-        <purl:IAO_0000111>systematic name</purl:IAO_0000111>
         <obo:IAO_0000115
             >A systematic name is a molecular entity name which is formulated systematically from the structure of the molecular entity.</obo:IAO_0000115>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_393615 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000107 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_393615">
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_373349"/>
+    <owl:Class rdf:about="&resource;CHEMINF_000107">
+        <rdfs:label>IUPAC name</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000106"/>
         <obo:IAO_0000115
             >An IUPAC name is a systematic name which is formulated according to the rules and recommendations for chemical nomenclature set out by the International Union of Pure and Applied Chemistry (IUPAC).</obo:IAO_0000115>
-        <purl:IAO_0000111>IUPAC name</purl:IAO_0000111>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_803215 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000108 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_803215">
+    <owl:Class rdf:about="&resource;CHEMINF_000108">
+        <rdfs:label>atomic quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
         <obo:IAO_0000115
             >An atomic quality is a molecular entity quality which inheres in an atom.</obo:IAO_0000115>
-        <purl:IAO_0000111>atomic quality</purl:IAO_0000111>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_878506 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000109 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_878506">
+    <owl:Class rdf:about="&resource;CHEMINF_000109">
+        <rdfs:label>trivial name</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
         <obo:IAO_0000115
-            >A trivial name is a molecular entity name that is in common public use and may not be related to the structure of the molecular entity. </obo:IAO_0000115>
-        <purl:IAO_0000111>trivial name</purl:IAO_0000111>
+            >A trivial name is a molecular entity name that is in common public use and may not be related to the structure of the molecular entity.</obo:IAO_0000115>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_997978 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000110 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_997978">
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_803215"/>
+    <owl:Class rdf:about="&resource;CHEMINF_000110">
+        <rdfs:label>element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000108"/>
         <obo:IAO_0000115
             >The element of an atom is a quality that inheres in an atom by virtue of the number of protons it contains. For example, an atom has element Carbon by virtue of containing six protons.</obo:IAO_0000115>
-        <purl:IAO_0000111>element</purl:IAO_0000111>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000111 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000111">
+        <rdfs:label>CML</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
+        <obo:IAO_0000115
+            >A CML (Chemical Markup Language) file is an XML-based representation of the atomic connectivity of a molecular entity. </obo:IAO_0000115>
     </owl:Class>
     
 
