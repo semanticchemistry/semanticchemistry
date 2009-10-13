@@ -252,18 +252,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty>
                     <owl:ObjectProperty>
                         <owl:inverseOf rdf:resource="&OBO_REL;bearer_of"/>
                     </owl:ObjectProperty>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -403,14 +403,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000403"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -454,14 +454,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000014"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000032"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000032"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000014"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -505,7 +505,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000020 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000020">
-        <rdfs:label>SMILES</rdfs:label>
+        <rdfs:label
+            >SMILES format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
         <rdfs:comment
             >The simplified molecular input line entry specification (SMILES) is a specification for unambiguously describing the structure of chemical molecules using short ASCII strings. SMILES strings can be imported by most molecule editors for conversion back into two-dimensional drawings or three-dimensional models of the molecules (source:wikipedia).</rdfs:comment>
@@ -516,7 +517,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000021 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000021">
-        <rdfs:label>SMARTS</rdfs:label>
+        <rdfs:label
+            >SMARTS format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
         <rdfs:comment
             >Smiles ARbitrary Target Specification (SMARTS) is a language for specifying substructural patterns in molecules. The SMARTS line notation is expressive and allows extremely precise and transparent substructural specification and atom typing (source:Wikipedia)</rdfs:comment>
@@ -722,7 +724,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000038 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000038">
-        <rdfs:label>InChI</rdfs:label>
+        <rdfs:label
+            >InChI format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
     </owl:Class>
     
@@ -934,7 +937,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000100 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000100">
-        <rdfs:label>MOLfile</rdfs:label>
+        <rdfs:label
+            >MOLfile format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
         <obo:IAO_0000115
             >The MOLfile atomic connectivity molecular structure encoding format specification may be found described at http://en.wikipedia.org/wiki/Chemical_table_file#Molfiles. It is composed primarily of a connection table (atoms and bonds); hydrogen may be implicit or explicit.</obo:IAO_0000115>
@@ -999,8 +1003,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000105 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000105">
-        <rdfs:label>isotope</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000108"/>
+        <rdfs:label>cycle basis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000104"/>
+        <obo:IAO_0000115
+            >The cycle basis of a molecular structure is the smallest set of cycles (closed paths) formed in the graph representation of the structure, from which all other cycles can be computed.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1052,10 +1058,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000110 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000110">
-        <rdfs:label>element</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000108"/>
+        <rdfs:label>fused cycles</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000104"/>
         <obo:IAO_0000115
-            >The element of an atom is a quality that inheres in an atom by virtue of the number of protons it contains. For example, an atom has element Carbon by virtue of containing six protons.</obo:IAO_0000115>
+            >The fused cycles in a molecular structure are those cycles from the cycle basis which share at least one bond. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1063,10 +1069,82 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000111 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000111">
-        <rdfs:label>CML</rdfs:label>
+        <rdfs:label
+            >CML format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
         <obo:IAO_0000115
-            >A CML (Chemical Markup Language) file is an XML-based representation of the atomic connectivity of a molecular entity. </obo:IAO_0000115>
+            >A CML (Chemical Markup Language) file is an XML-based representation of the atomic connectivity of a molecular entity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000112 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000112">
+        <rdfs:label
+            >atomic QSAR descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000046"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000113 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000113">
+        <rdfs:label
+            >InChI description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000114 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000114">
+        <rdfs:label
+            >MOLfile description</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000115 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000115">
+        <rdfs:label>aromaticity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000117"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000116 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000116">
+        <rdfs:label
+            >information about a molecular part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000117 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000117">
+        <rdfs:label
+            >information about a cycle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000116"/>
     </owl:Class>
     
 
