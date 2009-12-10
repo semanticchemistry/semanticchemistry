@@ -6,12 +6,13 @@ The Semantic Chemistry working group holds regular meetings by teleconference. T
 
 = Next meeting =
 
-The next proposed meeting will be held during the week of the 5th - 9th October 2009.
+The next meeting will be held during December and will focus on the topic of automatic classification.
 
 If you would like to join this meeting, please contact janna.hastings for details. 
 
 = Historical meetings =
 
+  * 10 December 2009, [Teleconference10122009], topic cheminf ontology. 
   * 16 September 2009, [Agenda16092009 Agenda], [Teleconference19082009 Minutes]
   * 19 August 2009, [Teleconference19082009 Minutes]
   * 04 August 2009, [Teleconference04082009 Minutes]
