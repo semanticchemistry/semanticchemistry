@@ -17,9 +17,9 @@ In future experiments, we will improve the scoring scheme and test alternative c
 
 2) DL-based classification by composition: state of the art?
 
-What is the latest on the work originally started by Michel on classification by functional groups in OWL? 
+What is the latest on the work originally done by Michel on chemical classification by the presence of functional groups expressed as an ontology in OWL? 
 
 
 3) Combined approaches
 
-E.g. combination of DL-based and similarity-based classification strategies. DL-based can be used to give an entry point for machine learning approaches, to narrow the search space for classification. 
+E.g. combination of DL-based and similarity-based classification strategies. DL-based can be used to give an entry point for machine learning approaches, to narrow the search space for subsequent classification. 
