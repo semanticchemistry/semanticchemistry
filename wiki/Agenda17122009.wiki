@@ -23,3 +23,7 @@ What is the latest on the work originally done by Michel on chemical classificat
 3) Combined approaches
 
 E.g. combination of DL-based and similarity-based classification strategies. DL-based can be used to give an entry point for machine learning approaches, to narrow the search space for subsequent classification. 
+
+4) Implementation, Data, Evaluation
+
+Any specific implementation details/difficulties, actual classification results or challenges with present algorithms/approaches? Implications for function-based class recognition by considering consensus fingerprints of the function-based class? Concrete classification approach benchmarking steps? Decide on datasets for machine learning (the ChEBI ones have extremely few representatives for terminal classes)? Evaluation techniques and strategies?
