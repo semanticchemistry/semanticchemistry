@@ -17,7 +17,7 @@ Leo, Egon, Nico, Duncan, Janna
 
 Exhaustive list of functional groups within all molecules in pathway. Consensus fingerprint of functional groups. Remember which FG leads to which molecule. Looking for big MCS present in class as well. Reasonable fast with SPARQL queries for database searching. Go through every atom in molecule and save connectivity to nearest neighbours (1-2-3 etc) I.e. paths through molecule.
 
-Reasoner based querying with all functional groups within molecule is veeeeery slow.
+Reasoner based querying with all functional groups within molecule is veeeeery slow (but we haven't tried all the reasoners, this is just a general statement regarding the reasoner, Pellet I believe, and the approach we tried - Leo).
 
 SPARQL querying with Virtuoso is fast enough (knowledge base expressed in RDFS).
 
