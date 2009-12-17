@@ -44,7 +44,7 @@ Not ready for being tried out yet but will be available soon. Its results, and p
 
     * reasoner and library integration?
 
-SMARTS based list of classifications : some functional groups are available online (Action point: Egon to send link if there are available catalogues of SMARTS for classes online). ***Actually, the file is called SMARTS_InteLigand.txt, and is included with openbabel - LEO, I am not sure if Egon has a better set.***
+SMARTS based list of classifications : some functional groups are available online (Action point: Egon to send link if there are available catalogues of SMARTS for classes online). ***Actually, the file is called SMARTS InteLigand txt, and is included with openbabel - LEO. (I am not sure if Egon has a better set.) ***
 
  Curators would need to be well versed with SMARTS to generate SMARTS-class test links.
 
