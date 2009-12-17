@@ -21,30 +21,32 @@ Reasoner based querying with all functional groups within molecule is veeeeery s
 
 SPARQL querying with Virtuoso is fast enough (knowledge base expressed in RDFS).
 
-Lipid maps set of classes with specification. Classifying into that. RDF used for fusion of disparate sets and representation of parts of molecule for searching. Working with singapore people for OWL specification of LIPIDS.
+LIPIDMAPS set of classes with specification (Leo and Michel). We were trying to use the dataset to infer the functional groups, or substructures, necessary to identify a class. The RDF molecular specification (through CHESS) was used because it has the benefit of an added ability to fuse disparate chemical databases and we can represent and later recall parts of molecules for searching. We are working with a few people for OWL specification of LIPID classes.
 
 
-    * how are functional groups extracted from classified structures?
+    * How are functional groups extracted from classified structures?
 
-Custom code. 
+Custom code. Of course, we are not talking about functional groups per se, but substructures.
 
-    * how are the classes defined (to which the molecules are classified by structure by extraction of FGs)?
+    * How are the classes defined (to which the molecules are classified by structure by extraction of FGs)?
 
-Lipidmaps classification.
+Lipidmaps classification, produced by hand and now maintained by Nature Publishing Group.
 
-    * tools/technologies?
+    * Tools/technologies?
 
-Virtuoso, own code for graph parsing and extraction of substructures (FGs) from connectivity. Get an SDF representation of the substructure. Pass to CDK for SMILES string which is hashed and then used for fingerprinting and RDF representation. Consensus description of what functional groups are present in a particular class which is then passed on to the ontology classification. Construct tree which tells us in which particular class the molecule would fit within a larger ontology.
+Virtuoso, own code for graph parsing and extraction of substructures (FGs) from connectivity tables in SDF molecular specifications to obtain an SDF representation of the substructure. Pass to CDK for SMILES string which is hashed and then used for fingerprinting and RDF representation. Consensus description of what functional groups are present in a particular class which is then passed on to the ontology classification. Construct tree which tells us in which particular class the molecule would fit within a larger ontology. We can also tell where within an ontology a class that we may define as human users or practicing (bio)chemists (not mutually exclusive) in the process of revising our ontology, will fit.
 
 Ontology thus derived from consensus: where does it fit in the ontology tree.
 
-Not ready for being tried out yet but will be available soon. (Like CHESS interface).
+Not ready for being tried out yet but will be available soon. Its results, and perhaps even the classifier will be available for use online, and will be similar to the CHESS interface.
 
 == combination of machine learning and functional group approaches? ==
 
     * reasoner and library integration?
 
-SMARTS based list of classifications : some functional groups are available online (Action point: Egon to send link if there are available catalogues of SMARTS for classes online). Curators would need to be well versed with SMARTS to generate SMARTS-class test links.
+SMARTS based list of classifications : some functional groups are available online (Action point: Egon to send link if there are available catalogues of SMARTS for classes online). ***Actually, the file is called SMARTS_InteLigand.txt, and is included with openbabel - LEO, I am not sure if Egon has a better set.***
+
+ Curators would need to be well versed with SMARTS to generate SMARTS-class test links.
 
 Substructure description of functional groups alone would not work? (Explicit hydrogens might go missing: have to generate hydrogens) Alcohol: OH group. In SMARTS you can restrict the number of connections to the particular molecule, while as a simple substructure, you cannot make this restriction. More powerful in terms of limitations that are placed on the graph you search for. Can do the same thing by defining a couple of graphs. How many bonds a certain atom is connected to. R group does not capture the full possibility of expressivity of SMARTS.
 
