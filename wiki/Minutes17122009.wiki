@@ -44,7 +44,7 @@ Not ready for being tried out yet but will be available soon. (Like CHESS interf
 
     * reasoner and library integration?
 
-SMARTS based list of classifications : some functional groups are available online. Curators would need to be well versed with SMARTS to generate SMARTS-class test links.
+SMARTS based list of classifications : some functional groups are available online (Action point: Egon to send link if there are available catalogues of SMARTS for classes online). Curators would need to be well versed with SMARTS to generate SMARTS-class test links.
 
 Substructure description of functional groups alone would not work? (Explicit hydrogens might go missing: have to generate hydrogens) Alcohol: OH group. In SMARTS you can restrict the number of connections to the particular molecule, while as a simple substructure, you cannot make this restriction. More powerful in terms of limitations that are placed on the graph you search for. Can do the same thing by defining a couple of graphs. How many bonds a certain atom is connected to. R group does not capture the full possibility of expressivity of SMARTS.
 
