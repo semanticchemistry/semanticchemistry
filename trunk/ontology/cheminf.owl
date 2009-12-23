@@ -2,21 +2,22 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY UO "http://purl.org/obo/owl/UO#" >
     <!ENTITY purl "http://purl.obofoundry.org/" >
+    <!ENTITY UO "http://purl.org/obo/owl/UO#" >
     <!ENTITY PATO "http://purl.org/obo/owl/PATO#" >
     <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
-    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
-    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY resource "http://semanticscience.org/resource/" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY CHEBI "http://purl.obolibrary.org/obo/CHEBI#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
@@ -25,23 +26,24 @@
 
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf.owl#"
      xml:base="http://www.semanticweb.org/ontologies/cheminf.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:PATO="http://purl.org/obo/owl/PATO#"
-     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:UO="http://purl.org/obo/owl/UO#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
-     xmlns:resource="http://semanticscience.org/resource/"
-     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:purl="http://purl.obofoundry.org/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:CHEBI="&obo;CHEBI#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:PATO="http://purl.org/obo/owl/PATO#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:purl="http://purl.obofoundry.org/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="">
         <dc:contributor rdf:datatype="&xsd;string">Janna Hastings</dc:contributor>
@@ -75,13 +77,13 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&dc;title"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
-    <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
-    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     
 
 
@@ -153,6 +155,38 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000004 -->
+
+    <owl:DatatypeProperty rdf:about="&obo;IAO_0000004">
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000012"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000404 -->
+
+    <owl:DatatypeProperty rdf:about="&obo;IAO_0000404">
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000012"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000405 -->
+
+    <owl:DatatypeProperty rdf:about="&obo;IAO_0000405">
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000012"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000406 -->
+
+    <owl:DatatypeProperty rdf:about="&obo;IAO_0000406">
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000012"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000009 -->
 
     <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000009">
@@ -160,6 +194,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >has uncertainty value</rdfs:label>
         <rdfs:domain rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000012"/>
         <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
@@ -181,6 +216,36 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI#CHEBI_23367 -->
+
+    <owl:Class rdf:about="&obo;CHEBI#CHEBI_23367">
+        <rdfs:label
+            >molecular entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <dc:language>CHEBI:23367</dc:language>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI#CHEBI_33250 -->
+
+    <owl:Class rdf:about="&obo;CHEBI#CHEBI_33250">
+        <rdfs:label>atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI#CHEBI_36357 -->
+
+    <owl:Class rdf:about="&obo;CHEBI#CHEBI_36357">
+        <rdfs:label
+            >polyatomic entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+    </owl:Class>
     
 
 
@@ -221,6 +286,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000310 -->
+
+    <owl:Class rdf:about="&obo;IAO_0000310"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000403 -->
 
     <owl:Class rdf:about="&obo;IAO_0000403"/>
@@ -239,37 +310,21 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000000 -->
+    <!-- http://purl.org/obo/owl/PATO#PATO_0000125 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_000000">
-        <rdfs:label>atomic position</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000046"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <owl:ObjectProperty>
-                        <owl:inverseOf rdf:resource="&OBO_REL;bearer_of"/>
-                    </owl:ObjectProperty>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment
-            >Atomic position refers to the spatial position of the atom.</rdfs:comment>
-        <rdfs:comment
-            >Comment (JH): the position in three dimensional space is not really a quality that inheres in the atom. It is a so-called &#39;Cambridge&#39; property (if only I could find the original source and definition of that name!). I think it would be better placed under information about an atom.</rdfs:comment>
+    <owl:Class rdf:about="&PATO;PATO_0000125">
+        <rdfs:label>mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:comment>from PATO</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/PATO#PATO_0001708 -->
+
+    <owl:Class rdf:about="&PATO;PATO_0001708">
+        <rdfs:label>1-D extent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
     </owl:Class>
     
 
@@ -324,12 +379,24 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000005">
         <rdfs:label
-            >RS stereochemistry</rdfs:label>
+            >RS stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -340,7 +407,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000006">
         <rdfs:label
-            >R stereochemistry</rdfs:label>
+            >R stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000005"/>
         <owl:disjointWith rdf:resource="&resource;CHEMINF_000034"/>
     </owl:Class>
@@ -350,7 +417,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000007 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000007">
-        <rdfs:label>atom</rdfs:label>
+        <rdfs:label
+            >Canonical SMILES</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000032"/>
     </owl:Class>
     
@@ -370,7 +438,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000010">
         <rdfs:label>atomic order</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000046"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
@@ -379,18 +447,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
-            >Atomic order is a label that indicates the position of an atom in a descriptive systems (e.g. SMILES).</rdfs:comment>
+            >Atomic order is an atomic descriptor that specifies the ordinal position of an atom.</rdfs:comment>
     </owl:Class>
     
 
@@ -403,14 +465,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000403"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -451,17 +507,28 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000017">
         <rdfs:label
             >information about a molecular entity</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000032"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000014"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -474,8 +541,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000018">
         <rdfs:label
-            >SMILES description</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+            >SMILES descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
@@ -490,14 +557,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000019">
         <rdfs:label
-            >SMARTS description</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+            >SMARTS descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000021"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment
+            >A molecular structure descriptor that conforms to the SMARTS specification.</rdfs:comment>
     </owl:Class>
     
 
@@ -563,7 +632,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000025">
         <rdfs:label
             >information about molecular structure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000066"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
@@ -588,8 +657,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000027">
         <rdfs:label
-            >stereochemical description</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+            >stereochemical descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
@@ -636,6 +705,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >molecular entity quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <owl:ObjectProperty>
+                        <owl:inverseOf rdf:resource="&OBO_REL;bearer_of"/>
+                    </owl:ObjectProperty>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115
             >A molecular entity quality is a quality which inheres in a molecular entity.</obo:IAO_0000115>
     </owl:Class>
@@ -645,10 +724,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000032 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000032">
-        <rdfs:label
-            >molecular entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <dc:language>CHEBI:23367</dc:language>
+        <rdfs:label>Isomeric SMILES</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000018"/>
     </owl:Class>
     
 
@@ -681,7 +758,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000034">
         <rdfs:label
-            >S stereochemistry</rdfs:label>
+            >S stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000005"/>
     </owl:Class>
     
@@ -760,7 +837,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000041">
         <rdfs:label
             >information about molecular composition</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000066"/>
     </owl:Class>
     
 
@@ -770,7 +847,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000042">
         <rdfs:label
             >molecular formula</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000041"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
@@ -788,7 +865,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000043">
         <rdfs:label
             >molecular entity name</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
@@ -829,11 +906,21 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000046">
         <rdfs:label
             >information about an atom</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&resource;CHEMINF_000017"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000007"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -846,12 +933,24 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000048">
         <rdfs:label
-            >+/- stereochemistry</rdfs:label>
+            >+/- stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -862,7 +961,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000049">
         <rdfs:label
-            >+ stereochemistry</rdfs:label>
+            >+ stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000048"/>
         <owl:disjointWith rdf:resource="&resource;CHEMINF_000050"/>
     </owl:Class>
@@ -873,7 +972,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000050">
         <rdfs:label
-            >- stereochemistry</rdfs:label>
+            >- stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000048"/>
     </owl:Class>
     
@@ -883,12 +982,24 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000051">
         <rdfs:label
-            >DL stereochemistry</rdfs:label>
+            >DL stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -899,7 +1010,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000052">
         <rdfs:label
-            >D stereochemistry</rdfs:label>
+            >D stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000051"/>
         <owl:disjointWith rdf:resource="&resource;CHEMINF_000053"/>
     </owl:Class>
@@ -910,7 +1021,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000053">
         <rdfs:label
-            >L stereochemistry</rdfs:label>
+            >L stereochemical descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000051"/>
     </owl:Class>
     
@@ -930,6 +1041,495 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <obo:IAO_0000115
             >Molecular composition is a molecular entity quality that inheres in a molecule by virtue of the atoms which constitute the molecule.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000055 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000055">
+        <rdfs:label
+            >chemical connectivity table</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000056 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000056">
+        <rdfs:label
+            >aromaticity descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000057 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000057">
+        <rdfs:label>file</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000310"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000058 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000058">
+        <rdfs:label>MOLfile</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000057"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000059 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000059">
+        <rdfs:label>InChIKey</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_36357"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000060 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000060">
+        <rdfs:label
+            >composite molecular entity descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000065"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000061 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000061">
+        <rdfs:label
+            >simple molecular entity descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000065"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000062 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000062">
+        <rdfs:label
+            >bond order descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000063 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000063">
+        <rdfs:label>chemical bond</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000065 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000065">
+        <rdfs:label
+            >molecular entity descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000066 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000066">
+        <rdfs:label
+            >information about a polyatomic entity</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&resource;CHEMINF_000017"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_36357"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000067 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000067">
+        <rdfs:label>cyclicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000068 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000068">
+        <rdfs:label
+            >functional group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000069 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000069">
+        <rdfs:label>polarity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000070 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000070">
+        <rdfs:label>polar</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000069"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000071 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000071">
+        <rdfs:label>nonpolar</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000069"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000072 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000072">
+        <rdfs:label>cyclic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000067"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000073 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000073">
+        <rdfs:label>acyclic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000067"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000074 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000074">
+        <rdfs:label>chiral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000013"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000075 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000075">
+        <rdfs:label>achiral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000013"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000076 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000076">
+        <rdfs:label>aromatic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000077 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000077">
+        <rdfs:label>non-aromatic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000115"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000078 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000078">
+        <rdfs:label>neutron count</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >The (integer) number of neutrons in the atom&#8217;s nucleus.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000079 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000079">
+        <rdfs:label>proton count</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >The (integer) number of protons in the atom&#8217;s nucleus.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000080 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000080">
+        <rdfs:label
+            >cis-trans stereochemical descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Descriptors which show the relationship between two ligands attached to separate atoms that are connected by a double bond or are contained in a ring. The two ligands are said to be located cis to each other if they lie on the same side of a plane. If they are on opposite sides, their relative position is described as trans. The appropriate reference plane of a double bond is perpendicular to that of the relevant &#963;-bonds and passes through the double bond.[source:IUPAC Gold Book - http://goldbook.iupac.org/C01092.html]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000081 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000081">
+        <rdfs:label
+            >cis stereochemical descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000080"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000082 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000082">
+        <rdfs:label
+            >trans stereochemical descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000080"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000083 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000083">
+        <rdfs:label>mass descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000084 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000084">
+        <rdfs:label>atomic mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000083"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000088 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000088">
+        <rdfs:label>molecular mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000083"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_36357"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000089 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000089">
+        <rdfs:label>polarizability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:comment
+            >The ease of distortion of the electron cloud of a molecular entity by an electric field [source: IUPAC Gold Book - http://goldbook.iupac.org/P04711.html]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000090 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000090">
+        <rdfs:label>atomic degree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >The integer number of non-H substituents of an atom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000091 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000091">
+        <rdfs:label>hybridization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:comment
+            >The quality of an atom that reflects the combination of its atomic orbitals to create bonding orbitals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000092 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000092">
+        <rdfs:label
+            >sp hybridization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000095"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000093 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000093">
+        <rdfs:label
+            >sp2 hybridization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000095"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000094 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000094">
+        <rdfs:label
+            >sp3 hybridization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000095"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000095 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000095">
+        <rdfs:label
+            >hybridization descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000096 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000096">
+        <rdfs:label>atomic valence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Atomic valence is an atomic descriptor that specifies the maximum number of univalent atoms (originally hydrogen or chlorine atoms) which may combine with an atom of the element under consideration, or with a fragment, or for which an atom of this element can be substituted [source: IUPAC Gold Book - http://goldbook.iupac.org/V06588.html]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000097 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000097">
+        <rdfs:label
+            >atomic hardness descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Atomic hardness descriptor is an atomic descriptor that estimates the difference between the ionization potential and the electron affinity of a given atom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000098 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000098">
+        <rdfs:label>valency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:comment
+            >Valency is an atomic quality of the number of chemical bonds formed by the atom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000099 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000099">
+        <rdfs:label
+            >atomic softness descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:comment
+            >Atomic softness descriptor is an atomic descriptor about charge delocalizing ability of a given atom</rdfs:comment>
     </owl:Class>
     
 
@@ -987,7 +1587,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000104">
         <rdfs:label
             >molecular QSAR descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000066"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000106"/>
@@ -1004,7 +1604,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000105">
         <rdfs:label>cycle basis</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000104"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <obo:IAO_0000115
             >The cycle basis of a molecular structure is the smallest set of cycles (closed paths) formed in the graph representation of the structure, from which all other cycles can be computed.</obo:IAO_0000115>
     </owl:Class>
@@ -1038,6 +1638,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000108">
         <rdfs:label>atomic quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <owl:ObjectProperty>
+                        <owl:inverseOf rdf:resource="&OBO_REL;bearer_of"/>
+                    </owl:ObjectProperty>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115
             >An atomic quality is a molecular entity quality which inheres in an atom.</obo:IAO_0000115>
     </owl:Class>
@@ -1059,9 +1669,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000110">
         <rdfs:label>fused cycles</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000104"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <obo:IAO_0000115
-            >The fused cycles in a molecular structure are those cycles from the cycle basis which share at least one bond. </obo:IAO_0000115>
+            >The fused cycles in a molecular structure are those cycles from the cycle basis which share at least one bond.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1092,8 +1702,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000113">
         <rdfs:label
-            >InChI description</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+            >InChI descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
@@ -1108,7 +1718,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000114">
         <rdfs:label
-            >MOLfile description</rdfs:label>
+            >MOLfile descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1124,7 +1734,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000115">
         <rdfs:label>aromaticity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000117"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <obo:IAO_0000115
+            >Aromaticity is a molecular entity quality that inheres in a conjugated ring of unsaturated bonds, lone pairs, or empty orbitals that exhibit a stabilization stronger than would be expected by the stabilization of conjugation alone.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1133,8 +1745,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000116">
         <rdfs:label
-            >information about a molecular part</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+            >atomic connectivity index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Atomic connectivity index is an atomic descriptor that is a measure of atomic connectivity, which can take various forms (e.g. zero-order, or first-order).</rdfs:comment>
     </owl:Class>
     
 
@@ -1144,7 +1764,184 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000117">
         <rdfs:label
             >information about a cycle</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000116"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000118 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000118">
+        <rdfs:label
+            >formal charge descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000131"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000119 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000119">
+        <rdfs:label
+            >partial charge descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000131"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000120 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000120">
+        <rdfs:label>charge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000121 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000121">
+        <rdfs:label
+            >electronegativity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:comment
+            >Electronegativity is an atomic quality that describes its power to attract electrons to itself [source:IUPAC Gold Book - http://goldbook.iupac.org/E01990.html]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000122 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000122">
+        <rdfs:label
+            >electronegativity descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000121"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000124 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000124">
+        <rdfs:label>radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&PATO;PATO_0001708"/>
+        <rdfs:comment
+            >A 1-D extent quality inhering in a bearer by virtue of the bearer&#39;s  dimension of extension to the circumference of a circle or sphere.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000125 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000125">
+        <rdfs:label>atomic radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000124"/>
+        <rdfs:comment
+            >Atomic radius is the 1D extent of the electron cloud surrounding the atom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000126 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000126">
+        <rdfs:label>ionic radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000124"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000127 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000127">
+        <rdfs:label
+            >van der Waal&#39;s radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000128 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000128">
+        <rdfs:label>covalent radius</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000125"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000129 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000129">
+        <rdfs:label
+            >bond multiplicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:comment
+            >Bond multiplicity gives the extent to which participating electrons are localized in the bonding orbitals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000130 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000130">
+        <rdfs:label
+            >bond multiplicity descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A bond descriptor that in primitive cases is defined as half of the difference between the number of bonding and antibonding electrons in a particular system, but may also be defined with relation to the strength of a single bond.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000131 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000131">
+        <rdfs:label
+            >charge descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000297"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000120"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1197,5 +1994,5 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.962) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
 
