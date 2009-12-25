@@ -858,7 +858,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
-            >A chemical formula is information about molecular composition as it identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecule of that compound.</rdfs:comment>
+            >A molecular formula is a composite molecular entity descriptor which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecule of that compound.</rdfs:comment>
     </owl:Class>
     
 
@@ -1066,6 +1066,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >aromaticity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >An aromaticity descriptor is a simple molecular entity descriptor which indicates the aromaticity of the overall molecule. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1218,6 +1226,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >functional group</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
+        <obo:IAO_0000115
+            >A functional group is a composite molecular entity descriptor which describes specific groups of atoms within molecules that are responsible for the characteristic chemical reactions of those molecules.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1610,7 +1620,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
-            >A molecular QSAR descriptor is an information about a molecular entity which gives a quantitative structure-activity relationship value. Quantitative structure-activity relationships relate a molecular structure to a measure of biological activity.</obo:IAO_0000115>
+            >A molecular QSAR descriptor is a composite molecular entity descriptor which gives a quantitative structure-activity relationship value. Quantitative structure-activity relationships relate a molecular structure to a measure of biological activity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1709,6 +1719,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >atomic QSAR descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
+        <obo:IAO_0000115
+            >An atomic QSAR descriptor is a composite molecular entity descriptor which is about an atom which is part of a molecule. </obo:IAO_0000115>
     </owl:Class>
     
 
