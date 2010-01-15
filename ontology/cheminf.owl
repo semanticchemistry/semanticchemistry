@@ -457,6 +457,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >three dimensional structure determination</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000066"/>
+        <obo:IAO_0000115
+            >An investigation the objective of which is to determine the three-dimensional structure of a chemical entity. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -485,14 +487,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -543,14 +545,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -657,14 +659,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000138"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000021"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000021"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -1039,12 +1041,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000030"/>
             </owl:Restriction>
@@ -1053,6 +1049,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1088,6 +1090,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000026"/>
             </owl:Restriction>
@@ -1096,12 +1104,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1167,14 +1169,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1469,14 +1471,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -1946,14 +1948,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000138"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000100"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2091,6 +2093,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000033"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >A descriptor is a data item which conforms to some specification, either for how it is calculated or for how it is measured, and is commonly used in the domain of chemistry to name and differentiate different numeric properties (both calculated and measured) which are about chemical entities. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2165,14 +2169,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2189,14 +2193,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000120"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000120"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2404,14 +2408,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2510,14 +2514,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_599144"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_599144"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2564,8 +2568,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_857451"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2576,8 +2580,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2594,6 +2598,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
             </owl:Restriction>
@@ -2602,12 +2612,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2736,14 +2740,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_806082"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_806082"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2766,14 +2770,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2814,14 +2818,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_077982"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_077982"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2842,14 +2846,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2926,14 +2930,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2977,14 +2981,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000208"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_798852"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_798852"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3024,14 +3028,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_798852"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_798852"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3048,14 +3052,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_339666"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_339666"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3072,14 +3076,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_138253"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_138253"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3096,12 +3100,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_216570"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
             </owl:Restriction>
@@ -3110,6 +3108,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3159,14 +3163,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_764405"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_764405"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3224,14 +3228,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_806082"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_806082"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3248,14 +3252,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_610620"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_610620"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3281,14 +3285,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3327,14 +3331,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_339666"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_339666"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3387,5 +3391,5 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.962) http://owlapi.sourceforge.net -->
 
