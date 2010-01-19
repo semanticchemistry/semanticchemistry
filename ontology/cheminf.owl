@@ -21,6 +21,7 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY bodo "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#" >
 ]>
 
 
@@ -49,6 +50,7 @@
         <dc:contributor rdf:datatype="&xsd;string">Janna Hastings</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string"
             >Michel Dumontier</dc:contributor>
+        <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
         <rdfs:comment rdf:datatype="&xsd;string"
             >The chemical information ontology (cheminf) intends to describe information entities about chemical entities. It means to provide  qualitative and quantitative attributes to richly describe chemicals.</rdfs:comment>
         <owl:versionInfo rdf:datatype="&xsd;string">alpha</owl:versionInfo>
@@ -2353,6 +2355,27 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     </owl:Class>
     
 
+    <!-- Inherited from the Blue Obelisk Descriptor Ontology -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000301">
+        <owl:sameAs rdf:resource="&bodo;Algorithm"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000302">
+        <owl:sameAs rdf:resource="&bodo;Implementation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000303">
+        <owl:sameAs rdf:resource="&bodo;Descriptor"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000304">
+        <owl:sameAs rdf:resource="&bodo;DescriptorValue"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000305">
+        <owl:sameAs rdf:resource="&bodo;MolecularDescriptor"/>
+    </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_056130 -->
 
