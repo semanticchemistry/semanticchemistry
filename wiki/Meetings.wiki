@@ -6,15 +6,15 @@ The Semantic Chemistry working group holds regular meetings by teleconference. T
 
 = Next meeting =
 
-The next meeting will be held on the 17th December 2009 at 1600 UK time, and will focus on the topic of automatic classification.
+The next meeting will be held in the week starting 25 January, and will focus on the topic of the cheminf ontology. 
 
-Agenda: [Agenda17122009].
 
 If you would like to join this meeting, please contact janna.hastings for details. 
 
 = Historical meetings =
 
-  * 19 January 2009, [Minutes190110 Minutes], topic cheminf ontology
+  * 19 January 2010, [Minutes190110 Minutes], topic cheminf ontology
+  * 17 December 2009,  Agenda: [Agenda17122009].
   * 10 December 2009, [Teleconference10122009 Minutes], topic cheminf ontology. 
   * 16 September 2009, [Agenda16092009 Agenda], [Teleconference19082009 Minutes]
   * 19 August 2009, [Teleconference19082009 Minutes]
