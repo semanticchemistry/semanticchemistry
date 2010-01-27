@@ -62,7 +62,7 @@ public class Convertor {
                 DescriptorValue value = (DescriptorValue)props.get(key);
                 IDescriptorResult result = value.getValue();
                 Resource rdfValue = model.createResource();
-                rdfValue.addProperty(RDF.type, BODO.DescriptorValue);
+                rdfValue.addProperty(RDF.type, CHEMINF.DescriptorValue);
                 rdfMolecule.addProperty(BODO.hasDescriptorValue, rdfValue);
                 // setup up the metadata list
                 Resource rdfDescImpl = model.createResource();
@@ -83,7 +83,7 @@ public class Convertor {
                 rdfAlgorithm.addProperty(OWL.sameAs,
                     model.createResource(specs.getSpecificationReference())
                 );
-                rdfAlgorithm.addProperty(RDF.type, BODO.Algorithm);
+                rdfAlgorithm.addProperty(RDF.type, CHEMINF.Algorithm);
                 rdfDescImpl.addProperty(BODO.instanceOf, rdfAlgorithm);
 
                 // add parameter setting to the metadata list
@@ -142,7 +142,7 @@ public class Convertor {
             BODO.hasValue, value
         );
         Resource descriptor = model.createResource();
-        descriptor.addProperty(RDF.type, BODO.Descriptor);
+        descriptor.addProperty(RDF.type, CHEMINF.Descriptor);
         descriptor.addLiteral(
             RDFS.label, descriptorName
         );
