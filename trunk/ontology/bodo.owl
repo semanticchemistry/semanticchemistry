@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY UO "http://purl.org/obo/owl/UO#" >
+    <!ENTITY purl "http://purl.obofoundry.org/" >
+    <!ENTITY PATO "http://purl.org/obo/owl/PATO#" >
+    <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
+    <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
+    <!ENTITY resource "http://semanticscience.org/resource/" >
+    <!ENTITY CHEBI "http://purl.obolibrary.org/obo/CHEBI#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY bodo "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/cheminf.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:PATO="http://purl.org/obo/owl/PATO#"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:UO="http://purl.org/obo/owl/UO#"
+     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:purl="http://purl.obofoundry.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:CHEBI="&obo;CHEBI#"
+     xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
+
+    <owl:Ontology rdf:about="">
+        <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
+        <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
+        <dc:title rdf:datatype="&xsd;string"
+            >chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
+        <dc:language rdf:datatype="&xsd;string">en</dc:language>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf.owl"/>
+    </owl:Ontology>
+
+
+    <!-- Inherited from the Blue Obelisk Descriptor Ontology -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000301">
+        <owl:sameAs rdf:resource="&bodo;Algorithm"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000302">
+        <owl:sameAs rdf:resource="&bodo;Implementation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000303">
+        <owl:sameAs rdf:resource="&bodo;Descriptor"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000304">
+        <owl:sameAs rdf:resource="&bodo;DescriptorValue"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000305">
+        <owl:sameAs rdf:resource="&bodo;MolecularDescriptor"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000306">
+        <!-- owl:sameAs rdf:resource="&bodo;isA"/ -->
+        <rdfs:label>Is A</rdfs:label>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000301"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000301"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000307">
+        <!-- owl:sameAs rdf:resource="&me;isAModificationOf" -->
+        <rdfs:label>Is a modification of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000306"/>
+        <owl:differentFrom rdf:resource="&resource;CHEMINF_000308"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000303"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000303"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000308">
+        <!-- owl:sameAs rdf:resource="&me;isAParameterizationOf" -->
+        <rdfs:label>Is a parameterization of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000306"/>
+        <owl:differentFrom rdf:resource="&resource;CHEMINF_000307"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000303"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000303"/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
