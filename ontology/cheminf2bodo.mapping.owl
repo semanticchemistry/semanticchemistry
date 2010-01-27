@@ -45,59 +45,36 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
 
-    <owl:Ontology rdf:about="">
-        <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
-        <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
-        <dc:title rdf:datatype="&xsd;string"
-            >chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
-        <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf.owl"/>
-    </owl:Ontology>
-
-
-    <!-- Inherited from the Blue Obelisk Descriptor Ontology -->
-
     <owl:Class rdf:about="&resource;CHEMINF_000301">
-        <rdfs:label>Algorithm</rdfs:label>
+        <oboInOwl:hasAlternativeId>BODO:Algorithm</oboInOwl:hasAlternativeId>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000302">
-        <rdfs:label>Implementation</rdfs:label>
+        <oboInOwl:hasAlternativeId>BODO:Implementation</oboInOwl:hasAlternativeId>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000303">
-        <rdfs:label>Descriptor</rdfs:label>
+        <oboInOwl:hasAlternativeId>BODO:Descriptor</oboInOwl:hasAlternativeId>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000304">
-        <rdfs:label>Descriptor Value</rdfs:label>
+        <oboInOwl:hasAlternativeId>BODO:DescriptorValue</oboInOwl:hasAlternativeId>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000305">
-        <rdfs:label>Molecular Descriptor</rdfs:label>
+        <oboInOwl:hasAlternativeId>BODO:MolecularDescriptor</oboInOwl:hasAlternativeId>
     </owl:Class>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000306">
-        <rdfs:label>Is A</rdfs:label>
-        <rdfs:domain rdf:resource="&resource;CHEMINF_000301"/>
-        <rdfs:range rdf:resource="&resource;CHEMINF_000301"/>
+        <oboInOwl:hasAlternativeId>BODO:isA</oboInOwl:hasAlternativeId>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000307">
-        <rdfs:label>Is a modification of</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000306"/>
-        <owl:differentFrom rdf:resource="&resource;CHEMINF_000308"/>
-        <rdfs:domain rdf:resource="&resource;CHEMINF_000303"/>
-        <rdfs:range rdf:resource="&resource;CHEMINF_000303"/>
+        <oboInOwl:hasAlternativeId>BODO:isAModificationOf</oboInOwl:hasAlternativeId>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000308">
-        <rdfs:label>Is a parameterization of</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000306"/>
-        <owl:differentFrom rdf:resource="&resource;CHEMINF_000307"/>
-        <rdfs:domain rdf:resource="&resource;CHEMINF_000303"/>
-        <rdfs:range rdf:resource="&resource;CHEMINF_000303"/>
+        <oboInOwl:hasAlternativeId>BODO:isAParameterizationOf</oboInOwl:hasAlternativeId>
     </owl:ObjectProperty>
 
 </rdf:RDF>
