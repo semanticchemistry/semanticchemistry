@@ -5,4 +5,4 @@ gunzip ChEBI_complete.sdf.gz
 
 Run with:
 
-CLASSPATH=jar/cdk-1.3.1.git.jar:jar/xercesImpl-2.9.0.jar groovy process.groovy
+CLASSPATH=bin:jar/cdk-1.3.1.git.jar:jar/xercesImpl-2.9.0.jar groovy process.groovy

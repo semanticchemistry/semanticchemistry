@@ -1,10 +1,11 @@
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.io.iterator.*;
-import org.openscience.cdk.io.rdf.CDKOWLWriter;
 import org.openscience.cdk.nonotify.NoNotificationChemObjectBuilder;
 import org.openscience.cdk.qsar.DescriptorValue;
 import org.openscience.cdk.qsar.descriptors.molecular.TPSADescriptor;
 import org.openscience.cdk.tools.manipulator.*;
+
+import com.google.code.semanticchemistry.cdk.io.ChemInfOWLWriter;
 
 iterator = new IteratingMDLReader(
   new File("ChEBI_complete.sdf").newReader(),
@@ -14,7 +15,7 @@ i = 0
 iterator.each { mol ->
   i++
   StringWriter output = new StringWriter();
-  CDKOWLWriter writer = new CDKOWLWriter(output);
+  ChemInfOWLWriter writer = new ChemInfOWLWriter(output);
 
   try {
     TPSADescriptor descriptor = new TPSADescriptor();
