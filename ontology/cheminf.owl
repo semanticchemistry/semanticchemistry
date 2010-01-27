@@ -2377,6 +2377,32 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <owl:sameAs rdf:resource="&bodo;MolecularDescriptor"/>
     </owl:Class>
 
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000306">
+        <!-- owl:sameAs rdf:resource="&bodo;isA"/ -->
+        <rdfs:label>Is A</rdfs:label>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000301"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000301"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000307">
+        <!-- owl:sameAs rdf:resource="&me;isAModificationOf" -->
+        <rdfs:label>Is a modification of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000306"/>
+        <owl:differentFrom rdf:resource="&resource;CHEMINF_000308"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000303"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000303"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000308">
+        <!-- owl:sameAs rdf:resource="&me;isAParameterizationOf" -->
+        <rdfs:label>Is a parameterization of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000306"/>
+        <owl:differentFrom rdf:resource="&resource;CHEMINF_000307"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000303"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000303"/>
+    </owl:ObjectProperty>
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_056130 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_056130">
