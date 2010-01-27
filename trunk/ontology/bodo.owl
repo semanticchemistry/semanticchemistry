@@ -83,7 +83,7 @@
         <rdfs:label>Is A</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000301"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000301"/>
-    </owl:Class>
+    </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000307">
         <oboInOwl:hasAlternativeId>BODO:isAModificationOf</oboInOwl:hasAlternativeId>
