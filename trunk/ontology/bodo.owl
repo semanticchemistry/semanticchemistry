@@ -76,7 +76,7 @@
 
     <owl:Class rdf:about="&resource;CHEMINF_000305">
         <rdfs:label>Molecular Descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;DescriptorAlgorithm"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000309"/>
     </owl:Class>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000306">
@@ -103,7 +103,7 @@
 
     <owl:Class rdf:about="&resource;CHEMINF_000309">
         <rdfs:label>Descriptor Algorithm</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;Algorithm"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000301"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000310">
@@ -120,27 +120,27 @@
 
     <owl:Class rdf:about="&resource;CHEMINF_000313">
         <rdfs:label>Physical Property</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;Property"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000312"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000314">
         <rdfs:label>Computational Property</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;Property"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000312"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000315">
         <rdfs:label>Atomic Descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;DescriptorAlgorithm"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000309"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000316">
         <rdfs:label>Bond Descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;DescriptorAlgorithm"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000309"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000317">
         <rdfs:label>Protein Descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;DescriptorAlgorithm"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000309"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000318">
@@ -149,54 +149,54 @@
 
     <owl:Class rdf:about="&resource;CHEMINF_000319">
         <rdfs:label>Data Representation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;DataFeature"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000318"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000320">
         <rdfs:label>Descriptor Implementation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&me;Implementation"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000302"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000321">
         <rdfs:label>Instance Of</rdfs:label>
-        <rdfs:domain rdf:resource="&me;Implementation"/>
-        <rdfs:range rdf:resource="&me;Algorithm"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000302"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000301"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000322">
         <rdfs:label>Requires</rdfs:label>
-        <rdfs:domain rdf:resource="&me;Algorithm"/>
-        <rdfs:range rdf:resource="&me;DataFeature"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000301"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000318"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000323">
         <rdfs:label>Models</rdfs:label>
-        <rdfs:domain rdf:resource="&me;DescriptorAlgorithm"/>
-        <rdfs:range rdf:resource="&me;Property"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000309"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000312"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000324">
         <rdfs:label>Describes</rdfs:label>
-        <rdfs:domain rdf:resource="&me;Descriptor"/>
-        <rdfs:range rdf:resource="&me;Property"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000303"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000312"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000325">
         <rdfs:label>Value Point for</rdfs:label>
-        <rdfs:domain rdf:resource="&me;DescriptorValuePoint"/>
-        <rdfs:range rdf:resource="&me;Descriptor"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000311"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000303"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000326">
         <rdfs:label>Has Part</rdfs:label>
-        <rdfs:domain rdf:resource="&me;DescriptorValue"/>
-        <rdfs:range rdf:resource="&me;DescriptorValuePoint"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000310"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000311"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000327">
         <rdfs:label>Is Calculated by</rdfs:label>
-        <rdfs:domain rdf:resource="&me;DescriptorValue"/>
-        <rdfs:range rdf:resource="&me;DescriptorImplementation"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000310"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000320"/>
     </owl:Class>
 
 </rdf:RDF>
