@@ -199,4 +199,30 @@
         <rdfs:range rdf:resource="&resource;CHEMINF_000320"/>
     </owl:ObjectProperty>
 
+    <owl:Class rdf:about="&resource;CHEMINF_000328">
+        <rdfs:label>Parameter</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&resource;CHEMINF_000329">
+        <rdfs:label>Parameter Value</rdfs:label>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000330">
+        <rdfs:label>Has Parameter</rdfs:label>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000301"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000328"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000331">
+        <rdfs:label>Value for</rdfs:label>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000329"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000328"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000332">
+        <rdfs:label>Is Calculated with Parameter</rdfs:label>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000310"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000329"/>
+    </owl:ObjectProperty>
+
 </rdf:RDF>
