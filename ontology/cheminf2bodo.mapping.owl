@@ -125,31 +125,31 @@
         <oboInOwl:hasAlternativeId>BODO:DescriptorImplementation</oboInOwl:hasAlternativeId>
     </owl:Class>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000321">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000321">
         <oboInOwl:hasAlternativeId>BODO:instanceOf</oboInOwl:hasAlternativeId>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000322">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000322">
         <oboInOwl:hasAlternativeId>BODO:requires</oboInOwl:hasAlternativeId>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000323">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000323">
         <oboInOwl:hasAlternativeId>BODO:models</oboInOwl:hasAlternativeId>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000324">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000324">
         <oboInOwl:hasAlternativeId>BODO:describes</oboInOwl:hasAlternativeId>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000325">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000325">
         <oboInOwl:hasAlternativeId>BODO:valuePointFor</oboInOwl:hasAlternativeId>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000326">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000326">
         <oboInOwl:hasAlternativeId>BODO:hasPart</oboInOwl:hasAlternativeId>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000327">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000327">
         <oboInOwl:hasAlternativeId>BODO:isCalculatedBy</oboInOwl:hasAlternativeId>
-    </owl:Class>
+    </owl:ObjectProperty>
 </rdf:RDF>
