@@ -13,6 +13,7 @@ If you would like to join this meeting, please contact janna.hastings for detail
 
 = Historical meetings =
 
+  * 27 January 2010, [Minutes270110 Minutes], topic cheminf ontology
   * 19 January 2010, [Minutes190110 Minutes], topic cheminf ontology
   * 17 December 2009,  [Agenda17122009 Agenda], [Minutes17122009 Minutes], topic automatic classification.
   * 10 December 2009, [Teleconference10122009 Minutes], topic cheminf ontology. 
