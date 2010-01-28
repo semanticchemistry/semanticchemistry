@@ -157,46 +157,46 @@
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000302"/>
     </owl:Class>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000321">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000321">
         <rdfs:label>Instance Of</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000302"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000301"/>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000322">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000322">
         <rdfs:label>Requires</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000301"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000318"/>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000323">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000323">
         <rdfs:label>Models</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000309"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000312"/>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000324">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000324">
         <rdfs:label>Describes</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000303"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000312"/>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000325">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000325">
         <rdfs:label>Value Point for</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000311"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000303"/>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000326">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000326">
         <rdfs:label>Has Part</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000310"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000311"/>
-    </owl:Class>
+    </owl:ObjectProperty>
 
-    <owl:Class rdf:about="&resource;CHEMINF_000327">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000327">
         <rdfs:label>Is Calculated by</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000310"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000320"/>
-    </owl:Class>
+    </owl:ObjectProperty>
 
 </rdf:RDF>
