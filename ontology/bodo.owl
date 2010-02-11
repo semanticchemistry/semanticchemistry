@@ -245,4 +245,10 @@
         <rdfs:domain rdf:resource="&owl;Thing"/>
     </<owl:DatatypeProperty>
 
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000337">
+        <rdfs:label>Has Descriptor Value</rdfs:label>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000000"/>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000310"/>
+    </<owl:ObjectProperty>
+
 </rdf:RDF>
