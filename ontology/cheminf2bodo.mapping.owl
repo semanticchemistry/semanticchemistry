@@ -172,4 +172,21 @@
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000332">
         <oboInOwl:hasAlternativeId>BODO:isCalculatedWithParameter</oboInOwl:hasAlternativeId>
     </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000333">
+        <oboInOwl:hasAlternativeId>BODO:hasVendor</oboInOwl:hasAlternativeId>
+    </<owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000334">
+        <oboInOwl:hasAlternativeId>BODO:hasIdentifier</oboInOwl:hasAlternativeId>
+    </<owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000335">
+        <oboInOwl:hasAlternativeId>BODO:hasTitle</oboInOwl:hasAlternativeId>
+    </<owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000336">
+        <oboInOwl:hasAlternativeId>BODO:hasValue</oboInOwl:hasAlternativeId>
+    </<owl:DatatypeProperty>
+
 </rdf:RDF>
