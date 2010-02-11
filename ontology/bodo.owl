@@ -228,27 +228,27 @@
     <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000333">
         <rdfs:label>Has Vendor</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000302"/>
-    </<owl:DatatypeProperty>
+    </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000334">
         <rdfs:label>Has Identifier</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000302"/>
-    </<owl:DatatypeProperty>
+    </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000335">
         <rdfs:label>Has Title</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000302"/>
-    </<owl:DatatypeProperty>
+    </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000336">
         <rdfs:label>Has Value</rdfs:label>
         <rdfs:domain rdf:resource="&owl;Thing"/>
-    </<owl:DatatypeProperty>
+    </owl:DatatypeProperty>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000337">
         <rdfs:label>Has Descriptor Value</rdfs:label>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000000"/>
         <rdfs:range rdf:resource="&resource;CHEMINF_000310"/>
-    </<owl:ObjectProperty>
+    </owl:ObjectProperty>
 
 </rdf:RDF>
