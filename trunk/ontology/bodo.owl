@@ -23,8 +23,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf.owl#"
-     xml:base="http://www.semanticweb.org/ontologies/cheminf.owl"
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf-bodo.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/cheminf-bodo.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
