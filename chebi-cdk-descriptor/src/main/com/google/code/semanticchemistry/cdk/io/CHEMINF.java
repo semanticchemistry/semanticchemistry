@@ -24,27 +24,27 @@ public class CHEMINF {
     public static final Resource Descriptor = resource("CHEMINF_000303");
     public static final Resource DescriptorValue = resource("CHEMINF_000304");
     public static final Resource MolecularDescriptor = resource("CHEMINF_000305");
-//    public static final Resource DescriptorAlgorithm = resource("DescriptorAlgorithm");
-//    public static final Resource DescriptorValuePoint = resource("DescriptorValuePoint");
-//    public static final Resource DescriptorImplementation = resource("DescriptorImplementation");
-//    public static final Resource Parameter = resource("Parameter");
-//    public static final Resource ParameterValue = resource("ParameterValue");
-//
+    public static final Resource DescriptorAlgorithm = resource("CHEMINF_000309");
+    public static final Resource DescriptorValuePoint = resource("CHEMINF_000311");
+    public static final Resource DescriptorImplementation = resource("CHEMINF_000320");
+    public static final Resource Parameter = resource("CHEMINF_000328");
+    public static final Resource ParameterValue = resource("CHEMINF_000329");
+
     public static final Property isA = property("CHEMINF_000306");
     public static final Property isAModificationOf = property("CHEMINF_000307");
     public static final Property isAParameterizationOf = property("CHEMINF_000308");
-//    public static final Property instanceOf = property("instanceOf");
-//    public static final Property hasTitle = property("hasTitle");
-//    public static final Property hasVendor = property("hasVendor");
-//    public static final Property hasIdentifier = property("hasIdentifier");
-//    public static final Property hasPart = property("hasPart");
-//    public static final Property hasValue = property("hasValue");
-//    public static final Property valuePointFor = property("valuePointFor");
-//    public static final Property isCalculatedBy = property("isCalculatedBy");
-//    public static final Property isCalculatedWithParameter = property("isCalculatedWithParameter");
-//    public static final Property valueFor = property("valueFor");
-//    public static final Property hasParameter = property("hasParameter");
-//    public static final Property hasDescriptorValue = property("hasDescriptorValue");
+    public static final Property instanceOf = property("CHEMINF_000321");
+    public static final Property hasTitle = property("CHEMINF_000335");
+    public static final Property hasVendor = property("CHEMINF_000333");
+    public static final Property hasIdentifier = property("CHEMINF_000334");
+    public static final Property hasPart = property("CHEMINF_000326");
+    public static final Property hasValue = property("CHEMINF_000336");
+    public static final Property valuePointFor = property("CHEMINF_000325");
+    public static final Property isCalculatedBy = property("CHEMINF_000327");
+    public static final Property isCalculatedWithParameter = property("CHEMINF_000332");
+    public static final Property valueFor = property("CHEMINF_000331");
+    public static final Property hasParameter = property("CHEMINF_000330");
 
+    public static final Property hasDescriptorValue = property("CHEMINF_000337");
     
 }

@@ -7,7 +7,6 @@ import java.util.Map;
 
 import org.openscience.cdk.interfaces.IChemObject;
 import org.openscience.cdk.interfaces.IMolecule;
-import org.openscience.cdk.libio.jena.BODO;
 import org.openscience.cdk.libio.jena.CDK;
 import org.openscience.cdk.qsar.DescriptorSpecification;
 import org.openscience.cdk.qsar.DescriptorValue;
@@ -52,7 +51,7 @@ public class Convertor {
 
     private static void serializeQSARDescriptors(Model model,
             Resource rdfMolecule, IChemObject object) {
-        model.setNsPrefix("bodo", BODO.URI);
+        model.setNsPrefix("cheminf", CHEMINF.URI);
         Map<Object,Object> props = object.getProperties();
         Iterator<Object> keys = props.keySet().iterator();
         while (keys.hasNext()) {
@@ -63,15 +62,15 @@ public class Convertor {
                 IDescriptorResult result = value.getValue();
                 Resource rdfValue = model.createResource();
                 rdfValue.addProperty(RDF.type, CHEMINF.DescriptorValue);
-                rdfMolecule.addProperty(BODO.hasDescriptorValue, rdfValue);
+                rdfMolecule.addProperty(CHEMINF.hasDescriptorValue, rdfValue);
                 // setup up the metadata list
                 Resource rdfDescImpl = model.createResource();
                 rdfDescImpl.addProperty(
-                    RDF.type, BODO.DescriptorImplementation
+                    RDF.type, CHEMINF.DescriptorImplementation
                 );
-                rdfValue.addProperty(BODO.isCalculatedBy, rdfDescImpl);
+                rdfValue.addProperty(CHEMINF.isCalculatedBy, rdfDescImpl);
                 rdfDescImpl.addLiteral(
-                    BODO.hasVendor, specs.getImplementationVendor()
+                    CHEMINF.hasVendor, specs.getImplementationVendor()
                 );
                 rdfDescImpl.addLiteral(
                     DC.identifier, specs.getImplementationIdentifier()
@@ -84,7 +83,7 @@ public class Convertor {
                     model.createResource(specs.getSpecificationReference())
                 );
                 rdfAlgorithm.addProperty(RDF.type, CHEMINF.Algorithm);
-                rdfDescImpl.addProperty(BODO.instanceOf, rdfAlgorithm);
+                rdfDescImpl.addProperty(CHEMINF.instanceOf, rdfAlgorithm);
 
                 // add parameter setting to the metadata list
                 Object[] params = value.getParameters();
@@ -96,16 +95,16 @@ public class Convertor {
                         Object paramVal = params[i];
                         if (paramName != null && paramVal != null) {
                             Resource rdfParamValue = model.createResource();
-                            rdfParamValue.addProperty(RDF.type, BODO.ParameterValue);
+                            rdfParamValue.addProperty(RDF.type, CHEMINF.ParameterValue);
                             Resource rdfParam = model.createResource();
-                            rdfParam.addProperty(RDF.type, BODO.Parameter);
-                            rdfParamValue.addProperty(BODO.valueFor, rdfParam);
+                            rdfParam.addProperty(RDF.type, CHEMINF.Parameter);
+                            rdfParamValue.addProperty(CHEMINF.valueFor, rdfParam);
                             rdfParamValue.addLiteral(
-                                BODO.hasValue, paramVal.toString()
+                                CHEMINF.hasValue, paramVal.toString()
                             );
                             rdfParam.addProperty(RDFS.label, paramNames[i]);
                             rdfValue.addProperty(
-                                BODO.isCalculatedWithParameter, rdfParamValue
+                                CHEMINF.isCalculatedWithParameter, rdfParamValue
                             );
                         }
                     }
@@ -136,17 +135,17 @@ public class Convertor {
     private static void createDescriptorPoint(Model model, Resource rdfValue,
             String descriptorName, Object value) {
         Resource point = model.createResource();
-        point.addProperty(RDF.type, BODO.DescriptorValuePoint);
-        rdfValue.addProperty(BODO.hasPart, point);
+        point.addProperty(RDF.type, CHEMINF.DescriptorValuePoint);
+        rdfValue.addProperty(CHEMINF.hasPart, point);
         point.addLiteral(
-            BODO.hasValue, value
+            CHEMINF.hasValue, value
         );
         Resource descriptor = model.createResource();
         descriptor.addProperty(RDF.type, CHEMINF.Descriptor);
         descriptor.addLiteral(
             RDFS.label, descriptorName
         );
-        point.addProperty(BODO.valuePointFor, descriptor);
+        point.addProperty(CHEMINF.valuePointFor, descriptor);
     }
 
 }
