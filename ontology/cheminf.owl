@@ -1547,7 +1547,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_056130"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000220"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2373,9 +2373,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_056130 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000220 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_056130">
+    <owl:Class rdf:about="&resource;CHEMINF_000220">
         <rdfs:label
             >cis-trans stereochemistry specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000028"/>
@@ -2383,9 +2383,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_058624 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000221 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_058624">
+    <owl:Class rdf:about="&resource;CHEMINF_000221">
         <rdfs:label
             >information about a chemical substance</rdfs:label>
         <owl:equivalentClass>
@@ -2404,18 +2404,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_077982 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000222 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_077982">
+    <owl:Class rdf:about="&resource;CHEMINF_000222">
         <rdfs:label>volume</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_105162"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000227"/>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_078047 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000223 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_078047">
+    <owl:Class rdf:about="&resource;CHEMINF_000223">
         <rdfs:label
             >largest pi-system size descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
@@ -2434,7 +2434,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2443,9 +2443,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_081415 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000224 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_081415">
+    <owl:Class rdf:about="&resource;CHEMINF_000224">
         <rdfs:label
             >bond dissociation Gibbs energy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
@@ -2458,7 +2458,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_339666"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2467,9 +2467,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_096034 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000225 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_096034">
+    <owl:Class rdf:about="&resource;CHEMINF_000225">
         <rdfs:label
             >solvation Gibbs energy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000208"/>
@@ -2482,7 +2482,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_798852"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2491,12 +2491,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_101349 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000226 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_101349">
+    <owl:Class rdf:about="&resource;CHEMINF_000226">
         <rdfs:label
             >bond charge density descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_192819"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000231"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
@@ -2507,34 +2507,34 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_105162 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000227 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_105162">
+    <owl:Class rdf:about="&resource;CHEMINF_000227">
         <rdfs:label>3-D extent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000211"/>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_138253 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000228 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_138253">
+    <owl:Class rdf:about="&resource;CHEMINF_000228">
         <rdfs:label>refraction</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_141815 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000229 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_141815">
+    <owl:Class rdf:about="&resource;CHEMINF_000229">
         <rdfs:label
             >surface area descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_599144"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000247"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2547,9 +2547,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_165956 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000230 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_165956">
+    <owl:Class rdf:about="&resource;CHEMINF_000230">
         <rdfs:label>composition</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
         <rdfs:comment>From PATO.</rdfs:comment>
@@ -2557,9 +2557,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_192819 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000231 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_192819">
+    <owl:Class rdf:about="&resource;CHEMINF_000231">
         <rdfs:label
             >charge density descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
@@ -2572,7 +2572,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_357196"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000236"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2581,12 +2581,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_213137 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000232 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_213137">
+    <owl:Class rdf:about="&resource;CHEMINF_000232">
         <rdfs:label
             >aromatic atom count descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_857451"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000263"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
@@ -2596,7 +2596,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2611,9 +2611,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_216570 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000233 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_216570">
+    <owl:Class rdf:about="&resource;CHEMINF_000233">
         <rdfs:label
             >bond count descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
@@ -2632,7 +2632,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2641,9 +2641,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_317832 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000234 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_317832">
+    <owl:Class rdf:about="&resource;CHEMINF_000234">
         <rdfs:label
             >chemical substance descriptor</rdfs:label>
         <owl:equivalentClass>
@@ -2657,14 +2657,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_058624"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000221"/>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_339666 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000235 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_339666">
+    <owl:Class rdf:about="&resource;CHEMINF_000235">
         <rdfs:label
             >propensity to dissociate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
@@ -2672,18 +2672,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_357196 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000236 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_357196">
+    <owl:Class rdf:about="&resource;CHEMINF_000236">
         <rdfs:label>charge density</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_395659 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000237 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_395659">
+    <owl:Class rdf:about="&resource;CHEMINF_000237">
         <rdfs:label
             >bond aromaticity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000056"/>
@@ -2711,9 +2711,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_399677 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000238 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_399677">
+    <owl:Class rdf:about="&resource;CHEMINF_000238">
         <rdfs:label>meltability</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
     </owl:Class>
@@ -2732,9 +2732,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_451968 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000239 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_451968">
+    <owl:Class rdf:about="&resource;CHEMINF_000239">
         <rdfs:label
             >formation Gibbs energy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
@@ -2747,7 +2747,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_806082"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2756,16 +2756,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_468172 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000240 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_468172">
+    <owl:Class rdf:about="&resource;CHEMINF_000240">
         <rdfs:label
             >largest aliphatic chain size descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_595260"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000246"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2786,16 +2786,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_501056 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000241 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_501056">
+    <owl:Class rdf:about="&resource;CHEMINF_000241">
         <rdfs:label
             >formation enthalpy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_806082"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2810,16 +2810,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_533745 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000242 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_533745">
+    <owl:Class rdf:about="&resource;CHEMINF_000242">
         <rdfs:label
             >volume descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_077982"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000222"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2832,16 +2832,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_535048 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000243 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_535048">
+    <owl:Class rdf:about="&resource;CHEMINF_000243">
         <rdfs:label
             >aromatic bond count descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_216570"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000233"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2862,9 +2862,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_541912 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000244 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_541912">
+    <owl:Class rdf:about="&resource;CHEMINF_000244">
         <rdfs:label
             >hydrogen bond donor count</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
@@ -2877,7 +2877,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2892,9 +2892,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_586165 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000245 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_586165">
+    <owl:Class rdf:about="&resource;CHEMINF_000245">
         <rdfs:label
             >hydrogen bond acceptor count</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
@@ -2913,7 +2913,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -2922,9 +2922,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_595260 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000246 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_595260">
+    <owl:Class rdf:about="&resource;CHEMINF_000246">
         <rdfs:label
             >largest chain size descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
@@ -2937,7 +2937,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2952,18 +2952,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_599144 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000247 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_599144">
+    <owl:Class rdf:about="&resource;CHEMINF_000247">
         <rdfs:label>surface area</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_850393"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000262"/>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_610620 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000248 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_610620">
+    <owl:Class rdf:about="&resource;CHEMINF_000248">
         <rdfs:label
             >relative permittivity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
@@ -2973,16 +2973,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_613615 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000249 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_613615">
+    <owl:Class rdf:about="&resource;CHEMINF_000249">
         <rdfs:label
             >solvation entropy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000208"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_798852"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2997,16 +2997,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_636132 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000250 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_636132">
+    <owl:Class rdf:about="&resource;CHEMINF_000250">
         <rdfs:label
             >solvation enthalpy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000208"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_798852"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3021,15 +3021,15 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_638247 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000251 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_638247">
+    <owl:Class rdf:about="&resource;CHEMINF_000251">
         <rdfs:label>logP descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_798852"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3044,16 +3044,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_672821 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000252 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_672821">
+    <owl:Class rdf:about="&resource;CHEMINF_000252">
         <rdfs:label
             >bond dissociation enthalpy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_339666"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3068,16 +3068,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_706286 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000253 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_706286">
+    <owl:Class rdf:about="&resource;CHEMINF_000253">
         <rdfs:label
             >refractive index descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_138253"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000228"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3092,12 +3092,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_729566 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000254 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_729566">
+    <owl:Class rdf:about="&resource;CHEMINF_000254">
         <rdfs:label
             >rotatable bond count descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_216570"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000233"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
@@ -3113,7 +3113,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3122,25 +3122,25 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_764405 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000255 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_764405">
+    <owl:Class rdf:about="&resource;CHEMINF_000255">
         <rdfs:label>vaporizability</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_768594 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000256 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_768594">
+    <owl:Class rdf:about="&resource;CHEMINF_000256">
         <rdfs:label
             >melting point descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_399677"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000238"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3155,9 +3155,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_773418 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000257 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_773418">
+    <owl:Class rdf:about="&resource;CHEMINF_000257">
         <rdfs:label
             >boiling point descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
@@ -3170,7 +3170,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_764405"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000255"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3179,9 +3179,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_798852 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000258 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_798852">
+    <owl:Class rdf:about="&resource;CHEMINF_000258">
         <rdfs:label
             >propensity to solubilize</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
@@ -3189,9 +3189,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_806082 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000259 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_806082">
+    <owl:Class rdf:about="&resource;CHEMINF_000259">
         <rdfs:label
             >propensity to form</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
@@ -3199,16 +3199,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_827964 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000260 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_827964">
+    <owl:Class rdf:about="&resource;CHEMINF_000260">
         <rdfs:label
             >formation entropy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_806082"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3223,9 +3223,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_843454 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000261 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_843454">
+    <owl:Class rdf:about="&resource;CHEMINF_000261">
         <rdfs:label
             >relative permittivity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
@@ -3238,7 +3238,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_610620"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000248"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3247,18 +3247,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_850393 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000262 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_850393">
+    <owl:Class rdf:about="&resource;CHEMINF_000262">
         <rdfs:label>2-D extent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000211"/>
     </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_857451 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000263 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_857451">
+    <owl:Class rdf:about="&resource;CHEMINF_000263">
         <rdfs:label
             >atom count descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
@@ -3271,7 +3271,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_165956"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3286,12 +3286,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_865773 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000264 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_865773">
+    <owl:Class rdf:about="&resource;CHEMINF_000264">
         <rdfs:label
             >atomic charge density descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_192819"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000231"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
@@ -3302,9 +3302,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_996901 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000265 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_996901">
+    <owl:Class rdf:about="&resource;CHEMINF_000265">
         <rdfs:label
             >bond dissociation entropy descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
@@ -3317,7 +3317,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_339666"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
