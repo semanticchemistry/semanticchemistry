@@ -25,7 +25,7 @@
 
 
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf.owl#"
-     xml:base="http://www.semanticweb.org/ontologies/cheminf.owl"
+     xml:base="http://semanticscience.org/ontology/cheminf.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
@@ -59,12 +59,12 @@
         <dc:title rdf:datatype="&xsd;string"
             >chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <dc:contributor>Leonid Chepelev</dc:contributor>
         <rdfs:comment
             >To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
 specified URI = http://semanticscience.org/resource/
 Followed by &#39;/&#39;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
+        <dc:contributor>Leonid Chepelev</dc:contributor>
         <dc:rights
             >http://creativecommons.org/licenses/by/3.0</dc:rights>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
@@ -522,12 +522,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000024"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -580,8 +574,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >Atomic order is an atomic descriptor that specifies the ordinal position of an atom.</rdfs:comment>
+        <obo:IAO_0000115
+            >Atomic order is an atomic descriptor that specifies the ordinal position of an atom.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -721,14 +715,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000021"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000021"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -874,7 +868,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000031">
         <rdfs:label
             >molecular entity quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000086"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -1036,14 +1030,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000039"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000039"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1111,6 +1105,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
@@ -1119,12 +1119,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000030"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1160,6 +1154,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
@@ -1168,12 +1168,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000026"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1239,14 +1233,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1545,14 +1539,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1568,14 +1562,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1592,14 +1586,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000220"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000220"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -1670,6 +1664,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000086 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000086">
+        <rdfs:label
+            >chemical quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <obo:IAO_0000115
+            >A chemical quality is a quality that inheres in a molecular entity or aggregate molecular substance.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000088 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000088">
@@ -1732,14 +1738,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000091"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000091"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1829,7 +1835,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000101">
         <rdfs:label
             >chemical substance quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000086"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -1878,14 +1884,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000064"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000106"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000103"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000106"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000103"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2014,14 +2020,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000038"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000038"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2118,6 +2124,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >The formal charge gives the charge assigned to an atom in a molecule, assuming that electrons in a chemical bond are shared equally between atoms, regardless of relative electronegativity.
+The formal charge of any atom in a molecule can be calculated by the following equation: FC = number of valence electrons of the atom in isolation (atom in ground state) - number of non-bonding electrons on this atom in the molecule - half the total number of electrons shared in covalent bonds with other atoms in the molecule. [source:wikipedia]</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2134,6 +2143,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >A partial charge descriptor gives the charge with an absolute value of less than one elementary charge unit (that is, smaller than the charge of the electron). [source:wikipedia]</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2169,14 +2180,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000121"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000121"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2200,14 +2211,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&snap;SpecificallyDependentContinuant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&snap;SpecificallyDependentContinuant"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2287,14 +2298,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2356,6 +2367,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000133">
         <rdfs:label>sp hybridized</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000091"/>
+        <obo:IAO_0000115
+            >The quality of an atom in which the 2s orbital mixes with only one of the three p-orbitals resulting in two sp orbitals and two remaining unchanged p orbitals. sp&#8211;sp overlap between two atoms form a &#963; bond and two additional &#960; bonds formed by p&#8211;p overlap.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2516,12 +2529,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
@@ -2530,6 +2537,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2546,18 +2559,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >Bond dissociation Gibbs energy descriptor captures the Gibbs energy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >Bond dissociation Gibbs energy descriptor captures the Gibbs energy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2580,8 +2593,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >The molecular entity solvation Gibbs energy descriptor reflects the Gibbs energy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</rdfs:comment>
+        <obo:IAO_0000115
+            >The molecular entity solvation Gibbs energy descriptor reflects the Gibbs energy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2667,14 +2680,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000236"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000236"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2697,14 +2710,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2721,12 +2734,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
@@ -2735,6 +2742,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2803,18 +2816,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >A bond aromaticity descriptor is an aromaticity descriptor associated with a bond within a chemical entity which indicates whether that  bond belongs to an aromatic system.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >A bond aromaticity descriptor is an aromaticity descriptor associated with a bond within a chemical entity which indicates whether that  bond belongs to an aromatic system.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2838,18 +2851,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >The formation Gibbs energy descriptor captures the Gibbs energy associated with the formation of a molecular entity, relative to the standard state of constituent atoms. This can be measured, calculated in vacuo, or calculated with respect to a specific solvent, at a particular temperature and pressure. When calculated, the formation Gibbs energy value depends on the molecular conformation.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >The formation Gibbs energy descriptor captures the Gibbs energy associated with the formation of a molecular entity, relative to the standard state of constituent atoms. This can be measured, calculated in vacuo, or calculated with respect to a specific solvent, at a particular temperature and pressure. When calculated, the formation Gibbs energy value depends on the molecular conformation.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2862,6 +2875,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000246"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
@@ -2872,14 +2891,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115
-            >A descriptor useful in QSAR that reflects the integer length (number of atoms) in the largest unbranched chain of atoms that does not contain aromatic atoms, within a given molecular entity.</obo:IAO_0000115>
+            >The largest aliphatic chain size descriptor is a count descriptor that gives the integer length (number of atoms) in the largest unbranched chain of atoms that does not contain aromatic atoms, within a given molecular entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2902,8 +2915,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >Molecular entity formation enthaply descriptor captures the enthalpy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</rdfs:comment>
+        <obo:IAO_0000115
+            >Molecular entity formation enthaply descriptor captures the enthalpy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2940,6 +2953,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000233"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
@@ -2948,12 +2967,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3006,14 +3019,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3036,18 +3049,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115
-            >A descriptor useful in QSAR that reflects the integer length (number of atoms) in the largest chain in a molecular entity.</obo:IAO_0000115>
+            >The largest chain size descriptor is a count descriptor that gives the integer length (number of atoms) in the largest chain in a molecular entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3091,8 +3104,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >The molecular entity solvation entropy descriptor reflects the entropy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</rdfs:comment>
+        <obo:IAO_0000115
+            >The molecular entity solvation entropy descriptor reflects the entropy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3105,18 +3118,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000208"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >The molecular entity solvation enthalpy descriptor reflects the enthalpy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >The molecular entity solvation enthalpy descriptor reflects the enthalpy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3128,14 +3141,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3162,8 +3175,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >Bond dissociation enthalpy descriptor captures the enthalpy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</rdfs:comment>
+        <obo:IAO_0000115
+            >Bond dissociation enthalpy descriptor captures the enthalpy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3206,14 +3219,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3265,14 +3278,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000255"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000255"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3311,18 +3324,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >Molecular entity formaiton entropy descriptor captures the entropy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >Molecular entity formaiton entropy descriptor captures the entropy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3370,6 +3383,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
@@ -3378,12 +3397,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3426,8 +3439,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment
-            >Bond dissociation entropy descriptor captures the entropy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</rdfs:comment>
+        <obo:IAO_0000115
+            >Bond dissociation entropy descriptor captures the entropy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</obo:IAO_0000115>
     </owl:Class>
     
 
