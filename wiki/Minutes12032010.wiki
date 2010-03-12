@@ -10,7 +10,9 @@ Michel, Egon, Leo, Janna
 = Agenda =
 
 1. ontology - OBO
+
 2. algorithms
+
 3. annotated data
 
 = Minutes =
