@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.Map;
 
 import org.openscience.cdk.annotations.TestMethod;
 import org.openscience.cdk.exception.CDKException;
@@ -14,6 +15,7 @@ import org.openscience.cdk.interfaces.IMolecule;
 import org.openscience.cdk.io.DefaultChemObjectWriter;
 import org.openscience.cdk.io.formats.CDKOWLFormat;
 import org.openscience.cdk.io.formats.IResourceFormat;
+import org.openscience.cdk.qsar.DescriptorSpecification;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
@@ -23,9 +25,11 @@ import com.hp.hpl.jena.rdf.model.Model;
 public class ChemInfOWLWriter extends DefaultChemObjectWriter {
 
     private Writer output;
+    private Map<DescriptorSpecification, String> specs;
 
-    public ChemInfOWLWriter(Writer output) {
+    public ChemInfOWLWriter(Writer output, Map<DescriptorSpecification, String> specs) {
         this.output = output;
+        this.specs = specs;
     }
 
     public ChemInfOWLWriter() {
@@ -76,7 +80,7 @@ public class ChemInfOWLWriter extends DefaultChemObjectWriter {
     }
 
     private void writeMolecule(IMolecule mol) {
-        Model model = Convertor.molecule2Model(mol);
+        Model model = Convertor.molecule2Model(mol, specs);
         model.write(output, "N3");
     }
 
