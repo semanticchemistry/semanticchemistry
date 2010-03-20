@@ -24,13 +24,13 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 
 public class Convertor {
 
-    public static Model molecule2Model(IMolecule molecule) {
+    public static Model molecule2Model(IMolecule molecule, Map<DescriptorSpecification, String> specs) {
         Model model = createCDKModel();
         Resource subject = model.createResource(
             createIdentifier(model, molecule)
         );
         model.add(subject, RDF.type, CDK.Molecule);
-        serializeQSARDescriptors(model, subject, molecule);
+        serializeQSARDescriptors(model, subject, molecule, specs);
         return model;
     }
 
@@ -50,7 +50,8 @@ public class Convertor {
     }
 
     private static void serializeQSARDescriptors(Model model,
-            Resource rdfMolecule, IChemObject object) {
+            Resource rdfMolecule, IChemObject object,
+            Map<DescriptorSpecification, String> allSpecs) {
         model.setNsPrefix("cheminf", CHEMINF.URI);
         Map<Object,Object> props = object.getProperties();
         Iterator<Object> keys = props.keySet().iterator();
@@ -64,26 +65,10 @@ public class Convertor {
                 rdfValue.addProperty(RDF.type, CHEMINF.DescriptorValue);
                 rdfMolecule.addProperty(CHEMINF.hasDescriptorValue, rdfValue);
                 // setup up the metadata list
-                Resource rdfDescImpl = model.createResource();
-                rdfDescImpl.addProperty(
-                    RDF.type, CHEMINF.DescriptorImplementation
+                rdfValue.addProperty(
+                    CHEMINF.isCalculatedBy, 
+                    model.createResource(allSpecs.get(specs.getImplementationTitle()))
                 );
-                rdfValue.addProperty(CHEMINF.isCalculatedBy, rdfDescImpl);
-                rdfDescImpl.addLiteral(
-                    CHEMINF.hasVendor, specs.getImplementationVendor()
-                );
-                rdfDescImpl.addLiteral(
-                    DC.identifier, specs.getImplementationIdentifier()
-                );
-                rdfDescImpl.addLiteral(
-                    DC.title, specs.getImplementationTitle()
-                );
-                Resource rdfAlgorithm = model.createResource();
-                rdfAlgorithm.addProperty(OWL.sameAs,
-                    model.createResource(specs.getSpecificationReference())
-                );
-                rdfAlgorithm.addProperty(RDF.type, CHEMINF.Algorithm);
-                rdfDescImpl.addProperty(CHEMINF.instanceOf, rdfAlgorithm);
 
                 // add parameter setting to the metadata list
                 Object[] params = value.getParameters();
