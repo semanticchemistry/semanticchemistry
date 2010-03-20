@@ -65,6 +65,7 @@
 
     <owl:Class rdf:about="&resource;CHEMINF_000302">
         <rdfs:label>Implementation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000115"/>
     </owl:Class>
 
     <owl:Class rdf:about="&resource;CHEMINF_000303">
