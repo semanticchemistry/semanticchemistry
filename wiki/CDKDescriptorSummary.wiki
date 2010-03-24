@@ -176,7 +176,67 @@ We would like to verify that we have full coverage of the descriptors calculated
 
 = RDKit =
 
-TBD
+Gasteiger/Marsili Partial Charges
+
+BalabanJ
+
+BertzCT
+
+Ipc
+
+HallKierAlpha
+
+Kappa1 - Kappa 3
+
+Chi0
+
+Chi1
+
+Chi0n-Chi4n
+
+Chi0v-Chi4v
+
+MolLogP
+
+MolMR
+
+MolWt
+
+HeavyAtomCount
+
+HeavyAtomMolWt
+
+NHOHCount
+
+NOCount
+
+NumHAcceptors
+
+NumHDonors
+
+NumHeteroatoms
+
+NumRotatableBonds
+
+NumValenceElectrons
+
+RingCount
+
+TPSA
+
+LabuteASA
+
+PEOE_VSA1 - PEOE_VSA14
+
+SMR_VSA1 - SMR_VSA10
+
+SlogP_VSA1 - SlogP_VSA12
+
+EState_VSA1 - EState_VSA11
+
+VSA_EState1 - VSA_EState10
+
+
 
 = OEChem =
 
