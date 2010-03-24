@@ -164,6 +164,15 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000145 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000145">
+        <rdfs:label>has output</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000200 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000200">
@@ -1938,7 +1947,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2578,7 +2587,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
             </owl:Restriction>
         </rdfs:subClassOf>
