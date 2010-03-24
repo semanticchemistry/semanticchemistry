@@ -176,7 +176,6 @@ We would like to verify that we have full coverage of the descriptors calculated
 
 = RDKit =
 
-
 	Gasteiger/Marsili Partial Charges
 	
 	BalabanJ
