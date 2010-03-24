@@ -1003,7 +1003,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000042">
         <rdfs:label
             >molecular formula</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
@@ -2435,6 +2435,16 @@ The formal charge of any atom in a molecule can be calculated by the following e
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000136 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000136">
+        <rdfs:label
+            >constitutional descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000137 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000137">
@@ -2492,7 +2502,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000209">
         <rdfs:label
             >count descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <obo:IAO_0000115
             >A count descriptor is a chemical descriptor which is calculated by counting the number of features of a certain kind which are present in the chemical entity.</obo:IAO_0000115>
     </owl:Class>
