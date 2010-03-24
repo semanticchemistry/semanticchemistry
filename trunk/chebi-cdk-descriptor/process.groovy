@@ -9,6 +9,8 @@ import org.openscience.cdk.tools.manipulator.*;
 
 import com.google.code.semanticchemistry.cdk.io.ChemInfOWLWriter;
 
+demo = true;
+
 public String zeroPad(int intVal) {
   StringBuffer buffer = new StringBuffer();
   String value = "" + intVal;
@@ -22,9 +24,15 @@ public String zeroPad(int intVal) {
 CDK_VERSION = "1.3.1";
 
 println "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.";
+println "@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .";
+println "@prefix owl:     <http://www.w3.org/2002/07/owl#> .";
+println "@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .";
+println "";
 println "@prefix obo: <http://purl.obolibrary.org/obo/>.";
-println "@prefix ci: <http://www.semanticweb.org/ontologies/cheminf.owl#>.";
+println "@prefix cheminf: <http://www.semanticweb.org/ontologies/cheminf.owl#>.";
+println "@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .";
 println "@prefix : <http://cdk.sf.net/org/openscience/cdk/qsar/>.";
+println "@prefix cdk:     <http://cdk.sourceforge.net/model.owl#> .";
 println "";
 println ":cdk-v" + CDK_VERSION + " a obo:IAO_0000010 ;";
 println "  ci:CHEMINF_000333 \"The Chemistry Development Kit\" ;";
@@ -33,11 +41,13 @@ println "";
 
 List<IMolecularDescriptor> descriptors = new ArrayList();
 descriptors.add(new TPSADescriptor());
-descriptors.add(new BCUTDescriptor());
-descriptors.add(new XLogPDescriptor());
-descriptors.add(new HBondAcceptorCountDescriptor());
-descriptors.add(new HBondDonorCountDescriptor());
-descriptors.add(new RotatableBondsCountDescriptor());
+if (!demo) {
+  descriptors.add(new BCUTDescriptor());
+  descriptors.add(new XLogPDescriptor());
+  descriptors.add(new HBondAcceptorCountDescriptor());
+  descriptors.add(new HBondDonorCountDescriptor());
+  descriptors.add(new RotatableBondsCountDescriptor());
+}
 
 i = 0
 Map<String, String> specs = new HashMap();
@@ -51,7 +61,7 @@ for (IMolecularDescriptor descriptor : descriptors) {
     spec.getImplementationTitle().substring(47) + 
     " Implementation\" ;"
   );
-  System.out.println("  ci:CHEMINF_000321 <" + spec.getSpecificationReference() + "> ;");
+  System.out.println("  cheminf:CHEMINF_000321 <" + spec.getSpecificationReference() + "> ;");
   System.out.println("  :distributedWith :cdk-v" + CDK_VERSION + " .");
 }
 println "";
@@ -74,12 +84,13 @@ iterator.each { mol ->
       writer.write(mol);
 
       String outputString = output.toString();
-      System.out.println(outputString);
+      outputString.eachLine { line ->
+        if (!line.contains("@prefix"))
+          System.out.println(line);      
+      }
     } catch (Exception exception) {
       System.err.println "\nFailed to convert to RDF: " + mol.getProperty("ChEBI ID");
     }
   }
-  if (i == 1) {
-    System.exit(0);
-  }
+  if (demo) System.exit(0);
 }
