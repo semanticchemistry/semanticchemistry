@@ -9,7 +9,7 @@ import com.hp.hpl.jena.rdf.model.ResourceFactory;
 public class CHEMINF {
 
     public static final String URI =
-        "http://semanticscience.org/resource/";
+        "http://www.semanticweb.org/ontologies/cheminf.owl#";
 
     private static final Resource resource(String local) {
         return ResourceFactory.createResource(URI + local);
