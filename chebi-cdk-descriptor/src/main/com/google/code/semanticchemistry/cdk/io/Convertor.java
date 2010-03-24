@@ -17,7 +17,6 @@ import org.openscience.cdk.qsar.result.IntegerArrayResult;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.vocabulary.DC;
 import com.hp.hpl.jena.vocabulary.OWL;
 import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.RDFS;
@@ -30,6 +29,20 @@ public class Convertor {
             createIdentifier(model, molecule)
         );
         model.add(subject, RDF.type, CDK.Molecule);
+        if (molecule.getProperty("InChI") != null)
+            model.add(subject, OWL.sameAs,
+                model.createResource(
+                    "http://rdf.openmolecules.net/?" +
+                    molecule.getProperty("InChI")
+                )
+            );
+        if (molecule.getProperty("ChEBI ID") != null)
+            model.add(subject, OWL.sameAs,
+                model.createResource(
+                    "http://bio2rdf.org/" +
+                    ((String)molecule.getProperty("ChEBI ID")).toLowerCase()
+                )
+            );
         serializeQSARDescriptors(model, subject, molecule, specs);
         return model;
     }
