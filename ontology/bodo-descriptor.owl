@@ -11,7 +11,7 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY chemoinformatics-algorithms "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#" >
 ]>
-
+ 
 
 <rdf:RDF xmlns="http://semanticscience.org/ontology/bodo.owl#"
      xml:base="http://semanticscience.org/ontology/bodo.owl"

@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
+
+
 <!DOCTYPE rdf:RDF [
     <!ENTITY UO "http://purl.org/obo/owl/UO#" >
     <!ENTITY purl "http://purl.obofoundry.org/" >
@@ -19,17 +21,18 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
-    <!ENTITY bodo "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#" >
+    <!ENTITY chemoinformatics-algorithms "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf.owl#"
-     xml:base="http://www.semanticweb.org/ontologies/cheminf.owl"
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf2bodo.mapping.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/cheminf2bodo.mapping.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:UO="http://purl.org/obo/owl/UO#"
+     xmlns:chemoinformatics-algorithms="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
@@ -44,149 +47,136 @@
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/bodo.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
+    </owl:Ontology>
+    
 
-    <owl:Class rdf:about="&resource;CHEMINF_000301">
-        <oboInOwl:hasAlternativeId>BODO:Algorithm</oboInOwl:hasAlternativeId>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000017 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000017"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000046 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000046"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000087 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000087"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000092 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000092"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000093 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000093"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000123 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000123"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000136 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000136"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000137 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000137"/>
+    
+
+
+    <!-- http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor -->
+
+    <owl:Class rdf:about="&chemoinformatics-algorithms;AtomicDescriptor">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000046"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="&resource;CHEMINF_000302">
-        <oboInOwl:hasAlternativeId>BODO:Implementation</oboInOwl:hasAlternativeId>
+
+    <!-- http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#BondDescriptor -->
+
+    <owl:Class rdf:about="&chemoinformatics-algorithms;BondDescriptor">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000137"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="&resource;CHEMINF_000303">
-        <oboInOwl:hasAlternativeId>BODO:Descriptor</oboInOwl:hasAlternativeId>
+
+    <!-- http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#MolecularDescriptor -->
+
+    <owl:Class rdf:about="&chemoinformatics-algorithms;MolecularDescriptor">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000017"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="&resource;CHEMINF_000304">
-        <oboInOwl:hasAlternativeId>BODO:DescriptorValue</oboInOwl:hasAlternativeId>
+
+    <!-- http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#constitutionalDescriptor -->
+
+    <owl:Class rdf:about="&chemoinformatics-algorithms;constitutionalDescriptor">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="&resource;CHEMINF_000305">
-        <oboInOwl:hasAlternativeId>BODO:MolecularDescriptor</oboInOwl:hasAlternativeId>
+
+    <!-- http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#electronicDescriptor -->
+
+    <owl:Class rdf:about="&chemoinformatics-algorithms;electronicDescriptor">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
     </owl:Class>
+    
 
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000306">
-        <oboInOwl:hasAlternativeId>BODO:isA</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000307">
-        <oboInOwl:hasAlternativeId>BODO:isAModificationOf</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
+    <!-- http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#geometricalDescriptor -->
 
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000308">
-        <oboInOwl:hasAlternativeId>BODO:isAParameterizationOf</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000309">
-        <oboInOwl:hasAlternativeId>BODO:DescriptorAlgoritm</oboInOwl:hasAlternativeId>
+    <owl:Class rdf:about="&chemoinformatics-algorithms;geometricalDescriptor">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="&resource;CHEMINF_000310">
-        <oboInOwl:hasAlternativeId>BODO:DescriptorValue</oboInOwl:hasAlternativeId>
+
+    <!-- http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#hybridDescriptor -->
+
+    <owl:Class rdf:about="&chemoinformatics-algorithms;hybridDescriptor">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="&resource;CHEMINF_000311">
-        <oboInOwl:hasAlternativeId>BODO:DescriptorValuePoint</oboInOwl:hasAlternativeId>
+
+    <!-- http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#topologicalDescriptor -->
+
+    <owl:Class rdf:about="&chemoinformatics-algorithms;topologicalDescriptor">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
     </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000312">
-        <oboInOwl:hasAlternativeId>BODO:Property</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000313">
-        <oboInOwl:hasAlternativeId>BODO:PhysicalProperty</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000314">
-        <oboInOwl:hasAlternativeId>BODO:ComputationalProperty</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000315">
-        <oboInOwl:hasAlternativeId>BODO:AtomicDescriptor</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000316">
-        <oboInOwl:hasAlternativeId>BODO:BondDescriptor</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000317">
-        <oboInOwl:hasAlternativeId>BODO:ProteinDescriptor</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000318">
-        <oboInOwl:hasAlternativeId>BODO:DataFeature</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000319">
-        <oboInOwl:hasAlternativeId>BODO:DataRepresentation</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000320">
-        <oboInOwl:hasAlternativeId>BODO:DescriptorImplementation</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000321">
-        <oboInOwl:hasAlternativeId>BODO:instanceOf</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000322">
-        <oboInOwl:hasAlternativeId>BODO:requires</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000323">
-        <oboInOwl:hasAlternativeId>BODO:models</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000324">
-        <oboInOwl:hasAlternativeId>BODO:describes</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000325">
-        <oboInOwl:hasAlternativeId>BODO:valuePointFor</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000326">
-        <oboInOwl:hasAlternativeId>BODO:hasPart</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000327">
-        <oboInOwl:hasAlternativeId>BODO:isCalculatedBy</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000328">
-        <oboInOwl:hasAlternativeId>BODO:Parameter</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:Class rdf:about="&resource;CHEMINF_000329">
-        <oboInOwl:hasAlternativeId>BODO:ParameterValue</oboInOwl:hasAlternativeId>
-    </owl:Class>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000330">
-        <oboInOwl:hasAlternativeId>BODO:hasParameter</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000331">
-        <oboInOwl:hasAlternativeId>BODO:valueFor</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000332">
-        <oboInOwl:hasAlternativeId>BODO:isCalculatedWithParameter</oboInOwl:hasAlternativeId>
-    </owl:ObjectProperty>
-
-    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000333">
-        <oboInOwl:hasAlternativeId>BODO:hasVendor</oboInOwl:hasAlternativeId>
-    </<owl:DatatypeProperty>
-
-    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000334">
-        <oboInOwl:hasAlternativeId>BODO:hasIdentifier</oboInOwl:hasAlternativeId>
-    </<owl:DatatypeProperty>
-
-    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000335">
-        <oboInOwl:hasAlternativeId>BODO:hasTitle</oboInOwl:hasAlternativeId>
-    </<owl:DatatypeProperty>
-
-    <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000336">
-        <oboInOwl:hasAlternativeId>BODO:hasValue</oboInOwl:hasAlternativeId>
-    </<owl:DatatypeProperty>
-
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

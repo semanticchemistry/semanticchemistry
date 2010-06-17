@@ -89,6 +89,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
 
     <owl:ObjectProperty rdf:about="&obo;IAO_0000136">
+        <rdfs:label>is about</rdfs:label>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000202"/>
     </owl:ObjectProperty>
     
@@ -451,14 +452,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000041"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -564,14 +565,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000020"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000020"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -879,14 +880,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -978,6 +979,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
@@ -986,12 +993,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000030"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1106,14 +1107,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1402,14 +1403,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1425,14 +1426,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1449,14 +1450,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000220"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000220"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -1777,14 +1778,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             >software module to calculate a chemical descriptor</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000144"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000144"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -1801,14 +1802,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000064"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000106"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000103"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000106"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000103"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2202,14 +2203,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2226,14 +2227,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000120"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000120"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2250,14 +2251,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&PATO;PATO_0000122"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&PATO;PATO_0000122"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2458,12 +2459,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
@@ -2472,6 +2467,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2575,14 +2576,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000247"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000247"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2609,14 +2610,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000236"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000236"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2633,6 +2634,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000263"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
@@ -2641,12 +2648,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2663,12 +2664,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
@@ -2677,6 +2672,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2745,14 +2746,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;boolean"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2804,8 +2805,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000246"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2816,8 +2817,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2834,14 +2835,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2858,14 +2859,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000222"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000222"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2882,8 +2883,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000233"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2894,8 +2895,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -2912,14 +2913,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2942,14 +2943,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3023,14 +3024,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000208"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3070,14 +3071,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3094,14 +3095,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3118,14 +3119,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000228"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000228"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3142,6 +3143,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000233"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
@@ -3150,12 +3157,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -3183,14 +3184,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000238"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_440533"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000238"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment
@@ -3312,8 +3313,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3324,8 +3325,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
