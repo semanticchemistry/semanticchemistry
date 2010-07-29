@@ -1,0 +1,17 @@
+id	CHEMINF
+title	Chemical Information Ontology
+namespace	CHEMINF
+foundry	NO
+status	Production and review
+download	http://semanticchemistry.googlecode.com/svn/trunk/ontology/cheminf.owl
+source	
+home	Chemical Information Ontology|http://code.google.com/p/semanticchemistry/
+documentation	
+contact	Michel Dumontier	michel.dumontier	gmail.com
+format	OWL
+description	The Chemical Information Ontology (CHEMINF) aims to establish a standard in representing chemical information. In particular, it aims to produce an ontology to represent chemical structure and to richly describe chemical properties, whether intrinsic or computed.
+domain	Chemistry
+subtypes_of	
+patho_type	
+granularity	
+relevant_organism	
