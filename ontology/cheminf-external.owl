@@ -2186,8 +2186,6 @@ information entity by planning protocol applications included in an overall stud
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <owl:disjointWith rdf:resource="&snap;Object"/>
         <owl:disjointWith rdf:resource="&snap;ObjectAggregate"/>
-        <owl:disjointWith rdf:resource="&snap;ObjectBoundary"/>
-        <owl:disjointWith rdf:resource="&snap;Site"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A material entity [snap:MaterialEntity] that is part of an object [snap:Object] but is not demarcated by any physical discontinuities.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -2283,8 +2281,6 @@ information entity by planning protocol applications included in an overall stud
         <rdfs:label rdf:datatype="&xsd;string">object</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <owl:disjointWith rdf:resource="&snap;ObjectAggregate"/>
-        <owl:disjointWith rdf:resource="&snap;ObjectBoundary"/>
-        <owl:disjointWith rdf:resource="&snap;Site"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A material entity [snap:MaterialEntity] that is spatially extended, maximally self-connected and self-contained (the parts of a substance are not separated from each other by spatial gaps) and possesses an internal unity. The identity of substantial object [snap:Object] entities is independent of that of other entities and can be maintained through time.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
@@ -2301,8 +2297,6 @@ information entity by planning protocol applications included in an overall stud
         <rdfs:label rdf:datatype="&xsd;string"
             >object_aggregate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <owl:disjointWith rdf:resource="&snap;ObjectBoundary"/>
-        <owl:disjointWith rdf:resource="&snap;Site"/>
         <rdfs:comment rdf:datatype="&xsd;string"
             >Definition: A material entity [snap:MaterialEntity] that is a mereological sum of separate object [snap:Object] entities and possesses non-connected boundaries.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string"
