@@ -1818,24 +1818,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000103 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_000103">
-        <rdfs:label
-            >software module to calculate a chemical descriptor</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000144"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115
-            >A software module to calculate a chemical descriptor is software module that implements an algorithm which calculates a descriptor value for a chemical entity.</obo:IAO_0000115>
-    </owl:Class>
+    <owl:Class rdf:about="&resource;CHEMINF_000103"/>
     
 
 
@@ -2396,12 +2379,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000144">
         <rdfs:label
             >algorithm to calculate a chemical descriptor</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
