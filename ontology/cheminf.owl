@@ -145,7 +145,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000106">
-        <rdfs:label>is output of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
     </owl:ObjectProperty>
     
@@ -546,21 +545,29 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000103">
         <rdfs:label
             >software module to calculate a chemical descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000140"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000144"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000540"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000144"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115
             >A software module to calculate a chemical descriptor is software module that implements an algorithm which calculates a descriptor value for a chemical entity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000106">
+        <rdfs:label>is output of</rdfs:label>
     </owl:Class>
     
 
@@ -574,8 +581,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000033"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -586,8 +593,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000033"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -603,65 +610,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >programming language implementation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000010"/>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000140 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000140">
-        <rdfs:label>software module</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <obo:IAO_0000115
-            >A software module is a collection of software methods.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000141 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000141">
-        <rdfs:label>software method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <obo:IAO_0000115
-            >A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000142 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000142">
-        <rdfs:label
-            >software library</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_part"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&resource;CHEMINF_000140"/>
-                            <rdf:Description rdf:about="&resource;CHEMINF_000141"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115
-            >A software library is a collection of programming language mplementations (e.g. modules, methods) capable of realizing some objective specification when linked to a application software.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000143 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000143">
-        <rdfs:label
-            >software application</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <obo:IAO_0000115
-            >A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -690,6 +638,65 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
         <obo:IAO_0000115
             >A chemical disposition is a disposition which inheres in a chemical entity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000540 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000540">
+        <rdfs:label>software module</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <obo:IAO_0000115
+            >A software module is a collection of software methods.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000541 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000541">
+        <rdfs:label>software method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <obo:IAO_0000115
+            >A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000542 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000542">
+        <rdfs:label
+            >software library</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000540"/>
+                            <rdf:Description rdf:about="&resource;CHEMINF_000541"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115
+            >A software library is a collection of programming language mplementations (e.g. modules, methods) capable of realizing some objective specification when linked to a application software.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000543 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000543">
+        <rdfs:label
+            >software application</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <obo:IAO_0000115
+            >A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</obo:IAO_0000115>
     </owl:Class>
     
 
