@@ -134,9 +134,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000047 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000047">
+        <rdfs:label
+            >is implemented by</rdfs:label>
         <rdfs:label>implements</rdfs:label>
-        <rdfs:range rdf:resource="&obo;IAO_0000033"/>
-        <owl:inverseOf rdf:resource="&resource;CHEMINF_000146"/>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000047"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
     </owl:ObjectProperty>
     
@@ -150,21 +151,33 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000145 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000142 -->
 
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000145">
-        <rdfs:label>has output</rdfs:label>
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000142">
+        <rdfs:label>has descriptor</rdfs:label>
+        <rdfs:range rdf:resource="&resource;CHEMINF_000123"/>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000143"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000146 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000143 -->
 
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000146">
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000143">
         <rdfs:label
-            >is implemented by</rdfs:label>
+            >is descriptor of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
+        <rdfs:range rdf:resource="&snap;SpecificallyDependentContinuant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000145 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000145">
+        <rdfs:label>has output</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
     </owl:ObjectProperty>
     
 
@@ -187,44 +200,11 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000200 -->
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000200">
-        <rdfs:label
-            >is descriptor of</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
-        <rdfs:range rdf:resource="&snap;SpecificallyDependentContinuant"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000201 -->
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000201">
-        <rdfs:label>has descriptor</rdfs:label>
-        <rdfs:range rdf:resource="&resource;CHEMINF_000123"/>
-        <owl:inverseOf rdf:resource="&resource;CHEMINF_000200"/>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://semanticscience.org/resource/CHEMINF_000202 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000202">
         <rdfs:label>is subject of</rdfs:label>
         <rdfs:range rdf:resource="&obo;IAO_0000030"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000203 -->
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000203">
-        <rdfs:label
-            >is specification of</rdfs:label>
-        <rdfs:domain rdf:resource="&obo;IAO_0000033"/>
-        <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
     </owl:ObjectProperty>
     
 
@@ -238,6 +218,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://www.obofoundry.org/ro/ro.owl#has_agent -->
+
+    <owl:ObjectProperty rdf:about="&ro;has_agent"/>
+    
+
+
     <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
 
     <owl:ObjectProperty rdf:about="&ro;has_part"/>
@@ -247,12 +233,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://www.obofoundry.org/ro/ro.owl#has_participant -->
 
     <owl:ObjectProperty rdf:about="&ro;has_participant"/>
-    
-
-
-    <!-- http://www.obofoundry.org/ro/ro.owl#has_proper_part -->
-
-    <owl:ObjectProperty rdf:about="&ro;has_proper_part"/>
     
 
 
@@ -349,12 +329,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000033 -->
-
-    <owl:Class rdf:about="&obo;IAO_0000033"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000064 -->
 
     <owl:Class rdf:about="&obo;IAO_0000064">
@@ -366,12 +340,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/IAO_0000098 -->
 
     <owl:Class rdf:about="&obo;IAO_0000098"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
-
-    <owl:Class rdf:about="&obo;IAO_0000100"/>
     
 
 
@@ -394,21 +362,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000403 -->
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
 
-    <owl:Class rdf:about="&obo;IAO_0000403"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000066 -->
-
-    <owl:Class rdf:about="&obo;OBI_0000066"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0400002 -->
-
-    <owl:Class rdf:about="&obo;OBI_0400002"/>
+    <owl:Class rdf:about="&obo;OBI_0000011"/>
     
 
 
@@ -419,56 +375,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000115
             >A chemical entity is any molecular entity or chemical substance.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000003 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000003">
-        <rdfs:label
-            >three dimensional structure determination</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000066"/>
-        <obo:IAO_0000115
-            >An investigation the objective of which is to determine the three-dimensional structure of a chemical entity.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000004 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000004">
-        <rdfs:label
-            >three dimensional structure coordinate set</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000100"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_proper_part"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000403"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment
-            >A three dimensional structure coordinate set is a set of three dimensional coordinates for specifying the positions, in a three dimensional coordinate space, which can be used to specify the positions of the atoms which belong to a chemical entity in a molecular structure specification.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000008 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000008">
-        <rdfs:label
-            >X-Ray Diffraction instrument</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0400002"/>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000011 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000011">
-        <rdfs:label
-            >mean atomic 3d position</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000403"/>
     </owl:Class>
     
 
@@ -485,25 +391,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000015 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000017 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_000015">
-        <rdfs:label
-            >information about a chemical entity</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+    <owl:Class rdf:about="&resource;CHEMINF_000017">
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <rdfs:comment
-            >An information content entity which is about a chemical entity.</rdfs:comment>
     </owl:Class>
     
 
@@ -520,10 +411,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000058 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000058">
-        <rdfs:label>MOLfile</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000057"/>
-        <obo:IAO_0000115
-            >A MOLfile is a file which contains a MOLfile encoding of a chemical structure representation. It is the concretization of a MOLfile descriptor.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -548,14 +436,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000140"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000144"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000144"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
@@ -587,19 +475,27 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000200"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
                 <owl:someValuesFrom rdf:resource="&snap;SpecificallyDependentContinuant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000033"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115
             >A chemical descriptor is a data item which conforms to some specification, either for how it is calculated or for how it is measured, and is commonly used in the domain of chemistry to name and differentiate different numeric properties (both calculated and measured) which are about chemical entities.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>BODO:Descriptor</oboInOwl:hasAlternativeId>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000138 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000138">
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000143"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -683,6 +579,19 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000123"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000147 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000147">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>

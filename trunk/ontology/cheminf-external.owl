@@ -264,14 +264,6 @@ there is a measurement process p that has specified output m, a measurement datu
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000200 -->
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000200">
-        <rdfs:domain rdf:resource="&resource;CHEMINF_000123"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.obofoundry.org/ro/ro.owl#adjacent_to -->
 
     <owl:ObjectProperty rdf:about="&ro;adjacent_to">
@@ -1216,7 +1208,7 @@ concretized and realized by an actor&quot; with alternative term  &quot;instruct
     <owl:Class rdf:about="&obo;IAO_0000096">
         <rdfs:label xml:lang="en"
             >source code module</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000033"/>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000104"/>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI_0000039</obo:IAO_0000119>
         <obo:IAO_0000114 rdf:datatype="&xsd;anyURI"
             >http://purl.obolibrary.org/obo/IAO_0000124</obo:IAO_0000114>
@@ -1318,13 +1310,13 @@ What is the result of one FACS experiment?</obo:IAO_0000116>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;has_part"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000005"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;has_part"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000007"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116 rdf:datatype="&xsd;string"
@@ -1841,14 +1833,14 @@ GO   gene ontology</obo:IAO_0000112>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000407"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
+                <owl:someValuesFrom rdf:resource="&snap;ZeroDimensionalRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
-                <owl:someValuesFrom rdf:resource="&snap;ZeroDimensionalRegion"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000407"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116 rdf:datatype="&xsd;string"
@@ -1905,6 +1897,12 @@ GO   gene ontology</obo:IAO_0000112>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000400"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000406"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -1917,12 +1915,6 @@ GO   gene ontology</obo:IAO_0000112>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000406"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1946,6 +1938,18 @@ GO   gene ontology</obo:IAO_0000112>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000400"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000404"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000406"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -1958,18 +1962,6 @@ GO   gene ontology</obo:IAO_0000112>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000406"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000404"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2091,12 +2083,6 @@ information entity by planning protocol applications included in an overall stud
         <obo:IAO_0000111 rdf:datatype="&xsd;string"
             >length unit label</obo:IAO_0000111>
     </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000123 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000123"/>
     
 
 
