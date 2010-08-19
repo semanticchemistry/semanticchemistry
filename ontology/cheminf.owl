@@ -154,10 +154,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000142 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000142">
-        <rdfs:label>has descriptor</rdfs:label>
-        <rdfs:range rdf:resource="&resource;CHEMINF_000123"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000143"/>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
     </owl:ObjectProperty>
     
 
@@ -165,8 +162,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000143 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000143">
-        <rdfs:label
-            >is descriptor of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
         <rdfs:range rdf:resource="&snap;SpecificallyDependentContinuant"/>
     </owl:ObjectProperty>
@@ -196,6 +191,23 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000149">
         <rdfs:label>is input of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000200 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000200">
+        <rdfs:label>has attribute</rdfs:label>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000201"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000201 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000201">
+        <rdfs:label>is attribute of</rdfs:label>
     </owl:ObjectProperty>
     
 
