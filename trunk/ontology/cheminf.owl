@@ -425,7 +425,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;has_agent"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000343"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -444,7 +444,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000140 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_000140">
+    <owl:Class rdf:about="&resource;CHEMINF_000340">
         <rdfs:label>software module</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <dc:description
@@ -455,7 +455,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000141 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_000141">
+    <owl:Class rdf:about="&resource;CHEMINF_000341">
         <rdfs:label>software method</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <dc:description
@@ -466,7 +466,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000142 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_000142">
+    <owl:Class rdf:about="&resource;CHEMINF_000342">
         <rdfs:label
             >software library</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
@@ -476,8 +476,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&resource;CHEMINF_000140"/>
-                            <rdf:Description rdf:about="&resource;CHEMINF_000141"/>
+                            <rdf:Description rdf:about="&resource;CHEMINF_000340"/>
+                            <rdf:Description rdf:about="&resource;CHEMINF_000341"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -491,7 +491,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000143 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_000143">
+    <owl:Class rdf:about="&resource;CHEMINF_000343">
         <rdfs:label
             >software application</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
