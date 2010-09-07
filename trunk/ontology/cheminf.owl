@@ -82,10 +82,11 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
      -->
 
     <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
-    <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
     <owl:AnnotationProperty rdf:about="&dc;rights"/>
@@ -396,6 +397,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000103 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000103">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000340"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000106">
@@ -442,7 +451,28 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000140 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000144 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000144">
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000147 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000147">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000340 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000340">
         <rdfs:label>software module</rdfs:label>
@@ -453,7 +483,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000141 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000341 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000341">
         <rdfs:label>software method</rdfs:label>
@@ -464,7 +494,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000142 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000342 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000342">
         <rdfs:label
@@ -489,7 +519,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000143 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000343 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000343">
         <rdfs:label
@@ -497,27 +527,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <dc:description
             >A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000144 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000144">
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000147 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000147">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
