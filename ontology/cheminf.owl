@@ -103,14 +103,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
-
-    <owl:ObjectProperty rdf:about="&obo;IAO_0000136">
-        <owl:inverseOf rdf:resource="&resource;CHEMINF_000202"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
 
     <owl:ObjectProperty rdf:about="&obo;OBI_0000293">
@@ -131,38 +123,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000047 -->
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000047">
-        <rdfs:label
-            >is implemented by</rdfs:label>
-        <rdfs:label>implements</rdfs:label>
-        <owl:inverseOf rdf:resource="&resource;CHEMINF_000047"/>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000106">
-        <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000142 -->
-
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000142">
-        <owl:inverseOf rdf:resource="&resource;CHEMINF_000143"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://semanticscience.org/resource/CHEMINF_000143 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000143">
-        <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
         <rdfs:range rdf:resource="&snap;SpecificallyDependentContinuant"/>
     </owl:ObjectProperty>
     
@@ -172,7 +135,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000145">
         <rdfs:label>has output</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
     </owl:ObjectProperty>
     
 
@@ -181,7 +143,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000148">
         <rdfs:label>has input</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
     </owl:ObjectProperty>
     
 
@@ -190,7 +151,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000149">
         <rdfs:label>is input of</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000202"/>
     </owl:ObjectProperty>
     
 
@@ -385,8 +345,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000000">
         <rdfs:label>chemical entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <obo:IAO_0000115
-            >A chemical entity is any molecular entity or chemical substance.</obo:IAO_0000115>
+        <dc:description
+            >A chemical entity is any molecular entity or chemical substance.</dc:description>
     </owl:Class>
     
 
@@ -397,8 +357,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >molecular entity information format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000098"/>
-        <obo:IAO_0000115
-            >A molecular entity information format specification is an information content entity which specifies a format in which information about a molecular entity should be encoded.</obo:IAO_0000115>
+        <dc:description
+            >A molecular entity information format specification is an information content entity which specifies a format in which information about a molecular entity should be encoded.</dc:description>
     </owl:Class>
     
 
@@ -487,8 +447,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000140">
         <rdfs:label>software module</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <obo:IAO_0000115
-            >A software module is a collection of software methods.</obo:IAO_0000115>
+        <dc:description
+            >A software module is a collection of software methods.</dc:description>
     </owl:Class>
     
 
@@ -498,8 +458,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000141">
         <rdfs:label>software method</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <obo:IAO_0000115
-            >A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</obo:IAO_0000115>
+        <dc:description
+            >A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
     </owl:Class>
     
 
@@ -523,8 +483,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115
-            >A software library is a collection of programming language mplementations (e.g. modules, methods) capable of realizing some objective specification when linked to a application software.</obo:IAO_0000115>
+        <dc:description
+            >A software library is a collection of programming language mplementations (e.g. modules, methods) capable of realizing some objective specification when linked to a application software.</dc:description>
     </owl:Class>
     
 
@@ -535,8 +495,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label
             >software application</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <obo:IAO_0000115
-            >A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</obo:IAO_0000115>
+        <dc:description
+            >A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</dc:description>
     </owl:Class>
     
 
