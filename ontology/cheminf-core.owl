@@ -1778,7 +1778,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000103">
         <rdfs:label
             >software module to calculate a chemical descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000140"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000340"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
@@ -2333,10 +2333,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
     </owl:Class>
     
 
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000140 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000140"/>
     
 
 
