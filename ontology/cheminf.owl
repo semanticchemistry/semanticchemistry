@@ -21,6 +21,7 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl/" >
 ]>
 
 
@@ -28,6 +29,7 @@
      xml:base="http://www.semanticweb.org/ontologies/cheminf.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:PATO="http://purl.org/obo/owl/PATO#"
+     xmlns:cheminf="http://semanticscience.org/ontology/cheminf.owl/"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:UO="http://purl.org/obo/owl/UO#"
@@ -77,8 +79,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:AnnotationProperty rdf:about="&rdfs;label"/>
     <owl:AnnotationProperty rdf:about="&dc;description"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
@@ -334,6 +336,130 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0000 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0000">
+        <rdfs:label>parameter data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000115>A parameter data item is a data item that plays the role of a parameter to a software method. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0001 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0001">
+        <rdfs:label>input parameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0000"/>
+        <obo:IAO_0000115>An input parameter is a data item that plays the role of an input parameter to some software implementation. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0002 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0002">
+        <rdfs:label>output parameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0000"/>
+        <obo:IAO_0000115>An output parameter is a data item that plays the role of output parameter to some software method implementation. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0003 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0003">
+        <rdfs:label>numeric data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <owl:disjointWith rdf:resource="&cheminf;CHEMINF_0004"/>
+        <obo:IAO_0000115>A numeric data item is a data item which has a value which is numeric. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0004 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0004">
+        <rdfs:label>textual data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0005 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0005">
+        <rdfs:label>numeric parameter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&cheminf;CHEMINF_0000"/>
+                    <rdf:Description rdf:about="&cheminf;CHEMINF_0003"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0000"/>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0006 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0006">
+        <rdfs:label>textual parameter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&cheminf;CHEMINF_0000"/>
+                    <rdf:Description rdf:about="&cheminf;CHEMINF_0004"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0000"/>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0004"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0007 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0007">
+        <rdfs:label>software message data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <obo:IAO_0000115>A software message data item is a data item that plays the role of a message generated by a software implementation, for example, an error, warning or success message.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0008 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0008">
+        <rdfs:label>warning message</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0009 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0009">
+        <rdfs:label>error message</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0010 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0010">
+        <rdfs:label>success message</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0007"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000000 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000000">
@@ -466,6 +592,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000340">
         <rdfs:label>software module</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <rdfs:comment>Is this equivalent to IAO &#39;source code module&#39; (IAO_0000096) on the same level as &#39;software&#39;? From the textual definition in IAO it seems fairly close. (JH)</rdfs:comment>
         <dc:description>A software module is a collection of software methods.</dc:description>
     </owl:Class>
     
@@ -476,6 +603,24 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000341">
         <rdfs:label>software method</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
     </owl:Class>
     
