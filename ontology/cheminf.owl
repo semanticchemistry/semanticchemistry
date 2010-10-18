@@ -25,7 +25,7 @@
 
 
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf.owl#"
-     xml:base="http://semanticscience.org/ontology/cheminf.owl"
+     xml:base="http://www.semanticweb.org/ontologies/cheminf.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
@@ -45,28 +45,21 @@
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
-    <owl:Ontology rdf:about="">
-        <dc:contributor rdf:datatype="&xsd;string"
-            >Egon Willighagen</dc:contributor>
+    <owl:Ontology rdf:about="http://semanticscience.org/ontology/cheminf.owl">
+        <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Janna Hastings</dc:contributor>
-        <dc:contributor rdf:datatype="&xsd;string"
-            >Michel Dumontier</dc:contributor>
-        <rdfs:comment rdf:datatype="&xsd;string"
-            >The chemical information ontology (cheminf) intends to describe information entities about chemical entities. It means to provide  qualitative and quantitative attributes to richly describe chemicals.</rdfs:comment>
+        <dc:contributor rdf:datatype="&xsd;string">Michel Dumontier</dc:contributor>
+        <rdfs:comment rdf:datatype="&xsd;string">The chemical information ontology (cheminf) intends to describe information entities about chemical entities. It means to provide  qualitative and quantitative attributes to richly describe chemicals.</rdfs:comment>
         <owl:versionInfo rdf:datatype="&xsd;string">alpha</owl:versionInfo>
-        <dc:format rdf:datatype="&xsd;string"
-            >application/rdf+xml</dc:format>
-        <dc:title rdf:datatype="&xsd;string"
-            >chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
+        <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
+        <dc:title rdf:datatype="&xsd;string">chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <rdfs:comment
-            >To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
+        <dc:contributor>Leonid Chepelev</dc:contributor>
+        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
+        <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
 specified URI = http://semanticscience.org/resource/
 Followed by &#39;/&#39;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
-        <dc:contributor>Leonid Chepelev</dc:contributor>
-        <dc:rights
-            >http://creativecommons.org/licenses/by/3.0</dc:rights>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
     </owl:Ontology>
@@ -81,14 +74,17 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
-    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
-    <owl:AnnotationProperty rdf:about="&dc;description"/>
-    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&dc;rights"/>
     
 
@@ -107,8 +103,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
 
     <owl:ObjectProperty rdf:about="&obo;OBI_0000293">
-        <rdfs:label
-            >has specified input</rdfs:label>
+        <rdfs:label>has specified input</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
     </owl:ObjectProperty>
     
@@ -117,8 +112,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
 
     <owl:ObjectProperty rdf:about="&obo;OBI_0000299">
-        <rdfs:label
-            >has specified output</rdfs:label>
+        <rdfs:label>has specified output</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
     </owl:ObjectProperty>
     
@@ -256,8 +250,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000009">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label
-            >has uncertainty value</rdfs:label>
+        <rdfs:label>has uncertainty value</rdfs:label>
         <rdfs:domain rdf:resource="&obo;IAO_0000030"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000012"/>
         <rdfs:range rdf:resource="&xsd;float"/>
@@ -346,8 +339,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000000">
         <rdfs:label>chemical entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <dc:description
-            >A chemical entity is any molecular entity or chemical substance.</dc:description>
+        <dc:description>A chemical entity is any molecular entity or chemical substance.</dc:description>
     </owl:Class>
     
 
@@ -355,11 +347,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000014 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000014">
-        <rdfs:label
-            >molecular entity information format specification</rdfs:label>
+        <rdfs:label>molecular entity information format specification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000098"/>
-        <dc:description
-            >A molecular entity information format specification is an information content entity which specifies a format in which information about a molecular entity should be encoded.</dc:description>
+        <dc:description>A molecular entity information format specification is an information content entity which specifies a format in which information about a molecular entity should be encoded.</dc:description>
     </owl:Class>
     
 
@@ -444,8 +434,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000139 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000139">
-        <rdfs:label
-            >programming language implementation</rdfs:label>
+        <rdfs:label>programming language implementation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000010"/>
     </owl:Class>
     
@@ -477,8 +466,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000340">
         <rdfs:label>software module</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <dc:description
-            >A software module is a collection of software methods.</dc:description>
+        <dc:description>A software module is a collection of software methods.</dc:description>
     </owl:Class>
     
 
@@ -488,8 +476,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000341">
         <rdfs:label>software method</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <dc:description
-            >A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
+        <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
     </owl:Class>
     
 
@@ -497,8 +484,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000342 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000342">
-        <rdfs:label
-            >software library</rdfs:label>
+        <rdfs:label>software library</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -513,8 +499,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description
-            >A software library is a collection of programming language mplementations (e.g. modules, methods) capable of realizing some objective specification when linked to a application software.</dc:description>
+        <dc:description>A software library is a collection of programming language mplementations (e.g. modules, methods) capable of realizing some objective specification when linked to a application software.</dc:description>
     </owl:Class>
     
 
@@ -522,11 +507,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000343 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000343">
-        <rdfs:label
-            >software application</rdfs:label>
+        <rdfs:label>software application</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <dc:description
-            >A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</dc:description>
+        <dc:description>A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</dc:description>
     </owl:Class>
     
 
@@ -560,9 +543,24 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant -->
 
     <owl:Class rdf:about="&snap;SpecificallyDependentContinuant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000064">
+        <oboInOwl:hasAlternativeId>BODO:Descriptor</oboInOwl:hasAlternativeId>
+        <rdfs:comment>NOTE: QSAR descriptors are often just called &#39;chemical descriptor&#39; or &#39;molecular descriptor&#39; in the cheminformatics community.</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
 
