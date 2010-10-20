@@ -102,6 +102,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="&obo;IAO_0000136"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
 
     <owl:ObjectProperty rdf:about="&obo;OBI_0000293">
@@ -117,6 +123,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label>has specified output</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000047 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000047"/>
     
 
 
@@ -346,31 +358,17 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0001 -->
-
-    <owl:Class rdf:about="&cheminf;CHEMINF_0001">
-        <rdfs:label>input parameter</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0000"/>
-        <obo:IAO_0000115>An input parameter is a data item that plays the role of an input parameter to some software implementation. </obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0002 -->
-
-    <owl:Class rdf:about="&cheminf;CHEMINF_0002">
-        <rdfs:label>output parameter</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0000"/>
-        <obo:IAO_0000115>An output parameter is a data item that plays the role of output parameter to some software method implementation. </obo:IAO_0000115>
-    </owl:Class>
-    
-
-
     <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0003 -->
 
     <owl:Class rdf:about="&cheminf;CHEMINF_0003">
         <rdfs:label>numeric data item</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0400"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&cheminf;CHEMINF_0004"/>
         <obo:IAO_0000115>A numeric data item is a data item which has a value which is numeric. </obo:IAO_0000115>
     </owl:Class>
@@ -382,6 +380,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&cheminf;CHEMINF_0004">
         <rdfs:label>textual data item</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0401"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
     </owl:Class>
     
@@ -456,6 +460,80 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&cheminf;CHEMINF_0010">
         <rdfs:label>success message</rdfs:label>
         <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_0007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0400 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0400">
+        <rdfs:label>numeric data format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000098"/>
+        <obo:IAO_0000115>A numeric data format specification is a data format specification for data items which are numeric, that is, they contain only numeric values.  </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0401 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0401">
+        <rdfs:label>textual data format specification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000098"/>
+        <obo:IAO_0000115>A textual data format specification is a specification of the format of data items which are textual, that is, they consist of character data. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0402 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0402">
+        <rdfs:label>numeric chemical descriptor</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&cheminf;CHEMINF_0003"/>
+                    <rdf:Description rdf:about="&resource;CHEMINF_000123"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0403 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0403">
+        <rdfs:label>textual chemical descriptor</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&cheminf;CHEMINF_0004"/>
+                    <rdf:Description rdf:about="&resource;CHEMINF_000123"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_0404 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_0404">
+        <rdfs:label>chemical substance descriptor</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&resource;CHEMINF_000123"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
     </owl:Class>
     
 
@@ -560,7 +638,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000139 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000139">
-        <rdfs:label>programming language implementation</rdfs:label>
+        <rdfs:label>software implementation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000010"/>
     </owl:Class>
     
@@ -579,11 +657,23 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000266 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000266"/>
     
 
 
@@ -592,6 +682,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000340">
         <rdfs:label>software module</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000341"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Is this equivalent to IAO &#39;source code module&#39; (IAO_0000096) on the same level as &#39;software&#39;? From the textual definition in IAO it seems fairly close. (JH)</rdfs:comment>
         <dc:description>A software module is a collection of software methods.</dc:description>
     </owl:Class>
@@ -606,18 +702,18 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_0000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
