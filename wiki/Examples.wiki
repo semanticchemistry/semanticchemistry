@@ -21,6 +21,8 @@ This page lists examples of CHEMINF use.
 
 Note that for other formats, the URI for the resource must be changed.
 
+== A molecule with an InChI (Turtle) ==
+
 == Define a molecular QSAR descriptor ==
 
 
