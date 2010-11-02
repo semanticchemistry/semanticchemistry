@@ -1,0 +1,8 @@
+#summary examples of CHEMINF content
+#labels example
+
+= CHEMINF Examples =
+
+This page lists examples of CHEMINF use.
+
+== Example 1 ==
