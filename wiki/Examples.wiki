@@ -5,4 +5,11 @@
 
 This page lists examples of CHEMINF use.
 
-== Example 1 ==
+== Define a file format ==
+
+
+== Define a molecular QSAR descriptor ==
+
+
+== Define a calculated molecular QSAR descriptor value ==
+
