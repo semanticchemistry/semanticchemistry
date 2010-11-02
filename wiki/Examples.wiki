@@ -5,11 +5,23 @@
 
 This page lists examples of CHEMINF use.
 
-== Define a file format ==
+== Define a file format (RDF/XML) ==
 
+{{{
+<owl:Class rdf:about="&resource;CHEMINF_000111">
+  <rdfs:label>CML format specification</rdfs:label>
+  <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
+  <dc:description>
+    A CML (Chemical Markup Language) file is an XML-based
+    representation of the atomic connectivity of a molecular
+    entity.
+  </dc:description>
+</owl:Class>
+}}}
+
+Note that for other formats, the URI for the resource must be changed.
 
 == Define a molecular QSAR descriptor ==
 
 
 == Define a calculated molecular QSAR descriptor value ==
-
