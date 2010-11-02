@@ -1,5 +1,5 @@
 #summary examples of CHEMINF content
-#labels example
+#labels example,InChI
 
 = CHEMINF Examples =
 
@@ -22,6 +22,16 @@ This page lists examples of CHEMINF use.
 Note that for other formats, the URI for the resource must be changed.
 
 == A molecule with an InChI (Turtle) ==
+
+{{{
+:entityX [
+  rdfs:subClassOf CHEMINF_000000 ;
+  CHEMINF_000200 [
+    a CHEMINF_000113 ;
+    CHEMINF_?????? "InChI=1/CH4/h1H4" .
+  ] .
+] .
+}}}
 
 == Define a molecular QSAR descriptor ==
 
