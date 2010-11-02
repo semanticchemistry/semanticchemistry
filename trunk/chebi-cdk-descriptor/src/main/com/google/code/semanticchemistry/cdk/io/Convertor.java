@@ -3,6 +3,7 @@
 package com.google.code.semanticchemistry.cdk.io;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.openscience.cdk.interfaces.IChemObject;
@@ -16,6 +17,7 @@ import org.openscience.cdk.qsar.result.IntegerArrayResult;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.vocabulary.OWL;
 import com.hp.hpl.jena.vocabulary.RDF;
@@ -25,6 +27,10 @@ public class Convertor {
 
     public static Model molecule2Model(IMolecule molecule, Map<DescriptorSpecification, String> specs) {
         Model model = createCDKModel();
+
+        Property failedForElement =
+            model.createProperty("http://egonw.github.com/atomTypePerceptionFailedForElement");
+
         Resource subject = model.createResource(
             createIdentifier(model, molecule)
         );
@@ -43,6 +49,18 @@ public class Convertor {
                     ((String)molecule.getProperty("ChEBI ID")).toLowerCase()
                 )
             );
+        if (molecule.getProperty("AT_FAILS") != null) {
+            List<String> fails = (List<String>)molecule.getProperty("AT_FAILS");
+            for (String fail : fails) {
+                model.add(
+                    subject,
+                    failedForElement,
+                    model.createResource(
+                        "http://cdk.sf.net/ontologies/elements#" + fail
+                    )
+                );
+            }
+        }
         serializeQSARDescriptors(model, subject, molecule, specs);
         return model;
     }

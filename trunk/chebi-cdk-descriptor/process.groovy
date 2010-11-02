@@ -6,10 +6,12 @@ import org.openscience.cdk.qsar.DescriptorSpecification;
 import org.openscience.cdk.qsar.IMolecularDescriptor;
 import org.openscience.cdk.qsar.descriptors.molecular.*;
 import org.openscience.cdk.tools.manipulator.*;
+import org.openscience.cdk.atomtype.CDKAtomTypeMatcher;
 
 import com.google.code.semanticchemistry.cdk.io.ChemInfOWLWriter;
 
 demo = true;
+builder = NoNotificationChemObjectBuilder.getInstance();
 
 public String zeroPad(int intVal) {
   StringBuffer buffer = new StringBuffer();
@@ -33,6 +35,7 @@ println "@prefix cheminf: <http://www.semanticweb.org/ontologies/cheminf.owl#>."
 println "@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .";
 println "@prefix : <http://cdk.sf.net/org/openscience/cdk/qsar/>.";
 println "@prefix cdk:     <http://cdk.sourceforge.net/model.owl#> .";
+println "@prefix elem:     <http://cdk.sf.net/ontologies/elements#> .";
 println "";
 println ":cdk-v" + CDK_VERSION + " a obo:IAO_0000010 ;";
 println "  ci:CHEMINF_000333 \"The Chemistry Development Kit\" ;";
@@ -68,29 +71,53 @@ println "";
 
 iterator = new IteratingMDLReader(
   new File("ChEBI_complete.sdf").newReader(),
-  NoNotificationChemObjectBuilder.getInstance()
+  builder
 )
 
 i = 0
+matcher = CDKAtomTypeMatcher.getInstance(builder);
 iterator.each { mol ->
   i++
+
   StringWriter output = new StringWriter();
   ChemInfOWLWriter writer = new ChemInfOWLWriter(output, specs);
 
-  for (IMolecularDescriptor descriptor : descriptors) {
-    try {
-      DescriptorValue value = descriptor.calculate(mol);
-      mol.setProperty(value.getSpecification(), value);
-      writer.write(mol);
-
-      String outputString = output.toString();
-      outputString.eachLine { line ->
-        if (!line.contains("@prefix"))
-          System.out.println(line);      
+  // do atom type perception
+  allOK = true
+  mol.atoms().each { atom ->
+    type = matcher.findMatchingAtomType(mol, atom)
+    if (type == null) {
+      allOK = false;
+      List<String> fails = mol.getProperty("AT_FAILS");
+      if (fails == null) {
+        fails = new ArrayList();
+        mol.setProperty("AT_FAILS", fails);
+        System.err.println(
+          "Atom typing fail in " +
+          mol.getProperty("CHEBI ID")
+        ); 
       }
-    } catch (Exception exception) {
-      System.err.println "\nFailed to convert to RDF: " + mol.getProperty("ChEBI ID");
+      fails.add(atom.getSymbol());
     }
   }
-  if (demo) System.exit(0);
+
+  if (allOK) {
+    for (IMolecularDescriptor descriptor : descriptors) {
+      DescriptorValue value = descriptor.calculate(mol);
+      mol.setProperty(value.getSpecification(), value);
+    }
+  }
+
+  try {
+    writer.write(mol);
+  } catch (Exception exception) {
+    System.err.println "\nFailed to convert to RDF: " + mol.getProperty("ChEBI ID");
+  }
+
+  String outputString = output.toString();
+  outputString.eachLine { line ->
+    if (!line.contains("@prefix"))
+      System.out.println(line);      
+  }
+  if (demo && i == 10) System.exit(0);
 }
