@@ -79,9 +79,6 @@ matcher = CDKAtomTypeMatcher.getInstance(builder);
 iterator.each { mol ->
   i++
 
-  StringWriter output = new StringWriter();
-  ChemInfOWLWriter writer = new ChemInfOWLWriter(output, specs);
-
   // do atom type perception
   allOK = true
   mol.atoms().each { atom ->
@@ -94,7 +91,7 @@ iterator.each { mol ->
         mol.setProperty("AT_FAILS", fails);
         System.err.println(
           "Atom typing fail in " +
-          mol.getProperty("CHEBI ID")
+          mol.getProperty("ChEBI ID")
         ); 
       }
       fails.add(atom.getSymbol());
@@ -103,10 +100,21 @@ iterator.each { mol ->
 
   if (allOK) {
     for (IMolecularDescriptor descriptor : descriptors) {
-      DescriptorValue value = descriptor.calculate(mol);
-      mol.setProperty(value.getSpecification(), value);
+      try {
+        DescriptorValue value = descriptor.calculate(mol);
+        mol.setProperty(value.getSpecification(), value);
+      } catch (Exception exception) {
+        System.err.println(
+          "Could not calculate descriptor for: " +
+          mol.getProperty("ChEBI ID")
+        );
+        exception.printStackTrace(System.err);
+      }
     }
   }
+
+  StringWriter output = new StringWriter();
+  ChemInfOWLWriter writer = new ChemInfOWLWriter(output, specs);
 
   try {
     writer.write(mol);
