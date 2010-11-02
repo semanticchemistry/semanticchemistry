@@ -82,7 +82,16 @@ iterator.each { mol ->
   // do atom type perception
   allOK = true
   mol.atoms().each { atom ->
-    type = matcher.findMatchingAtomType(mol, atom)
+    type = null;
+    try {
+      type = matcher.findMatchingAtomType(mol, atom)
+    } catch (Exception exception) {
+      System.err.println(
+        "Could not perceive atom types for: " +
+        mol.getProperty("ChEBI ID")
+      );
+      exception.printStackTrace(System.err);
+    }
     if (type == null) {
       allOK = false;
       List<String> fails = mol.getProperty("AT_FAILS");
