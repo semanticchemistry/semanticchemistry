@@ -36,6 +36,25 @@ Note that for other formats, the URI for the resource must be changed.
 
 == Define a molecular QSAR descriptor ==
 
-
-
 == Define a calculated molecular QSAR descriptor value ==
+
+== Remove method invocation of a SADI service ==
+
+Usage of CHEMINF in a SADI service :
+
+{{{
+<rdf:RDFxmlns="http://semanticscience.org/sadi/ontology/caffeine.rdf#"
+  xmlns:so="http://semanticscience.org/sadi/ontology/lipinskiserviceontology.owl#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:sio="http://semanticscience.org/resource/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <so:smilesmolecule
+    rdf:about="http://semanticscience.org/sadi/ontology/caffeine.rdf#m">
+    <sio:SIO_000008 rdf:resource="http://semanticscience.org/sadi/ontology/caffeine.rdf#msmiles"/>
+  </so:smilesmolecule>
+  <sio:CHEMINF_000018 rdf:about="http://semanticscience.org/sadi/ontology/caffeine.rdf#msmiles">
+    <sio:SIO_000300 rdf:datatype="xsd:string">Cn1cnc2n(C)c(=O)n(C)c(=O)c12</sio:SIO_000300>
+  </sio:CHEMINF_000018>
+</rdf:RDF>
+}}}
