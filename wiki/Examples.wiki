@@ -40,7 +40,7 @@ Note that for other formats, the URI for the resource must be changed.
 
 == Remove method invocation of a SADI service ==
 
-Usage of CHEMINF in a SADI service :
+Usage of CHEMINF terms in a service ontology (lipinskiserviceontology.owl) to create RDF input used for a POST to a SADI service.
 
 {{{
 <rdf:RDFxmlns="http://semanticscience.org/sadi/ontology/caffeine.rdf#"
