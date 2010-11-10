@@ -123,10 +123,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
 
-    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000106">
-        <rdfs:label>systematic name</rdfs:label>
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
         <rdfs:label>is output of</rdfs:label>
-        <dc:description>A systematic name is a molecular entity name which is formulated systematically from the structure of the molecular entity.</dc:description>
         <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
     </owl:ObjectProperty>
     
@@ -233,7 +231,11 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&ro;has_part"/>
     </owl:ObjectProperty>
     
-
+<owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
+<rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:label>is output of</rdfs:label>
+	</owl:ObjectProperty>
+	
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1685,7 +1687,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000106"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000103"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1702,13 +1704,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <dc:description>The cycle basis of a molecular structure is the smallest set of cycles (closed paths) formed in the graph representation of the structure, from which all other cycles can be computed.</dc:description>
     </owl:Class>
     
-
-
+	
     <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000106">
         <rdfs:label>systematic name</rdfs:label>
-        <rdfs:label>is output of</rdfs:label>
+
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
         <dc:description>A systematic name is a molecular entity name which is formulated systematically from the structure of the molecular entity.</dc:description>
     </owl:Class>
