@@ -598,12 +598,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     </owl:Class>
     
 
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000106 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000106">
-        <rdfs:label>is output of</rdfs:label>
-    </owl:Class>
     
 
 
