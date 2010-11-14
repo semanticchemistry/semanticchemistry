@@ -36,6 +36,8 @@ Note that for other formats, the URI for the resource must be changed.
 ] .
 }}}
 
+Used [http://rdf.openmolecules.net/ here] in RDF/XML format.
+
 == Define a molecular QSAR descriptor ==
 
 == Define a calculated molecular QSAR descriptor value ==
