@@ -45,7 +45,7 @@ Note that for other formats, the URI for the resource must be changed.
 Usage of CHEMINF terms in a service ontology (lipinskiserviceontology.owl) to create RDF input used for a POST to a SADI service.
 
 {{{
-<rdf:RDFxmlns="http://semanticscience.org/sadi/ontology/caffeine.rdf#"
+<rdf:RDF xmlns="http://semanticscience.org/sadi/ontology/caffeine.rdf#"
   xmlns:so="http://semanticscience.org/sadi/ontology/lipinskiserviceontology.owl#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
