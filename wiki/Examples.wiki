@@ -19,6 +19,8 @@ This page lists examples of CHEMINF use.
 </owl:Class>
 }}}
 
+where &resource; := "http://semanticscience.org/resource/".
+
 Note that for other formats, the URI for the resource must be changed.
 
 == A molecule with an InChI (Turtle) ==
