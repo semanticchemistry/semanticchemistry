@@ -26,14 +26,34 @@ Note that for other formats, the URI for the resource must be changed.
 == A molecule with an InChI (Turtle) ==
 
 {{{
-:Methane [
-  rdfs:subClassOf CHEMINF_000000 ;
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cheminf: <http://semanticscience.org/resource/> .
+
+:Methane rdfs:subClassOf cheminf:CHEMINF_000000 ;
   rdfs:label "methane"@en ;
-  CHEMINF_000200 [
-    a CHEMINF_000113 ;
-    SIO_000300 "InChI=1/CH4/h1H4" .
+  cheminf:CHEMINF_000200 [
+    a cheminf:CHEMINF_000113 ;
+    cheminf:SIO_000300 "InChI=1/CH4/h1H4" .
   ] .
-] .
+}}}
+
+or as XML:
+
+{{{
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:cheminf="http://semanticscience.org/resource/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Methane">
+    <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000000" />
+    <rdfs:label xml:lang="en">methane</rdfs:label>
+    <cheminf:CHEMINF_000200>
+      <cheminf:CHEMINF_000113>
+        <cheminf:SIO_000300>InChI=1/CH4/h1H4</cheminf:SIO_000300>
+      </cheminf:CHEMINF_000113>
+    </cheminf:CHEMINF_000200>
+  </rdf:Description>
+</rdf:RDF>
 }}}
 
 Used [http://rdf.openmolecules.net/ here] in RDF/XML format.
