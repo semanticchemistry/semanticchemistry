@@ -1634,7 +1634,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000103"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000451"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A molecular QSAR descriptor is a OSAR descriptor which gives a quantitative value to some aspect of a molecular entity.</dc:description>
@@ -2119,7 +2119,20 @@ The formal charge of any atom in a molecule can be calculated by the following e
         </rdfs:subClassOf>
     </owl:Class>
     
-
+    <owl:Class rdf:about="&resource;CHEMINF_000450">
+      <rdfs:label>algorithm to calculate a molecular descriptor</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&resource;CHEMINF_000144"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000065"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000146 -->
 
