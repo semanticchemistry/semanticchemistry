@@ -825,7 +825,27 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <dc:description>A software library is a collection of programming language mplementations (e.g. modules, methods) capable of realizing some objective specification when linked to a application software.</dc:description>
     </owl:Class>
     
-
+    <owl:Class rdf:about="&resource;CHEMINF_000451">
+        <rdfs:label>software module to calculate a molecular descriptor</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000065"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000450"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A software module to calculate a molecular descriptor is software module that implements an algorithm which calculates a descriptor value for a molecular entity.</dc:description>
+    </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000343 -->
 
