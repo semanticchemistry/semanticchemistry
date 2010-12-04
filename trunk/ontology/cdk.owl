@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY UO "http://purl.org/obo/owl/UO#" >
+    <!ENTITY purl "http://purl.obofoundry.org/" >
+    <!ENTITY PATO "http://purl.org/obo/owl/PATO#" >
+    <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
+    <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
+    <!ENTITY resource "http://semanticscience.org/resource/" >
+    <!ENTITY CHEBI "http://purl.obolibrary.org/obo/CHEBI#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl/" >
+    <!ENTITY cdkdesc "http://cdk.sf.net/descriptor/molecular#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cdk.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/cdk.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:PATO="http://purl.org/obo/owl/PATO#"
+     xmlns:cheminf="http://semanticscience.org/ontology/cheminf.owl/"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:UO="http://purl.org/obo/owl/UO#"
+     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:purl="http://purl.obofoundry.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:CHEBI="&obo;CHEBI#"
+     xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
+
+    <owl:Ontology rdf:about="http://semanticscience.org/ontology/cdk.owl">
+        <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
+        <owl:versionInfo rdf:datatype="&xsd;string">alpha</owl:versionInfo>
+        <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
+        <dc:title rdf:datatype="&xsd;string">CDK descriptor algorithm implementations</dc:title>
+        <dc:language rdf:datatype="&xsd;string">en</dc:language>
+        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
+        <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
+specified URI = http://semanticscience.org/resource/
+Followed by &#39;/&#39;, End with : AutoID
+AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-algorithms.owl"/>
+    </owl:Ontology>
+    
+    <owl:Class rdf:about="&resource;CDK_000001">
+        <rdfs:label>The Chemistry Development Kit Library</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000342"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&resource;CDK_000100">
+        <rdfs:label>org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&resource;CHEMINF_000451"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_001000"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <ro:part_of rdf:resource="CDK_000001" />
+    </owl:Class>
+
+</rdf:RDF>

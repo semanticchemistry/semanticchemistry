@@ -22,6 +22,7 @@
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
     <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl/" >
+    <!ENTITY chemoinformatics-algorithms "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#" >
 ]>
 
 
@@ -64,6 +65,8 @@ Followed by &#39;/&#39;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-algorithms.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cdk.owl"/>
     </owl:Ontology>
     
 
@@ -913,6 +916,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <oboInOwl:hasAlternativeId>BODO:Descriptor</oboInOwl:hasAlternativeId>
         <rdfs:comment>NOTE: QSAR descriptors are often just called &#39;chemical descriptor&#39; or &#39;molecular descriptor&#39; in the cheminformatics community.</rdfs:comment>
     </rdf:Description>
+   
 </rdf:RDF>
 
 
