@@ -74,6 +74,33 @@ Used [http://rdf.openmolecules.net/ here] in RDF/XML format.
 
 == Define a molecular QSAR descriptor ==
 
+{{{
+    <owl:Class rdf:about="&resource;CHEMINF_000240">
+        <rdfs:label>size of largest aliphatic chain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000246"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>The largest aliphatic chain size descriptor is a count descriptor that gives the integer length (number of atoms) in 
+the largest unbranched chain of atoms that does not contain aromatic atoms, within a given molecular entity.</dc:description>
+    </owl:Class>
+}}}
+
 == Define a calculated molecular QSAR descriptor value ==
 
 == Remove method invocation of a SADI service ==
