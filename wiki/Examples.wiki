@@ -4,7 +4,7 @@
 = CHEMINF Examples =
 
 This page lists examples of CHEMINF use. To resolve what one of those cryptic CHEMINF_00xxxx links, you can just open the full URI in a webbrowser. For example,
-CHEMINF_000111 has the full URL http://semanticscience.org/resource/CHEMINF_000111.
+CHEMINF_000111 has the full URL http://semanticscience.org/resource/CHEMINF_000111. See [http://chem-bla-ics.blogspot.com/2010/12/konqueror-web-shortcuts-for-cheminf.html this blog post] how to use this in the Konqueror web browser.
 
 == Define a file format (RDF/XML) ==
 
