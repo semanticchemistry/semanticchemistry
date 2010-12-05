@@ -3,7 +3,7 @@
 
 = CHEMINF Examples =
 
-This page lists examples of CHEMINF use.
+This page lists examples of CHEMINF use. To resolve what one of those cryptic 
 
 == Define a file format (RDF/XML) ==
 
@@ -99,6 +99,35 @@ Used [http://rdf.openmolecules.net/ here] in RDF/XML format.
         <dc:description>The largest aliphatic chain size descriptor is a count descriptor that gives the integer length (number of atoms) in 
 the largest unbranched chain of atoms that does not contain aromatic atoms, within a given molecular entity.</dc:description>
     </owl:Class>
+}}}
+
+== Define a molecular QSAR descriptor algorithm ==
+
+== Define a molecular QSAR descriptor implementation ==
+
+Note that an algorithm typically is part of a library, so that link is made here too.
+
+{{{
+<owl:Class rdf:about="&resource;CDK_000001">
+  <rdfs:label>The Chemistry Development Kit Library</rdfs:label>
+  <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000342"/>
+</owl:Class>
+    
+<owl:Class rdf:about="&resource;CDK_000100">
+  <rdfs:label>org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="&resource;CHEMINF_000451"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+            <owl:someValuesFrom rdf:resource="&resource;CHEMINF_001000"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  <ro:part_of rdf:resource="CDK_000001" />
+</owl:Class>
 }}}
 
 == Define a calculated molecular QSAR descriptor value ==
