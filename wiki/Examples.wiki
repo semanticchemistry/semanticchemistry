@@ -3,7 +3,8 @@
 
 = CHEMINF Examples =
 
-This page lists examples of CHEMINF use. To resolve what one of those cryptic 
+This page lists examples of CHEMINF use. To resolve what one of those cryptic CHEMINF_00xxxx links, you can just open the full URI in a webbrowser. For example,
+CHEMINF_000111 has the full URL http://semanticscience.org/resource/CHEMINF_000111.
 
 == Define a file format (RDF/XML) ==
 
@@ -102,6 +103,26 @@ the largest unbranched chain of atoms that does not contain aromatic atoms, with
 }}}
 
 == Define a molecular QSAR descriptor algorithm ==
+
+A descriptor links to a descriptor (as above) via the OBI_0000299 ('has specified output') link.
+
+{{{
+<owl:Class rdf:about="&resource;CHEMINF_001000">
+  <rdfs:label>Atom Counting algorithm</rdfs:label>
+  <owl:sameAs rdf:about="&chemoinformatics-algorithms;atomCount" />
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="&resource;CHEMINF_000450"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+          <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000263"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+}}}
 
 == Define a molecular QSAR descriptor implementation ==
 
