@@ -6,6 +6,19 @@
 This page lists examples of CHEMINF use. To resolve what one of those cryptic CHEMINF_00xxxx links, you can just open the full URI in a webbrowser. For example,
 CHEMINF_000111 has the full URL http://semanticscience.org/resource/CHEMINF_000111. See [http://chem-bla-ics.blogspot.com/2010/12/konqueror-web-shortcuts-for-cheminf.html this blog post] how to use this in the Konqueror web browser.
 
+Here are some labels:
+
+|| *Resource*     || *Label* ||
+|| CHEMINF_000000 || chemical entity ||
+|| CHEMINF_000200 || has attribute ||
+|| CHEMINF_000113 || InChI descriptor ||
+|| SIO_000300     || has value ||
+|| CHEMINF_000018 || SMILES descriptor ||
+|| CHEMINF_000143 || is descriptor of ||
+|| CHEMINF_000230 || composition ||
+|| CHEMINF_000012 || has value ||
+|| SIO_000008     || has attribute ||
+
 == Define a file format (RDF/XML) ==
 
 {{{
