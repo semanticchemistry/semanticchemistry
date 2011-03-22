@@ -22,7 +22,6 @@
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
     <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl/" >
-    <!ENTITY chemoinformatics-algorithms "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#" >
 ]>
 
 
@@ -51,22 +50,22 @@
     <owl:Ontology rdf:about="http://semanticscience.org/ontology/cheminf.owl">
         <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Janna Hastings</dc:contributor>
+        <dc:contributor rdf:datatype="&rdf;PlainLiteral">Leonid Chepelev</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Michel Dumontier</dc:contributor>
         <rdfs:comment rdf:datatype="&xsd;string">The chemical information ontology (cheminf) describes information entities about chemical entities. It provides qualitative and quantitative attributes to richly describe chemicals.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&rdf;PlainLiteral">To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
+specified URI = http://semanticscience.org/resource/
+Followed by &#39;/&#39;, End with : AutoID
+AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <owl:versionInfo rdf:datatype="&xsd;string">alpha</owl:versionInfo>
         <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
         <dc:title rdf:datatype="&xsd;string">chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <dc:contributor>Leonid Chepelev</dc:contributor>
-        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
-        <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
-specified URI = http://semanticscience.org/resource/
-Followed by &#39;/&#39;, End with : AutoID
-AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
+        <dc:rights rdf:datatype="&rdf;PlainLiteral">http://creativecommons.org/licenses/by/3.0</dc:rights>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cdk.owl"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-algorithms.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-algorithms.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cdk.owl"/>
     </owl:Ontology>
     
 
@@ -403,6 +402,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000400 -->
+
+    <owl:Class rdf:about="&cheminf;CHEMINF_000400">
+        <rdfs:label>chemical graph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
+        <obo:IAO_0000115>A chemical graph is a structural descriptor in which the connectivity and constitution of the chemical entity are described in terms of a mathematical graph, usually with atoms as vertices and bonds as edges, but other variants exist.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000500 -->
 
     <owl:Class rdf:about="&cheminf;CHEMINF_000500">
@@ -452,27 +461,17 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000510"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000510"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000400 -->
-
-    <owl:Class rdf:about="&cheminf;CHEMINF_000400">
-        <rdfs:label>chemical graph</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
-        <obo:IAO_0000115>A chemical graph is a structural descriptor in which the connectivity and constitution of the chemical entity are described in terms of a mathematical graph, usually with atoms as vertices and bonds as edges, but other variants exist.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -629,8 +628,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000000">
         <rdfs:label>chemical entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <dc:description>A chemical entity is any molecular entity or chemical substance.</dc:description>
         <oboInOwl:hasAlternativeId>CHEBI:24431</oboInOwl:hasAlternativeId>
+        <dc:description>A chemical entity is any molecular entity or chemical substance.</dc:description>
     </owl:Class>
     
 
@@ -653,6 +652,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000044 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000044"/>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000057 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000057">
@@ -667,6 +672,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000058">
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000057"/>
     </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000065 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000065"/>
     
 
 
@@ -742,14 +753,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -786,13 +797,13 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -828,6 +839,34 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <dc:description>A software library is a collection of programming language mplementations (e.g. modules, methods) capable of realizing some objective specification when linked to a application software.</dc:description>
     </owl:Class>
     
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000343 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000343">
+        <rdfs:label>software application</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <dc:description>A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000404 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000404">
+        <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000450 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000450"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000451 -->
+
     <owl:Class rdf:about="&resource;CHEMINF_000451">
         <rdfs:label>software module to calculate a molecular descriptor</rdfs:label>
         <owl:equivalentClass>
@@ -849,21 +888,15 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <dc:description>A software module to calculate a molecular descriptor is software module that implements an algorithm which calculates a descriptor value for a molecular entity.</dc:description>
     </owl:Class>
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000343 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000343">
-        <rdfs:label>software application</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
-        <dc:description>A software application is a programming language implementation of a plan specification capable of realizing some objective specification.</dc:description>
-    </owl:Class>
     
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000404 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000550 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_000404">
-        <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
+    <owl:Class rdf:about="&resource;CHEMINF_000550">
+        <rdfs:label>ChEBI name</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000044"/>
+        <obo:IAO_0000115>A ChEBI name is a preferred name annotated by the ChEBI database.  The ChEBI name has the additional feature that it is unique within the ChEBI dataset. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -916,10 +949,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <oboInOwl:hasAlternativeId>BODO:Descriptor</oboInOwl:hasAlternativeId>
         <rdfs:comment>NOTE: QSAR descriptors are often just called &#39;chemical descriptor&#39; or &#39;molecular descriptor&#39; in the cheminformatics community.</rdfs:comment>
     </rdf:Description>
-   
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
 
