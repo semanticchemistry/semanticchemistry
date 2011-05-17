@@ -3565,7 +3565,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:label>chemical substance</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000000"/>
         <rdfs:comment>Chemical substance constitutes matter of constant composition, that may contain a collection of molecular entities. [IUPAC: http://goldbook.iupac.org/C01039.html]</rdfs:comment>
-        <dc:description>A cycle is a part of a molecular entity that is cyclic, that is, consists of a chain of atoms where each is reachable by a bond connected to another atom, and the first atom is reachable from itself.</dc:description>
     </owl:Class>
     
 
