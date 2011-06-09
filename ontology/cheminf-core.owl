@@ -3788,6 +3788,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
     </owl:Class>
     
 
+    <owl:Class rdf:about="&resource;CHEMINF_000405">
+        <rdfs:label>ChemSpider identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <dc:description>Database identifier used by ChemSpider.</dc:description>
+    </owl:Class>
+
 
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
