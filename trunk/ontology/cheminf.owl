@@ -48,20 +48,20 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://semanticscience.org/ontology/cheminf.owl">
+        <owl:versionInfo rdf:datatype="&xsd;string">1.0</owl:versionInfo>
         <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Janna Hastings</dc:contributor>
-        <dc:contributor rdf:datatype="&rdf;PlainLiteral">Leonid Chepelev</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Michel Dumontier</dc:contributor>
         <rdfs:comment rdf:datatype="&xsd;string">The chemical information ontology (cheminf) describes information entities about chemical entities. It provides qualitative and quantitative attributes to richly describe chemicals.</rdfs:comment>
-        <rdfs:comment rdf:datatype="&rdf;PlainLiteral">To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
-specified URI = http://semanticscience.org/resource/
-Followed by &#39;/&#39;, End with : AutoID
-AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
-        <owl:versionInfo rdf:datatype="&xsd;string">alpha</owl:versionInfo>
         <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
         <dc:title rdf:datatype="&xsd;string">chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <dc:rights rdf:datatype="&rdf;PlainLiteral">http://creativecommons.org/licenses/by/3.0</dc:rights>
+        <dc:contributor>Leonid Chepelev</dc:contributor>
+        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
+        <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
+specified URI = http://semanticscience.org/resource/
+Followed by &#39;/&#39;, End with : AutoID
+AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cdk.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-algorithms.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
@@ -429,6 +429,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -440,12 +446,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&cheminf;CHEMINF_000502"/>
@@ -461,14 +461,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000510"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000510"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
@@ -804,13 +804,13 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -953,5 +953,5 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
 
