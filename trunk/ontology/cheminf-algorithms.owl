@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+
 <!DOCTYPE rdf:RDF [
     <!ENTITY UO "http://purl.org/obo/owl/UO#" >
     <!ENTITY purl "http://purl.obofoundry.org/" >
