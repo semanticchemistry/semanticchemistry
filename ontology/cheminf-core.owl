@@ -2917,8 +2917,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <dc:description>A descriptor that provides the integer count of aromatic atoms in a given molecular entity.</dc:description>
     </owl:Class>
     
-
-
     <!-- http://semanticscience.org/resource/CHEMINF_000233 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000233">
@@ -3738,6 +3736,48 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000270"/>
     </owl:Class>
     
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000291 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000291">
+        <rdfs:label>Highest Occupied Molecular Orbital Energy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000086"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A descriptor that the energy of the highest occupied 'molecular' orbital of the chemical entity.</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000292 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000292">
+        <rdfs:label>Lowest Unoccupied Molecular Orbital Energy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000086"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A descriptor that the energy of the lowest unoccupied 'molecular' orbital of the chemical entity.</dc:description>
+    </owl:Class>
+
+
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_000401 -->
