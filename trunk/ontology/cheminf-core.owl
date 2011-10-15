@@ -3777,6 +3777,57 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <dc:description>A descriptor that the energy of the lowest unoccupied 'molecular' orbital of the chemical entity.</dc:description>
     </owl:Class>
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000293 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000293">
+        <rdfs:label>acidic group count</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A descriptor that specifies the integer count of acidic groups in a given molecular entity.</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000293 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000294">
+        <rdfs:label>basic group count</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A descriptor that specifies the integer count of basic groups in a given molecular entity.</dc:description>
+    </owl:Class>
 
 
 
