@@ -3838,6 +3838,13 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <short_name>ALogP</short_name>
     </owl:Class>
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000296 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000296">
+        <rdfs:label xml:lang="en">hybridization descriptor (VSEPR)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000095"/>
+    </owl:Class>
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000401 -->
 
