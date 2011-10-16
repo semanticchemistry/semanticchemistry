@@ -3845,6 +3845,27 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000095"/>
     </owl:Class>
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000297 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000297">
+        <rdfs:label xml:lang="en">inductive atomic hardness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000298 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000298">
+        <rdfs:label xml:lang="en">TPSA (fragments)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000152"/>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000299 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000299">
+        <rdfs:label xml:lang="en">VABC volume descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000242"/>
+    </owl:Class>
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000401 -->
 
