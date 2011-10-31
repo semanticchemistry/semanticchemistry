@@ -740,6 +740,24 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000140 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000140">
+        <rdfs:label>PubChem compound identifier (CID)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000141 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000141">
+        <rdfs:label>PubChem substance identifier (SID)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000144 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000144">
@@ -812,13 +830,13 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
