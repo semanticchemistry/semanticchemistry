@@ -18,6 +18,10 @@ Here are some labels:
 || CHEMINF_000230 || composition ||
 || CHEMINF_000012 || has value ||
 || SIO_000008     || has attribute ||
+|| CHEMINF_000087 || chemical quality ||
+|| CHEMINF_000087 || electronic descriptor ||
+|| IAO_0000136    || is about ||
+|| CHEBI:23367    || molecular entity ||
 
 == Define a file format (RDF/XML) ==
 
