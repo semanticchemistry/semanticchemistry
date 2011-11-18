@@ -8,20 +8,20 @@ CHEMINF_000111 has the full URL http://semanticscience.org/resource/CHEMINF_0001
 
 Here are some labels:
 
-|| *Resource*     || *Label* ||
-|| CHEMINF_000000 || chemical entity ||
+|| *Resource*     || *Label*               || *Resource*     || *Label* ||
+|| CHEMINF_000000 || chemical entity       || CHEMINF_000087 || chemical quality ||
+|| CHEMINF_000031 || molecular entity      || CHEMINF_000087 || molecular entity quality ||
 || CHEMINF_000200 || has attribute ||
-|| CHEMINF_000113 || InChI descriptor ||
+|| IAO_0000136    || is about ||
 || SIO_000300     || has value ||
+|| CHEMINF_000012 || has value ||
+|| CHEMINF_000113 || InChI descriptor ||
 || CHEMINF_000018 || SMILES descriptor ||
 || CHEMINF_000143 || is descriptor of ||
 || CHEMINF_000230 || composition ||
-|| CHEMINF_000012 || has value ||
 || SIO_000008     || has attribute ||
-|| CHEMINF_000087 || chemical quality ||
 || CHEMINF_000087 || electronic descriptor ||
-|| IAO_0000136    || is about ||
-|| CHEBI:23367    || molecular entity ||
+|| CHEMINF_000136 || constitutional descriptor ||
 
 == Define a file format (RDF/XML) ==
 
