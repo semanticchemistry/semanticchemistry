@@ -3936,7 +3936,29 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <dc:description>Database identifier used by ChemSpider.</dc:description>
     </owl:Class>
     
+    <!-- http://semanticscience.org/resource/CHEMINF_000406 -->
 
+    <owl:Class rdf:about="&resource;CHEMINF_000406">
+        <rdfs:label>DrugBank identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <dc:description>Database identifier used by DrugBank.</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000407 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000407">
+        <rdfs:label>ChEBI identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <dc:description>Database identifier used by ChEBI.</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000406 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000408">
+        <rdfs:label>HMDB identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <dc:description>Database identifier used by Human Metabolome Database.</dc:description>
+    </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000450 -->
 
