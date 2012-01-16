@@ -82,6 +82,9 @@ Used [http://rdf.openmolecules.net/ here] in RDF/XML format.
 || CHEMINF_000200 || has attribute          ||
 || SIO_000300     || has value              ||
 || CHEMINF_000405 || ChemSpider identifier  ||
+|| CHEMINF_000406 || DrugBank identifier  ||
+|| CHEMINF_000407 || ChEBI identifier  ||
+|| CHEMINF_000408 || HMDB identifier  ||
 
 To add a ChemSpider identifier:
 
