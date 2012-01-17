@@ -85,6 +85,10 @@ Used [http://rdf.openmolecules.net/ here] in RDF/XML format.
 || CHEMINF_000406 || DrugBank identifier  ||
 || CHEMINF_000407 || ChEBI identifier  ||
 || CHEMINF_000408 || HMDB identifier  ||
+|| CHEMINF_000409 || KEGG identifier  ||
+|| CHEMINF_000410 || Wikipedia identifier  ||
+|| CHEMINF_000411 || Reactome identifier  ||
+|| CHEMINF_000412 || PubChem identifier  ||
 
 To add a ChemSpider identifier:
 
