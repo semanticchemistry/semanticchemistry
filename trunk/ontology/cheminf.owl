@@ -62,6 +62,7 @@
 specified URI = http://semanticscience.org/resource/
 Followed by &#39;/&#39;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
+        <owl:imports rdf:resource="&obo;iao.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cdk.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-algorithms.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
@@ -244,6 +245,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- is_output_of -->
+
+    <owl:ObjectProperty rdf:about="is_output_of">
+        <rdfs:label>is output of</rdfs:label>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000145"/>
+        <rdfs:subPropertyOf rdf:resource="&ro;participates_in"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -405,12 +416,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -422,6 +427,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&cheminf;CHEMINF_000502"/>
@@ -719,6 +730,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000142 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000142">
+        <rdfs:label>Pipeline Pilot library</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000342"/>
+        <obo:IAO_0000115>http://accelrys.com/products/pipeline-pilot/</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000144 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000144">
@@ -732,16 +753,52 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000198 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000198">
+        <rdfs:label>molecular weight calculated by pipeline pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000216"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A molecular weight descriptor calculated by a relevant module of the Pipeline Pilot software tool. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -754,9 +811,618 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000221 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000221">
+        <rdfs:label>Ghose/Crippen ALogP calculation algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000450"/>
+        <obo:IAO_0000115>Fragment Method used for the calculation of ALogP as defined by Ghose and Crippen. 
+
+Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (Lipophilic) Properties of Small Organic Molecules Using Fragment Methods: An Analysis of AlogP and CLogP Methods. J. Phys. Chem. A, 1998, 102, 3762-3772.
+
+</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000266 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000266"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000305 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000305">
+        <rdfs:label>ALogP calculated by Pipeline Pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000295"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000221"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000306 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000306">
+        <rdfs:label>Ertl polar surface area calculation algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000450"/>
+        <obo:IAO_0000115>Fast calculation of molecular polar surface area as a sum of fragment based contributions and its application to the prediction of drug transport properties, Ertl, P., Rohde, B., Selzer, P., J. Med. Chem. 2000, 43, 3714-3717.
+</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000307 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000307">
+        <rdfs:label>polar surface area descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000308 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000308">
+        <rdfs:label>polar surface area descriptor calculated by Pipeline Pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000307"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000306"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000309 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000309">
+        <rdfs:label>hydrogen bond acceptor count calculated by pipeline pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000245"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000310 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000310">
+        <rdfs:label>hydrogen bond donor count calculated by pipeline pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000244"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000311 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000311">
+        <rdfs:label>rotatable bond count calculated by pipeline pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000254"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000312 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000312">
+        <rdfs:label>rule of five violations descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <obo:IAO_0000115>Number of properties defined in Lipinski’s Rule of 5 (RO5) that the compound fails.  Conditions which violate the RO5 are:
+Molecular weight&gt;=500
+AlogP&gt;=5
+HBD&gt;=5
+HBA&gt;=10
+</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000313 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000313">
+        <rdfs:label>Lipinski rule of five violation calculation algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000450"/>
+        <obo:IAO_0000115>Lipinski, C. A.; Lombardo, F.; Dominy, B. W.; Feeney, P. J. Experimental and Computational Approaches to Estimate Solubility and Permeability in Drug Discovery and Development Settings. Adv. Drug Deliv. Rev., 1997, 23, 3-25.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000314 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000314">
+        <rdfs:label>rule of five violations calculated by pipeline pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000312"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000313"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000315 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000315">
+        <rdfs:label>rule of three passes descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <obo:IAO_0000115>Rule of 3 passes.  It is suggested that compounds that pass all these criteria are more likely to be hits in fragment screening.
+molecular weight &lt;=300, 
+number of hydrogen bond donors &lt;=3, 
+number of hydrogen bond acceptors &lt;=3 
+AlogP &lt;=3. 
+RTB &lt;=3
+PSA&lt;=60
+</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000316 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000316">
+        <rdfs:label>rule of three passes calculation algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000450"/>
+        <obo:IAO_0000115>A ‘Rule of Three’ for fragment-based lead discovery? Miles Congreve, Robin Carr,
+Chris Murray and Harren Jhoti. Drug Discovery Today, 2003,8(19), 876-877
+</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000317 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000317">
+        <rdfs:label>rule of three passes calculated by pipeline pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000315"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000316"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000318 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000318">
+        <rdfs:label>medchem friendly descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <obo:IAO_0000115>MedChem Friendly
+These are functional groups that may not be desirable from a medicinal chemistry perspective.  For example reactive groups will be flagged as “N” (not MedChem Friendly).  Molecules which do not contain any of these groups will be flagged as “Y” (MedChem Friendly).
+The groups are defined by the following list of SMARTS:
+[N+]([O-])=O
+[C;!R](-[C;!R]=O)=[C;!R]
+C(-N)=S
+P
+O-N=C
+OS(=O)=O
+O1-CC-O-C-1
+C(-N)=C
+[C;H2]-[C;H2]-[C;H2]-[C;H2]-[C;H2]-[C;H2]-[C;H2]
+OC1OCC(O)C1
+C=N-C(-O)
+[N;H]-[C;H]-[N;H]
+[C;!R]=[C;!R]-N-[C;D1&amp;H3,D2&amp;H2,D3&amp;H1,D4]
+[S;!R]-[C;!R]-[O;!R]
+[O;D2]-[C;!H0](([F,Br,I,Cl])([F,Br,I,Cl])([!F,!Br,!I,!Cl]))
+CC([O;!R])([O;!R])
+C1-C-O1
+C(=O)-S-C(=S)
+[S;H]
+SC#N
+</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000319 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000319">
+        <rdfs:label>medchem friendly descriptor calculated by pipeline pilot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000318"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000320 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000320">
+        <rdfs:label>ACD/Labs PhysChem software library</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000342"/>
+        <obo:IAO_0000115>http://www.acdlabs.com/resources/knowledgebase/app_notes/physchem/</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000321 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000321">
+        <rdfs:label>logP calculated by ACD/Labs PhysChem software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000251"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000320"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000322 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000322">
+        <rdfs:label>logD descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <obo:IAO_0000115>octanol-water distribution coefficient calculated at a given pH. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000323 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000323">
+        <rdfs:label>logD calculated at pH 7.4 by ACD/Labs PhysChem software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000322"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000320"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>ACD_LogD(pH7.4)
+
+Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000324 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000324">
+        <rdfs:label>most acidic pKa calculated by ACD/Labs PhysChem software library</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000195"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000320"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Most acidic pKa of the molecule
+</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000325 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000325">
+        <rdfs:label>most basic pKa calculated by ACD/Labs PhysChem software library</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000195"/>
+        <obo:IAO_0000115>Most basic pKa of the molecule
+</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000326 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000326">
+        <rdfs:label>molecular species at pH 7.4 descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <obo:IAO_0000115>Molecular Species is a description of the predominant form of the molecule at pH7.4.  </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000327 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000327">
+        <rdfs:label>molecular species at pH 7.4 calculated by ACD/Labs PhysChem software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000326"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000320"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>These are defined  according to the definitions:
+Acid(A) ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&lt;8.5
+Bas (B) ACD_MOST_ApKa &gt;6.5 and ACD_MOST_BpKa&gt;8.5
+Neutral (N) ACD_MOST_ApKa &gt;6.5 and ACD_MOST_BpKa&lt;8.5
+Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
+</obo:IAO_0000115>
+    </owl:Class>
     
 
 
@@ -785,7 +1451,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -797,7 +1463,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -809,7 +1475,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000342">
         <rdfs:label>software library</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000343"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;has_part"/>
