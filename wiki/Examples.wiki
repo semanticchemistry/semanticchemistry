@@ -198,7 +198,7 @@ Note that an algorithm typically is part of a library, so that link is made here
 
 == Define a calculated molecular QSAR descriptor value ==
 
-== Remove method invocation of a SADI service ==
+== Remote method invocation of a SADI service ==
 
 Usage of CHEMINF terms in a service ontology (lipinskiserviceontology.owl) to create RDF input used for a POST to a SADI service.
 
