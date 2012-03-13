@@ -18,6 +18,7 @@
     <!ENTITY resource "http://semanticscience.org/resource/" >
     <!ENTITY CHEBI "http://purl.obolibrary.org/obo/CHEBI#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ontologies "http://www.semanticweb.org/ontologies/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
@@ -25,13 +26,14 @@
 ]>
 
 
-<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf.owl#"
-     xml:base="http://www.semanticweb.org/ontologies/cheminf.owl"
+<rdf:RDF xmlns="&ontologies;cheminf.owl#"
+     xml:base="&ontologies;cheminf.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:cheminf="http://semanticscience.org/ontology/cheminf.owl/"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:ontologies="http://www.semanticweb.org/ontologies/"
      xmlns:UO="http://purl.org/obo/owl/UO#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:resource="http://semanticscience.org/resource/"
@@ -245,9 +247,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- is_output_of -->
+    <!-- http://www.semanticweb.org/ontologies/is_output_of -->
 
-    <owl:ObjectProperty rdf:about="is_output_of">
+    <owl:ObjectProperty rdf:about="&ontologies;is_output_of">
         <rdfs:label>is output of</rdfs:label>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000145"/>
         <rdfs:subPropertyOf rdf:resource="&ro;participates_in"/>
@@ -753,14 +755,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -774,7 +776,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000216"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -787,7 +789,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -838,7 +840,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000295"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -897,7 +899,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000307"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -914,7 +916,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -936,7 +938,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000245"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -949,7 +951,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -971,7 +973,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000244"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -984,7 +986,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1006,7 +1008,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000254"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1019,7 +1021,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1066,7 +1068,7 @@ HBA&gt;=10
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000312"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1083,7 +1085,7 @@ HBA&gt;=10
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1134,7 +1136,7 @@ Chris Murray and Harren Jhoti. Drug Discovery Today, 2003,8(19), 876-877
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000315"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1151,7 +1153,7 @@ Chris Murray and Harren Jhoti. Drug Discovery Today, 2003,8(19), 876-877
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1206,7 +1208,7 @@ SC#N
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000318"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1219,7 +1221,7 @@ SC#N
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1251,7 +1253,7 @@ SC#N
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000251"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1264,7 +1266,7 @@ SC#N
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000320"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000328"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1296,7 +1298,7 @@ SC#N
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000322"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1309,7 +1311,7 @@ SC#N
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000320"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000328"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1334,7 +1336,7 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000195"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1347,7 +1349,7 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000320"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000328"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1392,7 +1394,7 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000326"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="is_output_of"/>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1405,7 +1407,7 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="&ro;part_of"/>
-                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000320"/>
+                                                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000328"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1422,6 +1424,24 @@ Bas (B) ACD_MOST_ApKa &gt;6.5 and ACD_MOST_BpKa&gt;8.5
 Neutral (N) ACD_MOST_ApKa &gt;6.5 and ACD_MOST_BpKa&lt;8.5
 Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000328 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000328">
+        <rdfs:label>ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000320"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000329 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000329">
+        <rdfs:label>Pipeline Pilot Server Version 8.5.0</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000142"/>
     </owl:Class>
     
 
@@ -1450,12 +1470,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
@@ -1464,6 +1478,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
