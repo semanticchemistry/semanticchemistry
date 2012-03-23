@@ -418,6 +418,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -429,12 +435,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&cheminf;CHEMINF_000502"/>
@@ -755,14 +755,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1477,13 +1477,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
