@@ -1363,8 +1363,6 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
         <obo:IAO_0000115>Most acidic pKa of the molecule
 </obo:IAO_0000115>
     </owl:Class>
-    
-
 
     <!-- http://semanticscience.org/resource/CHEMINF_000325 -->
 
@@ -1375,6 +1373,13 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
 </obo:IAO_0000115>
     </owl:Class>
     
+    <!-- http://semanticscience.org/resource/CHEMINF_000350 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000350"> 
+        <rdfs:label>molecular weight of the corresponding free base</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000216"/>
+        <dc:description>The molecular weight for the free base chemical structure matching this chemical structure.</dc:description>
+    </owl:Class>  
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_000326 -->
