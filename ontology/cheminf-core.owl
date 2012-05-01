@@ -4297,6 +4297,13 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <dc:description>Database identifier used by Reactome.</dc:description>
     </owl:Class>
     
+    <!-- http://semanticscience.org/resource/CHEMINF_000412 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000412">
+        <rdfs:label>ChEMBL identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <dc:description>Identifier used by the ChEMBL database for compounds, assays, target, etc.</dc:description>
+    </owl:Class>
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_000450 -->
