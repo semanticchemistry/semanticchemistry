@@ -1490,7 +1490,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000089">
         <rdfs:label>polarizability</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
         <dc:description>The ease of distortion of the electron cloud of a molecular entity by an electric field [source: IUPAC Gold Book - http://goldbook.iupac.org/P04711.html]</dc:description>
     </owl:Class>
     
@@ -1943,7 +1942,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
     <owl:Class rdf:about="&resource;CHEMINF_000121">
         <rdfs:label>electronegativity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
         <dc:description>Electronegativity is an atomic quality that describes its power to attract electrons to itself [source:IUPAC Gold Book - http://goldbook.iupac.org/E01990.html]</dc:description>
     </owl:Class>
     
@@ -3033,7 +3031,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
     <owl:Class rdf:about="&resource;CHEMINF_000228">
         <rdfs:label>refractive index</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
         <dc:description>The refractive index of a chemical substance is a measure of the manner in which  light waves are bent when they enter the medium of the chemical substance.</dc:description>
     </owl:Class>
     
@@ -3204,7 +3201,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
     <owl:Class rdf:about="&resource;CHEMINF_000238">
         <rdfs:label>meltability</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
         <dc:description>The meltability of a chemical substance is a quality which inheres in the chemical substance by virtue of the ease with which the substance can be changed from a solid to a liquid state especially by the application of heat.</dc:description>
     </owl:Class>
     
@@ -3423,7 +3419,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
     <owl:Class rdf:about="&resource;CHEMINF_000248">
         <rdfs:label>relative permittivity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
         <dc:description>Relative permittivity is a chemical substance quality that reflects the ability of a medium composed of molecules of a given type to transmit an electric field.</dc:description>
     </owl:Class>
     
@@ -3572,7 +3567,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
     <owl:Class rdf:about="&resource;CHEMINF_000255">
         <rdfs:label>vaporizability</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000101"/>
         <dc:description>The vaporizability of a chemical substance is a quality which inheres in the chemical substance by virtue of the ease with which the substance can be changed into a gaseous state.</dc:description>
     </owl:Class>
     
