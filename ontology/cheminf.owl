@@ -81,15 +81,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
-    <owl:AnnotationProperty rdf:about="&dc;description"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
-    <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
     <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
     <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&dc;rights"/>
@@ -127,28 +126,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
 
     <owl:ObjectProperty rdf:about="&obo;IAO_0000136"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
-
-    <owl:ObjectProperty rdf:about="&obo;OBI_0000293">
-        <rdfs:label>has specified input</rdfs:label>
-        <rdfs:range rdf:resource="&obo;IAO_0000027"/>
-        <rdfs:domain rdf:resource="&obo;IAO_0000104"/>
-        <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
-
-    <owl:ObjectProperty rdf:about="&obo;OBI_0000299">
-        <rdfs:label>has specified output</rdfs:label>
-        <rdfs:range rdf:resource="&obo;IAO_0000027"/>
-        <rdfs:domain rdf:resource="&obo;IAO_0000104"/>
-        <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
-    </owl:ObjectProperty>
     
 
 
@@ -219,12 +196,32 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000330 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000330">
+        <rdfs:label>should execute with input</rdfs:label>
+        <rdfs:range rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:domain rdf:resource="&obo;IAO_0000064"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000331 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000331">
+        <rdfs:label>should execute with output</rdfs:label>
+        <rdfs:range rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:domain rdf:resource="&obo;IAO_0000064"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
         <rdfs:domain rdf:resource="&obo;IAO_0000027"/>
-        <rdfs:range rdf:resource="&obo;IAO_0000104"/>
-        <owl:inverseOf rdf:resource="&obo;OBI_0000299"/>
+        <rdfs:range rdf:resource="&obo;IAO_0000064"/>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000331"/>
     </owl:ObjectProperty>
     
 
@@ -418,12 +415,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -435,6 +426,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&cheminf;CHEMINF_000502"/>
@@ -450,14 +447,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000510"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000510"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
@@ -755,14 +752,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1363,6 +1360,8 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
         <obo:IAO_0000115>Most acidic pKa of the molecule
 </obo:IAO_0000115>
     </owl:Class>
+    
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000325 -->
 
@@ -1373,13 +1372,6 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
 </obo:IAO_0000115>
     </owl:Class>
     
-    <!-- http://semanticscience.org/resource/CHEMINF_000350 -->
-
-    <owl:Class rdf:about="&resource;CHEMINF_000350"> 
-        <rdfs:label>molecular weight of the corresponding free base</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000216"/>
-        <dc:description>The molecular weight for the free base chemical structure matching this chemical structure.</dc:description>
-    </owl:Class>  
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_000326 -->
@@ -1475,19 +1467,19 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1529,6 +1521,16 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000350 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000350">
+        <rdfs:label>molecular weight of the corresponding free base</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000216"/>
+        <dc:description>The molecular weight for the free base chemical structure matching this chemical structure.</dc:description>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000404 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000404">
@@ -1552,7 +1554,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                        <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
                         <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000065"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
