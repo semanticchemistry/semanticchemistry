@@ -237,8 +237,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000009">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label>has uncertainty value</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000012"/>
-        <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
