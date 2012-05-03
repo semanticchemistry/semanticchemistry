@@ -81,14 +81,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&dc;language"/>
     <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
-    <owl:AnnotationProperty rdf:about="&dc;description"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
     <owl:AnnotationProperty rdf:about="&dc;format"/>
     <owl:AnnotationProperty rdf:about="&dc;title"/>
     <owl:AnnotationProperty rdf:about="&dc;rights"/>
@@ -667,11 +667,27 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000089 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000089">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000404"/>
+    </rdf:Description>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000103 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000103">
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000340"/>
     </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000121 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000121">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000404"/>
+    </rdf:Description>
     
 
 
@@ -821,6 +837,39 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
 
 </obo:IAO_0000115>
     </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000228 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000228">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000404"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000238 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000238">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000404"/>
+        <oboInOwl:hasSynonym>fusibility</oboInOwl:hasSynonym>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000248 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000248">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000404"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000255 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000255">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000404"/>
+    </rdf:Description>
     
 
 
