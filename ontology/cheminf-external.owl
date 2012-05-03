@@ -370,7 +370,9 @@
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
-    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+  -->   
+
+ <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
 
     <owl:Class rdf:about="&obo;OBI_0000011">
         <rdfs:label xml:lang="en">planned process</rdfs:label>
