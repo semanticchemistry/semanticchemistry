@@ -4375,6 +4375,15 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <dc:description>A descriptor of the pressure exerted by the vapour phase of a chemical substance on its condensed phase at a given temperature and pressure.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
+
+  <!-- http://semanticscience.org/resource/CHEMINF_000420 -->
+
+  <owl:Class rdf:about="&resource;CHEMINF_000420">
+    <rdfs:label>surface tension descriptor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+    <dc:description>A descriptor of the disposition of a portion of liquid to resist a force.</dc:description>
+    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+  </owl:Class>
     
 
 
