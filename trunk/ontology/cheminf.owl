@@ -58,8 +58,8 @@
         <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
         <dc:title rdf:datatype="&xsd;string">chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <dc:contributor>Leonid Chepelev</dc:contributor>
         <dc:contributor>Colin Batchelor</dc:contributor>
+        <dc:contributor>Leonid Chepelev</dc:contributor>
         <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
         <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
 specified URI = http://semanticscience.org/resource/
@@ -88,10 +88,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
@@ -216,6 +216,13 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     </owl:ObjectProperty>
     
 
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000331 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000331"/>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
@@ -229,6 +236,20 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://www.obofoundry.org/ro/ro.owl#has_agent -->
 
     <owl:ObjectProperty rdf:about="&ro;has_agent">
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -256,6 +277,20 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
     </owl:ObjectProperty>
     
 
@@ -263,6 +298,20 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
 
     <rdf:Description rdf:about="&ro;part_of">
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -464,6 +513,12 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -475,12 +530,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&cheminf;CHEMINF_000502"/>
@@ -545,6 +594,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&cheminf;CHEMINF_000502"/>
     </owl:Class>
     
+
+
     <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000509 -->
 
     <owl:Class rdf:about="&cheminf;CHEMINF_000509">
@@ -1465,19 +1516,19 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
                 <owl:someValuesFrom rdf:resource="&cheminf;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1759,173 +1810,194 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         </owl:equivalentClass>
         <dc:description>A parameterized software execution of GGA Indigo. This refers to a particular run of the software.</dc:description>
     </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000358 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000358">
-    <rdfs:label>molar volume calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000415"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Molar volume that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000359 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000359">
-    <rdfs:label>density calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000416"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Density that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000360 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000360">
-    <rdfs:label>flash point calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000417"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Flash point that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000361 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000361">
-    <rdfs:label>enthalpy of vaporization calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000418"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Enthalpy of vaporization that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000362 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000362">
-    <rdfs:label>vapour pressure calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000419"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Vapour pressure that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000363 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000363">
-    <rdfs:label>organic carbon adsorption coefficient at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000413"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Organic carbon adsorption coefficient at pH 5.5 that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000364 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000364">
-    <rdfs:label>organic carbon adsorption coefficient at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000413"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Organic carbon adsorption coefficient at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000365 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000365">
-    <rdfs:label>bioconcentration factor at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000414"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Bioconcentration factor at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000366 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000366">
-    <rdfs:label>bioconcentration factor at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000414"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Bioconcentration factor at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000367 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000367">
-    <rdfs:label>number of rule of five violations calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000312"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Number of rule of five violations for a chemical structure that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000368 -->
-
-  <owl:Class rdf:about="&resource;CHEMINF_000368">
-    <rdfs:label>surface tension calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
-    <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000420"/>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
-        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <dc:description>Surface tension, in dyne per centimetre, that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
-  </owl:Class>
+    
 
 
-  <!-- http://semanticscience.org/resource/CHEMINF_000404 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000358 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000358">
+        <rdfs:label>molar volume calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000415"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Molar volume that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000359 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000359">
+        <rdfs:label>density calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000416"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Density that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000360 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000360">
+        <rdfs:label>flash point calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000417"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Flash point that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000361 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000361">
+        <rdfs:label>enthalpy of vaporization calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000418"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Enthalpy of vaporization that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000362 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000362">
+        <rdfs:label>vapour pressure calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000419"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Vapour pressure that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000363 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000363">
+        <rdfs:label>organic carbon adsorption coefficient at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000413"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Organic carbon adsorption coefficient at pH 5.5 that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000364 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000364">
+        <rdfs:label>organic carbon adsorption coefficient at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000413"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Organic carbon adsorption coefficient at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000365 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000365">
+        <rdfs:label>bioconcentration factor at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000414"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Bioconcentration factor at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000366 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000366">
+        <rdfs:label>bioconcentration factor at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000414"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Bioconcentration factor at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000367 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000367">
+        <rdfs:label>number of rule of five violations calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000312"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Number of rule of five violations for a chemical structure that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000368 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000368">
+        <rdfs:label>surface tension calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000420"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Surface tension, in dyne per centimetre, that has been calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000404 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000404">
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
     </owl:Class>
+    
 
 
- 
-
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000450 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000450 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000450"/>
     
@@ -2014,6 +2086,9 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000101">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000100">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&ro;integral_part_of">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -2022,9 +2097,20 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000100">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000105">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
@@ -2055,15 +2141,29 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000308">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;GAZ_00000448">
-        <obo:IAO_0000412 rdf:resource="&obo;GAZ"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000307">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;GAZ_00000448">
+        <obo:IAO_0000412 rdf:resource="&obo;GAZ"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000306">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -2102,14 +2202,11 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000583">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000584">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000112">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000589">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    <rdf:Description rdf:about="&obo;IAO_0000584">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;proper_part_of">
         <oboInOwl:hasDefinition>
@@ -2119,6 +2216,23 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000589">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000117">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -2140,21 +2254,35 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000303">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000304">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;iao/obsolete.owl">
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000304">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    <rdf:Description rdf:about="&obo;IAO_0000581">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000442">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000581">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000443">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -2224,6 +2352,9 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&dc;date">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000078">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&ro;located_in">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -2232,9 +2363,20 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000078">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000006">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
@@ -2248,10 +2390,10 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000141">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000142">
+    <rdf:Description rdf:about="&obo;IAO_0000003">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000003">
+    <rdf:Description rdf:about="&obo;IAO_0000142">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;relationship">
@@ -2262,12 +2404,26 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000140">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000001">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000140">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
     <rdf:Description rdf:about="&PATO;PATO_0000125">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
@@ -2283,24 +2439,38 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
     </rdf:Description>
     <rdf:Description rdf:about="&dc;source">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000088">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000401">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000088">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000400">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000403">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&PATO;PATO_0000122">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000403">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000402">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
@@ -2308,11 +2478,11 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000015">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000017">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;OBI_0500000">
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000017">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000018">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
@@ -2341,11 +2511,11 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&UO;UO_0000002">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000414">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&dc;subject">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000414">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000413">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -2357,11 +2527,11 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000096">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000009">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000093">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000009">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000008">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
@@ -2377,6 +2547,20 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;contained_in">
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -2407,10 +2591,27 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000417">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000316">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&ro;derives_from">
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -2422,10 +2623,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000317">
+    <rdf:Description rdf:about="&obo;IAO_0000316">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000418">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000317">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000326">
@@ -2464,10 +2668,10 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000222">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000220">
+    <rdf:Description rdf:about="&obo;IAO_0000019">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000019">
+    <rdf:Description rdf:about="&obo;IAO_0000220">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000225">
@@ -2504,12 +2708,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000329">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000032">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000135">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000032">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0100001">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -2517,11 +2721,11 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&dc;coverage">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000330">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000129">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000330">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000232">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -2530,6 +2734,20 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;adjacent_to">
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
