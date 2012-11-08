@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE rdf:RDF [
-    <!ENTITY UO "http://purl.org/obo/owl/UO#" >
     <!ENTITY purl "http://purl.obofoundry.org/" >
-    <!ENTITY PATO "http://purl.org/obo/owl/PATO#" >
     <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
@@ -14,7 +12,6 @@
     <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY resource "http://semanticscience.org/resource/" >
-    <!ENTITY CHEBI "http://purl.obolibrary.org/obo/CHEBI#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
@@ -26,10 +23,8 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf-bodo.owl#"
      xml:base="http://www.semanticweb.org/ontologies/cheminf-bodo.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:UO="http://purl.org/obo/owl/UO#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
@@ -40,7 +35,6 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:CHEBI="&obo;CHEBI#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">

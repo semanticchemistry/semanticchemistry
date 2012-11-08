@@ -2,8 +2,6 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY UO "http://purl.org/obo/owl/UO#" >
-    <!ENTITY PATO "http://purl.org/obo/owl/PATO#" >
     <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
@@ -25,10 +23,8 @@
 <rdf:RDF xmlns="http://semanticscience.org/ontology/cheminf-external.owl#"
      xml:base="http://semanticscience.org/ontology/cheminf-external.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:UO="http://purl.org/obo/owl/UO#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
@@ -441,7 +437,7 @@ information entity by planning protocol applications included in an overall stud
 
     <!-- http://purl.org/obo/owl/UO#UO_0000001 -->
 
-    <owl:Class rdf:about="&UO;UO_0000001">
+    <owl:Class rdf:about="&obo;UO_0000001">
         <rdfs:label>length unit</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000003"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;anyURI">http://purl.org/obo/owl/UO</obo:IAO_0000412>
@@ -689,6 +685,21 @@ information entity by planning protocol applications included in an overall stud
         <rdfs:comment rdf:datatype="&xsd;string">Examples: the role of a person as a surgeon, the role of a chemical compound in an experiment, the role of a patient relative as defined by a hospital administrative form, the role of a woman as a legal mother in the context of system of laws, the role of a biological grandfather as legal guardian in the context of a system of laws, the role of ingested matter in digestion, the role of a student in a university</rdfs:comment>
     </owl:Class>
     
+    <!-- protein binding -->
+
+    <owl:Class rdf:about="&obo;GO_0005515">
+         <rdfs:label rdf:datatype="&xsd;string">protein binding</rdfs:label>
+         <rdfs:subClassOf rdf:resource="&span;Process"/>
+         <rdfs:comment rdf:datatype="&xsd;string">Definition: Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</rdfs:comment>
+    </owl:Class>
+
+    <!-- protein -->
+
+    <owl:Class rdf:about="&obo;PR_000000001">
+         <rdfs:label rdf:datatype="&xsd;string">protein</rdfs:label>
+         <rdfs:subClassOf rdf:resource="&obo;CHEBI_23367"/>
+         <rdfs:comment rdf:datatype="&xsd;string">Definition: An amino acid chain that is produced de novo by ribosome-mediated translation of a genetically-encoded mRNA.</rdfs:comment>
+    </owl:Class>
 
 
     <!-- http://www.ifomis.org/bfo/1.1/snap#Site -->
