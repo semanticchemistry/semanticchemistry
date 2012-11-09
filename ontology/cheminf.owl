@@ -144,33 +144,38 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
-    <!-- http://semanticscience.org/ontology/cheminf.owl#has_protein_binding_participant -->
+    <!-- http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000452 -->
 
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/ontology/cheminf.owl#has_protein_binding_participant">
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000452">
+      <rdfs:label>has_protein_binding_participant</rdfs:label>
         <rdfs:domain rdf:resource="&obo;GO_0005515"/>
-        <owl:inverseOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl#participates_in_protein_binding"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000453"/>
         <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticscience.org/ontology/cheminf.owl#ligates -->
+    <!-- http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000454 -->
 
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/ontology/cheminf.owl#ligates">
-        <rdfs:range rdf:resource="&obo;PR_000000001"/>
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000454">
+      <rdfs:label>ligates</rdfs:label>
+
+      <rdfs:range rdf:resource="&obo;PR_000000001"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://semanticscience.org/ontology/cheminf.owl#participates_in_protein_binding"/>
-            <rdf:Description rdf:about="http://semanticscience.org/ontology/cheminf.owl#has_protein_binding_participant"/>
+            <rdf:Description rdf:about="http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000453"/>
+            <rdf:Description rdf:about="http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000452"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticscience.org/ontology/cheminf.owl#participates_in_protein_binding -->
+    <!-- http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000453 -->
 
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/ontology/cheminf.owl#participates_in_protein_binding">
-        <rdfs:range rdf:resource="&obo;GO_0005515"/>
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000453">
+      <rdfs:label>participates_in_protein_binding</rdfs:label>
+      <owl:inverseOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl#CHEMINF_000452"/>
+      <rdfs:range rdf:resource="&obo;GO_0005515"/>
         <rdfs:subPropertyOf rdf:resource="&ro;participates_in"/>
     </owl:ObjectProperty>
     
