@@ -14,14 +14,12 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
-    <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl/" >
 ]>
 
 
 <rdf:RDF xmlns="http://semanticscience.org/ontology/cheminf-core.owl#"
      xml:base="http://semanticscience.org/ontology/cheminf-core.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:cheminf="http://semanticscience.org/ontology/cheminf.owl/"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -396,7 +394,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000400 -->
 
-    <owl:Class rdf:about="&cheminf;CHEMINF_000400">
+    <owl:Class rdf:about="&resource;CHEMINF_000400">
         <rdfs:label>chemical graph</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <dc:description>A chemical graph is a structural descriptor in which the connectivity and constitution of the chemical entity are described in terms of a mathematical graph, usually with atoms as vertices and bonds as edges, but other variants exist.</dc:description>
@@ -406,7 +404,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000513 -->
 
-    <owl:Class rdf:about="&cheminf;CHEMINF_000513">
+    <owl:Class rdf:about="&resource;CHEMINF_000513">
         <rdfs:label>chemical substance descriptor</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
