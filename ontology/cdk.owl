@@ -17,7 +17,6 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
-    <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl/" >
     <!ENTITY cdkdesc "http://cdk.sf.net/descriptor/molecular#" >
 ]>
 
@@ -25,7 +24,6 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cdk.owl#"
      xml:base="http://www.semanticweb.org/ontologies/cdk.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:cheminf="http://semanticscience.org/ontology/cheminf.owl/"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
