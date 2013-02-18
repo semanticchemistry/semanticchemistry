@@ -80,10 +80,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
@@ -277,7 +277,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000457">
         <rdfs:label>has_normalized_parent</rdfs:label>
-        <dc:description>Connects a molecule to a &apos;normalized&apos; &apos;version&apos; of the same molecule according to an algorithm. This is a pseudo-relation between molecules that will be a property chain that goes via connection tables.</dc:description>
+        <dc:description>Connects a molecule to a &apos;normalized&apos; &apos;version&apos; of the same molecule according to an algorithm. This is a pseudo-relation between molecules that will be a property chain that goes via connection tables.
+
+Caution: this is not a subclass relation and should not be thought of as such for reasoning purposes.</dc:description>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
     </owl:ObjectProperty>
@@ -293,18 +295,33 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000457"/>
     </owl:ObjectProperty>
+    
 
-  <!-- http://semanticscience.org/resource/CHEMINF_000459 -->
 
-  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000459">
-    <rdfs:label>has_isotopically_unspecified_parent</rdfs:label>
-    <dc:description>Connects a molecule to a &apos;normalized&apos; &apos;version&apos; of the same molecule according to an algorithm. This is a pseudo-relation between molecules that will be a property chain that goes via connection tables.</dc:description>
+    <!-- http://semanticscience.org/resource/CHEMINF_000459 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000459">
+        <rdfs:label>has_isotopically_unspecified_parent</rdfs:label>
+        <dc:description>Connects a molecule to a &apos;normalized&apos; &apos;version&apos; of the same molecule according to an algorithm. This is a pseudo-relation between molecules that will be a property chain that goes via connection tables.</dc:description>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&rdfs;isSubclassOf"/>
+    </owl:ObjectProperty>
+
+  <!-- http://semanticscience.org/resource/CHEMINF_000460 -->
+
+  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000460">
+    <rdfs:label>has_uncharged_parent</rdfs:label>
+    <dc:description>
+      Connects a molecule to a very similar molecule which is neutral.
+      Exactly how we get to the neutral molecule is implementation-dependent.
+    </dc:description>
     <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
     <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
-    <rdfs:subPropertyOf rdf:resource="&rdfs;isSubclassOf"/>
   </owl:ObjectProperty>
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
+
+  <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
         <rdfs:domain rdf:resource="&obo;IAO_0000027"/>
@@ -756,14 +773,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1653,14 +1670,14 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -2984,14 +3001,14 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
@@ -3651,40 +3668,40 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000319">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&ro;derives_from">
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000417">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&ro;derives_from">
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000316">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
