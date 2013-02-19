@@ -6,6 +6,7 @@
     <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY obo2 "http://purl.obolibrary.org/obo#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
@@ -31,6 +32,7 @@
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:obo2="http://purl.obolibrary.org/obo#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
@@ -80,10 +82,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
@@ -131,6 +133,29 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo#is_enantiomer_of -->
+
+    <owl:ObjectProperty rdf:about="&obo2;is_enantiomer_of">
+        <dc:description>A is_enantiomer_of B if and only if, given any a that instantiates A, has molecular graph ag, there is some b such that b instantiates B, is described by molecular graph bg, such that ca is equal to cb and ag is transformed into bg through a C2 symmetric transform.</dc:description>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000461"/>
+        <owl:propertyDisjointWith rdf:resource="&resource;CHEMINF_000463"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo#is_tautomer_of -->
+
+    <owl:ObjectProperty rdf:about="&obo2;is_tautomer_of">
+        <dc:description>A is_tautomer_of B if and only if, given any a which instantiates A and has composition ca and is described by a molecular graph ag, there is some b that instantiates B, has composition cb and is described by a molecular graph bg, such that ca equals cb, ag is different from bg and a derives from b as the result of an intramolecular chemical transformation process (i.e. a chemical transformation process which has only one participant), in which only bonds to hydrogen are broken or formed.</dc:description>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
+    </owl:ObjectProperty>
     
 
 
@@ -254,9 +279,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000455">
         <rdfs:label>is_isotopologue_of</rdfs:label>
-        <dc:description>An isotopologue is a molecular entity that differs only in isotopic composition from another molecular entity.</dc:description>
+        <dc:description>An isotopologue is a molecular entity that differs only in isotopic composition from another molecular entity. (AU:I03351)</dc:description>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
     </owl:ObjectProperty>
     
 
@@ -265,10 +291,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000456">
         <rdfs:label>has_stereoundefined_parent</rdfs:label>
-        <dc:description>This relation is a specialization of the subclass relation to capture the case where the parent class has less stereochemistry specified than in the child.</dc:description>
+        <dc:description>Subclass relation between a class that has stereochemistry defined and an otherwise identical class that does not.</dc:description>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-        <rdfs:subPropertyOf rdf:resource="&rdfs;isSubclassOf"/>
+        <rdfs:subPropertyOf rdf:resource="&rdfs;subClassOf"/>
     </owl:ObjectProperty>
     
 
@@ -276,9 +302,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000457 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000457">
-        <rdfs:label>has_normalized_parent</rdfs:label>
-        <dc:description>Connects a molecule to a &apos;normalized&apos; &apos;version&apos; of the same molecule according to an algorithm. This is a pseudo-relation between molecules that will be a property chain that goes via connection tables.
-
+        <rdfs:label>has_normalized_counterpart</rdfs:label>
+        <dc:description>Connects a molecule to a normalized counterpart of the same molecule according to an algorithm.
+Caution: The number of moieties in the first molecule may be greater than in the second molecule. Example: salts.
 Caution: this is not a subclass relation and should not be thought of as such for reasoning purposes.</dc:description>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
@@ -289,8 +315,8 @@ Caution: this is not a subclass relation and should not be thought of as such fo
     <!-- http://semanticscience.org/resource/CHEMINF_000458 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000458">
-        <rdfs:label>has_OPS_normalized_parent</rdfs:label>
-        <dc:description>This connects a molecule to its OPS &apos;super-parent&apos;.</dc:description>
+        <rdfs:label>has_OPS_normalized_counterpart</rdfs:label>
+        <dc:description>This connects a molecule to its normalized counterpart according to the OPS specification.</dc:description>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000457"/>
@@ -302,26 +328,61 @@ Caution: this is not a subclass relation and should not be thought of as such fo
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000459">
         <rdfs:label>has_isotopically_unspecified_parent</rdfs:label>
-        <dc:description>Connects a molecule to a &apos;normalized&apos; &apos;version&apos; of the same molecule according to an algorithm. This is a pseudo-relation between molecules that will be a property chain that goes via connection tables.</dc:description>
+        <dc:description>Subclass relation between a class that has isotopes specified, for example D2O or 14C-urea, and an otherwise identical class that does not, for example water or urea.</dc:description>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
-        <rdfs:subPropertyOf rdf:resource="&rdfs;isSubclassOf"/>
+        <rdfs:subPropertyOf rdf:resource="&rdfs;subClassOf"/>
     </owl:ObjectProperty>
-
-  <!-- http://semanticscience.org/resource/CHEMINF_000460 -->
-
-  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000460">
-    <rdfs:label>has_uncharged_parent</rdfs:label>
-    <dc:description>
-      Connects a molecule to a very similar molecule which is neutral.
-      Exactly how we get to the neutral molecule is implementation-dependent.
-    </dc:description>
-    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
-  </owl:ObjectProperty>
+    
 
 
-  <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000460 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000460">
+        <rdfs:label>has_uncharged_counterpart</rdfs:label>
+        <dc:description>Connects a molecule to molecule with identical heavy-atom connectivity which is neutral. It is not a subclass relation.</dc:description>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000461 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000461">
+        <rdfs:label>is_stereoisomer_of</rdfs:label>
+        <dc:description>Connects a molecule to an isomer with identical constitution but differing in its arrangement of atoms in space. (AU:S05984)</dc:description>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000462 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000462">
+        <rdfs:label>has_same_connectivity_as</rdfs:label>
+        <dc:description>Connects a molecule to an isomer with identical constitution.</dc:description>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000463 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000463">
+        <rdfs:label>is_diastereomer_of</rdfs:label>
+        <dc:description>Connects a molecule to a stereoisomer which is not its enantiomer.</dc:description>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000461"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
         <rdfs:domain rdf:resource="&obo;IAO_0000027"/>
@@ -434,6 +495,12 @@ Caution: this is not a subclass relation and should not be thought of as such fo
     <!-- http://www.w3.org/2000/01/rdf-schema#isSubclassOf -->
 
     <owl:ObjectProperty rdf:about="&rdfs;isSubclassOf"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:ObjectProperty rdf:about="&rdfs;subClassOf"/>
     
 
 
@@ -1670,14 +1737,14 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -2969,6 +3036,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -2980,12 +3053,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&resource;CHEMINF_000502"/>
@@ -3668,40 +3735,40 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000319">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;derives_from">
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000417">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&ro;derives_from">
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000316">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
