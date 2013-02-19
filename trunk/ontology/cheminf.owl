@@ -490,14 +490,6 @@ Caution: this is not a subclass relation and should not be thought of as such fo
         <rdfs:subPropertyOf rdf:resource="&ro;participates_in"/>
     </owl:ObjectProperty>
     
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#isSubclassOf -->
-
-    <owl:ObjectProperty rdf:about="&rdfs;isSubclassOf"/>
-    
-
-
     <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
 
     <owl:ObjectProperty rdf:about="&rdfs;subClassOf"/>
