@@ -82,6 +82,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&resource;CHEMINF_000464"/>
+    <owl:AnnotationProperty rdf:about="&resource;CHEMINF_000465"/>
+    <owl:AnnotationProperty rdf:about="&resource;CHEMINF_000466"/>
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -303,9 +306,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000457">
         <rdfs:label>has_normalized_counterpart</rdfs:label>
-        <dc:description>Connects a molecule to a normalized counterpart of the same molecule according to an algorithm.
-Caution: The number of moieties in the first molecule may be greater than in the second molecule. Example: salts.
-Caution: this is not a subclass relation and should not be thought of as such for reasoning purposes.</dc:description>
+        <rdfs:comment>Caution: this is not a subclass relation and should not be thought of as such for reasoning purposes.</rdfs:comment>
+        <rdfs:comment>Caution: The number of moieties in the first molecule may be greater than in the second molecule. Example: salts.</rdfs:comment>
+        <dc:description>Connects a molecule to a normalized counterpart of the same molecule according to an algorithm.</dc:description>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
     </owl:ObjectProperty>
@@ -490,6 +493,8 @@ Caution: this is not a subclass relation and should not be thought of as such fo
         <rdfs:subPropertyOf rdf:resource="&ro;participates_in"/>
     </owl:ObjectProperty>
     
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
 
     <owl:ObjectProperty rdf:about="&rdfs;subClassOf"/>
@@ -556,7 +561,6 @@ Caution: this is not a subclass relation and should not be thought of as such fo
     <owl:DatatypeProperty rdf:about="&resource;CHEMINF_000012">
         <rdfs:label>has value</rdfs:label>
         <rdfs:domain rdf:resource="&obo;IAO_0000027"/>
-        <rdfs:range rdf:resource="&xsd;anyType"/>
     </owl:DatatypeProperty>
     
 
@@ -655,6 +659,16 @@ Caution: this is not a subclass relation and should not be thought of as such fo
 
     <owl:Class rdf:about="&obo;OBI_0000011">
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000464">
+        <rdfs:label>database identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <obo:IAO_0000115>An identifying descriptor which is used within a particular database system to identify a chemical system.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -795,7 +809,7 @@ Caution: this is not a subclass relation and should not be thought of as such fo
 
     <owl:Class rdf:about="&resource;CHEMINF_000140">
         <rdfs:label>PubChem compound identifier (CID)</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000302"/>
     </owl:Class>
     
 
@@ -804,7 +818,7 @@ Caution: this is not a subclass relation and should not be thought of as such fo
 
     <owl:Class rdf:about="&resource;CHEMINF_000141">
         <rdfs:label>PubChem substance identifier (SID)</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000302"/>
     </owl:Class>
     
 
@@ -912,6 +926,14 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000234 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000234">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000140"/>
+    </rdf:Description>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000238 -->
 
     <rdf:Description rdf:about="&resource;CHEMINF_000238">
@@ -940,6 +962,30 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
     <!-- http://semanticscience.org/resource/CHEMINF_000266 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000266"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000302 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000302">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000303 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000303">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000304 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000304">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
     
 
 
@@ -1692,7 +1738,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <!-- http://semanticscience.org/resource/CHEMINF_000339 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000339">
-        <rdfs:label xml:lang="en">pubchem despositor-supplied molecular entity name</rdfs:label>
+        <rdfs:label xml:lang="en">pubchem depositor-supplied molecular entity name</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
         <obo:IAO_0000115>A molecular entity name that has been supplied by a depositor to the PubChem database. This is just a molecular entity name with additional provenance associated. </obo:IAO_0000115>
     </owl:Class>
@@ -1729,14 +1775,14 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -2970,6 +3016,70 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000405 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000405">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000406 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000406">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000407 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000407">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000408 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000408">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000409 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000409">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000410 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000410">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000411 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000411">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000412 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000412">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/ontology/cheminf.owl/CHEMINF_000464"/>
+    </rdf:Description>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000429 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000429">
@@ -3011,6 +3121,26 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000465 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000465">
+        <rdfs:label>ChemSpider validated synonym</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000044"/>
+        <obo:IAO_0000115>A preferred name in ChemSpider by virtue of having been validated by a curator.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000466 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000466">
+        <rdfs:label>ChemSpider unvalidated synonym</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
+        <obo:IAO_0000115>A molecular entity name in the ChemSpider database which has not been validated by a curator.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000500 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000500">
@@ -3028,12 +3158,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -3045,6 +3169,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&resource;CHEMINF_000502"/>
@@ -3060,14 +3190,14 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
