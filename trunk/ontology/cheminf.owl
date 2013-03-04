@@ -82,10 +82,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
@@ -95,6 +95,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:AnnotationProperty rdf:about="&dc;language">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
+    <rdf:Description rdf:about="&obo;IAO_0000117">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </rdf:Description>
     <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
     <owl:AnnotationProperty rdf:about="&dc;format">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
@@ -848,14 +851,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1772,6 +1775,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1779,12 +1788,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -3130,6 +3133,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000577"/>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
         <obo:IAO_0000115>An identifying descriptor which is used within a particular database system to identify a chemical system.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3140,6 +3144,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:label>ChemSpider validated synonym</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000044"/>
         <obo:IAO_0000115>A preferred name in ChemSpider by virtue of having been validated by a curator.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3149,6 +3154,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <owl:Class rdf:about="&resource;CHEMINF_000466">
         <rdfs:label>ChemSpider unvalidated synonym</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A molecular entity name in the ChemSpider database which has not been validated by a curator.</obo:IAO_0000115>
     </owl:Class>
     
@@ -3165,6 +3171,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000469"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A chemical database identifier which has been validated by a curator.</obo:IAO_0000115>
     </owl:Class>
     
@@ -3185,7 +3192,31 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <owl:Class rdf:about="&resource;CHEMINF_000469">
         <rdfs:label>CRID validation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A planned process in which a person bearing a curator role confirms an association between a CRID and an information content entity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000470 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000470">
+        <rdfs:label>chemical name devalidation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>A planned process in which a person bearing a curator role marks an association between a chemical name and an information content entity as unconfirmed.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3195,6 +3226,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <owl:Class rdf:about="&resource;CHEMINF_000471">
         <rdfs:label>CRID registry curation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000579"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A planned process in which a person bearing a curator role modifies a CRID registry.</obo:IAO_0000115>
     </owl:Class>
     
@@ -3211,13 +3249,70 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>A planned process in which a person bearing a curator role confirms an association between a chemical name and an information content entity.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000473 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000473">
+        <rdfs:label>chemical name deprecation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;has_participant"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000579"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A planned process in which a person bearing a curator role confirms an association between a chemical name and an information content entity.</obo:IAO_0000115>
+        <obo:IAO_0000115>A planned process in which a person bearing a curator role deprecates an association between a chemical name and an information content entity.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000474 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000474">
+        <rdfs:label>CRID deprecation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <rdfs:comment>This can be done automatically; it does not need a person bearing a curator role.</rdfs:comment>
+        <obo:IAO_0000115>A planned process in which an association between a CRID and an information content entity is deprecated.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000475 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000475">
+        <rdfs:label>CRID devalidation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>A planned process in which an association between a CRID and an information content entity is marked as unconfirmed.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000476 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000476">
+        <rdfs:label>ChemSpider title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000465"/>
+        <obo:IAO_0000115>A ChemSpider validated synonym that has been identified as a title by the ChemSpider software.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3239,6 +3334,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -3250,12 +3351,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&resource;CHEMINF_000502"/>
@@ -3271,14 +3366,14 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
@@ -3431,25 +3526,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://semanticscience.org/resource/CHEMINF_000470 -->
-
-    <owl:NamedIndividual rdf:about="&resource;CHEMINF_000470">
-        <rdf:type rdf:resource="&obo;IAO_0000579"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Annotations
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -3457,6 +3533,9 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 
     <rdf:Description rdf:about="&obo;IAO_0000101">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000100">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;integral_part_of">
         <oboInOwl:hasDefinition>
@@ -3480,9 +3559,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000100">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000105">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
@@ -3605,9 +3681,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000589">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000117">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000116">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -3759,12 +3832,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <rdf:Description rdf:about="&obo;IAO_0000141">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000003">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000142">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&ro;relationship">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -3787,6 +3854,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000142">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000003">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000001">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
