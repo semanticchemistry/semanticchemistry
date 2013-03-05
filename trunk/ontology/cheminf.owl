@@ -82,10 +82,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
@@ -157,7 +157,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <dc:description>A is_tautomer_of B if and only if, given any a which instantiates A and has composition ca and is described by a molecular graph ag, there is some b that instantiates B, has composition cb and is described by a molecular graph bg, such that ca equals cb, ag is different from bg and a derives from b as the result of an intramolecular chemical transformation process (i.e. a chemical transformation process which has only one participant), in which only bonds to hydrogen are broken or formed.</dc:description>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -311,6 +311,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <dc:description>Connects a molecule to a normalized counterpart of the same molecule according to an algorithm.</dc:description>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     </owl:ObjectProperty>
     
 
@@ -318,7 +319,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000458 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000458">
-        <rdfs:label>has_OPS_normalized_counterpart</rdfs:label>
+        <rdfs:label>has OPS normalized counterpart</rdfs:label>
         <dc:description>This connects a molecule to its normalized counterpart according to the OPS specification.</dc:description>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
@@ -346,6 +347,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <dc:description>Connects a molecule to molecule with identical heavy-atom connectivity which is neutral. It is not a subclass relation.</dc:description>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     </owl:ObjectProperty>
     
 
@@ -381,6 +383,87 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000461"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000477 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000477">
+        <rdfs:label>has PubChem normalized counterpart</rdfs:label>
+        <obo:IAO_0000115>This connects a molecule to its normalized counterpart according to the PubChem specification.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000457"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000478 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000478">
+        <rdfs:label>has component</rdfs:label>
+        <obo:IAO_0000115>Has as member parts (see BFO 2 Graz for more on this) many molecular entities.</obo:IAO_0000115>
+        <rdfs:comment>This connects entities at different granularities.</rdfs:comment>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000266"/>
+        <rdfs:subPropertyOf rdf:resource="&ro;has_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000479 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000479">
+        <rdfs:label>has counterpart molecular entity</rdfs:label>
+        <obo:IAO_0000115>Connects a molecular entity to another molecular entity according to some specification.</obo:IAO_0000115>
+        <rdfs:comment>This is intended to capture the case where a database has ad hoc relations between molecules that are not necessarily subclass relations.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000480 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000480">
+        <rdfs:label>has component with uncharged counterpart</rdfs:label>
+        <obo:IAO_0000115>Connects a molecular substance, say a mixture containing ions, with a neutral form of one of the ions.</obo:IAO_0000115>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&resource;CHEMINF_000266"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&resource;CHEMINF_000478"/>
+            <rdf:Description rdf:about="&resource;CHEMINF_000460"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000481 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000481">
+        <rdfs:label>similar to</rdfs:label>
+        <obo:IAO_0000115>Connects a molecular entity that is deemed similar to another according to some algorithm.</obo:IAO_0000115>
+        <rdfs:comment>not transitive, obviously</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000482 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000482">
+        <rdfs:label>similar to by PubChem 2D similarity algorithm</rdfs:label>
+        <obo:IAO_0000115>Has a Tanimoto score with the counterpart molecular entity of more than 0.9, based on the PubChem fingerprint specification.</obo:IAO_0000115>
+        <rdfs:comment>http://pubchem.ncbi.nlm.nih.gov/help.html#tanimoto</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000481"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000483 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000483">
+        <rdfs:label>similar to by PubChem 3D similarity algorithm</rdfs:label>
+        <obo:IAO_0000115>Has a 3D Tanimoto score with the counterpart molecule where the 3D shape similarity for the two is greater than 0.795 and the 3D feature score is greater than 0.495 or there are no features and the 3D shape similarity is greater than 0.925, where the shape similarity ST is calculated by ST=VAB/(VAA+VBB-VAB), where VAA and VBB are self-overlap volume of conformers A and B, and VAB is the common overlap volume between them and the feature score CT is calculated by CT=sum(VfAB)/(sum(VfAA)+sum(VfBB)-sum(VfAB)), where the superscript f indicates any of the six independent fictitious feature atom types, VfAA and VfBB are the respective self-overlap volumes of conformers A and B for feature atom type f, and VfAB is the overlap volume of conformers A and B for feature type f.</obo:IAO_0000115>
+        <rdfs:comment>http://dx.doi.org/10.1186/1758-2946-3-32</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000481"/>
     </owl:ObjectProperty>
     
 
@@ -1775,13 +1858,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3366,14 +3449,14 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
@@ -4028,6 +4111,22 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;derives_from">
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -4042,22 +4141,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000417">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
