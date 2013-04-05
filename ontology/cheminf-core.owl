@@ -1467,6 +1467,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI_36357"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+      <obo:IAO_0000115>The mass of a molecule calculated according to some assumption about the isotopic identity of the atoms constituting it.</obo:IAO_0000115>
+      <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -2853,8 +2855,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <!-- http://semanticscience.org/resource/CHEMINF_000216 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000216">
-        <rdfs:label xml:lang="en">molecular weight descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000083"/>
+        <rdfs:label xml:lang="en">average molecular weight descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000088"/>
         <dc:description>The mass of a molecule calculated using the average mass of each element weighted for its natural isotopic abundance. E.g., Carbon has two natural isotopes 12 and 13 with relative abundances of 98.9% and 1.1% to yield an average mass of 12.011 g/mol</dc:description>
     </owl:Class>
     
@@ -2864,7 +2866,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
     <owl:Class rdf:about="&resource;CHEMINF_000217">
         <rdfs:label xml:lang="en">exact mass descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000083"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000088"/>
         <dc:description>an exact mass descriptor corresponds to the mass of the most intense molecule/ion peak in an MS spec, and when calculated denotes the mass of an ion or a molecule containing most likely isotopic composition for a single random molecule.</dc:description>
     </owl:Class>
     
@@ -2874,7 +2876,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
     <owl:Class rdf:about="&resource;CHEMINF_000218">
         <rdfs:label xml:lang="en">monoisotopic mass descriptor</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000083"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000088"/>
         <dc:description>The mass of a molecule calculated using the mass of the most abundant isotope of each element. E.g., Carbon has a monoisotopic mass of 12.000 g/mol.</dc:description>
     </owl:Class>
     
