@@ -42,12 +42,12 @@
         <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
         <dc:title rdf:datatype="&xsd;string">chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
+        <dc:contributor>Leonid Chepelev</dc:contributor>
+        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
         <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
 specified URI = http://semanticscience.org/resource/
 Followed by &apos;/&apos;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
-        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
-        <dc:contributor>Leonid Chepelev</dc:contributor>
     </owl:Ontology>
     
 
@@ -60,31 +60,90 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
-    <owl:AnnotationProperty rdf:about="&dc;description"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
-    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
-    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
-    <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
-    <owl:AnnotationProperty rdf:about="http://semanticscience.org/ontology/cheminf-core.owl#short_name"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
     <owl:AnnotationProperty rdf:about="&dc;format"/>
-    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
     <owl:AnnotationProperty rdf:about="&dc;rights"/>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://purl.org/dc/elements/1.1/title -->
 
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf-core.owl#short_name -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticscience.org/ontology/cheminf-core.owl#short_name"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
     
 
 
@@ -387,8 +446,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&resource;CHEMINF_000000">
         <rdfs:label>chemical entity</rdfs:label>
-        <oboInOwl:hasAlternativeId>CHEBI:24431</oboInOwl:hasAlternativeId>
         <dc:description>A chemical entity is any molecular entity or chemical substance.</dc:description>
+        <oboInOwl:hasAlternativeId>CHEBI:24431</oboInOwl:hasAlternativeId>
     </owl:Class>
     
 
@@ -418,8 +477,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000003">
         <rdfs:label>partial positive surface area</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>sum of surface area on positive parts of molecule</dc:description>
         <short_name>PPSA-1</short_name>
+        <dc:description>sum of surface area on positive parts of molecule</dc:description>
     </owl:Class>
     
 
@@ -429,8 +488,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000004">
         <rdfs:label>PPSA-2</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>PPSA-2</short_name>
         <dc:description>partial positive surface area * total positive charge on the molecule</dc:description>
+        <short_name>PPSA-2</short_name>
     </owl:Class>
     
 
@@ -481,8 +540,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000008">
         <rdfs:label>charge weighted partial positive surface area</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>charge weighted partial positive surface area</dc:description>
         <short_name>PPSA-3</short_name>
+        <dc:description>charge weighted partial positive surface area</dc:description>
     </owl:Class>
     
 
@@ -514,8 +573,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000011">
         <rdfs:label>partial negative surface area</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>PNSA-1</short_name>
         <dc:description>sum of surface area on negative parts of molecule</dc:description>
+        <short_name>PNSA-1</short_name>
     </owl:Class>
     
 
@@ -544,8 +603,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000015">
         <rdfs:label>PNSA-2</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>PNSA-2</short_name>
         <dc:description>partial negative surface area * total negative charge on the molecule</dc:description>
+        <short_name>PNSA-2</short_name>
     </owl:Class>
     
 
@@ -581,14 +640,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000020"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000020"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A SMILES descriptor is a structure descriptor that denotes a molecular structure as a graph.</dc:description>
@@ -603,14 +662,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000021"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000021"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A SMARTS descriptor is a molecular structure descriptor that conforms to the SMARTS specification.</dc:description>
@@ -856,14 +915,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000054"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A molecular formula is a structure descriptor which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecule of that compound.</dc:description>
@@ -930,8 +989,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000030"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -942,8 +1001,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000030"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -976,14 +1035,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000074"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1042,14 +1101,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000115"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>An aromaticity descriptor is a chemical descriptor which indicates the aromaticity of a molecular entity.</dc:description>
@@ -1154,14 +1213,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         </owl:equivalentClass>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000014"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000014"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>a molecular entity descriptor is a chemical descriptor that provides information about a molecular entity.</dc:description>
@@ -1467,8 +1526,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI_36357"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-      <obo:IAO_0000115>The mass of a molecule calculated according to some assumption about the isotopic identity of the atoms constituting it.</obo:IAO_0000115>
-      <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>The mass of a molecule calculated according to some assumption about the isotopic identity of the atoms constituting it.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -1544,14 +1603,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000091"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000091"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A hybridization descriptor is a chemical descriptor that is about the hybridization of atomic orbitals in a molecular entity.</dc:description>
@@ -1803,14 +1862,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000038"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000038"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>An InChI descriptor is a structure descriptor which conforms to the InChI format specification.</dc:description>
@@ -1825,14 +1884,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000100"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A MOLfile descriptor is a structure descriptor which conforms to the MOLfile format specification.</dc:description>
@@ -1957,6 +2016,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -1966,12 +2031,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A chemical descriptor is a data item (quantity or value) about a chemical entity that conforms to a specification for how it is calculated, measured or recorded.</dc:description>
@@ -2043,14 +2102,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000129"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A bond multiplicity descriptor is a chemical descriptor that in primitive cases is defined as half of the difference between the number of bonding and antibonding electrons in a particular system, but may also be defined with relation to the strength of a single bond.</dc:description>
@@ -2232,8 +2291,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000153">
         <rdfs:label>charge weighted partial negative surface area</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>PNSA-3</short_name>
         <dc:description>charge weighted partial negative surface area</dc:description>
+        <short_name>PNSA-3</short_name>
     </owl:Class>
     
 
@@ -2243,8 +2302,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000154">
         <rdfs:label>DPSA-1</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>DPSA-1</short_name>
         <dc:description>difference of PPSA-1 and PNSA-1</dc:description>
+        <short_name>DPSA-1</short_name>
     </owl:Class>
     
 
@@ -2254,8 +2313,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000155">
         <rdfs:label>DPSA-2</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>difference of FPSA-2 and PNSA-2</dc:description>
         <short_name>DPSA-2</short_name>
+        <dc:description>difference of FPSA-2 and PNSA-2</dc:description>
     </owl:Class>
     
 
@@ -2265,8 +2324,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000156">
         <rdfs:label>DPSA-3</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>DPSA-3</short_name>
         <dc:description>difference of PPSA-3 and PNSA-3</dc:description>
+        <short_name>DPSA-3</short_name>
     </owl:Class>
     
 
@@ -2276,8 +2335,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000157">
         <rdfs:label>FPSA-1</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>PPSA-1 / total molecular surface area</dc:description>
         <short_name>FPSA-1</short_name>
+        <dc:description>PPSA-1 / total molecular surface area</dc:description>
     </owl:Class>
     
 
@@ -2287,8 +2346,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000158">
         <rdfs:label>FPSA-2</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>FPSA-2</short_name>
         <dc:description>PPSA-2 / total molecular surface area</dc:description>
+        <short_name>FPSA-2</short_name>
     </owl:Class>
     
 
@@ -2298,8 +2357,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000159">
         <rdfs:label>FPSA-3</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>FPSA-3</short_name>
         <dc:description>PPSA-3 / total molecular surface area</dc:description>
+        <short_name>FPSA-3</short_name>
     </owl:Class>
     
 
@@ -2309,8 +2368,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000160">
         <rdfs:label>FNSA-1</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>PNSA-1 / total molecular surface area</dc:description>
         <short_name>FNSA-1</short_name>
+        <dc:description>PNSA-1 / total molecular surface area</dc:description>
     </owl:Class>
     
 
@@ -2320,8 +2379,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000161">
         <rdfs:label>FNSA-2</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>FNSA-2</short_name>
         <dc:description>PNSA-2 / total molecular surface area</dc:description>
+        <short_name>FNSA-2</short_name>
     </owl:Class>
     
 
@@ -2331,8 +2390,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000162">
         <rdfs:label>FNSA-3</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>FNSA-3</short_name>
         <dc:description>PNSA-3 / total molecular surface area</dc:description>
+        <short_name>FNSA-3</short_name>
     </owl:Class>
     
 
@@ -2342,8 +2401,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000163">
         <rdfs:label>WPSA-1</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>PPSA-1 * total molecular surface area / 1000</dc:description>
         <short_name>WPSA-1</short_name>
+        <dc:description>PPSA-1 * total molecular surface area / 1000</dc:description>
     </owl:Class>
     
 
@@ -2353,8 +2412,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000164">
         <rdfs:label>WPSA-2</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>WPSA-2</short_name>
         <dc:description>PPSA-2 * total molecular surface area /1000</dc:description>
+        <short_name>WPSA-2</short_name>
     </owl:Class>
     
 
@@ -2364,8 +2423,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000165">
         <rdfs:label>WPSA-3</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>PPSA-3 * total molecular surface area /1000</dc:description>
         <short_name>WPSA-3</short_name>
+        <dc:description>PPSA-3 * total molecular surface area /1000</dc:description>
     </owl:Class>
     
 
@@ -2375,8 +2434,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000166">
         <rdfs:label>WNSA-1</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>PNSA-1 * total molecular surface area /1000</dc:description>
         <short_name>WNSA-1</short_name>
+        <dc:description>PNSA-1 * total molecular surface area /1000</dc:description>
     </owl:Class>
     
 
@@ -2386,8 +2445,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000167">
         <rdfs:label>WNSA-2</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>WNSA-2</short_name>
         <dc:description>PNSA-2 * total molecular surface area /1000</dc:description>
+        <short_name>WNSA-2</short_name>
     </owl:Class>
     
 
@@ -2397,8 +2456,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000168">
         <rdfs:label>WNSA-3</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>WNSA-3</short_name>
         <dc:description>PNSA-3 * total molecular surface area /1000</dc:description>
+        <short_name>WNSA-3</short_name>
     </owl:Class>
     
 
@@ -2408,8 +2467,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000169">
         <rdfs:label>relative positive charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>most positive charge / total positive charge</dc:description>
         <short_name>RPCG</short_name>
+        <dc:description>most positive charge / total positive charge</dc:description>
     </owl:Class>
     
 
@@ -2419,8 +2478,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000170">
         <rdfs:label>relative negative charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>most negative charge / total negative charge</dc:description>
         <short_name>RNCG</short_name>
+        <dc:description>most negative charge / total negative charge</dc:description>
     </owl:Class>
     
 
@@ -2430,8 +2489,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000171">
         <rdfs:label>relative positive charge surface area</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>RPCS</short_name>
         <dc:description>most positive surface area * RPCG</dc:description>
+        <short_name>RPCS</short_name>
     </owl:Class>
     
 
@@ -2441,8 +2500,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000172">
         <rdfs:label>relative negative charge surface area</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>most negative surface area * RNCG</dc:description>
         <short_name>RNCS</short_name>
+        <dc:description>most negative surface area * RNCG</dc:description>
     </owl:Class>
     
 
@@ -2452,8 +2511,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000173">
         <rdfs:label>THSA</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>sum of solvent accessible surface areas of atoms with absolute value of partial charges less than 0.2</dc:description>
         <short_name>THSA</short_name>
+        <dc:description>sum of solvent accessible surface areas of atoms with absolute value of partial charges less than 0.2</dc:description>
     </owl:Class>
     
 
@@ -2463,8 +2522,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000174">
         <rdfs:label>TPSA</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>sum of solvent accessible surface areas of atoms with absolute value of partial charges greater than or equal 0.2</dc:description>
         <short_name>TPSA</short_name>
+        <dc:description>sum of solvent accessible surface areas of atoms with absolute value of partial charges greater than or equal 0.2</dc:description>
     </owl:Class>
     
 
@@ -2474,8 +2533,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000175">
         <rdfs:label>RHSA</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <short_name>RHSA</short_name>
         <dc:description>THSA / total molecular surface area</dc:description>
+        <short_name>RHSA</short_name>
     </owl:Class>
     
 
@@ -2485,8 +2544,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000176">
         <rdfs:label>RPSA</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000229"/>
-        <dc:description>TPSA / total molecular surface area</dc:description>
         <short_name>RPSA</short_name>
+        <dc:description>TPSA / total molecular surface area</dc:description>
     </owl:Class>
     
 
@@ -2520,8 +2579,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000179">
         <rdfs:label xml:lang="en">molecular polarizability</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000094"/>
-        <dc:description>Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule (including implicit hydrogens)</dc:description>
         <short_name>BPol</short_name>
+        <dc:description>Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule (including implicit hydrogens)</dc:description>
     </owl:Class>
     
 
@@ -2531,8 +2590,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000180">
         <rdfs:label xml:lang="en">fragment complexity descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000219"/>
-        <dc:description>defined as @cdk.cite{Nilakantan06}</dc:description>
         <short_name>FragmentComplexity</short_name>
+        <dc:description>defined as @cdk.cite{Nilakantan06}</dc:description>
     </owl:Class>
     
 
@@ -2577,8 +2636,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000184">
         <rdfs:label xml:lang="en">Petitjean number</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <short_name>petitjeanNumber</short_name>
         <dc:description>the eccentricity of a vertex corresponds to the distance from that vertex to the most remote vertex in the graph. The distance is obtained from the distance matrix as the count of edges between the two vertices. If r i is the largest matrix entry in row i of the distance matrix D, then the radius is defined as the smallest of the r i . The graph diameter D is defined as the largest vertex eccentricity in the graph. Petitjean Number is the value of ( diameter - radius ) diameter .</dc:description>
+        <short_name>petitjeanNumber</short_name>
     </owl:Class>
     
 
@@ -2588,8 +2647,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000185">
         <rdfs:label xml:lang="en">Petitjean Shape Index</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <short_name>petitjeanShapeIndex</short_name>
         <dc:description>A measure of the anisotropy in a molecule</dc:description>
+        <short_name>petitjeanShapeIndex</short_name>
     </owl:Class>
     
 
@@ -2599,8 +2658,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000186">
         <rdfs:label xml:lang="en">XLogP descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000251"/>
-        <dc:description>A LogP descriptor based on the atom-type method described in Wang, R., Fu, Y., and Lai, L.. A New Atom-Additive Method for Calculating Partition Coefficients, Journal of Chemical Information and Computer Sciences. vol. 37. 1997, pp. 615-621.</dc:description>
         <short_name>XLogP</short_name>
+        <dc:description>A LogP descriptor based on the atom-type method described in Wang, R., Fu, Y., and Lai, L.. A New Atom-Additive Method for Calculating Partition Coefficients, Journal of Chemical Information and Computer Sciences. vol. 37. 1997, pp. 615-621.</dc:description>
     </owl:Class>
     
 
@@ -2610,8 +2669,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000187">
         <rdfs:label xml:lang="en">MLogP descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000251"/>
-        <dc:description>A LogP descriptor based on a simple equation using the number of carbons and hetero atoms.</dc:description>
         <short_name>MannholdLogP</short_name>
+        <dc:description>A LogP descriptor based on a simple equation using the number of carbons and hetero atoms.</dc:description>
     </owl:Class>
     
 
@@ -2676,8 +2735,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000194">
         <rdfs:label xml:lang="en">acid dissociation constant</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000193"/>
-        <dc:description>the acid dissociation constant, Ka, is quantitative measure of the strength of an acid in solution. It is the equilibrium constant for a chemical reaction known as dissociation in the context of acid-base reactions.</dc:description>
         <short_name>Ka</short_name>
+        <dc:description>the acid dissociation constant, Ka, is quantitative measure of the strength of an acid in solution. It is the equilibrium constant for a chemical reaction known as dissociation in the context of acid-base reactions.</dc:description>
     </owl:Class>
     
 
@@ -2687,8 +2746,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000195">
         <rdfs:label xml:lang="en">pKa</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000193"/>
-        <dc:description>the logarithmic measure of the acid dissociation constant (Ka)</dc:description>
         <short_name>pKa</short_name>
+        <dc:description>the logarithmic measure of the acid dissociation constant (Ka)</dc:description>
     </owl:Class>
     
 
@@ -2917,14 +2976,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2933,8 +2992,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>The integer number of atoms in a pi-orbital system.</dc:description>
         <short_name>LargestPiSystem</short_name>
+        <dc:description>The integer number of atoms in a pi-orbital system.</dc:description>
     </owl:Class>
     
 
@@ -2946,14 +3005,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>Bond dissociation Gibbs energy descriptor captures the Gibbs energy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</dc:description>
@@ -2968,14 +3027,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000208"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>The molecular entity solvation Gibbs energy descriptor reflects the Gibbs energy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</dc:description>
@@ -3078,6 +3137,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000263"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
@@ -3086,12 +3151,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A descriptor that provides the integer count of aromatic atoms in a given molecular entity.</dc:description>
@@ -3106,12 +3165,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
@@ -3120,6 +3173,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A descriptor that specifies the integer count of bonds in a given molecular entity.</dc:description>
@@ -3193,14 +3252,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>The formation Gibbs energy descriptor captures the Gibbs energy associated with the formation of a molecular entity, relative to the standard state of constituent atoms. This can be measured, calculated in vacuo, or calculated with respect to a specific solvent, at a particular temperature and pressure. When calculated, the formation Gibbs energy value depends on the molecular conformation.</dc:description>
@@ -3215,14 +3274,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000246"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3243,14 +3302,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>Molecular entity formation enthaply descriptor captures the enthalpy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</dc:description>
@@ -3265,14 +3324,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000060"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000222"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000222"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A volume descriptor is a descriptor which describes a measure or calculation of the volume of a chemical entity.</dc:description>
@@ -3287,12 +3346,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000233"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
@@ -3301,6 +3354,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A descriptor that provides the integer count of aromatic bonds in a given molecular entity.</dc:description>
@@ -3321,14 +3380,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A descriptor that reflects the integer number of hydrogen bond donors in a given molecular entity, as determined by a given method. In highly simplified terms, this is usually the count of all negatively or partially negatively charged heteroatoms (e.g. alcohol oxygen) that have covalently attached to them partially positively charged hydrogen atoms that are capable of participating in a hydrogen bond.</dc:description>
@@ -3365,12 +3424,6 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
@@ -3379,6 +3432,12 @@ The formal charge of any atom in a molecule can be calculated by the following e
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>The largest chain size descriptor is a count descriptor that gives the integer length (number of atoms) in the largest chain in a molecular entity.</dc:description>
@@ -3455,14 +3514,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000258"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>The logarithm of octanol-water partition coefficient, which is the ratio of the molecules dissolved in octanol to those dissolved in pure un-ionized water upon mixture equilibration. This can be measured or predicted. The value is dimensionless. May depend on molecular conformation when computed.</dc:description>
@@ -3477,14 +3536,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000210"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000063"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>Bond dissociation enthalpy descriptor captures the enthalpy associated with the process of breaking the bond in question. This could be measured or calculated in vacuo or in a specific Solvent, at a given temperature and pressure. Depends on molecular conformation.</dc:description>
@@ -3499,14 +3558,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000228"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000228"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>Chemical substance refractive index descriptor is a unitless descriptor that specifies the ratio of the speed of light in vacuum to that in a given chemical substance. [IUPAC: http://goldbook.iupac.org/R05240.html]</dc:description>
@@ -3537,8 +3596,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:someValuesFrom rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>a bond count that denotes the integer number of rotors in the molecule, generally single bonds torsion around which produces non-identical geometric molecular configurations.</dc:description>
         <short_name>RotatableBondsCount</short_name>
+        <dc:description>a bond count that denotes the integer number of rotors in the molecule, generally single bonds torsion around which produces non-identical geometric molecular configurations.</dc:description>
     </owl:Class>
     
 
@@ -3559,14 +3618,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000238"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000238"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Melting point descriptor specifies the temperature at which a chemical substance undergoes the transition from solid to liquid state under standard conditions.</rdfs:comment>
@@ -3622,14 +3681,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000207"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000259"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>Molecular entity formaiton entropy descriptor captures the entropy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed.</dc:description>
@@ -3682,14 +3741,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_23367"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A descriptor that specifies the integer count of atoms in a given molecular entity.</dc:description>
@@ -3873,8 +3932,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <!-- http://semanticscience.org/resource/CHEMINF_000280 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000280">
-        <rdfs:label>histidine count</rdfs:label>
         <rdfs:label xml:lang="en">covalent unit count</rdfs:label>
+        <rdfs:label>histidine count</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000209"/>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000270"/>
         <dc:description>The number of covalent units (molecule / ion) in a chemical structure</dc:description>
@@ -4077,8 +4136,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000295">
         <rdfs:label xml:lang="en">ALogP descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000251"/>
-        <short_name>ALogP</short_name>
         <dc:description>The ALogP descriptor described by Ghose and Crippen in 1986 and 1987.</dc:description>
+        <short_name>ALogP</short_name>
     </owl:Class>
     
 
@@ -4124,7 +4183,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000300">
         <rdfs:label xml:lang="en">heavy atom count</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000263"/>
-        <dc:description>The sum of all non-hydrogen atoms</dc:description>
+        <dc:description>The number of non-hydrogen atoms</dc:description>
     </owl:Class>
     
 
@@ -4289,11 +4348,11 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000413">
         <rdfs:label>organic carbon adsorption descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>A descriptor of the ratio of the amount of a given chemical substance
     adsorbed per unit weight of organic carbon in soil or sediment to the concentration
     of the chemical substance in solution at equilibrium.
     </dc:description>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4303,8 +4362,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000414">
         <rdfs:label>bioconcentration factor descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>A descriptor of the ratio of the concentration of a chemical substance in an organism immersed in water to that in the surrounding water at equilibrium.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4314,8 +4373,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000415">
         <rdfs:label>molar volume descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>A descriptor of the volume occupied by one mole of the given substance at a given temperature and pressure.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4325,8 +4384,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000416">
         <rdfs:label>density descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>A descriptor of the density of a given substance at a given temperature and pressure.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4336,9 +4395,9 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000417">
         <rdfs:label>flash point descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>A descriptor of the flash point of a substance at a given pressure.
     The flash point is the minimum temperature at which a mixture of the substance with air can be ignited, within its explosive range.</dc:description>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4348,8 +4407,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000418">
         <rdfs:label>enthalpy of vaporization descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
-        <dc:description>A descriptor of the energy taken in by a chemical substance on vaporization at a given temperature and pressure.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>A descriptor of the energy taken in by a chemical substance on vaporization at a given temperature and pressure.</dc:description>
     </owl:Class>
     
 
@@ -4359,8 +4418,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000419">
         <rdfs:label>vapour pressure descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
-        <dc:description>A descriptor of the pressure exerted by the vapour phase of a chemical substance on its condensed phase at a given temperature and pressure.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>A descriptor of the pressure exerted by the vapour phase of a chemical substance on its condensed phase at a given temperature and pressure.</dc:description>
     </owl:Class>
     
 
@@ -4370,8 +4429,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000420">
         <rdfs:label>surface tension descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>A descriptor of the disposition of a portion of liquid to resist a force.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4381,8 +4440,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000421">
         <rdfs:label>validation algorithm</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>An algorithm that specifies how to determine whether data meets given criteria for correctness.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4392,8 +4451,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_000422">
         <rdfs:label>standardization algorithm</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>An algorithm that specifies how to transform data such that the resulting data meets given criteria for correctness.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4409,8 +4468,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000085"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>A validation algorithm that specifies how to determine whether a structural descriptor meets given criteria for correctness.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4426,8 +4485,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000085"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>A standardization algorithm that specifies how to transform a structural descriptor such that it meets given criteria for correctness.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>A standardization algorithm that specifies how to transform a structural descriptor such that it meets given criteria for correctness.</dc:description>
     </owl:Class>
     
 
@@ -4443,8 +4502,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000423"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>A warning message that indicates that a structural descriptor does not meet some criterion for correctness.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>A warning message that indicates that a structural descriptor does not meet some criterion for correctness.</dc:description>
     </owl:Class>
     
 
@@ -4460,8 +4519,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000424"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>An error message that indicates that a structural descriptor cannot be parsed.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -4481,8 +4540,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <dc:description>An execution of code which implements a structural standardization algorithm.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>An execution of code which implements a structural standardization algorithm.</dc:description>
     </owl:Class>
     
 
@@ -4502,8 +4561,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <dc:description>An execution of code which implements a structural validation algorithm.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>An execution of code which implements a structural validation algorithm.</dc:description>
     </owl:Class>
     
 
@@ -4632,5 +4691,5 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
 
 
-<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
