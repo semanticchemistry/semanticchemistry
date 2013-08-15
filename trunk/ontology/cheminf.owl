@@ -2393,7 +2393,21 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     </owl:Class>
     
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000490 -->
 
+    <owl:Class rdf:about="&resource;CHEMINF_000490">
+        <rdfs:label>molecular formula calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000042"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontologies;is_output_of"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000354"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Molecular formula for a chemical structure as calculated by ACD/Labs PhysChem software library version 12.01.</dc:description>
+    </owl:Class>
+  
+  
     <!-- http://semanticscience.org/resource/CHEMINF_000368 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000368">
