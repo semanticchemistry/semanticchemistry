@@ -552,6 +552,32 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000489 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000489">
+        <rdfs:label xml:lang="en">is_isotopically_unspecified_parent_of</rdfs:label>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>Superclass relation between a class does not have isotopes specified, such as water or urea, and a class that does, such as D2O or 14C-urea.</dc:description>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000459"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000491 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000491">
+        <rdfs:label xml:lang="en">is_stereoundefined_parent_of</rdfs:label>
+        <dc:description>Superclass relation between a class that does not have stereochemistry defined and another otherwise identical one that does.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000456"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
@@ -834,111 +860,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:Class rdf:about="&obo;OBI_0000011">
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
-    </owl:Class>
-    
-
-
-    <owl:Class rdf:about="&resource;CHEMINF_000552">
-        <rdfs:label xml:lang="en">algorithm to interpret a connection table</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
-        <rdfs:comment>This may of course not be successful!</rdfs:comment>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
-        <dc:description>An algorithm that specifies how to take a connection table and convert it into a representation of a molecule.</dc:description>
-    </owl:Class>
-    
-
-
-    <owl:Class rdf:about="&resource;CHEMINF_000553">
-        <rdfs:label xml:lang="en">structural standardization error</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000507"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000424"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:description>An error message produced in the execution of a structural standardiation algorithm.</dc:description>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <owl:Class rdf:about="&resource;CHEMINF_000554">
-        <rdfs:label xml:lang="en">structural standardization warning</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000506"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000423"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-    <owl:Class rdf:about="&resource;CHEMINF_000555">
-        <rdfs:label xml:lang="en">connection table interpretation warning</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000506"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000552"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-    <owl:Class rdf:about="&resource;CHEMINF_000556">
-        <rdfs:label xml:lang="en">connection table interpretation error</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000507"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000552"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-    <owl:Class rdf:about="&resource;CHEMINF_000557">
-        <rdfs:label xml:lang="en">information data item</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000505"/>
-        <dc:description>A software message data item which is merely intended to convey information and not a warning or an error.</dc:description>
-    </owl:Class>
-    
-    <owl:Class rdf:about="&resource;CHEMINF_000558">
-        <rdfs:label xml:lang="en">connection table interpretation information data item</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000557"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000552"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-
-    <owl:Class rdf:about="&resource;CHEMINF_000559">
-        <rdfs:label xml:lang="en">structural standardization information data item</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000557"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000424"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-
-    <owl:Class rdf:about="&resource;CHEMINF_000560">
-        <rdfs:label xml:lang="en">structural validation information data item</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000557"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000423"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2046,14 +1967,14 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3722,14 +3643,14 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
@@ -3843,6 +3764,135 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000552 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000552">
+        <rdfs:label xml:lang="en">algorithm to interpret a connection table</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
+        <rdfs:comment>This may of course not be successful!</rdfs:comment>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>An algorithm that specifies how to take a connection table and convert it into a representation of a molecule.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000553 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000553">
+        <rdfs:label xml:lang="en">structural standardization error</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000507"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000424"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An error message produced in the execution of a structural standardiation algorithm.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000554 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000554">
+        <rdfs:label xml:lang="en">structural standardization warning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000506"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000423"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000555 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000555">
+        <rdfs:label xml:lang="en">connection table interpretation warning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000506"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000552"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000556 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000556">
+        <rdfs:label xml:lang="en">connection table interpretation error</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000507"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000552"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000557 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000557">
+        <rdfs:label xml:lang="en">information data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000505"/>
+        <dc:description>A software message data item which is merely intended to convey information and not a warning or an error.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000558 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000558">
+        <rdfs:label xml:lang="en">connection table interpretation information data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000557"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000552"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000559 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000559">
+        <rdfs:label xml:lang="en">structural standardization information data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000557"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000424"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000560 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000560">
+        <rdfs:label xml:lang="en">structural validation information data item</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000557"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000606"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000423"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
 
     <owl:Class rdf:about="&snap;Disposition"/>
@@ -3890,9 +3940,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <rdf:Description rdf:about="&obo;IAO_0000101">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000100">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&ro;integral_part_of">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -3915,6 +3962,9 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000100">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000105">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
@@ -4012,6 +4062,9 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <rdf:Description rdf:about="&obo;IAO_0000584">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000589">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&ro;proper_part_of">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -4034,9 +4087,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000589">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000116">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -4383,40 +4433,40 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <rdf:Description rdf:about="&obo;IAO_0000319">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&ro;derives_from">
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000417">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&ro;derives_from">
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000316">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
