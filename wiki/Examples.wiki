@@ -218,3 +218,21 @@ Usage of CHEMINF terms in a service ontology (lipinskiserviceontology.owl) to cr
   </sio:CHEMINF_000018>
 </rdf:RDF>
 }}}
+
+== Properties ==
+
+This is how a boiling point can be added (thinking of them as describing/identifying (to some extend) the comound):
+
+To add a ChemSpider identifier:
+
+{{{
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cheminf: <http://semanticscience.org/resource/> .
+
+:Methane rdfs:subClassOf cheminf:CHEMINF_000000 ;
+  rdfs:label "methane"@en ;
+  cheminf:CHEMINF_000200 [
+    a cheminf:CHEMINF_000347 ;
+    cheminf:SIO_000300 "-164" .
+  ] .
+}}}
