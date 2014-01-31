@@ -228,6 +228,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo#is_tautomer_of -->
 
     <owl:ObjectProperty rdf:about="&obo2;is_tautomer_of">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <dc:description>A is_tautomer_of B if and only if, given any a which instantiates A and has composition ca and is described by a molecular graph ag, there is some b that instantiates B, has composition cb and is described by a molecular graph bg, such that ca equals cb, ag is different from bg and a derives from b as the result of an intramolecular chemical transformation process (i.e. a chemical transformation process which has only one participant), in which only bonds to hydrogen are broken or formed.</dc:description>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
@@ -574,6 +576,50 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000456"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000492 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000492">
+        <rdfs:label xml:lang="en">is component with uncharged counterpart of</rdfs:label>
+        <obo:IAO_0000115>Connects a neutral molecule with a salt.</obo:IAO_0000115>
+        <rdfs:comment>This is here because Open PHACTS has requested an inverse. Use with caution!</rdfs:comment>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000480"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000493 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000493">
+        <rdfs:label xml:lang="en">is major tautomer at pH 7.4 of</rdfs:label>
+        <obo:IAO_0000115>A exists in an equilibrium with B at pH 7.4 and physiological temperature and A is the dominant isomer.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000486"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000494 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000494">
+        <rdfs:label xml:lang="en">is OPS normalized counterpart of</rdfs:label>
+        <obo:IAO_0000115>If A &apos;is OPS normalized counterpart of&apos; B, then A is the molecular entity corresponding to the connection table obtained by applying OPS normalization to the connection table of B.</obo:IAO_0000115>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000458"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000495 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000495">
+        <rdfs:label xml:lang="en">is uncharged counterpart of</rdfs:label>
+        <obo:IAO_0000115>If A &apos;is uncharged counterpart of&apos; B, then A is the neutral species corresponding to B. B may itself of course be neutral.</obo:IAO_0000115>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000460"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     </owl:ObjectProperty>
     
 
@@ -1044,14 +1090,14 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3611,6 +3657,12 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -3622,12 +3674,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&resource;CHEMINF_000502"/>
@@ -4433,6 +4479,9 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <rdf:Description rdf:about="&obo;IAO_0000319">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000417">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&ro;derives_from">
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
@@ -4444,9 +4493,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -4464,9 +4510,9 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000417">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000316">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
