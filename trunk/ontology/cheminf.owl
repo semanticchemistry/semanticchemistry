@@ -4011,7 +4011,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001506">
         <rdfs:label>Chi Chain Indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Evluates the simple and valence chi chain descriptors (Kier & Hall) of orders 3, 4, 5, 6 and 7. </dc:description>
+        <dc:description>Evluates the simple and valence chi chain descriptors (Kier and Hall) of orders 3, 4, 5, 6 and 7. </dc:description>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
         <short_name>chiChain</short_name>
     </owl:Class>
@@ -4023,7 +4023,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001507">
         <rdfs:label>Chi Cluster Indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Evluates the simple and valence chi cluster descriptors (Kier & Hall) of orders 3, 4,5 and 6.</dc:description>
+        <dc:description>Evluates the simple and valence chi cluster descriptors (Kier and Hall) of orders 3, 4,5 and 6.</dc:description>
         <rdfs:comment> It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
         <short_name>chiCluster</short_name>
     </owl:Class>
@@ -4035,7 +4035,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001508">
         <rdfs:label>Chi Path Indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Evaluates the Kier & Hall Chi path indices of orders 0,1,2,3,4,5,6 and 7.  </dc:description>
+        <dc:description>Evaluates the Kier and Hall Chi path indices of orders 0,1,2,3,4,5,6 and 7.  </dc:description>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
         <short_name>chiPath</short_name>
     </owl:Class>
@@ -4047,7 +4047,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001509">
         <rdfs:label>Chi Path-Cluster Indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Evaluates the Kier & Hall Chi path cluster indices of orders 4,5 and 6.</dc:description>
+        <dc:description>Evaluates the Kier and Hall Chi path cluster indices of orders 4,5 and 6.</dc:description>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
         <short_name>chiPathCluster</short_name>
     </owl:Class>
