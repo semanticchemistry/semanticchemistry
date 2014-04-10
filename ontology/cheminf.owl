@@ -78,11 +78,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-     <!-- http://semanticscience.org/ontology/cheminf.owl#short_name -->
-
-    <owl:AnnotationProperty rdf:about="http://semanticscience.org/ontology/cheminf.owl#short_name"/>
-
-
 	
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
@@ -3949,7 +3944,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>Eigenvalue based descriptor noted for its utility in chemical diversity.</obo:IAO_0000115>
         <rdfs:comment> http://dx.doi.org/10.1021/ci980137x</rdfs:comment>
-        <short_name>BCUT</short_name>
     </owl:Class>
 
 
@@ -3960,7 +3954,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">bond partial pi charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptor that calculates bond-pi Partial charge of a bond by determining the difference the Partial Pi Charge on atoms A and B of a bond (based in Gasteiger Charge).</obo:IAO_0000115>
-        <short_name>bondPartialPiCharge</short_name>
     </owl:Class>
 
 
@@ -3971,7 +3964,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">bond partial sigma charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptor that calculates bond-sigma Partial charge of a bond.</obo:IAO_0000115>
-        <short_name>bondPartialSigmaCharge</short_name>
     </owl:Class>
 
 
@@ -3982,7 +3974,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">bond partial total charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptor that calculates bond-total Partial charge of a bond.</obo:IAO_0000115>
-        <short_name>bondPartialTCharge</short_name>
     </owl:Class>
 
 
@@ -3993,7 +3984,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">bond sigma electronegativity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptor that calculates of bond-Polarizability of a bond by determining the difference the Sigma electronegativity on atoms A and B of a bond.</obo:IAO_0000115>
-        <short_name>bondSigmaElectronegativity</short_name>
     </owl:Class>
 
 
@@ -4004,7 +3994,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">bonds to Atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>Descriptor based on the number of bonds on the shortest path between two atoms (topological distance).</obo:IAO_0000115>
-        <short_name>bondsToAtom</short_name>
     </owl:Class>
 
 
@@ -4014,9 +4003,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001506">
         <rdfs:label xml:lang="en">chi chain indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <obo:IAO_0000115>Evluates the simple and valence chi chain descriptors (Kier & Hall) of orders 3, 4, 5, 6 and 7. </obo:IAO_0000115>
+        <obo:IAO_0000115>Evluates the simple and valence chi chain descriptors (Kier and Hall) of orders 3, 4, 5, 6 and 7. </obo:IAO_0000115>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
-        <short_name>chiChain</short_name>
     </owl:Class>
 
 
@@ -4026,9 +4014,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001507">
         <rdfs:label xml:lang="en">chi cluster indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <obo:IAO_0000115>Evluates the simple and valence chi cluster descriptors (Kier & Hall) of orders 3, 4,5 and 6.</obo:IAO_0000115>
+        <obo:IAO_0000115>Evluates the simple and valence chi cluster descriptors (Kier and Hall) of orders 3, 4,5 and 6.</obo:IAO_0000115>
         <rdfs:comment> It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
-        <short_name>chiCluster</short_name>
     </owl:Class>
 
 
@@ -4038,9 +4025,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001508">
         <rdfs:label xml:lang="en">chi path indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <obo:IAO_0000115>Evaluates the Kier & Hall Chi path indices of orders 0,1,2,3,4,5,6 and 7.  </obo:IAO_0000115>
+        <obo:IAO_0000115>Evaluates the Kier and Hall Chi path indices of orders 0,1,2,3,4,5,6 and 7.  </obo:IAO_0000115>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
-        <short_name>chiPath</short_name>
     </owl:Class>
 
 
@@ -4050,9 +4036,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001509">
         <rdfs:label xml:lang="en">chi path-cluster indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <obo:IAO_0000115>Evaluates the Kier & Hall Chi path cluster indices of orders 4,5 and 6.</obo:IAO_0000115>
+        <obo:IAO_0000115>Evaluates the Kier and Hall Chi path cluster indices of orders 4,5 and 6.</obo:IAO_0000115>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
-        <short_name>chiPathCluster</short_name>
     </owl:Class>
 
 
@@ -4064,7 +4049,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
         <obo:IAO_0000115>Descriptor characterizing the mass distribution of the molecule.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1021/jp953224q</rdfs:comment>
-        <short_name>gravitationalIndex</short_name>
     </owl:Class>
 
 
@@ -4076,7 +4060,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
         <obo:IAO_0000115>Descriptor characterizing the mass distribution of the molecule as the square or cube root of the gravitational index.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1021/ci980029a</rdfs:comment>
-        <short_name>gravitationalIndex_SquareAndCubeRoots</short_name>
     </owl:Class>
 
 
@@ -4088,7 +4071,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Counts the number of acceptor field atoms for a carbonyl oxygen probe using force field based definition.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1021/jm011039x</rdfs:comment>
-        <short_name>hBondAcceptorsBoehmKlebe</short_name>
     </owl:Class>
 
 
@@ -4100,7 +4082,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptor that calculates the number of hydrogen bond acceptors (by Daylight).</obo:IAO_0000115>
         <rdfs:comment>SMILES on-line tutorial, http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html)</rdfs:comment>
-        <short_name>hBondacceptorsDaylight</short_name>
     </owl:Class>
 
 
@@ -4112,7 +4093,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Counts the number of acceptor/donor field atoms for a carbonyl oxygen or amino hydrogen probe. </obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1021/jm011039x</rdfs:comment>
-        <short_name>hBondAcceptorsDonorsBoehmKlebe</short_name>
     </owl:Class>
 
 
@@ -4124,7 +4104,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Counts the number of donor field atoms for an amino hydrogen probe.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1021/jm011039x</rdfs:comment>
-        <short_name>hBondDonorsBoehmKlebe</short_name>
     </owl:Class>
 
 
@@ -4136,7 +4115,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptor that calculates the number of hydrogen bond donors (by Daylight).</obo:IAO_0000115>
         <rdfs:comment>SMILES on-line tutorial, http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html)</rdfs:comment>
-        <short_name>hBondDonorsDaylight</short_name>
     </owl:Class>
 
 
@@ -4147,7 +4125,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">proton belonging to an aromatic system</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <obo:IAO_0000115>Descriptor returns 1 if the protons is directly bonded to an aromatic system, it returns 2 if the distance between aromatic system and proton is 2 bonds, and it return 0 for other positions.</obo:IAO_0000115>
-        <short_name>isProtonInAromaticSystem</short_name>
     </owl:Class>
 
 
@@ -4158,7 +4135,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">proton belonging to a pi-system</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <obo:IAO_0000115>Descriptor returns true if the protons is directly bonded to a pi system.</obo:IAO_0000115>
-        <short_name>isProtonInConjugatedPiSystem</short_name>
     </owl:Class>
 
 
@@ -4170,7 +4146,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>Counts the number of occurrences of the E-state fragments.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.3390/91201004</rdfs:comment>
-        <short_name>kierHallSmarts</short_name>
     </owl:Class>
 
 
@@ -4182,7 +4157,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>Evaluate molecular distance edge descriptors for C, N and O.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1021/ci970109z</rdfs:comment>
-        <short_name>mde</short_name>
     </owl:Class>
 
 
@@ -4193,7 +4167,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">moments of inertia</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
         <obo:IAO_0000115>Descriptor that calculates the principal moments of inertia and ratios of the principal moments. Als calculates the radius of gyration.</obo:IAO_0000115>
-        <short_name>momentOfInertia</short_name>
     </owl:Class>
 
 
@@ -4204,7 +4177,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">partial total charge (MMFF94)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptor that calculates total partial charges of an heavy atom.</obo:IAO_0000115>
-        <short_name>partialTChargeMMFF94</short_name>
     </owl:Class>
 
 
@@ -4215,7 +4187,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">period of an atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <obo:IAO_0000115>Descriptor that returns the period in the periodic table of an atom belonging to an atom container.</obo:IAO_0000115>
-        <short_name>period</short_name>
     </owl:Class>
 
 
@@ -4226,7 +4197,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pi-contact of two atoms</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
         <obo:IAO_0000115>Descriptor that check if two atoms have pi-contact (this is true when there is one and the same conjugated pi-system which contains both atoms, or directly linked neighboors of the atoms).</obo:IAO_0000115>
-        <short_name>piContact</short_name>
     </owl:Class>
 
 
@@ -4237,7 +4207,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">proton total partial charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptor that calculates partial charges of an heavy atom and its protons based on Gasteiger Marsili (PEOE).</obo:IAO_0000115>
-        <short_name>protonPartialCharge</short_name>
     </owl:Class>
 
 
@@ -4249,7 +4218,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>Calculation of RDF proton descriptor.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1021/ac010737m</rdfs:comment>
-        <short_name>rdfProtonCalculatedValues</short_name>
     </owl:Class>
 
 
@@ -4261,7 +4229,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <obo:IAO_0000115>Descriptors ({@cdk.cite BREN1995} {@cdk.cite BREN1997} {@cdk.cite WHITE2003}) derived from pre-calculated quantum mechanical parameters by using the paramaters for amino acids and evaluating a set of 147 descriptors for peptide sequences.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1016/0097-8485(94)00052-G</rdfs:comment>
-        <short_name>taeAminoAcid</short_name>
     </owl:Class>
 
 
@@ -4272,7 +4239,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">weighted path</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>The weighted path (molecular ID) descriptors described by Randic. They characterize molecular branching.</obo:IAO_0000115>
-        <short_name>weightedPath</short_name>
     </owl:Class>
 
 
@@ -4284,7 +4250,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>Holistic descriptors described by Todeschini et al.</obo:IAO_0000115>
         <rdfs:comment>Todeschini, R. and Gramatica, P.. New 3D Molecular Descriptors: The WHIM theory and QAR Applications, Persepectives in Drug Discovery and Design. 1998, pp. 355-380. </rdfs:comment>
-        <short_name>WHIM</short_name>
     </owl:Class>
 
 
@@ -4296,7 +4261,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>The Moreau-Broto autocorrelation descriptors using partial charges</obo:IAO_0000115>
         <rdfs:comment>ATSc1 - ATSc5</rdfs:comment>
-        <short_name>autoCorrelationCharge</short_name>
     </owl:Class>
 
 
@@ -4308,7 +4272,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>The Moreau-Broto autocorrelation descriptors using atomic weight</obo:IAO_0000115>
         <rdfs:comment>ATSm1 - ATSm5</rdfs:comment>
-        <short_name>autoCorrelationMass</short_name>
     </owl:Class>
 
 
@@ -4320,11 +4283,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <obo:IAO_0000115>The Moreau-Broto autocorrelation descriptors using polarizability</obo:IAO_0000115>
         <rdfs:comment>ATSp1 - ATSp5</rdfs:comment>
-        <short_name>autoCorrelationPolarizability</short_name>
     </owl:Class>
 
 
-
+	
     <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
 
     <owl:Class rdf:about="&snap;Disposition"/>
