@@ -4327,8 +4327,170 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <short_name>autoCorrelationPolarizability</short_name>
     </owl:Class>	
 
+	
+	
+    <!-- http://semanticscience.org/resource/CHEMINF_001533 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001533">
+        <rdfs:label xml:lang="en">carbon types</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Characterizes the carbon connectivity in terms of hybridization</dc:description>
+        <rdfs:comment>C1SP1, C2SP1, C1SP2, C2SP2, C3SP2, C1SP3, C2SP3, C3SP3, C4SP3</rdfs:comment>
+        <short_name>carbonTypes</short_name>
+    </owl:Class>
 
 
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001534 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001534">
+        <rdfs:label xml:lang="en">carbon connectivity index (order 0)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Descriptor that calculates the carbon connectivity index (order 0). </dc:description>
+        <short_name>chi0C</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001535 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001535">
+        <rdfs:label xml:lang="en">valence connectivity index (order 0)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Descriptor that calculates atomic valence connectivity index (order 0). </dc:description>
+        <short_name>chi0v</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001536 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001536">
+        <rdfs:label xml:lang="en">valence carbon connectivity index (order 0)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Descriptor that calculates carbon valence connectivity index (order 0).</dc:description>
+        <short_name>chi0vC</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001537 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001537">
+        <rdfs:label xml:lang="en">carbon connectivity index (order 1)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Descriptor that calculates carbon connectivity index (order 1). </dc:description>
+        <short_name>chi1C</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001538 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001538">
+        <rdfs:label xml:lang="en">valence connectivity index (order 1)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Descriptor that calculates atomic valence connectivity index (order 1). </dc:description>
+        <short_name>chi1v</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001539 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001539">
+        <rdfs:label xml:lang="en">valence carbon connectivity index (order 1)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Descriptor that calculates carbon valence connectivity index (order 1). </dc:description>
+        <short_name>chi1vC</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001540 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001540">
+        <rdfs:label xml:lang="en">distance to Atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
+        <dc:description>Descriptor that calculates the 3D distance between two atoms.</dc:description>
+        <short_name>distanceToAtom</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001541 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001541">
+        <rdfs:label xml:lang="en">effective polarizability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+        <dc:description>Descriptor that calculates the effective polarizability of a given heavy atom.</dc:description>
+        <rdfs:comment>EffectiveAtomPolarizabilityDescriptor, effAtomPol</rdfs:comment>
+        <short_name>effectivePolarizability</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001542 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001542">
+        <rdfs:label xml:lang="en">hybridization ratio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Characterizes molecular complexity in terms of carbon hybridization states.</dc:description>
+        <rdfs:comment>It reports the fraction of sp3 carbons to sp2 carbons as Nsp3/ (Nsp3 + Nsp2). The original form of the descriptor (i.e., simple ratio) has been used to characterize molecular complexity, especially in the are of natural products , which usually have a high value of the sp3 to sp2 ratio. Other short names: HybridizationRatio, HybRatio.</rdfs:comment>
+        <short_name>hybratio</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001543 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001543">
+        <rdfs:label xml:lang="en">Kier and Hall kappa molecular shape indices</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <dc:description>Descriptor that calculates Kier and Hall kappa molecular shape indices.</dc:description>
+        <rdfs:comment>Kier and Hall kappa molecular shape indices compare the molecular graph with minimal and maximal molecular graphs. First kappa shape index is given by n ( n - 1 ) 2 m 2 , second kappa shape index is given by ( n - 1 ) ( n - 2 ) 2 p 2 2 and third kappa shape index is given by ( n - 1 ) ( n - 3 ) 2 p 3 2 for odd n and ( n - 3 ) ( n - 2 ) 2 p 3 2 for enev n, where n denotes the number of atoms in the hydrogen suppressed graph, m is the number of bonds in the hydrogen suppressed graph. Also, let p2 denote the number of paths of length 2 and let p3 denote the number of paths of length 3. Other short names: KappaShapeIndices, Kier1, Kier2, Kier3.</rdfs:comment>
+        <short_name>kierValues</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001544 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001544">
+        <rdfs:label xml:lang="en">partial pi charge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+        <dc:description>Descriptor that calculates pi partial charges in pi-bonded systems of an heavy atom based on based on Gasteiger H.Saller (PEPE).</dc:description>
+        <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1002/ange.19850970818</bibo:doi>
+        <rdfs:comment>Other short_name: pepe.</rdfs:comment>
+        <short_name>partialPiCharge</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001545 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001545">
+        <rdfs:label xml:lang="en">partial sigma charge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+        <dc:description>Descriptor that calculates sigma partial charges in sigma-bonded systems (PEOE) of an heavy atom based on Gasteiger Marsili.</dc:description>
+        <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1016/0040-4020(80)80168-2</bibo:doi>
+        <short_name>partialSigmaCharge</short_name>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001546 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001546">
+        <rdfs:label xml:lang="en">pi electronegativity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+        <dc:description>Descriptor that returns the pi electronegativity for a given atom.</dc:description>
+        <rdfs:comment>Pi electronegativity is given by X = a + b q + c ( q 2 ) , where a, b and c are Gasteiger Marsili parameters, and q is the sigma charge. Other short_name: elecPiA.</rdfs:comment>
+        <short_name>piElectronegativity</short_name>
+    </owl:Class>
+	
+
+	
     <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
 
     <owl:Class rdf:about="&snap;Disposition"/>
