@@ -4,6 +4,7 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY purl "http://purl.obofoundry.org/" >
     <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
+    <!ENTITY bibo "http://purl.org/ontology/bibo/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY obo2 "http://purl.obolibrary.org/obo#" >
@@ -20,13 +21,14 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
-	<!ENTITY bibo "http://purl.org/ontology/bibo/" >
+    <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="&ontologies;cheminf.owl#"
      xml:base="&ontologies;cheminf.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:cheminf="http://semanticscience.org/ontology/cheminf.owl#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontologies="http://www.semanticweb.org/ontologies/"
@@ -38,13 +40,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:purl="http://purl.obofoundry.org/"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
-	 xmlns:bibo="http://purl.org/ontology/bibo/">
+     xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://semanticscience.org/ontology/cheminf.owl">
         <owl:versionInfo rdf:datatype="&xsd;string">1.0</owl:versionInfo>
         <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
@@ -54,14 +56,17 @@
         <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
         <dc:title rdf:datatype="&xsd;string">chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <dc:contributor>Colin Batchelor</dc:contributor>
-        <dc:contributor>Mark Davies</dc:contributor>
-        <dc:contributor>Leonid Chepelev</dc:contributor>
-        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
         <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
 specified URI = http://semanticscience.org/resource/
 Followed by &apos;/&apos;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
+        <dc:rights>http://creativecommons.org/licenses/by/3.0</dc:rights>
+        <dc:contributor>Cristian Munteanu</dc:contributor>
+        <dc:contributor>Gang Fu</dc:contributor>
+        <dc:contributor>Leonid Chepelev</dc:contributor>
+        <dc:contributor>Mark Davies</dc:contributor>
+        <dc:contributor>Evan Bolton</dc:contributor>
+        <dc:contributor>Colin Batchelor</dc:contributor>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
         <owl:imports rdf:resource="&obo;iao.owl"/>
         <owl:imports rdf:resource="http://semanticscience.org/ontology/cdk.owl"/>
@@ -80,7 +85,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-	
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
@@ -161,9 +168,27 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://purl.org/ontology/bibo/doi -->
+
+    <owl:AnnotationProperty rdf:about="&bibo;doi"/>
+    
+
+
+    <!-- http://semanticscience.org/ontology/cheminf.owl#short_name -->
+
+    <owl:AnnotationProperty rdf:about="&cheminf;short_name"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
 
     <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/cheminf.owl#short_name -->
+
+    <owl:AnnotationProperty rdf:about="&ontologies;cheminf.owl#short_name"/>
     
 
 
@@ -183,12 +208,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     
-    
-	
-	<!-- http://semanticscience.org/ontology/cheminf.owl#short_name -->
 
-    <owl:AnnotationProperty rdf:about="http://semanticscience.org/ontology/cheminf.owl#short_name"/>
-	
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -222,8 +242,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&obo2;is_enantiomer_of">
         <dc:description>A is_enantiomer_of B if and only if, given any a that instantiates A, has molecular graph ag, there is some b such that b instantiates B, is described by molecular graph bg, such that ca is equal to cb and ag is transformed into bg through a C2 symmetric transform.</dc:description>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000461"/>
         <owl:propertyDisjointWith rdf:resource="&resource;CHEMINF_000463"/>
     </owl:ObjectProperty>
@@ -236,8 +256,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <dc:description>A is_tautomer_of B if and only if, given any a which instantiates A and has composition ca and is described by a molecular graph ag, there is some b that instantiates B, has composition cb and is described by a molecular graph bg, such that ca equals cb, ag is different from bg and a derives from b as the result of an intramolecular chemical transformation process (i.e. a chemical transformation process which has only one participant), in which only bonds to hydrogen are broken or formed.</dc:description>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -364,8 +384,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000455">
         <rdfs:label>is_isotopologue_of</rdfs:label>
         <dc:description>An isotopologue is a molecular entity that differs only in isotopic composition from another molecular entity. (AU:I03351)</dc:description>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
     </owl:ObjectProperty>
     
@@ -376,8 +396,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000456">
         <rdfs:label>has_stereoundefined_parent</rdfs:label>
         <dc:description>Subclass relation between a class that has stereochemistry defined and an otherwise identical class that does not.</dc:description>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&rdfs;subClassOf"/>
     </owl:ObjectProperty>
     
@@ -387,11 +407,11 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000457">
         <rdfs:label>has_normalized_counterpart</rdfs:label>
-        <rdfs:comment>Caution: this is not a subclass relation and should not be thought of as such for reasoning purposes.</rdfs:comment>
-        <rdfs:comment>Caution: The number of moieties in the first molecule may be greater than in the second molecule. Example: salts.</rdfs:comment>
         <dc:description>Connects a molecule to a normalized counterpart of the same molecule according to an algorithm.</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:comment>Caution: The number of moieties in the first molecule may be greater than in the second molecule. Example: salts.</rdfs:comment>
+        <rdfs:comment>Caution: this is not a subclass relation and should not be thought of as such for reasoning purposes.</rdfs:comment>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     </owl:ObjectProperty>
     
@@ -402,8 +422,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000458">
         <rdfs:label>has OPS normalized counterpart</rdfs:label>
         <dc:description>This connects a molecule to its normalized counterpart according to the OPS specification.</dc:description>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000457"/>
     </owl:ObjectProperty>
     
@@ -414,8 +434,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000459">
         <rdfs:label>has_isotopically_unspecified_parent</rdfs:label>
         <dc:description>Subclass relation between a class that has isotopes specified, for example D2O or 14C-urea, and an otherwise identical class that does not, for example water or urea.</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&rdfs;subClassOf"/>
     </owl:ObjectProperty>
     
@@ -426,8 +446,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000460">
         <rdfs:label>has_uncharged_counterpart</rdfs:label>
         <dc:description>Connects a molecule to molecule with identical heavy-atom connectivity which is neutral. It is not a subclass relation.</dc:description>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     </owl:ObjectProperty>
     
@@ -438,8 +458,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000461">
         <rdfs:label>is_stereoisomer_of</rdfs:label>
         <dc:description>Connects a molecule to an isomer with identical constitution but differing in its arrangement of atoms in space. (AU:S05984)</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
     </owl:ObjectProperty>
     
@@ -450,8 +470,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000462">
         <rdfs:label>has_same_connectivity_as</rdfs:label>
         <dc:description>Connects a molecule to an isomer with identical constitution.</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
     </owl:ObjectProperty>
     
 
@@ -461,8 +481,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000463">
         <rdfs:label>is_diastereomer_of</rdfs:label>
         <dc:description>Connects a molecule to a stereoisomer which is not its enantiomer.</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000461"/>
     </owl:ObjectProperty>
     
@@ -482,8 +502,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000478">
         <rdfs:label>has component</rdfs:label>
-        <obo:IAO_0000115>Has as member parts (see BFO 2 Graz for more on this) many molecular entities.</obo:IAO_0000115>
         <rdfs:comment>This connects entities at different granularities.</rdfs:comment>
+        <obo:IAO_0000115>Has as member parts (see BFO 2 Graz for more on this) many molecular entities.</obo:IAO_0000115>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000266"/>
         <rdfs:subPropertyOf rdf:resource="&ro;has_part"/>
@@ -495,8 +515,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000479">
         <rdfs:label>has counterpart molecular entity</rdfs:label>
-        <obo:IAO_0000115>Connects a molecular entity to another molecular entity according to some specification.</obo:IAO_0000115>
         <rdfs:comment>This is intended to capture the case where a database has ad hoc relations between molecules that are not necessarily subclass relations.</rdfs:comment>
+        <obo:IAO_0000115>Connects a molecular entity to another molecular entity according to some specification.</obo:IAO_0000115>
     </owl:ObjectProperty>
     
 
@@ -520,8 +540,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000481">
         <rdfs:label>similar to</rdfs:label>
-        <obo:IAO_0000115>Connects a molecular entity that is deemed similar to another according to some algorithm.</obo:IAO_0000115>
         <rdfs:comment>not transitive, obviously</rdfs:comment>
+        <obo:IAO_0000115>Connects a molecular entity that is deemed similar to another according to some algorithm.</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     </owl:ObjectProperty>
     
@@ -531,8 +551,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000482">
         <rdfs:label>similar to by PubChem 2D similarity algorithm</rdfs:label>
-        <obo:IAO_0000115>Has a Tanimoto score with the counterpart molecular entity of more than 0.9, based on the PubChem fingerprint specification.</obo:IAO_0000115>
         <rdfs:comment>http://pubchem.ncbi.nlm.nih.gov/help.html#tanimoto</rdfs:comment>
+        <obo:IAO_0000115>Has a Tanimoto score with the counterpart molecular entity of more than 0.9, based on the PubChem fingerprint specification.</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000481"/>
     </owl:ObjectProperty>
     
@@ -542,8 +562,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000483">
         <rdfs:label>similar to by PubChem 3D similarity algorithm</rdfs:label>
-        <obo:IAO_0000115>Has a 3D Tanimoto score with the counterpart molecule where the 3D shape similarity for the two is greater than 0.795 and the 3D feature score is greater than 0.495 or there are no features and the 3D shape similarity is greater than 0.925, where the shape similarity ST is calculated by ST=VAB/(VAA+VBB-VAB), where VAA and VBB are self-overlap volume of conformers A and B, and VAB is the common overlap volume between them and the feature score CT is calculated by CT=sum(VfAB)/(sum(VfAA)+sum(VfBB)-sum(VfAB)), where the superscript f indicates any of the six independent fictitious feature atom types, VfAA and VfBB are the respective self-overlap volumes of conformers A and B for feature atom type f, and VfAB is the overlap volume of conformers A and B for feature type f.</obo:IAO_0000115>
         <rdfs:comment>http://dx.doi.org/10.1186/1758-2946-3-32</rdfs:comment>
+        <obo:IAO_0000115>Has a 3D Tanimoto score with the counterpart molecule where the 3D shape similarity for the two is greater than 0.795 and the 3D feature score is greater than 0.495 or there are no features and the 3D shape similarity is greater than 0.925, where the shape similarity ST is calculated by ST=VAB/(VAA+VBB-VAB), where VAA and VBB are self-overlap volume of conformers A and B, and VAB is the common overlap volume between them and the feature score CT is calculated by CT=sum(VfAB)/(sum(VfAA)+sum(VfBB)-sum(VfAB)), where the superscript f indicates any of the six independent fictitious feature atom types, VfAA and VfBB are the respective self-overlap volumes of conformers A and B for feature atom type f, and VfAB is the overlap volume of conformers A and B for feature type f.</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000481"/>
     </owl:ObjectProperty>
     
@@ -563,10 +583,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000489">
         <rdfs:label xml:lang="en">is_isotopically_unspecified_parent_of</rdfs:label>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>Superclass relation between a class does not have isotopes specified, such as water or urea, and a class that does, such as D2O or 14C-urea.</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000459"/>
     </owl:ObjectProperty>
     
@@ -576,10 +596,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000491">
         <rdfs:label xml:lang="en">is_stereoundefined_parent_of</rdfs:label>
-        <dc:description>Superclass relation between a class that does not have stereochemistry defined and another otherwise identical one that does.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <dc:description>Superclass relation between a class that does not have stereochemistry defined and another otherwise identical one that does.</dc:description>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000456"/>
     </owl:ObjectProperty>
     
@@ -589,8 +609,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000492">
         <rdfs:label xml:lang="en">is component with uncharged counterpart of</rdfs:label>
-        <obo:IAO_0000115>Connects a neutral molecule with a salt.</obo:IAO_0000115>
         <rdfs:comment>This is here because Open PHACTS has requested an inverse. Use with caution!</rdfs:comment>
+        <obo:IAO_0000115>Connects a neutral molecule with a salt.</obo:IAO_0000115>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000480"/>
     </owl:ObjectProperty>
     
@@ -920,8 +940,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:Class rdf:about="&resource;CHEMINF_000000">
         <rdfs:label>chemical entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <oboInOwl:hasAlternativeId>obo:24431</oboInOwl:hasAlternativeId>
         <dc:description>A chemical entity is any molecular entity or chemical substance.</dc:description>
+        <oboInOwl:hasAlternativeId>obo:24431</oboInOwl:hasAlternativeId>
     </owl:Class>
     
 
@@ -2005,8 +2025,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000341"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Is this equivalent to IAO &apos;source code module&apos; (IAO_0000096) on the same level as &apos;software&apos;? From the textual definition in IAO it seems fairly close. (JH)</rdfs:comment>
         <dc:description>A software module is a collection of software methods.</dc:description>
+        <rdfs:comment>Is this equivalent to IAO &apos;source code module&apos; (IAO_0000096) on the same level as &apos;software&apos;? From the textual definition in IAO it seems fairly close. (JH)</rdfs:comment>
     </owl:Class>
     
 
@@ -2018,6 +2038,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
@@ -2026,12 +2052,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -2840,8 +2860,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <owl:Class rdf:about="&resource;CHEMINF_000381">
         <rdfs:label xml:lang="en">aromatic cycle count</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000380"/>
-        <obo:IAO_0000118>aromatic rings</obo:IAO_0000118>
         <obo:IAO_0000115>A descriptor that specifies the integer count of aromatic cycles in a given molecular entity.</obo:IAO_0000115>
+        <obo:IAO_0000118>aromatic rings</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -3375,13 +3395,23 @@ Brenk R, et al. Lessons learnt from assembling screening libraries for drug disc
     <owl:Class rdf:about="&resource;CHEMINF_000431">
         <rdfs:label xml:lang="en">weighted quantitative estimate of drug-likeness</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <obo:IAO_0000118>QED weighted</obo:IAO_0000118>
         <obo:IAO_0000115>A descriptor which gives a quantitative estimate of drug likeness according to the procedure outlined in Bickerton et al., 2012. 
 
 http://www.ncbi.nlm.nih.gov/pubmed/22270643
 Nat Chem. 2012 Jan 24;4(2):90-8. doi: 10.1038/nchem.1243.
 Quantifying the chemical beauty of drugs.
 Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
-        <obo:IAO_0000118>QED weighted</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000432 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000432">
+        <rdfs:label xml:lang="en">freezing point descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:comment>A descriptor that indicates the temperature at which a chemical substance undergoes a state transition from gas or liquid to solid, under standard conditions.</rdfs:comment>
     </owl:Class>
     
 
@@ -3424,8 +3454,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label>chemical database identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000577"/>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000061"/>
-        <obo:IAO_0000115>An identifying descriptor which is used within a particular database system to identify a chemical system.</obo:IAO_0000115>
         <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>An identifying descriptor which is used within a particular database system to identify a chemical system.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3435,8 +3465,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_000465">
         <rdfs:label>ChemSpider validated synonym</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000044"/>
-        <obo:IAO_0000115>A preferred name in ChemSpider by virtue of having been validated by a curator.</obo:IAO_0000115>
         <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>A preferred name in ChemSpider by virtue of having been validated by a curator.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3446,8 +3476,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_000466">
         <rdfs:label>ChemSpider unvalidated synonym</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
-        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A molecular entity name in the ChemSpider database which has not been validated by a curator.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3463,8 +3493,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000469"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A chemical database identifier which has been validated by a curator.</obo:IAO_0000115>
         <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>A chemical database identifier which has been validated by a curator.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3490,8 +3520,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A planned process in which a person bearing a curator role confirms an association between a CRID and an information content entity.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3507,8 +3537,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A planned process in which a person bearing a curator role marks an association between a chemical name and an information content entity as unconfirmed.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3524,8 +3554,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000579"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A planned process in which a person bearing a curator role modifies a CRID registry.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3541,8 +3571,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A planned process in which a person bearing a curator role confirms an association between a chemical name and an information content entity.</obo:IAO_0000115>
         <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>A planned process in which a person bearing a curator role confirms an association between a chemical name and an information content entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3558,8 +3588,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A planned process in which a person bearing a curator role deprecates an association between a chemical name and an information content entity.</obo:IAO_0000115>
         <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>A planned process in which a person bearing a curator role deprecates an association between a chemical name and an information content entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3575,9 +3605,9 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
-        <rdfs:comment>This can be done automatically; it does not need a person bearing a curator role.</rdfs:comment>
         <obo:IAO_0000115>A planned process in which an association between a CRID and an information content entity is deprecated.</obo:IAO_0000115>
+        <rdfs:comment>This can be done automatically; it does not need a person bearing a curator role.</rdfs:comment>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3593,8 +3623,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>A planned process in which an association between a CRID and an information content entity is marked as unconfirmed.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3662,12 +3692,6 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -3679,6 +3703,12 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                         </owl:unionOf>
                     </rdfs:Datatype>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&resource;CHEMINF_000502"/>
@@ -3820,9 +3850,9 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_000552">
         <rdfs:label xml:lang="en">algorithm to interpret a connection table</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000064"/>
-        <rdfs:comment>This may of course not be successful!</rdfs:comment>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>An algorithm that specifies how to take a connection table and convert it into a representation of a molecule.</dc:description>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <rdfs:comment>This may of course not be successful!</rdfs:comment>
     </owl:Class>
     
 
@@ -3838,8 +3868,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000424"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>An error message produced in the execution of a structural standardiation algorithm.</dc:description>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <dc:description>An error message produced in the execution of a structural standardiation algorithm.</dc:description>
     </owl:Class>
     
 
@@ -3942,17 +3972,18 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         </rdfs:subClassOf>
     </owl:Class>
     
-	
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_001500 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_001500">
         <rdfs:label xml:lang="en">BCUT</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Eigenvalue based descriptor noted for its utility in chemical diversity.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string"> http://dx.doi.org/10.1021/ci980137x</bibo:doi>
         <short_name>BCUT</short_name>
+        <dc:description>Eigenvalue based descriptor noted for its utility in chemical diversity.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001501 -->
@@ -3960,10 +3991,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001501">
         <rdfs:label xml:lang="en">bond partial pi charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptor that calculates bond-pi Partial charge of a bond by determining the difference the Partial Pi Charge on atoms A and B of a bond (based in Gasteiger Charge).</dc:description>
         <short_name>bondPartialPiCharge</short_name>
+        <dc:description>Descriptor that calculates bond-pi Partial charge of a bond by determining the difference the Partial Pi Charge on atoms A and B of a bond (based in Gasteiger Charge).</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001502 -->
@@ -3974,7 +4005,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <dc:description>Descriptor that calculates bond-sigma Partial charge of a bond.</dc:description>
         <short_name>bondPartialSigmaCharge</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001503 -->
@@ -3985,7 +4016,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <dc:description>Descriptor that calculates bond-total Partial charge of a bond.</dc:description>
         <short_name>bondPartialTCharge</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001504 -->
@@ -3996,7 +4027,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <dc:description>Descriptor that calculates of bond-Polarizability of a bond by determining the difference the Sigma electronegativity on atoms A and B of a bond.</dc:description>
         <short_name>bondSigmaElectronegativity</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001505 -->
@@ -4008,7 +4039,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:comment>This is the shortest distance between a pair of atoms in a graph, defined as the number of edges in the shortest path between the atom pair in the molecular graph.</rdfs:comment>
         <short_name>bondsToAtom</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001506 -->
@@ -4020,7 +4051,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
         <short_name>chiChain</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001507 -->
@@ -4028,11 +4059,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001507">
         <rdfs:label xml:lang="en">chi cluster indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Evluates the simple and valence chi cluster descriptors (Kier and Hall) of orders 3, 4,5 and 6.</dc:description>
         <rdfs:comment> It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
         <short_name>chiCluster</short_name>
+        <dc:description>Evluates the simple and valence chi cluster descriptors (Kier and Hall) of orders 3, 4,5 and 6.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001508 -->
@@ -4040,11 +4071,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001508">
         <rdfs:label xml:lang="en">chi path indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <short_name>chiPath</short_name>
         <dc:description>Evaluates the Kier and Hall Chi path indices of orders 0,1,2,3,4,5,6 and 7.  </dc:description>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
-        <short_name>chiPath</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001509 -->
@@ -4056,7 +4087,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:comment>It utilizes the graph isomorphism code of the CDK to find fragments matching SMILES strings representing the fragments corresponding to each type of chain.</rdfs:comment>
         <short_name>chiPathCluster</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001510 -->
@@ -4064,11 +4095,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001510">
         <rdfs:label xml:lang="en">gravitational Index</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
-        <dc:description>Descriptor characterizing the mass distribution of the molecule.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/jp953224q</bibo:doi>
+        <dc:description>Descriptor characterizing the mass distribution of the molecule.</dc:description>
         <short_name>gravitationalIndex</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001511 -->
@@ -4076,11 +4107,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001511">
         <rdfs:label xml:lang="en">gravitational index (square and cube roots)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
-        <dc:description>Descriptor characterizing the mass distribution of the molecule as the square or cube root of the gravitational index.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/ci980029a</bibo:doi>
+        <dc:description>Descriptor characterizing the mass distribution of the molecule as the square or cube root of the gravitational index.</dc:description>
         <short_name>gravitationalIndex_SquareAndCubeRoots</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001512 -->
@@ -4088,11 +4119,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001512">
         <rdfs:label xml:lang="en">acceptor field atoms (Boehm,Klebe)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Counts the number of acceptor field atoms for a carbonyl oxygen probe using force field based definition.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/jm011039x</bibo:doi>
+        <dc:description>Counts the number of acceptor field atoms for a carbonyl oxygen probe using force field based definition.</dc:description>
         <short_name>hBondAcceptorsBoehmKlebe</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001513 -->
@@ -4100,11 +4131,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001513">
         <rdfs:label xml:lang="en">hydrogen bond acceptors (Daylight)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptor that calculates the number of hydrogen bond acceptors (by Daylight).</dc:description>
         <rdfs:comment>SMILES on-line tutorial, http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html)</rdfs:comment>
         <short_name>hBondacceptorsDaylight</short_name>
+        <dc:description>Descriptor that calculates the number of hydrogen bond acceptors (by Daylight).</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001514 -->
@@ -4112,11 +4143,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001514">
         <rdfs:label xml:lang="en">acceptors or donors field atoms (Boehm,Klebe)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Counts the number of acceptor/donor field atoms for a carbonyl oxygen or amino hydrogen probe. </dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/jm011039x</bibo:doi>
+        <dc:description>Counts the number of acceptor/donor field atoms for a carbonyl oxygen or amino hydrogen probe. </dc:description>
         <short_name>hBondAcceptorsDonorsBoehmKlebe</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001515 -->
@@ -4124,11 +4155,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001515">
         <rdfs:label xml:lang="en">donor field atoms (Boehm,Klebe)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Counts the number of donor field atoms for an amino hydrogen probe.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/jm011039x</bibo:doi>
         <short_name>hBondDonorsBoehmKlebe</short_name>
+        <dc:description>Counts the number of donor field atoms for an amino hydrogen probe.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001516 -->
@@ -4136,11 +4167,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001516">
         <rdfs:label xml:lang="en">hydrogen bond donors (Daylight)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptor that calculates the number of hydrogen bond donors (by Daylight).</dc:description>
-        <rdfs:comment>SMILES on-line tutorial, http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html)</rdfs:comment>
         <short_name>hBondDonorsDaylight</short_name>
+        <rdfs:comment>SMILES on-line tutorial, http://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html)</rdfs:comment>
+        <dc:description>Descriptor that calculates the number of hydrogen bond donors (by Daylight).</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001517 -->
@@ -4148,10 +4179,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001517">
         <rdfs:label xml:lang="en">proton belonging to an aromatic system</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
-        <dc:description>Descriptor returns 1 if the protons is directly bonded to an aromatic system, it returns 2 if the distance between aromatic system and proton is 2 bonds, and it return 0 for other positions.</dc:description>
         <short_name>isProtonInAromaticSystem</short_name>
+        <dc:description>Descriptor returns 1 if the protons is directly bonded to an aromatic system, it returns 2 if the distance between aromatic system and proton is 2 bonds, and it return 0 for other positions.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001518 -->
@@ -4159,10 +4190,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001518">
         <rdfs:label xml:lang="en">proton belonging to a pi-system</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
-        <dc:description>Descriptor returns true if the protons is directly bonded to a pi system.</dc:description>
         <short_name>isProtonInConjugatedPiSystem</short_name>
+        <dc:description>Descriptor returns true if the protons is directly bonded to a pi system.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001519 -->
@@ -4170,11 +4201,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001519">
         <rdfs:label xml:lang="en">Kier Hall SMARTS</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Counts the number of occurrences of the E-state fragments.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.3390/91201004</bibo:doi>
+        <dc:description>Counts the number of occurrences of the E-state fragments.</dc:description>
         <short_name>kierHallSmarts</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001520 -->
@@ -4182,11 +4213,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001520">
         <rdfs:label xml:lang="en">molecular distance edge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Evaluate molecular distance edge descriptors for C, N and O.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/ci970109z</bibo:doi>
+        <dc:description>Evaluate molecular distance edge descriptors for C, N and O.</dc:description>
         <short_name>mde</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001521 -->
@@ -4197,7 +4228,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <dc:description>Descriptor that calculates the principal moments of inertia and ratios of the principal moments. Als calculates the radius of gyration.</dc:description>
         <short_name>momentOfInertia</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001522 -->
@@ -4205,10 +4236,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001522">
         <rdfs:label xml:lang="en">partial total charge (MMFF94)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptor that calculates total partial charges of an heavy atom.</dc:description>
         <short_name>partialTChargeMMFF94</short_name>
+        <dc:description>Descriptor that calculates total partial charges of an heavy atom.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001523 -->
@@ -4216,10 +4247,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001523">
         <rdfs:label xml:lang="en">period of an atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000136"/>
-        <dc:description>Descriptor that returns the period in the periodic table of an atom belonging to an atom container.</dc:description>
         <short_name>period</short_name>
+        <dc:description>Descriptor that returns the period in the periodic table of an atom belonging to an atom container.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001524 -->
@@ -4230,7 +4261,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <dc:description>Descriptor that check if two atoms have pi-contact (this is true when there is one and the same conjugated pi-system which contains both atoms, or directly linked neighboors of the atoms).</dc:description>
         <short_name>piContact</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001525 -->
@@ -4238,10 +4269,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001525">
         <rdfs:label xml:lang="en">proton total partial charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptor that calculates partial charges of an heavy atom and its protons based on Gasteiger Marsili (PEOE).</dc:description>
         <short_name>protonPartialCharge</short_name>
+        <dc:description>Descriptor that calculates partial charges of an heavy atom and its protons based on Gasteiger Marsili (PEOE).</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001526 -->
@@ -4249,12 +4280,12 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001526">
         <rdfs:label xml:lang="en">RDF proton descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Calculation of RDF proton descriptor.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/ac010737m</bibo:doi>
-        <rdfs:comment>This is a mixed descriptor: topological, geometrical and electronic descriptor.</rdfs:comment>
+        <dc:description>Calculation of RDF proton descriptor.</dc:description>
         <short_name>rdfProtonCalculatedValues</short_name>
+        <rdfs:comment>This is a mixed descriptor: topological, geometrical and electronic descriptor.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001527 -->
@@ -4262,12 +4293,12 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001527">
         <rdfs:label xml:lang="en">TAE RECON descriptors for amino acid sequences</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptors are derived from pre-calculated quantum mechanical parameters by using the paramaters for amino acids and evaluating a set of 147 descriptors for peptide sequences.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1016/0097-8485(94)00052-G</bibo:doi>
-        <rdfs:comment>{@cdk.cite BREN1995} {@cdk.cite BREN1997} {@cdk.cite WHITE2003}</rdfs:comment>
         <short_name>taeAminoAcid</short_name>
+        <dc:description>Descriptors are derived from pre-calculated quantum mechanical parameters by using the paramaters for amino acids and evaluating a set of 147 descriptors for peptide sequences.</dc:description>
+        <rdfs:comment>{@cdk.cite BREN1995} {@cdk.cite BREN1997} {@cdk.cite WHITE2003}</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001528 -->
@@ -4275,10 +4306,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001528">
         <rdfs:label xml:lang="en">weighted path</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>The weighted path (molecular ID) descriptors were described by Randic and they characterize molecular branching.</dc:description>
         <short_name>weightedPath</short_name>
+        <dc:description>The weighted path (molecular ID) descriptors were described by Randic and they characterize molecular branching.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001529 -->
@@ -4286,11 +4317,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001529">
         <rdfs:label xml:lang="en">WHIM</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Holistic descriptors described by Todeschini et al.</dc:description>
         <rdfs:comment>Todeschini, R. and Gramatica, P.. New 3D Molecular Descriptors: The WHIM theory and QAR Applications, Persepectives in Drug Discovery and Design. 1998, pp. 355-380. Mixed descriptors: molecular size, shape, symmetry, and atom distribution and density. Uses 3D coordinates, PCA and it calculates 10 descriptors.</rdfs:comment>
+        <dc:description>Holistic descriptors described by Todeschini et al.</dc:description>
         <short_name>WHIM</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001530 -->
@@ -4298,11 +4329,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001530">
         <rdfs:label xml:lang="en">Moreau-Broto Autocorrelation (charge) descriptors</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>The Moreau-Broto autocorrelation descriptors using partial charges.</dc:description>
         <rdfs:comment>ATSc1 - ATSc5</rdfs:comment>
+        <dc:description>The Moreau-Broto autocorrelation descriptors using partial charges.</dc:description>
         <short_name>autoCorrelationCharge</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001531 -->
@@ -4311,10 +4342,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Moreau-Broto autocorrelation (mass) descriptors</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <dc:description>The Moreau-Broto autocorrelation descriptors using atomic weight.</dc:description>
-        <rdfs:comment>ATSm1 - ATSm5</rdfs:comment>
         <short_name>autoCorrelationMass</short_name>
+        <rdfs:comment>ATSm1 - ATSm5</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001532 -->
@@ -4322,23 +4353,23 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001532">
         <rdfs:label xml:lang="en">Moreau-Broto autocorrelation (polarizability) descriptors</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>The Moreau-Broto autocorrelation descriptors using polarizability.</dc:description>
         <rdfs:comment>ATSp1 - ATSp5</rdfs:comment>
         <short_name>autoCorrelationPolarizability</short_name>
-    </owl:Class>	
+        <dc:description>The Moreau-Broto autocorrelation descriptors using polarizability.</dc:description>
+    </owl:Class>
+    
 
-	
-	
+
     <!-- http://semanticscience.org/resource/CHEMINF_001533 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_001533">
         <rdfs:label xml:lang="en">carbon types</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
+        <short_name>carbonTypes</short_name>
         <dc:description>Characterizes the carbon connectivity in terms of hybridization</dc:description>
         <rdfs:comment>C1SP1, C2SP1, C1SP2, C2SP2, C3SP2, C1SP3, C2SP3, C3SP3, C4SP3</rdfs:comment>
-        <short_name>carbonTypes</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001534 -->
@@ -4346,10 +4377,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001534">
         <rdfs:label xml:lang="en">carbon connectivity index (order 0)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Descriptor that calculates the carbon connectivity index (order 0). </dc:description>
         <short_name>chi0C</short_name>
+        <dc:description>Descriptor that calculates the carbon connectivity index (order 0). </dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001535 -->
@@ -4360,7 +4391,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <dc:description>Descriptor that calculates atomic valence connectivity index (order 0). </dc:description>
         <short_name>chi0v</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001536 -->
@@ -4368,10 +4399,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001536">
         <rdfs:label xml:lang="en">valence carbon connectivity index (order 0)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Descriptor that calculates carbon valence connectivity index (order 0).</dc:description>
         <short_name>chi0vC</short_name>
+        <dc:description>Descriptor that calculates carbon valence connectivity index (order 0).</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001537 -->
@@ -4379,10 +4410,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001537">
         <rdfs:label xml:lang="en">carbon connectivity index (order 1)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Descriptor that calculates carbon connectivity index (order 1). </dc:description>
         <short_name>chi1C</short_name>
+        <dc:description>Descriptor that calculates carbon connectivity index (order 1). </dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001538 -->
@@ -4390,10 +4421,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001538">
         <rdfs:label xml:lang="en">valence connectivity index (order 1)</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
-        <dc:description>Descriptor that calculates atomic valence connectivity index (order 1). </dc:description>
         <short_name>chi1v</short_name>
+        <dc:description>Descriptor that calculates atomic valence connectivity index (order 1). </dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001539 -->
@@ -4404,7 +4435,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <dc:description>Descriptor that calculates carbon valence connectivity index (order 1). </dc:description>
         <short_name>chi1vC</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001540 -->
@@ -4412,10 +4443,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001540">
         <rdfs:label xml:lang="en">distance to Atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
-        <dc:description>Descriptor that calculates the 3D distance between two atoms.</dc:description>
         <short_name>distanceToAtom</short_name>
+        <dc:description>Descriptor that calculates the 3D distance between two atoms.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001541 -->
@@ -4423,11 +4454,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001541">
         <rdfs:label xml:lang="en">effective polarizability</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptor that calculates the effective polarizability of a given heavy atom.</dc:description>
         <rdfs:comment>EffectiveAtomPolarizabilityDescriptor, effAtomPol</rdfs:comment>
         <short_name>effectivePolarizability</short_name>
+        <dc:description>Descriptor that calculates the effective polarizability of a given heavy atom.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001542 -->
@@ -4439,7 +4470,7 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:comment>It reports the fraction of sp3 carbons to sp2 carbons as Nsp3/ (Nsp3 + Nsp2). The original form of the descriptor (i.e., simple ratio) has been used to characterize molecular complexity, especially in the are of natural products , which usually have a high value of the sp3 to sp2 ratio. Other short names: HybridizationRatio, HybRatio.</rdfs:comment>
         <short_name>hybratio</short_name>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001543 -->
@@ -4448,10 +4479,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">Kier and Hall kappa molecular shape indices</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000092"/>
         <dc:description>Descriptor that calculates Kier and Hall kappa molecular shape indices.</dc:description>
-        <rdfs:comment>Kier and Hall kappa molecular shape indices compare the molecular graph with minimal and maximal molecular graphs. First kappa shape index is given by n ( n - 1 ) 2 m 2 , second kappa shape index is given by ( n - 1 ) ( n - 2 ) 2 p 2 2 and third kappa shape index is given by ( n - 1 ) ( n - 3 ) 2 p 3 2 for odd n and ( n - 3 ) ( n - 2 ) 2 p 3 2 for enev n, where n denotes the number of atoms in the hydrogen suppressed graph, m is the number of bonds in the hydrogen suppressed graph. Also, let p2 denote the number of paths of length 2 and let p3 denote the number of paths of length 3. Other short names: KappaShapeIndices, Kier1, Kier2, Kier3.</rdfs:comment>
         <short_name>kierValues</short_name>
+        <rdfs:comment>Kier and Hall kappa molecular shape indices compare the molecular graph with minimal and maximal molecular graphs. First kappa shape index is given by n ( n - 1 ) 2 m 2 , second kappa shape index is given by ( n - 1 ) ( n - 2 ) 2 p 2 2 and third kappa shape index is given by ( n - 1 ) ( n - 3 ) 2 p 3 2 for odd n and ( n - 3 ) ( n - 2 ) 2 p 3 2 for enev n, where n denotes the number of atoms in the hydrogen suppressed graph, m is the number of bonds in the hydrogen suppressed graph. Also, let p2 denote the number of paths of length 2 and let p3 denote the number of paths of length 3. Other short names: KappaShapeIndices, Kier1, Kier2, Kier3.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001544 -->
@@ -4459,12 +4490,12 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001544">
         <rdfs:label xml:lang="en">partial pi charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptor that calculates pi partial charges in pi-bonded systems of an heavy atom based on based on Gasteiger H.Saller (PEPE).</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1002/ange.19850970818</bibo:doi>
-        <rdfs:comment>Other short_name: pepe.</rdfs:comment>
+        <dc:description>Descriptor that calculates pi partial charges in pi-bonded systems of an heavy atom based on based on Gasteiger H.Saller (PEPE).</dc:description>
         <short_name>partialPiCharge</short_name>
+        <rdfs:comment>Other short_name: pepe.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001545 -->
@@ -4472,11 +4503,11 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_001545">
         <rdfs:label xml:lang="en">partial sigma charge</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <dc:description>Descriptor that calculates sigma partial charges in sigma-bonded systems (PEOE) of an heavy atom based on Gasteiger Marsili.</dc:description>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1016/0040-4020(80)80168-2</bibo:doi>
         <short_name>partialSigmaCharge</short_name>
+        <dc:description>Descriptor that calculates sigma partial charges in sigma-bonded systems (PEOE) of an heavy atom based on Gasteiger Marsili.</dc:description>
     </owl:Class>
-
+    
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001546 -->
@@ -4485,12 +4516,12 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pi electronegativity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <dc:description>Descriptor that returns the pi electronegativity for a given atom.</dc:description>
-        <rdfs:comment>Pi electronegativity is given by X = a + b q + c ( q 2 ) , where a, b and c are Gasteiger Marsili parameters, and q is the sigma charge. Other short_name: elecPiA.</rdfs:comment>
         <short_name>piElectronegativity</short_name>
+        <rdfs:comment>Pi electronegativity is given by X = a + b q + c ( q 2 ) , where a, b and c are Gasteiger Marsili parameters, and q is the sigma charge. Other short_name: elecPiA.</rdfs:comment>
     </owl:Class>
-	
+    
 
-	
+
     <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
 
     <owl:Class rdf:about="&snap;Disposition"/>
@@ -4777,8 +4808,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000230"/>
     </rdf:Description>
     <rdf:Description rdf:about="&resource;CHEMINF_000064">
-        <oboInOwl:hasAlternativeId>BODO:Descriptor</oboInOwl:hasAlternativeId>
         <rdfs:comment>NOTE: QSAR descriptors are often just called &apos;chemical descriptor&apos; or &apos;molecular descriptor&apos; in the cheminformatics community.</rdfs:comment>
+        <oboInOwl:hasAlternativeId>BODO:Descriptor</oboInOwl:hasAlternativeId>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;OBI_0000471">
         <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
