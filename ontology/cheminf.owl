@@ -3370,6 +3370,45 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000414 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000414">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000416 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000416">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000417 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000417">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000429 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000429">
@@ -3411,7 +3450,224 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL.</obo:IAO_0000115>
     <owl:Class rdf:about="&resource;CHEMINF_000432">
         <rdfs:label xml:lang="en">freezing point descriptor</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
-        <rdfs:comment>A descriptor that indicates the temperature at which a chemical substance undergoes a state transition from gas or liquid to solid, under standard conditions.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A descriptor that indicates the temperature at which a chemical substance undergoes a state transition from gas or liquid to solid, under standard conditions.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000433 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000433">
+        <rdfs:label xml:lang="en">Henry&apos;s Law constant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Henry&apos;s law, formulated by William Henry in 1803, states &quot;At a constant temperature, the amount of a given gas that dissolves in a given type and volume of liquid is directly proportional to the partial pressure of that gas in equilibrium with that liquid.&quot; Henry&apos;s law can be put into mathematical terms (at constant temperature) as
+    p = kHc
+where p is the partial pressure of the solute in the gas above the solution, c is the concentration of the solute and kH is a constant with the dimensions of pressure divided by concentration. The constant, known as the Henry&apos;s law constant, depends on the solute, the solvent and the temperature.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000434 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000434">
+        <rdfs:label xml:lang="en">atmospheric OH rate constant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor for the rate constant of a reaction of a chemical entity with OH. This is used to describe the atmospheric behaviour (i.e. stability) of the entity. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000435 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000435">
+        <rdfs:label xml:lang="en">upper explosive limit descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor for the upper explosive limit of the entity in air as a percentage by volume at room temperature. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000436 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000436">
+        <rdfs:label xml:lang="en">lower explosive limit descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor for the lower explosive limit in air as a percentage by volume at room temperature</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000437 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000437">
+        <rdfs:label xml:lang="en">minimum explosive concentration descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor for the minimum explosive concentration. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000438 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000438">
+        <rdfs:label xml:lang="en">specific gravity descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor of the ratio of the density of chemical substance to the density of a reference substance. The reference substance is usually water for liquids or air for gases. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000439 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000439">
+        <rdfs:label xml:lang="en">relative density descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A descriptor of the relative density of gases referenced to air as 1, which indicates how many times a gas is heavier than air at the same temperature. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000440 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000440">
+        <rdfs:label xml:lang="en">vapor density descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A descriptor of the density of a vapour in relation in that of hydrogen, defined as the mass of a certain volume of the given substance divided by the mass of the same volume of hydrogen. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000441 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000441">
+        <rdfs:label xml:lang="en">odor detection threshold descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor for the lowest concentration of an odorant chemical entity that is perceivable by the human sense of smell. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000442 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000442">
+        <rdfs:label xml:lang="en">pH descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor which gives a measure of the acidity or basicity of an aqueous solution, defined as the decimal logarithm of the reciprocal of the hydrogen ion activity in a solution. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000443 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000443">
+        <rdfs:label xml:lang="en">evaporation rate descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor of the rate of evaporation of a liquid under standard conditions. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000444 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000444">
+        <rdfs:label xml:lang="en">autoignition temperature descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor of the lowest temperature at a substance will spontaneously ignite in a normal atmosphere without an external source of ignition. </dc:description>
+        <obo:IAO_0000118>kindling point</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000445 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000445">
+        <rdfs:label xml:lang="en">soil half-life descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A physical descriptor for the time it takes for half of a portion of substance of a given type to decompose in soil under standard conditions. </dc:description>
     </owl:Class>
     
 
