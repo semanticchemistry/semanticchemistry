@@ -4565,7 +4565,21 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
     </owl:Class>
     
+    <!-- http://semanticscience.org/resource/CHEMINF_000446 -->
 
+    <owl:Class rdf:about="&resource;CHEMINF_000446">
+        <rdfs:label>CAS registry number</rdfs:label>
+        <dc:description>Identifier used by the Chemical Abstracts Service database.</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000447 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000447">
+        <rdfs:label>EC number</rdfs:label>
+        <rdfs:label>European Community number</rdfs:label>
+        <rdfs:label>EINECS No</rdfs:label>
+        <dc:description>A seven-digit identifier for chemical substances for regulatory purposes within the European Union.</dc:description>
+    </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000450 -->
 
