@@ -583,9 +583,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000489">
         <rdfs:label xml:lang="en">is_isotopically_unspecified_parent_of</rdfs:label>
-        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>Superclass relation between a class does not have isotopes specified, such as water or urea, and a class that does, such as D2O or 14C-urea.</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+      <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+
+      <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000459"/>
     </owl:ObjectProperty>
@@ -646,10 +647,33 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000460"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
+  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000497">
+    <rdfs:label xml:lang="en">is counterpart with different charge of</rdfs:label>
+    <obo:IAO_0000115>If A &apos;is a counterpart with different charge of&apos; B, then A is an otherwise identical species to B but for charge.</obo:IAO_0000115>
+    <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
+    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+
+    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000498">
+    <rdfs:label xml:lang="en">shares OPS normalized parent with</rdfs:label>
+    <obo:IAO_0000115>If A &apos;shares OPS normalized parent with&apos; B,
+then A 'has OPS normalized counterpart' C and B 'has OPS normalized counterpart' C.</obo:IAO_0000115>
+    <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
+    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+
+    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+
+  </owl:ObjectProperty>
+
+
+  <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
         <rdfs:domain rdf:resource="&obo;IAO_0000027"/>
