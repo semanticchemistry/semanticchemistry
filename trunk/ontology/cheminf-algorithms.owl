@@ -111,7 +111,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_001000 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_001000">
-        <rdfs:label>Atom Counting algorithm</rdfs:label>
+        <rdfs:label>atom counting algorithm</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">

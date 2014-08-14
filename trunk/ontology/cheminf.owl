@@ -384,6 +384,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000455">
         <rdfs:label>is_isotopologue_of</rdfs:label>
         <dc:description>An isotopologue is a molecular entity that differs only in isotopic composition from another molecular entity. (AU:I03351)</dc:description>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
@@ -457,6 +459,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000461">
         <rdfs:label>is_stereoisomer_of</rdfs:label>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <dc:description>Connects a molecule to an isomer with identical constitution but differing in its arrangement of atoms in space. (AU:S05984)</dc:description>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
@@ -666,10 +670,34 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 then A 'has OPS normalized counterpart' C and B 'has OPS normalized counterpart' C.</obo:IAO_0000115>
     <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+    <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    <rdf:type rdf:resource="&owl;SymmetricProperty"/>
 
     <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
     <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
 
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000499">
+    <rdfs:label xml:lang="en">has ChemAxon canonicalised tautomer</rdfs:label>
+    <obo:IAO_0000115>If A 'has ChemAxon canonicalised tautomer' B then B is the molecular entity corresponding to the output of ChemAxon's canonical tautomer generation algorithm applied to the connection table of A.</obo:IAO_0000115>
+    <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+    <rdfs:comment>A and B can be identical.</rdfs:comment>
+    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+    <owl:inverseOf rdf:resource="&resource;CHEMINF_000514"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000514">
+    <rdfs:label xml:lang="en">is ChemAxon canonicalised tautomer of</rdfs:label>
+    <obo:IAO_0000115>If B 'has ChemAxon canonicalised tautomer' A then B is the molecular entity corresponding to the output of ChemAxon's canonical tautomer generation algorithm applied to the connection table of A.</obo:IAO_0000115>
+    <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+    <rdfs:comment>A and B can be identical.</rdfs:comment>
+    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+    <owl:inverseOf rdf:resource="&resource;CHEMINF_000499"/>
   </owl:ObjectProperty>
 
 
