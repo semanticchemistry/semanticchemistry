@@ -4296,7 +4296,47 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         </rdfs:subClassOf>
     </owl:Class>
     
+    <!-- http://semanticscience.org/resource/CHEMINF_000561 -->
 
+    <owl:Class rdf:about="&resource;CHEMINF_000561">
+        <rdfs:label>drug trade name</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
+        <obo:IAO_0000115>Trade name of a drug compound.</obo:IAO_0000115>
+        <!-- TODO: add axiom to have this act on molecules (drugs) -->
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000562 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000562">
+        <rdfs:label>International Non-proprietary Name</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
+        <obo:IAO_0000115>International Non-proprietary Name, defined by the WHO.</obo:IAO_0000115>
+        <!-- TODO: add axiom to have this act on molecules (drugs) -->
+        <short_name>INN</short_name>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000563 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000563">
+        <rdfs:label>Unique Ingredient Identifier</rdfs:label>
+        <dc:description>Identifier used by the USA Food and Drug Administration.</dc:description>
+        <short_name>UNII</short_name>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000564 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000564">
+        <rdfs:label>LipidMaps identifier</rdfs:label>
+        <dc:description>Identifier used by the LipidMaps database, http://www.lipidmaps.org/.</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000565 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000565">
+        <rdfs:label>National Service Center number</rdfs:label>
+        <dc:description>Identifier used by the Cancer Chemotherapy National Service Center.</dc:description>
+        <short_name>NSC number</short_name>
+    </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_001500 -->
 
