@@ -4321,6 +4321,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:label>Unique Ingredient Identifier</rdfs:label>
         <dc:description>Identifier used by the USA Food and Drug Administration.</dc:description>
         <short_name>UNII</short_name>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
     </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000564 -->
@@ -4328,6 +4329,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <owl:Class rdf:about="&resource;CHEMINF_000564">
         <rdfs:label>LipidMaps identifier</rdfs:label>
         <dc:description>Identifier used by the LipidMaps database, http://www.lipidmaps.org/.</dc:description>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
     </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000565 -->
@@ -4336,6 +4338,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:label>National Service Center number</rdfs:label>
         <dc:description>Identifier used by the Cancer Chemotherapy National Service Center.</dc:description>
         <short_name>NSC number</short_name>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
     </owl:Class>
 
     <!-- http://semanticscience.org/resource/CHEMINF_001500 -->
