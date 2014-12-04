@@ -382,10 +382,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000455 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000455">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label>is_isotopologue_of</rdfs:label>
         <dc:description>An isotopologue is a molecular entity that differs only in isotopic composition from another molecular entity. (AU:I03351)</dc:description>
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
@@ -458,9 +458,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <!-- http://semanticscience.org/resource/CHEMINF_000461 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000461">
-        <rdfs:label>is_stereoisomer_of</rdfs:label>
-        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>is_stereoisomer_of</rdfs:label>
         <dc:description>Connects a molecule to an isomer with identical constitution but differing in its arrangement of atoms in space. (AU:S05984)</dc:description>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
@@ -587,10 +587,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000489">
         <rdfs:label xml:lang="en">is_isotopically_unspecified_parent_of</rdfs:label>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <dc:description>Superclass relation between a class does not have isotopes specified, such as water or urea, and a class that does, such as D2O or 14C-urea.</dc:description>
-      <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
-
-      <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000459"/>
     </owl:ObjectProperty>
@@ -651,57 +650,68 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000460"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
     </owl:ObjectProperty>
+    
 
 
-  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000497">
-    <rdfs:label xml:lang="en">is counterpart with different charge of</rdfs:label>
-    <obo:IAO_0000115>If A &apos;is a counterpart with different charge of&apos; B, then A is an otherwise identical species to B but for charge.</obo:IAO_0000115>
-    <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
-    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+    <!-- http://semanticscience.org/resource/CHEMINF_000497 -->
 
-    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
-
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000498">
-    <rdfs:label xml:lang="en">shares OPS normalized parent with</rdfs:label>
-    <obo:IAO_0000115>If A &apos;shares OPS normalized parent with&apos; B,
-then A 'has OPS normalized counterpart' C and B 'has OPS normalized counterpart' C.</obo:IAO_0000115>
-    <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
-    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
-    <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-    <rdf:type rdf:resource="&owl;SymmetricProperty"/>
-
-    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
-
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000499">
-    <rdfs:label xml:lang="en">has ChemAxon canonicalised tautomer</rdfs:label>
-    <obo:IAO_0000115>If A 'has ChemAxon canonicalised tautomer' B then B is the molecular entity corresponding to the output of ChemAxon's canonical tautomer generation algorithm applied to the connection table of A.</obo:IAO_0000115>
-    <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
-    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
-    <rdfs:comment>A and B can be identical.</rdfs:comment>
-    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
-    <owl:inverseOf rdf:resource="&resource;CHEMINF_000514"/>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="&resource;CHEMINF_000514">
-    <rdfs:label xml:lang="en">is ChemAxon canonicalised tautomer of</rdfs:label>
-    <obo:IAO_0000115>If B 'has ChemAxon canonicalised tautomer' A then B is the molecular entity corresponding to the output of ChemAxon's canonical tautomer generation algorithm applied to the connection table of A.</obo:IAO_0000115>
-    <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
-    <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
-    <rdfs:comment>A and B can be identical.</rdfs:comment>
-    <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-    <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
-    <owl:inverseOf rdf:resource="&resource;CHEMINF_000499"/>
-  </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000497">
+        <rdfs:label xml:lang="en">is counterpart with different charge of</rdfs:label>
+        <obo:IAO_0000115>If A &apos;is a counterpart with different charge of&apos; B, then A is an otherwise identical species to B but for charge.</obo:IAO_0000115>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000462"/>
+    </owl:ObjectProperty>
+    
 
 
-  <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_000498 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000498">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">shares OPS normalized parent with</rdfs:label>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>If A &apos;shares OPS normalized parent with&apos; B,
+then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normalized counterpart&apos; C.</obo:IAO_0000115>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000479"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000499 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000499">
+        <rdfs:label xml:lang="en">has ChemAxon canonicalised tautomer</rdfs:label>
+        <obo:IAO_0000115>If A &apos;has ChemAxon canonicalised tautomer&apos; B then B is the molecular entity corresponding to the output of ChemAxon&apos;s canonical tautomer generation algorithm applied to the connection table of A.</obo:IAO_0000115>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <rdfs:comment>A and B can be identical.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000514 -->
+
+    <owl:ObjectProperty rdf:about="&resource;CHEMINF_000514">
+        <rdfs:label xml:lang="en">is ChemAxon canonicalised tautomer of</rdfs:label>
+        <rdfs:comment>A and B can be identical.</rdfs:comment>
+        <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
+        <obo:IAO_0000115>If B &apos;has ChemAxon canonicalised tautomer&apos; A then B is the molecular entity corresponding to the output of ChemAxon&apos;s canonical tautomer generation algorithm applied to the connection table of A.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <owl:inverseOf rdf:resource="&resource;CHEMINF_000499"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000606 -->
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000606">
         <rdfs:domain rdf:resource="&obo;IAO_0000027"/>
@@ -2090,12 +2100,6 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000330"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
@@ -2104,6 +2108,12 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -3740,6 +3750,26 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000448 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000448">
+        <rdfs:label xml:lang="en">metal atom count</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000263"/>
+        <obo:IAO_0000115>A descriptor that specifies the integer count of metal atoms in a given chemical entity. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000449 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000449">
+        <rdfs:label xml:lang="en">oxygen atom count</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000263"/>
+        <obo:IAO_0000115>A descriptor that specifies the integer count of oxygen atoms in a given chemical entity. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000450 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000450"/>
@@ -3979,6 +4009,29 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:label>monoisotopic molecular weight descriptor calculated by ACD/Labs PhysChem software library version 12.01</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000218"/>
         <obo:IAO_0000117>Person: Colin Batchelor</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000487 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000487">
+        <rdfs:label xml:lang="en">energy band gap</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000016"/>
+        <obo:IAO_0000115>A descriptor that describes the energy range in a solid where no electron states can exist. In graphs of the electron band structure of solids, the band gap generally refers to the energy difference (in electron volts) between the top of the valence band and the bottom of the conduction band in insulators and semiconductors. [http://en.wikipedia.org/wiki/Band_gap]</obo:IAO_0000115>
+        <obo:IAO_0000118>band gap</obo:IAO_0000118>
+        <obo:IAO_0000118>energy gap</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000488 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000488">
+        <rdfs:label xml:lang="en">metal element mass descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000083"/>
+        <obo:IAO_0000118>metal element mass</obo:IAO_0000118>
+        <obo:IAO_0000115>A descriptor describing the mass of the metal element component of a composite substance. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4296,14 +4349,17 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         </rdfs:subClassOf>
     </owl:Class>
     
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000561 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000561">
         <rdfs:label>drug trade name</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
         <obo:IAO_0000115>Trade name of a drug compound.</obo:IAO_0000115>
-        <!-- TODO: add axiom to have this act on molecules (drugs) -->
     </owl:Class>
+    
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000562 -->
 
@@ -4311,35 +4367,42 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:label>International Non-proprietary Name</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000043"/>
         <obo:IAO_0000115>International Non-proprietary Name, defined by the WHO.</obo:IAO_0000115>
-        <!-- TODO: add axiom to have this act on molecules (drugs) -->
         <short_name>INN</short_name>
     </owl:Class>
+    
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000563 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000563">
         <rdfs:label>Unique Ingredient Identifier</rdfs:label>
-        <dc:description>Identifier used by the USA Food and Drug Administration.</dc:description>
-        <short_name>UNII</short_name>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+        <short_name>UNII</short_name>
+        <dc:description>Identifier used by the USA Food and Drug Administration.</dc:description>
     </owl:Class>
+    
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000564 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000564">
         <rdfs:label>LipidMaps identifier</rdfs:label>
-        <dc:description>Identifier used by the LipidMaps database, http://www.lipidmaps.org/.</dc:description>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+        <dc:description>Identifier used by the LipidMaps database, http://www.lipidmaps.org/.</dc:description>
     </owl:Class>
+    
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000565 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000565">
         <rdfs:label>National Service Center number</rdfs:label>
-        <dc:description>Identifier used by the Cancer Chemotherapy National Service Center.</dc:description>
-        <short_name>NSC number</short_name>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+        <short_name>NSC number</short_name>
+        <dc:description>Identifier used by the Cancer Chemotherapy National Service Center.</dc:description>
     </owl:Class>
+    
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_001500 -->
 
@@ -4936,6 +4999,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000101">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000100">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&ro;integral_part_of">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -4958,9 +5024,6 @@ where p is the partial pressure of the solute in the gas above the solution, c i
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000100">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000105">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
@@ -5058,9 +5121,6 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000584">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000589">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&ro;proper_part_of">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -5083,6 +5143,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000589">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000116">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -5119,23 +5182,23 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000303">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000304">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;iao/obsolete.owl">
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000581">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    <rdf:Description rdf:about="&obo;IAO_0000304">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000442">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000443">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    <rdf:Description rdf:about="&obo;IAO_0000581">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000582">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000443">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000580">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -5196,6 +5259,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&dc;date">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000078">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&ro;located_in">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -5219,9 +5285,6 @@ where p is the partial pressure of the solute in the gas above the solution, c i
             </rdf:Description>
         </oboInOwl:hasDefinition>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000078">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000006">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
@@ -5235,9 +5298,6 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000003">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000142">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;relationship">
@@ -5262,6 +5322,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000142">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000001">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -5298,11 +5361,11 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&dc;source">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000401">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000088">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000401">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000400">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -5316,11 +5379,21 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000015">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;OBI_0500000">
-        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
+    <rdf:Description rdf:about="&resource;CHEMINF_000191">
+        <obo:IAO_0000118>ionization potential</obo:IAO_0000118>
+        <obo:IAO_0000115>An ionization energy descriptor is a descriptor that describes the minimum amount of energy required to remove an electron (to an infinite distance) from an atom or molecule in a gaseous state. 
+
+X + energy → X+ + e-
+
+The term &apos;ionization potential&apos; has historically been used but is now no longer recommended. </obo:IAO_0000115>
+        <obo:IAO_0000118>ionization enthalpy</obo:IAO_0000118>
+        <obo:IAO_0000118>ionization energy</obo:IAO_0000118>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000017">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;OBI_0500000">
+        <obo:IAO_0000412 rdf:resource="&obo;obi.owl"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000018">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
@@ -5349,12 +5422,12 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000413">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;UO_0000003">
+        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000097">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000002"/>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;UO_0000003">
-        <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;UO_0000001">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
@@ -5365,11 +5438,11 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;UO_0000002">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000093">
-        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000009">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000093">
+        <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000008">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
@@ -5417,28 +5490,32 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000121"/>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000226"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000415">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000318">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000415">
+    <rdf:Description rdf:about="&obo;IAO_0000319">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000416">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000319">
+    <rdf:Description rdf:about="&obo;IAO_0000316">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000417">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;derives_from">
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDefinition>
+            <rdf:Description>
+                <oboInOwl:hasDbXref>
+                    <rdf:Description/>
+                </oboInOwl:hasDbXref>
+            </rdf:Description>
+        </oboInOwl:hasDefinition>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -5449,13 +5526,12 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasDefinition>
-            <rdf:Description>
-                <oboInOwl:hasDbXref>
-                    <rdf:Description/>
-                </oboInOwl:hasDbXref>
-            </rdf:Description>
-        </oboInOwl:hasDefinition>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -5464,13 +5540,10 @@ where p is the partial pressure of the solute in the gas above the solution, c i
             </rdf:Description>
         </oboInOwl:hasDefinition>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000316">
+    <rdf:Description rdf:about="&obo;IAO_0000317">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000418">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000317">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000326">
@@ -5509,10 +5582,10 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;PATO_0000122">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/PATO"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000019">
+    <rdf:Description rdf:about="&obo;IAO_0000220">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000220">
+    <rdf:Description rdf:about="&obo;IAO_0000019">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000225">
@@ -5537,11 +5610,11 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;OBI_0000300">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000132">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000327">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000132">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000328">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -5549,12 +5622,12 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000329">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000032">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000135">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000032">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0100001">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
@@ -5562,17 +5635,18 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&dc;coverage">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000129">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000330">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000129">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&resource;CHEMINF_000241">
+        <obo:IAO_0000118>heat of formation</obo:IAO_0000118>
+        <obo:IAO_0000118>enthalpy of formation</obo:IAO_0000118>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000232">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;iao/iao-main.owl">
-        <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
     </rdf:Description>
     <rdf:Description rdf:about="&ro;adjacent_to">
         <oboInOwl:hasDefinition>
@@ -5596,6 +5670,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;iao/iao-main.owl">
+        <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
     </rdf:Description>
     <rdf:Description rdf:about="&dc;relation">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
