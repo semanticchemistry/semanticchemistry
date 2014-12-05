@@ -1177,14 +1177,14 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
     <owl:Class rdf:about="&resource;CHEMINF_000147">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000148"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000145"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2107,13 +2107,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000331"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000505"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000500"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A software method (also called subroutine, subprogram, procedure, method, function, or routine) is a programming language implementation of a plan specification which is capable of realizing some objective specification when part of a software application.</dc:description>
@@ -4101,14 +4101,14 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
-                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000510"/>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A textual data item is a data item which has a value that has at least some non-numeric characters included in it. </obo:IAO_0000115>
@@ -4523,7 +4523,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <!-- http://semanticscience.org/resource/CHEMINF_001510 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_001510">
-        <rdfs:label xml:lang="en">gravitational Index</rdfs:label>
+        <rdfs:label xml:lang="en">gravitational index</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/jp953224q</bibo:doi>
         <short_name>gravitationalIndex</short_name>
@@ -4536,7 +4536,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
     <owl:Class rdf:about="&resource;CHEMINF_001511">
         <rdfs:label xml:lang="en">gravitational index (square and cube roots)</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_001510"/>
         <bibo:doi rdf:datatype="&xsd;string">http://dx.doi.org/10.1021/ci980029a</bibo:doi>
         <short_name>gravitationalIndex_SquareAndCubeRoots</short_name>
         <dc:description>Descriptor characterizing the mass distribution of the molecule as the square or cube root of the gravitational index.</dc:description>
@@ -4871,7 +4871,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <!-- http://semanticscience.org/resource/CHEMINF_001540 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_001540">
-        <rdfs:label xml:lang="en">distance to Atom</rdfs:label>
+        <rdfs:label xml:lang="en">distance to atom</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000093"/>
         <dc:description>Descriptor that calculates the 3D distance between two atoms.</dc:description>
         <short_name>distanceToAtom</short_name>
@@ -4999,9 +4999,6 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000101">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000100">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&ro;integral_part_of">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -5024,6 +5021,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000100">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000105">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
@@ -5121,6 +5121,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000584">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000589">
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&ro;proper_part_of">
         <oboInOwl:hasDefinition>
             <rdf:Description>
@@ -5143,9 +5146,6 @@ where p is the partial pressure of the solute in the gas above the solution, c i
                 </oboInOwl:hasDbXref>
             </rdf:Description>
         </oboInOwl:hasDefinition>
-    </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000589">
-        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000116">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
@@ -5429,6 +5429,9 @@ The term &apos;ionization potential&apos; has historically been used but is now 
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000002"/>
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
+    <rdf:Description rdf:about="&resource;CHEMINF_000189">
+        <obo:IAO_0000115>A descriptor characterizing the ratio of the length to the breadth of a given entity.</obo:IAO_0000115>
+    </rdf:Description>
     <rdf:Description rdf:about="&obo;UO_0000001">
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/UO"/>
     </rdf:Description>
@@ -5540,10 +5543,10 @@ The term &apos;ionization potential&apos; has historically been used but is now 
             </rdf:Description>
         </oboInOwl:hasDefinition>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000317">
+    <rdf:Description rdf:about="&obo;IAO_0000418">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000418">
+    <rdf:Description rdf:about="&obo;IAO_0000317">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000326">
