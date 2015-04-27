@@ -1317,7 +1317,6 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
     <owl:Class rdf:about="&resource;CHEMINF_000266"/>
     
 
-
     <!-- http://semanticscience.org/resource/CHEMINF_000302 -->
 
     <rdf:Description rdf:about="&resource;CHEMINF_000302">
@@ -4454,6 +4453,14 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <short_name>NSC number</short_name>
     </owl:Class>
     
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000566 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000566">
+        <rdfs:label>RTECS identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+	<dc:description>Identifier used by the RTECS database (http://www.cdc.gov/niosh/rtecs/).</dc:description>
+    </owl:Class>
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_001500 -->
