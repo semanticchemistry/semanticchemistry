@@ -1,0 +1,269 @@
+# CHEMINF Examples #
+
+This page lists examples of CHEMINF use. To resolve what one of those cryptic CHEMINF\_00xxxx links, you can just open the full URI in a webbrowser. For example,
+CHEMINF\_000111 has the full URL http://semanticscience.org/resource/CHEMINF_000111. See [this blog post](http://chem-bla-ics.blogspot.com/2010/12/konqueror-web-shortcuts-for-cheminf.html) how to use this in the Konqueror web browser.
+
+Here are some labels:
+
+| **Resource**     | **Label**               | **Resource**     | **Label** |
+|:-----------------|:------------------------|:-----------------|:----------|
+| CHEMINF\_000000  | chemical entity         | CHEMINF\_000087  | chemical quality |
+| CHEMINF\_000031  | molecular entity        | CHEMINF\_000087  | molecular entity quality |
+| CHEMINF\_000200  | has attribute           |
+| IAO\_0000136     | is about                |
+| SIO\_000300      | has value               |
+| CHEMINF\_000012  | has value               |
+| CHEMINF\_000113  | InChI descriptor        |
+| CHEMINF\_000018  | SMILES descriptor       |
+| CHEMINF\_000143  | is descriptor of        |
+| CHEMINF\_000230  | composition             |
+| SIO\_000008      | has attribute           |
+| CHEMINF\_000087  | electronic descriptor   |
+| CHEMINF\_000136  | constitutional descriptor |
+
+## Define a file format (RDF/XML) ##
+
+```
+<owl:Class rdf:about="&resource;CHEMINF_000111">
+  <rdfs:label>CML format specification</rdfs:label>
+  <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000035"/>
+  <dc:description>
+    A CML (Chemical Markup Language) file is an XML-based
+    representation of the atomic connectivity of a molecular
+    entity.
+  </dc:description>
+</owl:Class>
+```
+
+where &resource; := "http://semanticscience.org/resource/".
+
+Note that for other formats, the URI for the resource must be changed.
+
+## A molecule with an InChI (Turtle) ##
+
+```
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cheminf: <http://semanticscience.org/resource/> .
+
+:Methane rdfs:subClassOf cheminf:CHEMINF_000000 ;
+  rdfs:label "methane"@en ;
+  cheminf:CHEMINF_000200 [
+    a cheminf:CHEMINF_000113 ;
+    cheminf:SIO_000300 "InChI=1/CH4/h1H4" .
+  ] .
+```
+
+or as XML:
+
+```
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:cheminf="http://semanticscience.org/resource/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Methane">
+    <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000000" />
+    <rdfs:label xml:lang="en">methane</rdfs:label>
+    <cheminf:CHEMINF_000200>
+      <cheminf:CHEMINF_000113>
+        <cheminf:SIO_000300>InChI=1/CH4/h1H4</cheminf:SIO_000300>
+      </cheminf:CHEMINF_000113>
+    </cheminf:CHEMINF_000200>
+  </rdf:Description>
+</rdf:RDF>
+```
+
+Used [here](http://rdf.openmolecules.net/) in RDF/XML format.
+
+## Database Identifiers ##
+
+| **Resource**     | **Label**                |
+|:-----------------|:-------------------------|
+| CHEMINF\_000200  | has attribute            |
+| SIO\_000300      | has value                |
+| CHEMINF\_000405  | ChemSpider identifier    |
+| CHEMINF\_000406  | DrugBank identifier      |
+| CHEMINF\_000407  | ChEBI identifier         |
+| CHEMINF\_000408  | HMDB identifier          |
+| CHEMINF\_000409  | KEGG identifier          |
+| CHEMINF\_000410  | Wikipedia identifier     |
+| CHEMINF\_000411  | Reactome identifier      |
+| CHEMINF\_000412  | PubChem identifier       |
+| CHEMINF\_000446  | CAS number               |
+| CHEMINF\_000447  | EINECS No                |
+
+To add a ChemSpider identifier:
+
+```
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cheminf: <http://semanticscience.org/resource/> .
+
+:Methane rdfs:subClassOf cheminf:CHEMINF_000000 ;
+  rdfs:label "methane"@en ;
+  cheminf:CHEMINF_000200 [
+    a cheminf:CHEMINF_000405 ;
+    cheminf:SIO_000300 "2157" .
+  ] .
+```
+
+To define a new identifier:
+
+```
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:SOME_000001 ;
+  rdfs:label "Some Identifier"@en ;
+  dc:description "This is the identifier used by Some Database"@en ;
+  rdfs:subClassOf cheminf:CHEMINF_000061 .
+```
+
+If the descriptor is about substances you can add that as restriction:
+
+```
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:SOME_000001 ;
+  rdfs:label "Some Identifier"@en ;
+  dc:description "This is the identifier used by Some Database"@en ;
+  rdfs:subClassOf cheminf:CHEMINF_000061 ;
+  rdfs:subClassOf [
+    owl:Restriction [
+      owl:onProperty obo:IAO_0000136 ;
+      owl:someValuesFrom cheminf:CHEMINF_000266 .
+    ]
+  ]
+```
+
+
+## A molecule with an SMILES (Turtle) ##
+
+```
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cheminf: <http://semanticscience.org/resource/> .
+
+:Methane rdfs:subClassOf cheminf:CHEMINF_000000 ;
+  rdfs:label "methane"@en ;
+  cheminf:CHEMINF_000200 [
+    a cheminf:CHEMINF_000018 ;
+    cheminf:SIO_000300 "C" .
+  ] .
+```
+
+## Define a molecular QSAR descriptor ##
+
+```
+    <owl:Class rdf:about="&resource;CHEMINF_000240">
+        <rdfs:label>size of largest aliphatic chain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000246"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
+                <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000230"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI#CHEBI_23367"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&resource;CHEMINF_000012"/>
+                <owl:someValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>The largest aliphatic chain size descriptor is a count descriptor that gives the integer length (number of atoms) in 
+the largest unbranched chain of atoms that does not contain aromatic atoms, within a given molecular entity.</dc:description>
+    </owl:Class>
+```
+
+## Define a molecular QSAR descriptor algorithm ##
+
+A descriptor links to a descriptor (as above) via the OBI\_0000299 ('has specified output') link.
+
+```
+<owl:Class rdf:about="&resource;CHEMINF_001000">
+  <rdfs:label>Atom Counting algorithm</rdfs:label>
+  <owl:sameAs rdf:about="&chemoinformatics-algorithms;atomCount" />
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="&resource;CHEMINF_000450"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+          <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000263"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+```
+
+## Define a molecular QSAR descriptor implementation ##
+
+Note that an algorithm typically is part of a library, so that link is made here too.
+
+```
+<owl:Class rdf:about="&resource;CDK_000001">
+  <rdfs:label>The Chemistry Development Kit Library</rdfs:label>
+  <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000342"/>
+</owl:Class>
+    
+<owl:Class rdf:about="&resource;CDK_000100">
+  <rdfs:label>org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="&resource;CHEMINF_000451"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="&resource;CHEMINF_000047"/>
+            <owl:someValuesFrom rdf:resource="&resource;CHEMINF_001000"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  <ro:part_of rdf:resource="CDK_000001" />
+</owl:Class>
+```
+
+## Define a calculated molecular QSAR descriptor value ##
+
+## Remote method invocation of a SADI service ##
+
+Usage of CHEMINF terms in a service ontology (lipinskiserviceontology.owl) to create RDF input used for a POST to a SADI service.
+
+```
+<rdf:RDF xmlns="http://semanticscience.org/sadi/ontology/caffeine.rdf#"
+  xmlns:so="http://semanticscience.org/sadi/ontology/lipinskiserviceontology.owl#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:sio="http://semanticscience.org/resource/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <so:smilesmolecule
+    rdf:about="http://semanticscience.org/sadi/ontology/caffeine.rdf#m">
+    <sio:SIO_000008 rdf:resource="http://semanticscience.org/sadi/ontology/caffeine.rdf#msmiles"/>
+  </so:smilesmolecule>
+  <sio:CHEMINF_000018 rdf:about="http://semanticscience.org/sadi/ontology/caffeine.rdf#msmiles">
+    <sio:SIO_000300 rdf:datatype="xsd:string">Cn1cnc2n(C)c(=O)n(C)c(=O)c12</sio:SIO_000300>
+  </sio:CHEMINF_000018>
+</rdf:RDF>
+```
+
+## Properties ##
+
+This is how a boiling point can be added (thinking of them as describing/identifying (to some extend) the comound):
+
+To add a ChemSpider identifier:
+
+```
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cheminf: <http://semanticscience.org/resource/> .
+@prefix qudt: <http://qudt.org/vocab/unit#> .
+
+:Methane rdfs:subClassOf cheminf:CHEMINF_000000 ;
+  rdfs:label "methane"@en ;
+  cheminf:CHEMINF_000200 [
+    a cheminf:CHEMINF_000347 ;
+    cheminf:SIO_000300 "-164"^^qudt:DegreeCelsius .
+  ] .
+```
