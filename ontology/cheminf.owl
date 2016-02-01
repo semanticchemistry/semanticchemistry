@@ -1913,7 +1913,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     
     <owl:Class rdf:about="&resource;CHEMINF_000801">
         <rdfs:label xml:lang="en">RDKit software library version 2015_09_2</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000342"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000800"/>
         <obo:IAO_0000115>http://www.rdkit.org/</obo:IAO_0000115>
     </owl:Class>
 	
