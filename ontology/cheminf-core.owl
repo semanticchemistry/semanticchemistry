@@ -4324,6 +4324,13 @@ The formal charge of any atom in a molecule can be calculated by the following e
     </owl:Class>
     
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000567 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000567">
+        <rdfs:label>Wikidata identifier</rdfs:label>
+        <dc:description>Database identifier used by Wikidata.</dc:description>
+    </owl:Class>
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000411 -->
 
