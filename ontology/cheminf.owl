@@ -3678,7 +3678,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <!-- http://semanticscience.org/resource/CHEMINF_000410 -->
 
     <rdf:Description rdf:about="&resource;CHEMINF_000410">
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000577"/>
     </rdf:Description>
     
 
