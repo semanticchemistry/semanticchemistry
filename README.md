@@ -1,4 +1,10 @@
-The Chemical Information Ontology (CHEMINF) aims to establish a standard in representing chemical information. In particular, it aims to produce an ontology to represent chemical structure and to richly describe chemical properties, whether intrinsic or computed.
+The **Chemical Information Ontology** (CHEMINF) aims to establish a standard in representing chemical information. In particular, it aims to produce an ontology to represent chemical structure and to richly describe chemical properties, whether intrinsic or computed.
+
+You can browse the ontology online at:
+
+* [BioPortal](http://bioportal.bioontology.org/ontologies/CHEMINF/)
+* [Ontology Lookup Service](https://www.ebi.ac.uk/ols/ontologies/cheminf)
+* [AberOWL](http://aber-owl.net/ontology/CHEMINF/)
 
 Featured Articles:
 
