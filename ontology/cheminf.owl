@@ -3,7 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY purl "http://purl.obofoundry.org/" >
-    <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
+    <!ENTITY bfo "http://purl.obolibrary.org/obo/" >
     <!ENTITY bibo "http://purl.org/ontology/bibo/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
@@ -12,7 +12,6 @@
     <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
-    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
     <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY resource "http://semanticscience.org/resource/" >
@@ -32,9 +31,8 @@
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontologies="http://www.semanticweb.org/ontologies/"
-     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:resource="http://semanticscience.org/resource/"
-     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:bfo="http://purl.obofoundry.org/obo/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:obo2="http://purl.obolibrary.org/obo#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -308,7 +306,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000143">
         <rdfs:domain rdf:resource="&obo;IAO_0000027"/>
-        <rdfs:range rdf:resource="&snap;SpecificallyDependentContinuant"/>
+        <rdfs:range rdf:resource="&bfo;BFO_0000020"/>
     </owl:ObjectProperty>
     
 
@@ -1025,7 +1023,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
 
     <owl:Class rdf:about="&resource;CHEMINF_000000">
         <rdfs:label>chemical entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000040"/>
         <dc:description>A chemical entity is any molecular entity or chemical substance.</dc:description>
         <oboInOwl:hasAlternativeId>obo:24431</oboInOwl:hasAlternativeId>
     </owl:Class>
@@ -1093,7 +1091,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
     <!-- http://semanticscience.org/resource/CHEMINF_000086 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000086">
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000019"/>
     </owl:Class>
     
 
@@ -1128,7 +1126,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&resource;CHEMINF_000143"/>
-                <owl:someValuesFrom rdf:resource="&snap;SpecificallyDependentContinuant"/>
+                <owl:someValuesFrom rdf:resource="&bfo;BFO_0000020"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1252,7 +1250,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
     <!-- http://semanticscience.org/resource/CHEMINF_000211 -->
 
     <rdf:Description rdf:about="&resource;CHEMINF_000211">
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000019"/>
     </rdf:Description>
     
 
@@ -3630,7 +3628,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
     <!-- http://semanticscience.org/resource/CHEMINF_000404 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000404">
-        <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000016"/>
     </owl:Class>
     
 
@@ -4130,7 +4128,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
     <owl:Class rdf:about="&resource;CHEMINF_000468">
         <rdfs:label>curator role</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000023"/>
         <obo:IAO_0000115>A role inhering in a person which is realized when they perform a curation task.</obo:IAO_0000115>
     </owl:Class>
     
@@ -5263,27 +5261,27 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
 
-    <owl:Class rdf:about="&snap;Disposition"/>
+    <owl:Class rdf:about="&bfo;BFO_0000016"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
-    <owl:Class rdf:about="&snap;MaterialEntity"/>
+    <owl:Class rdf:about="&bfo;BFO_0000040"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Quality -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
-    <owl:Class rdf:about="&snap;Quality"/>
+    <owl:Class rdf:about="&bfo;BFO_0000019"/>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
 
-    <owl:Class rdf:about="&snap;SpecificallyDependentContinuant"/>
+    <owl:Class rdf:about="&bfo;BFO_0000020"/>
     
 
 

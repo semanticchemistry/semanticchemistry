@@ -2,7 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
+    <!ENTITY bfo "http://purl.obolibrary.org/obo/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -27,7 +27,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:resource="http://semanticscience.org/resource/"
-     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
+     xmlns:bfo="http://purl.obolibrary.org/obo/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
@@ -108,7 +108,7 @@
 
     <owl:ObjectProperty rdf:about="&OBO_REL;bearer_of">
         <rdfs:range rdf:resource="&snap;DependentContinuant"/>
-        <rdfs:domain rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:domain rdf:resource="&bfo;BFO_0000004"/>
     </owl:ObjectProperty>
     
 
@@ -418,7 +418,7 @@ information entity by planning protocol applications included in an overall stud
 
     <owl:Class rdf:about="&obo;OBI_0400002">
         <rdfs:label>device</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000040"/>
     </owl:Class>
     
 
@@ -446,14 +446,14 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1#Entity -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
 
-    <owl:Class rdf:about="&bfo;Entity">
+    <owl:Class rdf:about="&bfo;BFO_0000001">
         <rdfs:label rdf:datatype="&xsd;string">entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&snap;Continuant"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000002"/>
                     <rdf:Description rdf:about="&span;Occurrent"/>
                 </owl:unionOf>
             </owl:Class>
@@ -462,16 +462,16 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Continuant -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
-    <owl:Class rdf:about="&snap;Continuant">
+    <owl:Class rdf:about="&bfo;BFO_0000002">
         <rdfs:label rdf:datatype="&xsd;string">continuant</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&snap;DependentContinuant"/>
-                    <rdf:Description rdf:about="&snap;IndependentContinuant"/>
-                    <rdf:Description rdf:about="&snap;SpatialRegion"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000004"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000006"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -491,14 +491,14 @@ information entity by planning protocol applications included in an overall stud
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&snap;GenericallyDependentContinuant"/>
-                    <rdf:Description rdf:about="&snap;SpecificallyDependentContinuant"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000031"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000020"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;Continuant"/>
-        <owl:disjointWith rdf:resource="&snap;IndependentContinuant"/>
-        <owl:disjointWith rdf:resource="&snap;SpatialRegion"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000002"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000004"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000006"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is either dependent on one or other independent continuant [snap:IndependentContinuant] bearers or inheres in or is borne by other entities.</rdfs:comment>
     </owl:Class>
     
@@ -510,7 +510,7 @@ information entity by planning protocol applications included in an overall stud
         <rdfs:label rdf:datatype="&xsd;string">disposition</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;RealizableEntity"/>
         <owl:disjointWith rdf:resource="&snap;Function"/>
-        <owl:disjointWith rdf:resource="&snap;Role"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000023"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A realizable entity [snap:RealizableEntity] that essentially causes a specific process or transformation in the object [snap:Object] in which it inheres, under specific circumstances and in conjunction with the laws of nature. A general formula for dispositions is: X (object [snap:Object] has the disposition D to (transform, initiate a process) R under conditions C.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: the disposition of vegetables to decay when not refrigerated, the disposition of a vase to brake if dropped, the disposition of blood to coagulate, the disposition of a patient with a weakened immune system to contract disease, the disposition of metal to conduct electricity.</rdfs:comment>
     </owl:Class>
@@ -521,9 +521,9 @@ information entity by planning protocol applications included in an overall stud
 
     <owl:Class rdf:about="&snap;FiatObjectPart">
         <rdfs:label rdf:datatype="&xsd;string">fiat_object_part</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000040"/>
         <owl:disjointWith rdf:resource="&snap;Object"/>
-        <owl:disjointWith rdf:resource="&snap;ObjectAggregate"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000027"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A material entity [snap:MaterialEntity] that is part of an object [snap:Object] but is not demarcated by any physical discontinuities.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: upper and lower lobes of the left lung, the dorsal and ventral surfaces of the body, the east side of Saarbruecken, the lower right portion of a human torso</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Synonyms: fiat substance part</rdfs:comment>
@@ -536,40 +536,40 @@ information entity by planning protocol applications included in an overall stud
     <owl:Class rdf:about="&snap;Function">
         <rdfs:label rdf:datatype="&xsd;string">function</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;RealizableEntity"/>
-        <owl:disjointWith rdf:resource="&snap;Role"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000023"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A realizable entity [snap:RealizableEntity] the manifestation of which is an essentially end-directed activity of a continuant [snap:Continuant] entity in virtue of that continuant [snap:Continuant] entity being a specific kind of entity in the kind or kinds of contexts that it is made for.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: the function of a birth canal to enable transport, the function of the heart in the body: to pump blood, to receive de-oxygenated and oxygenated blood, etc., the function of reproduction in the transmission of genetic material, the digestive function of the stomach to nutriate the body, the function of a hammer to drive in nails, the function of a computer program to compute mathematical equations, the function of an automobile to provide transportation, the function of a judge in a court of law</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
 
-    <owl:Class rdf:about="&snap;GenericallyDependentContinuant">
+    <owl:Class rdf:about="&bfo;BFO_0000031">
         <rdfs:label rdf:datatype="&xsd;string">generically_dependent_continuant</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;DependentContinuant"/>
-        <owl:disjointWith rdf:resource="&snap;SpecificallyDependentContinuant"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000020"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is dependent on one or other independent continuant [snap:IndependentContinuant] bearers. For every instance of A requires some instance of (an independent continuant [snap:IndependentContinuant] type) B but which instance of B serves can change from time to time.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: a certain PDF file that exists in different and in several hard drives</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
 
-    <owl:Class rdf:about="&snap;IndependentContinuant">
+    <owl:Class rdf:about="&bfo;BFO_0000004">
         <rdfs:label rdf:datatype="&xsd;string">independent_continuant</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                    <rdf:Description rdf:about="&snap;ObjectBoundary"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000040"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000140"/>
                     <rdf:Description rdf:about="&snap;Site"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;Continuant"/>
-        <owl:disjointWith rdf:resource="&snap;SpatialRegion"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000002"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000006"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is a bearer of quality [snap:Quality] and realizable entity [snap:RealizableEntity] entities, in which other entities inhere and which itself cannot inhere in anything.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: an organism, a heart, a leg, a person, a symphony orchestra, a chair, the bottom right portion of a human torso, the lawn and atmosphere in front of our building</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Synonyms: substantial entity</rdfs:comment>
@@ -577,21 +577,21 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
-    <owl:Class rdf:about="&snap;MaterialEntity">
+    <owl:Class rdf:about="&bfo;BFO_0000040">
         <rdfs:label rdf:datatype="&xsd;string">material_entity</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&snap;FiatObjectPart"/>
                     <rdf:Description rdf:about="&snap;Object"/>
-                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000027"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
-        <owl:disjointWith rdf:resource="&snap;ObjectBoundary"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000004"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000140"/>
         <owl:disjointWith rdf:resource="&snap;Site"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: An independent continuant [snap:IndependentContinuant] that is spatially extended whose identity is independent of that of other entities and can be maintained through time. Note: Material entity [snap:MaterialEntity] subsumes object [snap:Object], fiat object part [snap:FiatObjectPart], and object aggregate [snap:ObjectAggregate], which assume a three level theory of granularity, which is inadequate for some domains, such as biology.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: collection of random bacteria, a chair, dorsal surface of the body</rdfs:comment>
@@ -603,8 +603,8 @@ information entity by planning protocol applications included in an overall stud
 
     <owl:Class rdf:about="&snap;Object">
         <rdfs:label rdf:datatype="&xsd;string">object</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <owl:disjointWith rdf:resource="&snap;ObjectAggregate"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000040"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000027"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A material entity [snap:MaterialEntity] that is spatially extended, maximally self-connected and self-contained (the parts of a substance are not separated from each other by spatial gaps) and possesses an internal unity. The identity of substantial object [snap:Object] entities is independent of that of other entities and can be maintained through time.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: an organism, a heart, a chair, a lung, an apple</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Synonyms: substance</rdfs:comment>
@@ -612,11 +612,11 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000027 -->
 
-    <owl:Class rdf:about="&snap;ObjectAggregate">
+    <owl:Class rdf:about="&bfo;BFO_0000027">
         <rdfs:label rdf:datatype="&xsd;string">object_aggregate</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000040"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A material entity [snap:MaterialEntity] that is a mereological sum of separate object [snap:Object] entities and possesses non-connected boundaries.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: a heap of stones, a group of commuters on the subway, a collection of random bacteria, a flock of geese, the patients in a hospital</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Synonyms: substance aggregate</rdfs:comment>
@@ -624,11 +624,11 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000140 -->
 
-    <owl:Class rdf:about="&snap;ObjectBoundary">
+    <owl:Class rdf:about="&bfo;BFO_0000140">
         <rdfs:label rdf:datatype="&xsd;string">object_boundary</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000004"/>
         <owl:disjointWith rdf:resource="&snap;Site"/>
         <rdfs:comment rdf:datatype="&xsd;string">Comment: Boundaries are theoretically difficult entities to account for, however the intuitive notion of a physical boundary as a surface of some sort (whether inside or outside of a thing) will generally serve as a good guide for the use of this universal.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: An independent continuant [snap:IndependentContinuant] that is a lower dimensional part of a spatial entity, normally a closed two-dimensional surface. Boundaries are those privileged parts of object [snap:Object] entities that exist at exactly the point where the object [snap:Object] is separated off from the rest of the existing entities in the world.</rdfs:comment>
@@ -638,25 +638,25 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#OneDimensionalRegion -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000026 -->
 
-    <owl:Class rdf:about="&snap;OneDimensionalRegion">
+    <owl:Class rdf:about="&bfo;BFO_0000026">
         <rdfs:label rdf:datatype="&xsd;string">one_dimensional_region</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;SpatialRegion"/>
-        <owl:disjointWith rdf:resource="&snap;ThreeDimensionalRegion"/>
-        <owl:disjointWith rdf:resource="&snap;TwoDimensionalRegion"/>
-        <owl:disjointWith rdf:resource="&snap;ZeroDimensionalRegion"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000006"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000028"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000009"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000018"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatial region [snap:SpatialRegion] with one dimension.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: the part of space that is a line stretching from one end of absolute space to the other, an edge of a cube-shaped part of space</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Quality -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
-    <owl:Class rdf:about="&snap;Quality">
+    <owl:Class rdf:about="&bfo;BFO_0000019">
         <rdfs:label rdf:datatype="&xsd;string">quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;SpecificallyDependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000020"/>
         <owl:disjointWith rdf:resource="&snap;RealizableEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A specifically dependent continuant [snap:SpecificallyDependentContinuant] that is exhibited if it inheres in an entity or entities at all (a categorical property).</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: the color of a tomato, the ambient temperature of air, the circumference of a waist, the shape of a nose, the mass of a piece of gold, the weight of a chimpanzee</rdfs:comment>
@@ -668,7 +668,7 @@ information entity by planning protocol applications included in an overall stud
 
     <owl:Class rdf:about="&snap;RealizableEntity">
         <rdfs:label rdf:datatype="&xsd;string">realizable_entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;SpecificallyDependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000020"/>
         <rdfs:comment rdf:datatype="&xsd;string">Comment: If a realizable entity [snap:RealizableEntity] inheres in a continuant [snap:Continuant], this does not imply that it is actually realized.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A specifically dependent continuant [snap:SpecificallyDependentContinuant] that inheres in continuant [snap:Continuant] entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: the role of being a doctor, the function of the reproductive organs, the disposition of blood to coagulate, the disposition of metal to conduct electricity</rdfs:comment>
@@ -676,9 +676,9 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Role -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
 
-    <owl:Class rdf:about="&snap;Role">
+    <owl:Class rdf:about="&bfo;BFO_0000023">
         <rdfs:label rdf:datatype="&xsd;string">role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;RealizableEntity"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A realizable entity [snap:RealizableEntity] the manifestation of which brings about some result or end that is not essential to a continuant [snap:Continuant] in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant [snap:Continuant] in some kinds of natural, social or institutional contexts.</rdfs:comment>
@@ -706,7 +706,7 @@ information entity by planning protocol applications included in an overall stud
 
     <owl:Class rdf:about="&snap;Site">
         <rdfs:label rdf:datatype="&xsd;string">site</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000004"/>
         <rdfs:comment rdf:datatype="&xsd;string">Comment: An instance of Site [snap:Site] is a mixture of independent continuant [snap:IndependentContinuant] entities which act as surrounding environments for other independent continuant [snap:IndependentContinuant] entities, most importantly for instances of object [snap:Object]. A site [snap:Site] is typically made of object [snap:Object] or fiat object part [snap:FiatObjectPart] entities and a surrounding medium in which is found an object [snap:Object] occupying the site [snap:Site]. Independent continuant [snap:IndependentContinuant] entities may be associated with others (which, then, are site [snap:Site] entities) through a relation of &quot;occupation&quot;. That relation is connected to, but distinct from, the relation of spatial location. Site [snap:Site] entities are not to be confused with spatial region [snap:SpatialRegion] entities. In BFO, site [snap:Site] allows for a so-called relational view of space which is different from the view corresponding to the class spatial region [snap:SpatialRegion] (see the comment on this class).</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: An independent continuant [snap:IndependentContinuant] consisting of a characteristic spatial shape in relation to some arrangement of other continuant [snap:Continuant] entities and of the medium which is enclosed in whole or in part by this characteristic spatial shape. Site [snap:Site] entities are entities that can be occupied by other continuant [snap:Continuant] entities.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: a particular room in a particular hospital, Maria&#39;s nostril or her intestines for a variety of bacteria.</rdfs:comment>
@@ -714,21 +714,21 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#SpatialRegion -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000006 -->
 
-    <owl:Class rdf:about="&snap;SpatialRegion">
+    <owl:Class rdf:about="&bfo;BFO_0000006">
         <rdfs:label rdf:datatype="&xsd;string">spatial_region</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&snap;OneDimensionalRegion"/>
-                    <rdf:Description rdf:about="&snap;ThreeDimensionalRegion"/>
-                    <rdf:Description rdf:about="&snap;TwoDimensionalRegion"/>
-                    <rdf:Description rdf:about="&snap;ZeroDimensionalRegion"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000026"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000028"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000009"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000018"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;Continuant"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000002"/>
         <rdfs:comment rdf:datatype="&xsd;string">Comment: All instances of continuant [snap:Continuant] are spatial entities, that is, they enter in the relation of (spatial) location with spatial region [snap:SpatialRegion] entities. As a particular case, the exact spatial location of a spatial region [snap:SpatialRegion] is this region itself.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Comment: An instance of spatial region [snap:SpatialRegion] is a part of space. All parts of space are spatial region [snap:SpatialRegion] entities and only spatial region [snap:SpatialRegion] entities are parts of space. Space is the entire extent of the spatial universe, a designated individual, which is thus itself a spatial region [snap:SpatialRegion].</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Comment: Space and spatial region [snap:SpatialRegion] entities are entities in their own rights which exist independently of any entities which can be located at them. This view of space is sometimes called &quot;absolutist&quot; or &quot;the container view&quot;. In BFO, the class site [snap:Site] allows for a so-called relational view of space, that is to say, a view according to which spatiality is a matter of relative location between entities and not a matter of being tied to space. The bridge between these two views is secured through the fact that while instances of site [snap:Site] are not spatial region [snap:SpatialRegion] entities, they are nevertheless spatial entities.</rdfs:comment>
@@ -738,14 +738,14 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
 
-    <owl:Class rdf:about="&snap;SpecificallyDependentContinuant">
+    <owl:Class rdf:about="&bfo;BFO_0000020">
         <rdfs:label rdf:datatype="&xsd;string">specifically_dependent_continuant</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&snap;Quality"/>
+                    <rdf:Description rdf:about="&bfo;BFO_0000019"/>
                     <rdf:Description rdf:about="&snap;RealizableEntity"/>
                 </owl:unionOf>
             </owl:Class>
@@ -758,36 +758,36 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000028 -->
 
-    <owl:Class rdf:about="&snap;ThreeDimensionalRegion">
+    <owl:Class rdf:about="&bfo;BFO_0000028">
         <rdfs:label rdf:datatype="&xsd;string">three_dimensional_region</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;SpatialRegion"/>
-        <owl:disjointWith rdf:resource="&snap;TwoDimensionalRegion"/>
-        <owl:disjointWith rdf:resource="&snap;ZeroDimensionalRegion"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000006"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000009"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000018"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatial region [snap:SpatialRegion] with three dimensions.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: a cube-shaped part of space, a sphere-shaped part of space</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000009 -->
 
-    <owl:Class rdf:about="&snap;TwoDimensionalRegion">
+    <owl:Class rdf:about="&bfo;BFO_0000009">
         <rdfs:label rdf:datatype="&xsd;string">two_dimensional_region</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;SpatialRegion"/>
-        <owl:disjointWith rdf:resource="&snap;ZeroDimensionalRegion"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000006"/>
+        <owl:disjointWith rdf:resource="&bfo;BFO_0000018"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatial region [snap:SpatialRegion] with two dimensions.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: the surface of a cube-shaped part of space, the surface of a sphere-shaped part of space, the surface of a rectilinear planar figure-shaped part of space</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000018 -->
 
-    <owl:Class rdf:about="&snap;ZeroDimensionalRegion">
+    <owl:Class rdf:about="&bfo;BFO_0000018">
         <rdfs:label rdf:datatype="&xsd;string">zero_dimensional_region</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;SpatialRegion"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000006"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A spatial region [snap:SpatialRegion] with no dimensions.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: a point</rdfs:comment>
     </owl:Class>
