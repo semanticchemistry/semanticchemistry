@@ -313,7 +313,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000145">
         <rdfs:label>has output</rdfs:label>
-        <rdfs:domain rdf:resource="&bfo;BFO_0000007"/>
+        <rdfs:domain rdf:resource="&bfo;BFO_0000015"/>
         <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
     </owl:ObjectProperty>
     
@@ -323,7 +323,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000148">
         <rdfs:label>has input</rdfs:label>
-        <rdfs:domain rdf:resource="&bfo;BFO_0000007"/>
+        <rdfs:domain rdf:resource="&bfo;BFO_0000015"/>
         <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
         <rdfs:range rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
@@ -5285,7 +5285,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000007 -->
 
-    <owl:Class rdf:about="&bfo;BFO_0000007"/>
+    <owl:Class rdf:about="&bfo;BFO_0000015"/>
     
 
 
