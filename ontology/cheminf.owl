@@ -314,7 +314,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000145">
         <rdfs:label>has output</rdfs:label>
         <rdfs:domain rdf:resource="&bfo;BFO_0000015"/>
-        <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
+        <rdfs:subPropertyOf rdf:resource="&bfo;RO_0000057"/>
     </owl:ObjectProperty>
     
 
@@ -324,7 +324,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000148">
         <rdfs:label>has input</rdfs:label>
         <rdfs:domain rdf:resource="&bfo;BFO_0000015"/>
-        <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
+        <rdfs:subPropertyOf rdf:resource="&bfo;RO_0000057"/>
         <rdfs:range rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
     
@@ -369,7 +369,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000452">
         <rdfs:label>has_protein_binding_participant</rdfs:label>
         <rdfs:domain rdf:resource="&obo;GO_0005515"/>
-        <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
+        <rdfs:subPropertyOf rdf:resource="&bfo;RO_0000057"/>
     </owl:ObjectProperty>
     
 
@@ -380,7 +380,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:label>participates_in_protein_binding</rdfs:label>
         <rdfs:range rdf:resource="&obo;GO_0005515"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000452"/>
-        <rdfs:subPropertyOf rdf:resource="&ro;participates_in"/>
+        <rdfs:subPropertyOf rdf:resource="&bfo;RO_0000056"/>
     </owl:ObjectProperty>
     
 
@@ -530,7 +530,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <obo:IAO_0000115>Has as member parts (see BFO 2 Graz for more on this) many molecular entities.</obo:IAO_0000115>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&resource;CHEMINF_000266"/>
-        <rdfs:subPropertyOf rdf:resource="&ro;has_part"/>
+        <rdfs:subPropertyOf rdf:resource="&bfo;BFO_0000051"/>
     </owl:ObjectProperty>
     
 
@@ -743,7 +743,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_agent -->
 
-    <owl:ObjectProperty rdf:about="&ro;has_agent">
+    <owl:ObjectProperty rdf:about="&bfo;RO_0002218">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -771,13 +771,13 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
 
-    <owl:ObjectProperty rdf:about="&ro;has_part"/>
+    <owl:ObjectProperty rdf:about="&bfo;BFO_0000051"/>
     
 
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_participant -->
 
-    <owl:ObjectProperty rdf:about="&ro;has_participant">
+    <owl:ObjectProperty rdf:about="&bfo;RO_0000057">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -805,7 +805,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
 
     <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
 
-    <rdf:Description rdf:about="&ro;part_of">
+    <rdf:Description rdf:about="&bfo;BFO_0000050">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -836,7 +836,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
     <owl:ObjectProperty rdf:about="&ontologies;is_output_of">
         <rdfs:label>is output of</rdfs:label>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000145"/>
-        <rdfs:subPropertyOf rdf:resource="&ro;participates_in"/>
+        <rdfs:subPropertyOf rdf:resource="&bfo;RO_0000056"/>
     </owl:ObjectProperty>
     
 
@@ -1137,7 +1137,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000343"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1222,13 +1222,13 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1350,7 +1350,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1360,7 +1360,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000221"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1409,7 +1409,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1419,7 +1419,7 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000306"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1448,13 +1448,13 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1483,13 +1483,13 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1518,13 +1518,13 @@ Ghose, A.K., Viswanadhan V.N., and Wendoloski, J.J., Prediction of Hydrophobic (
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1578,7 +1578,7 @@ HBA&gt;=10
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1588,7 +1588,7 @@ HBA&gt;=10
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000313"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1646,7 +1646,7 @@ Chris Murray and Harren Jhoti. Drug Discovery Today, 2003,8(19), 876-877
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
@@ -1656,7 +1656,7 @@ Chris Murray and Harren Jhoti. Drug Discovery Today, 2003,8(19), 876-877
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000316"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1718,13 +1718,13 @@ SC#N
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000329"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1805,13 +1805,13 @@ Distribution Coefficient calculated at pH7.4</obo:IAO_0000115>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0002218"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000328"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1926,13 +1926,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000801"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1959,13 +1959,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000801"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -1992,13 +1992,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000801"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2025,13 +2025,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000801"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2058,13 +2058,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000801"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2091,13 +2091,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000801"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2124,13 +2124,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000801"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2167,13 +2167,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2202,13 +2202,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2237,13 +2237,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2272,13 +2272,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2307,13 +2307,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2346,7 +2346,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000139"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:onProperty rdf:resource="&bfo;BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000341"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2391,7 +2391,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000343"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:onProperty rdf:resource="&bfo;BFO_0000051"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -2568,13 +2568,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;has_participant"/>
+                        <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                                        <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                         <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000142"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
@@ -2598,13 +2598,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;has_participant"/>
+                        <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                                        <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                         <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000328"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
@@ -2639,13 +2639,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;has_participant"/>
+                        <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                                        <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                         <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000356"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
@@ -2849,13 +2849,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2884,13 +2884,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2919,13 +2919,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2954,13 +2954,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -2989,13 +2989,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3024,13 +3024,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3059,13 +3059,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000333"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3094,13 +3094,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000378"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3148,13 +3148,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000378"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3204,13 +3204,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000384"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3277,13 +3277,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000386"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3312,13 +3312,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000386"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3347,13 +3347,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000386"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3382,13 +3382,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000386"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3417,13 +3417,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000386"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3452,13 +3452,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000386"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3506,13 +3506,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000394"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3541,13 +3541,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000398"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -3595,13 +3595,13 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="&resource;CHEMINF_000103"/>
                                             <owl:Restriction>
-                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:onProperty rdf:resource="&bfo;BFO_0000050"/>
                                                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000398"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
@@ -4139,7 +4139,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4156,7 +4156,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4173,7 +4173,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000579"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4190,7 +4190,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4207,7 +4207,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000043"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4224,7 +4224,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4242,7 +4242,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000471"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000577"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5353,7 +5353,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000309">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;transformation_of">
+    <rdf:Description rdf:about="&bfo;RO_0002494">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -5569,7 +5569,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000078">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;located_in">
+    <rdf:Description rdf:about="&bfo;RO_0001025">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -5642,7 +5642,7 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     <rdf:Description rdf:about="&obo;IAO_0000144">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;preceded_by">
+    <rdf:Description rdf:about="&bfo;BFO_0000062">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -5767,7 +5767,7 @@ The term &apos;ionization potential&apos; has historically been used but is now 
     <rdf:Description rdf:about="&obo;IAO_0000025">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;contained_in">
+    <rdf:Description rdf:about="&bfo;RO_0001018">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -5815,7 +5815,7 @@ The term &apos;ionization potential&apos; has historically been used but is now 
     <rdf:Description rdf:about="&obo;IAO_0000316">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;derives_from">
+    <rdf:Description rdf:about="&bfo;RO_0001000">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -5958,7 +5958,7 @@ The term &apos;ionization potential&apos; has historically been used but is now 
     <rdf:Description rdf:about="&obo;IAO_0000232">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;adjacent_to">
+    <rdf:Description rdf:about="&bfo;RO_0002220">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>

@@ -177,7 +177,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;IAO_0000309">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;transformation_of">
+    <rdf:Description rdf:about="&bfo;RO_0002494">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -323,7 +323,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;IAO_0000572">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;has_agent">
+    <rdf:Description rdf:about="&bfo;RO_0002218">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -365,7 +365,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;IAO_0000178">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;has_participant">
+    <rdf:Description rdf:about="&bfo;RO_0000057">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -380,7 +380,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&dc;date">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;located_in">
+    <rdf:Description rdf:about="&bfo;RO_0001025">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -431,7 +431,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;IAO_0000144">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;preceded_by">
+    <rdf:Description rdf:about="&bfo;BFO_0000062">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -479,7 +479,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;IAO_0000012">
         <obo:IAO_0000231 rdf:resource="&obo;IAO_0000103"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;part_of">
+    <rdf:Description rdf:about="&bfo;BFO_0000050">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -550,7 +550,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;IAO_0000025">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;contained_in">
+    <rdf:Description rdf:about="&bfo;RO_0001018">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -587,7 +587,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;IAO_0000316">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;derives_from">
+    <rdf:Description rdf:about="&bfo;RO_0001000">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>
@@ -715,7 +715,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;iao/iao-main.owl">
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&ro;adjacent_to">
+    <rdf:Description rdf:about="&bfo;RO_0002220">
         <oboInOwl:hasDefinition>
             <rdf:Description>
                 <oboInOwl:hasDbXref>

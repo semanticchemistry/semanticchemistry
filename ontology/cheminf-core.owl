@@ -250,20 +250,20 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
 
-    <owl:ObjectProperty rdf:about="&ro;has_part"/>
+    <owl:ObjectProperty rdf:about="&bfo;BFO_0000051"/>
     
 
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_participant -->
 
-    <owl:ObjectProperty rdf:about="&ro;has_participant"/>
+    <owl:ObjectProperty rdf:about="&bfo;RO_0000057"/>
     
 
 
     <!-- http://www.obofoundry.org/ro/ro.owl#has_proper_part -->
 
     <owl:ObjectProperty rdf:about="&ro;has_proper_part">
-        <rdfs:subPropertyOf rdf:resource="&ro;has_part"/>
+        <rdfs:subPropertyOf rdf:resource="&bfo;BFO_0000051"/>
     </owl:ObjectProperty>
     
 
@@ -4541,7 +4541,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;has_participant"/>
+                        <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                         <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000424"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -4562,7 +4562,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&resource;CHEMINF_000138"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;has_participant"/>
+                        <owl:onProperty rdf:resource="&bfo;RO_0000057"/>
                         <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000423"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
