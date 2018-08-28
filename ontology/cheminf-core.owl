@@ -4332,6 +4332,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
     </owl:Class>
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000568 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000568">
+        <rdfs:label>DSSTOX substance identifier</rdfs:label>
+        <dc:description>Database identifier used by the USA EPA CompTox Dashboard.</dc:description>
+    </owl:Class>
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000411 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000411">
