@@ -12,7 +12,6 @@
     <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
-    <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY resource "http://semanticscience.org/resource/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -43,8 +42,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://semanticscience.org/ontology/cheminf.owl">
         <owl:versionInfo rdf:datatype="&xsd;string">1.0</owl:versionInfo>
         <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
@@ -315,7 +313,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000145">
         <rdfs:label>has output</rdfs:label>
-        <rdfs:domain rdf:resource="&span;Process"/>
+        <rdfs:domain rdf:resource="&bfo;BFO_0000007"/>
         <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
     </owl:ObjectProperty>
     
@@ -325,7 +323,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000148">
         <rdfs:label>has input</rdfs:label>
-        <rdfs:domain rdf:resource="&span;Process"/>
+        <rdfs:domain rdf:resource="&bfo;BFO_0000007"/>
         <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
         <rdfs:range rdf:resource="&owl;Thing"/>
     </owl:ObjectProperty>
@@ -5285,9 +5283,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     
 
 
-    <!-- http://www.ifomis.org/bfo/1.1/span#Process -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000007 -->
 
-    <owl:Class rdf:about="&span;Process"/>
+    <owl:Class rdf:about="&bfo;BFO_0000007"/>
     
 
 
