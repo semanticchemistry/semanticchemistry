@@ -3,6 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY bfo "http://purl.obolibrary.org/obo/" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
