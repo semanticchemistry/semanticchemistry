@@ -65,10 +65,10 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <dc:contributor>Colin Batchelor</dc:contributor>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
         <owl:imports rdf:resource="&obo;iao.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cdk.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-algorithms.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cdk.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-algorithms.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-core.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-external.owl"/>
     </owl:Ontology>
     
 
