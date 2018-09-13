@@ -43,8 +43,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://semanticscience.org/ontology/cheminf.owl">
-        <owl:versionInfo rdf:datatype="&xsd;string">1.9.1</owl:versionInfo>
+    <owl:Ontology rdf:about="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl">
+        <owl:versionInfo rdf:datatype="&xsd;string">1.9.2</owl:versionInfo>
         <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Janna Hastings</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Michel Dumontier</dc:contributor>

@@ -41,8 +41,8 @@
         <dc:title rdf:datatype="&xsd;string"
             >chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-external.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl"/>
     </owl:Ontology>
 
 

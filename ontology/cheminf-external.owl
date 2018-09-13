@@ -33,7 +33,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://semanticscience.org/ontology/cheminf-external.owl">
+    <owl:Ontology rdf:about="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-external.owl">
         <rdfs:comment rdf:datatype="&xsd;string">Document containing upporting external terms</rdfs:comment>
         <dc:creator rdf:datatype="&xsd;string">Michel Dumontier</dc:creator>
         <dc:title rdf:datatype="&xsd;string">Supporting terminology for chemical information ontology (cheminf)</dc:title>

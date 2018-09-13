@@ -34,7 +34,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://semanticscience.org/ontology/cheminf-algorithms.owl">
+    <owl:Ontology rdf:about="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-algorithms.owl">
         <dc:contributor rdf:datatype="&xsd;string">Egon Willighagen</dc:contributor>
         <owl:versionInfo rdf:datatype="&xsd;string">alpha</owl:versionInfo>
         <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
@@ -45,9 +45,9 @@
 specified URI = http://semanticscience.org/resource/
 Followed by &apos;/&apos;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-core.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf-external.owl"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/cheminf.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-core.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-external.owl"/>
+        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl"/>
     </owl:Ontology>
     
 
