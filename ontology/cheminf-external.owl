@@ -103,7 +103,7 @@
     <!-- http://purl.org/obo/owl/OBO_REL#bearer_of -->
 
     <owl:ObjectProperty rdf:about="&OBO_REL;bearer_of">
-        <rdfs:range rdf:resource="&bfo;BFO_0000005"/>
+        <rdfs:range rdf:resource="&bfo;BFO_0000002"/>
         <rdfs:domain rdf:resource="&bfo;BFO_0000004"/>
     </owl:ObjectProperty>
     
@@ -465,7 +465,6 @@ information entity by planning protocol applications included in an overall stud
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&bfo;BFO_0000005"/>
                     <rdf:Description rdf:about="&bfo;BFO_0000004"/>
                     <rdf:Description rdf:about="&bfo;BFO_0000006"/>
                 </owl:unionOf>
@@ -476,26 +475,6 @@ information entity by planning protocol applications included in an overall stud
         <rdfs:comment rdf:datatype="&xsd;string">Definition: An entity [bfo:Entity] that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: a heart, a person, the color of a tomato, the mass of a cloud, a symphony orchestra, the disposition of blood to coagulate, the lawn and atmosphere in front of our building</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Synonyms: endurant</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000005 -->
-
-    <owl:Class rdf:about="&bfo;BFO_0000005">
-        <rdfs:label rdf:datatype="&xsd;string">dependent_continuant</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&bfo;BFO_0000031"/>
-                    <rdf:Description rdf:about="&bfo;BFO_0000020"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000002"/>
-        <owl:disjointWith rdf:resource="&bfo;BFO_0000004"/>
-        <owl:disjointWith rdf:resource="&bfo;BFO_0000006"/>
-        <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is either dependent on one or other independent continuant [snap:IndependentContinuant] bearers or inheres in or is borne by other entities.</rdfs:comment>
     </owl:Class>
     
 
@@ -543,7 +522,7 @@ information entity by planning protocol applications included in an overall stud
 
     <owl:Class rdf:about="&bfo;BFO_0000031">
         <rdfs:label rdf:datatype="&xsd;string">generically_dependent_continuant</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000005"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000002"/>
         <owl:disjointWith rdf:resource="&bfo;BFO_0000020"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that is dependent on one or other independent continuant [snap:IndependentContinuant] bearers. For every instance of A requires some instance of (an independent continuant [snap:IndependentContinuant] type) B but which instance of B serves can change from time to time.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: a certain PDF file that exists in different and in several hard drives</rdfs:comment>
@@ -746,7 +725,7 @@ information entity by planning protocol applications included in an overall stud
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000005"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000002"/>
         <rdfs:comment rdf:datatype="&xsd;string">Definition: A continuant [snap:Continuant] that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Examples: the mass of a cloud, the smell of mozzarella, the liquidity of blood, the color of a tomato, the disposition of fish to decay, the role of being a doctor, the function of the heart in the body: to pump blood, to receive de-oxygenated and oxygenated blood, etc.</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">Synonyms: property, trope, mode</rdfs:comment>
