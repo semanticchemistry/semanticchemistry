@@ -47,7 +47,6 @@ Followed by &apos;/&apos;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-core.owl"/>
         <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-external.owl"/>
-        <owl:imports rdf:resource="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl"/>
     </owl:Ontology>
     
 
