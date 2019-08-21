@@ -4017,6 +4017,13 @@ where p is the partial pressure of the solute in the gas above the solution, c i
     </rdf:Description>
     
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000569 -->
+
+    <rdf:Description rdf:about="&resource;CHEMINF_000569">
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+    </rdf:Description>
+
+
 
     <!-- http://semanticscience.org/resource/CHEMINF_000447 -->
 

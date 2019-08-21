@@ -4592,6 +4592,15 @@ The formal charge of any atom in a molecule can be calculated by the following e
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000569 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000569">
+        <rdfs:label>European Registry of Materials identifier</rdfs:label>
+        <dc:description>Identifier used by the European Registry of Materials (https://nanocommons.github.io/identifiers/).</dc:description>
+    </owl:Class>
+
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000447 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000447">
