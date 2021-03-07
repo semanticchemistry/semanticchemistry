@@ -1,5 +1,7 @@
 The **Chemical Information Ontology** (CHEMINF) aims to establish a standard in representing chemical information. In particular, it aims to produce an ontology to represent chemical structure and to richly describe chemical properties, whether intrinsic or computed.
 
+The ontology URL is http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl
+
 You can browse the ontology online at:
 
 * [BioPortal](http://bioportal.bioontology.org/ontologies/CHEMINF/)
