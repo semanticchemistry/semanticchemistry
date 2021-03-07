@@ -1878,6 +1878,22 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000517 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000517">
+        <rdfs:label>NInChI descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An InChI-like descriptor for nanomaterials.</dc:description>
+    </owl:Class>
+
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000114 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000114">
