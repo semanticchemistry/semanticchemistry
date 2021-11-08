@@ -5282,6 +5282,34 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000571 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000571">
+        <rdfs:label xml:lang="en">MolMeDB identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000572 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000572">
+        <rdfs:label xml:lang="en">PDB ligand identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+    </owl:Class>
+
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_000573 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000573">
+        <rdfs:label xml:lang="en">PDB structure identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+        <short_name>PDB identifier</short_name>
+    </owl:Class>
+
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
 
     <owl:Class rdf:about="&bfo;BFO_0000016"/>
