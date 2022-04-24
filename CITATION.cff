@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Hastings
+    given-names: Janna
+  - family-names: Chepelev
+    given-names: Leonid
+  - family-names: Willighagen
+    given-names: Egon
+  - family-names: Adams
+    given-names: Nico
+  - family-names: Steinbeck
+    given-names: Christoph
+  - family-names: Dumontier
+    given-names: Michel
+doi: 10.1371/JOURNAL.PONE.0025513
+identifiers:
+  - type: doi
+    value: 10.1371/JOURNAL.PONE.0025513
+  - type: other
+    value: urn:issn:1932-6203
+  - type: other
+    value: pmcid:3184996
+  - type: other
+    value: pmid:21991315
+keywords:
+  - ontology
+  - Semantic Web
+title: >-
+  The Chemical Information Ontology: provenance and disambiguation for chemical
+  data on the biological semantic web
