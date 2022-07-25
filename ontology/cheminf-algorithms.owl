@@ -269,9 +269,6 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <rdf:Description rdf:about="&obo;IAO_0000303">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;iao/obsolete.owl">
-        <rdfs:seeAlso rdf:resource="http://code.google.com/p/information-artifact-ontology/"/>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000304">
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </rdf:Description>
