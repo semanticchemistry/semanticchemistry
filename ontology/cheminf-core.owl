@@ -1886,7 +1886,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_59999"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEMINF_000266"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>An InChI-like descriptor for nanomaterials.</dc:description>
