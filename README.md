@@ -8,6 +8,10 @@ You can browse the ontology online at:
 * [Ontology Lookup Service](https://www.ebi.ac.uk/ols/ontologies/cheminf)
 * [AberOWL](http://aber-owl.net/ontology/CHEMINF/)
 
+Validation reports can be found at:
+
+* [OBO Dashboard](http://dashboard.obofoundry.org/dashboard/cheminf/dashboard.html)
+
 Featured Articles:
 
 * Janna Hastings, Leonid Chepelev, Egon Willighagen, Nico Adams, Christoph Steinbeck, Michel Dumontier. The chemical information ontology: Provenance and disambiguation for chemical data on the biological semantic web. PLoS ONE 6, e25513+ (2011). URL https://doi.org/10.1371/journal.pone.0025513.
