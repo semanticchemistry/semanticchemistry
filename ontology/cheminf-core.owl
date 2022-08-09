@@ -4812,10 +4812,10 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <!-- http://semanticscience.org/resource/CHEMINF_000524 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000524">
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000038"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000113"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4378-6061"/>
         <dc:date rdf:datatype="&xsd;dateTime">2022-07-11T08:22:02Z</dc:date>
-        <dc:description rdf:datatype="&xsd;string">An InChI format specification that is a non-standard InChI created with the fixedH layer option. The fixedH layer is appended to the standard InChI and lists the exact position of the tautomeric hydrogen atoms. It is useful when one wants to represent a specific tautomer of a given structure, as if the InChIs for the tautomers were created without the fixedH layer option, the normalization performed by the InChI generation program would result in these InChIs being identical.</dc:description>
+        <dc:description rdf:datatype="&xsd;string">An InChI descriptor that is not the standard and that is created with the fixedH layer option. The fixedH layer is appended to the standard InChI and lists the exact position of the tautomeric hydrogen atoms. It is useful when one wants to represent a specific tautomer of a given structure, because if the InChIs for the tautomers were created without the fixedH layer option, the normalization performed by the InChI generation program would result in these InChIs being identical.</dc:description>
         <dc:source rdf:datatype="&xsd;anyURI">https://doi.org/10.1186%2Fs13321-015-0068-4</dc:source>
         <rdfs:label xml:lang="en">InChI with fixedH layer</rdfs:label>
     </owl:Class>
