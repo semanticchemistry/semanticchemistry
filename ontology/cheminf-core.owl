@@ -44,7 +44,7 @@
         <dc:title rdf:datatype="&xsd;string">chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
         <dc:contributor>Leonid Chepelev</dc:contributor>
-        <dc:rights>https://creativecommons.org/publicdomain/zero/1.0/legalcode</dc:rights>
+        <dc:rights>http://creativecommons.org/publicdomain/zero/1.0/</dc:rights>
         <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
 specified URI = http://semanticscience.org/resource/
 Followed by &apos;/&apos;, End with : AutoID

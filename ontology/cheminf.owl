@@ -56,7 +56,7 @@
 specified URI = http://semanticscience.org/resource/
 Followed by &apos;/&apos;, End with : AutoID
 AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
-        <dc:rights>https://creativecommons.org/publicdomain/zero/1.0/legalcode</dc:rights>
+        <dc:rights>http://creativecommons.org/publicdomain/zero/1.0/</dc:rights>
         <dc:contributor>Cristian Munteanu</dc:contributor>
         <dc:contributor>Gang Fu</dc:contributor>
         <dc:contributor>Leonid Chepelev</dc:contributor>
