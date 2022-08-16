@@ -21,6 +21,7 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/cheminf-algorithms.owl#"
      xml:base="http://www.semanticweb.org/ontologies/cheminf-algorithms.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
@@ -40,7 +41,7 @@
         <dc:format rdf:datatype="&xsd;string">application/rdf+xml</dc:format>
         <dc:title rdf:datatype="&xsd;string">chemical information ontology (cheminf) - information entities about chemical entities</dc:title>
         <dc:language rdf:datatype="&xsd;string">en</dc:language>
-        <dc:rights>http://creativecommons.org/publicdomain/zero/1.0/</dc:rights>
+        <dct:license>http://creativecommons.org/publicdomain/zero/1.0/</dct:license>
         <rdfs:comment>To develop the ontology, you must change the default auto-create settings in Protege 4. Go to file&gt;preferences&gt;New Entities. Change the following:
 specified URI = http://semanticscience.org/resource/
 Followed by &apos;/&apos;, End with : AutoID
