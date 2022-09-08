@@ -20,6 +20,7 @@
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
     <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl#" >
+    <!ENTITY chebi "http://purl.obolibrary.org/obo/chebi#" >
 ]>
 
 
@@ -261,24 +262,24 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://purl.obolibrary.org/obo#is_enantiomer_of -->
 
-    <owl:ObjectProperty rdf:about="&obo2;is_enantiomer_of">
+    <owl:ObjectProperty rdf:about="&chebi;is_enantiomer_of">
         <dc:description>A is_enantiomer_of B if and only if, given any a that instantiates A, has molecular graph ag, there is some b such that b instantiates B, is described by molecular graph bg, such that ca is equal to cb and ag is transformed into bg through a C2 symmetric transform.</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&chebi;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&chebi;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000461"/>
         <owl:propertyDisjointWith rdf:resource="&resource;CHEMINF_000463"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo#is_tautomer_of -->
+    <!-- http://purl.obolibrary.org/obo/chebi#is_tautomer_of -->
 
-    <owl:ObjectProperty rdf:about="&obo2;is_tautomer_of">
+    <owl:ObjectProperty rdf:about="&chebi;is_tautomer_of">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <dc:description>A is_tautomer_of B if and only if, given any a which instantiates A and has composition ca and is described by a molecular graph ag, there is some b that instantiates B, has composition cb and is described by a molecular graph bg, such that ca equals cb, ag is different from bg and a derives from b as the result of an intramolecular chemical transformation process (i.e. a chemical transformation process which has only one participant), in which only bonds to hydrogen are broken or formed.</dc:description>
-        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
-        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&chebi;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&chebi;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -599,7 +600,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000486">
         <rdfs:label>has major tautomer at pH 7.4</rdfs:label>
         <obo:IAO_0000115>A exists in an equilibrium with B at pH 7.4 and physiological temperature and B is the dominant isomer.</obo:IAO_0000115>
-        <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+        <rdfs:subPropertyOf rdf:resource="&chebi;is_tautomer_of"/>
     </owl:ObjectProperty>
     
 
@@ -646,7 +647,7 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     <owl:ObjectProperty rdf:about="&resource;CHEMINF_000493">
         <rdfs:label xml:lang="en">is major tautomer at pH 7.4 of</rdfs:label>
         <obo:IAO_0000115>A exists in an equilibrium with B at pH 7.4 and physiological temperature and A is the dominant isomer.</obo:IAO_0000115>
-        <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+        <rdfs:subPropertyOf rdf:resource="&chebi;is_tautomer_of"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000486"/>
     </owl:ObjectProperty>
     
@@ -710,7 +711,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
         <rdfs:comment>A and B can be identical.</rdfs:comment>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <obo:IAO_0000115>If A &apos;has ChemAxon canonicalised tautomer&apos; B then B is the molecular entity corresponding to the output of ChemAxon&apos;s canonical tautomer generation algorithm applied to the connection table of A.</obo:IAO_0000115>
-        <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+        <rdfs:subPropertyOf rdf:resource="&chebi;is_tautomer_of"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
     </owl:ObjectProperty>
@@ -724,7 +725,7 @@ then A &apos;has OPS normalized counterpart&apos; C and B &apos;has OPS normaliz
         <obo:IAO_0000115>If B &apos;has ChemAxon canonicalised tautomer&apos; A then B is the molecular entity corresponding to the output of ChemAxon&apos;s canonical tautomer generation algorithm applied to the connection table of A.</obo:IAO_0000115>
         <obo:IAO_0000117>Colin Batchelor</obo:IAO_0000117>
         <rdfs:comment>A and B can be identical.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&obo2;is_tautomer_of"/>
+        <rdfs:subPropertyOf rdf:resource="&chebi;is_tautomer_of"/>
         <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
         <owl:inverseOf rdf:resource="&resource;CHEMINF_000499"/>
