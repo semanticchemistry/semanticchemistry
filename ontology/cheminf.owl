@@ -264,8 +264,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&chebi;is_enantiomer_of">
         <dc:description>A is_enantiomer_of B if and only if, given any a that instantiates A, has molecular graph ag, there is some b such that b instantiates B, is described by molecular graph bg, such that ca is equal to cb and ag is transformed into bg through a C2 symmetric transform.</dc:description>
-        <rdfs:range rdf:resource="&chebi;CHEBI_23367"/>
-        <rdfs:domain rdf:resource="&chebi;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&resource;CHEMINF_000461"/>
         <owl:propertyDisjointWith rdf:resource="&resource;CHEMINF_000463"/>
     </owl:ObjectProperty>
@@ -278,8 +278,8 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <dc:description>A is_tautomer_of B if and only if, given any a which instantiates A and has composition ca and is described by a molecular graph ag, there is some b that instantiates B, has composition cb and is described by a molecular graph bg, such that ca equals cb, ag is different from bg and a derives from b as the result of an intramolecular chemical transformation process (i.e. a chemical transformation process which has only one participant), in which only bonds to hydrogen are broken or formed.</dc:description>
-        <rdfs:range rdf:resource="&chebi;CHEBI_23367"/>
-        <rdfs:domain rdf:resource="&chebi;CHEBI_23367"/>
+        <rdfs:range rdf:resource="&obo;CHEBI_23367"/>
+        <rdfs:domain rdf:resource="&obo;CHEBI_23367"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
