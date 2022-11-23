@@ -4726,6 +4726,8 @@ The formal charge of any atom in a molecule can be calculated by the following e
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000123"/>
+    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000517">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000061"/>
     </owl:Class>
     
 
