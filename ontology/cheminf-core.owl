@@ -1867,9 +1867,9 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
 
     <!-- http://semanticscience.org/resource/CHEMINF_000113 -->
 
+    <owl:Class rdf:about="&resource;CHEMINF_000113">
         <rdfs:label>InChI descriptor</rdfs:label>
-    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000113">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000061"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
@@ -1882,16 +1882,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000038"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>An InChI descriptor is an identifying descriptor which conforms to the InChI format specification.</dc:description>
+        <dc:description>An InChI descriptor is a structure descriptor which conforms to the InChI format specification.</dc:description>
     </owl:Class>
     
 
 
     <!-- http://semanticscience.org/resource/CHEMINF_000517 -->
 
+    <owl:Class rdf:about="&resource;CHEMINF_000517">
         <rdfs:label>NInChI descriptor</rdfs:label>
-    <owl:Class rdf:about="http://semanticscience.org/resource/CHEMINF_000114">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/CHEMINF_000085"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000085"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
