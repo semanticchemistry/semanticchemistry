@@ -846,11 +846,11 @@ information entity by planning protocol applications included in an overall stud
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000007 -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
 
     <owl:Class rdf:about="&bfo;BFO_0000015">
         <rdfs:label rdf:datatype="&xsd;string">process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000015"/>
+        <rdfs:subClassOf rdf:resource="&bfo;BFO_0000003"/>
         <owl:disjointWith rdf:resource="&bfo;BFO_0000014"/>
         <owl:disjointWith rdf:resource="&bfo;BFO_0000035"/>
         <owl:disjointWith rdf:resource="&bfo;BFO_0000037"/>
