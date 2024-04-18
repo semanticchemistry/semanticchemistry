@@ -4845,9 +4845,9 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <dc:description>Descriptor that calculates the sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule (including implicit hydrogens).</dc:description>
     </owl:Class>
     
-    <!-- http://semanticscience.org/resource/CHEMINF_001100 -->
+    <!-- http://semanticscience.org/resource/CHEMINF_001101 -->
 
-    <owl:Class rdf:about="&resource;CHEMINF_001100">
+    <owl:Class rdf:about="&resource;CHEMINF_001101">
         <rdfs:label>oxidation state</rdfs:label>
         <dcterms:source>https://doi.org/10.1351/goldbook.O04365</dcterms:source>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
