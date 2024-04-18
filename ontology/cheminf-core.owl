@@ -15,6 +15,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+    <!ENTITY dcterms "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/" >
 ]>
 
 
@@ -32,7 +33,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dcterms="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">
     <owl:Ontology rdf:about="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf-core.owl">
         <owl:versionInfo rdf:datatype="&xsd;string">1.9.2</owl:versionInfo>
         <dc:contributor rdf:datatype="&xsd;string">Colin Batchelor</dc:contributor>
@@ -4843,7 +4845,22 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <dc:description>Descriptor that calculates the sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule (including implicit hydrogens).</dc:description>
     </owl:Class>
     
+    <!-- http://semanticscience.org/resource/CHEMINF_001100 -->
 
+    <owl:Class rdf:about="&resource;CHEMINF_001100">
+        <rdfs:label>oxidation state</rdfs:label>
+        <dcterms:source>https://doi.org/10.1351/goldbook.O04365</dcterms:source>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+        <rdfs:subClassOf rdf:resource="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>Oxidation state is an atomic descriptor that gives the degree of oxidation of an atom in terms of counting electrons. The higher the oxidation state (OS) of a given atom, the greater is its degree of oxidation
+. [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.O04365]</dc:description>
+    </owl:Class>
 
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
