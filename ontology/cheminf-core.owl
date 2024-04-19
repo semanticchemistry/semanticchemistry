@@ -4850,8 +4850,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_001101">
         <rdfs:label>oxidation state</rdfs:label>
         <dcterms:source>https://doi.org/10.1351/goldbook.O04365</dcterms:source>
-        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
-        <rdfs:subClassOf rdf:resource="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
@@ -4860,6 +4859,16 @@ The formal charge of any atom in a molecule can be calculated by the following e
         </rdfs:subClassOf>
         <dc:description>Oxidation state is an atomic descriptor that gives the degree of oxidation of an atom in terms of counting electrons. The higher the oxidation state (OS) of a given atom, the greater is its degree of oxidation
 . [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.O04365]</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001102 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001102">
+        <rdfs:label>reactivity</rdfs:label>
+        <dcterms:source>https://doi.org/10.1351/goldbook.R05180</dcterms:source>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000108"/>
+        <dc:description>As applied to a chemical species, the term expresses a kinetic property. A species is said to be more reactive or to have a higher reactivity in some given context than some other (reference) species if it has a larger rate constant for a specified elementary reaction [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.R05180]</dc:description>
     </owl:Class>
 
     <!-- http://www.w3.org/2002/07/owl#Thing -->
