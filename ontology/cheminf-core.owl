@@ -4871,6 +4871,14 @@ The formal charge of any atom in a molecule can be calculated by the following e
         <dc:description>As applied to a chemical species, the term expresses a kinetic property. A species is said to be more reactive or to have a higher reactivity in some given context than some other (reference) species if it has a larger rate constant for a specified elementary reaction [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.R05180]</dc:description>
     </owl:Class>
 
+    <!-- http://semanticscience.org/resource/CHEMINF_001103 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001103">
+        <rdfs:label>photoreactivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_001102"/>
+        <dc:description>Property by which a chemical species becomes reactive upon exposure to UV or visible light</dc:description>
+    </owl:Class>
+
     <!-- http://www.w3.org/2002/07/owl#Thing -->
 
     <owl:Class rdf:about="&owl;Thing"/>
