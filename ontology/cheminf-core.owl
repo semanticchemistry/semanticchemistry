@@ -4858,8 +4858,25 @@ The formal charge of any atom in a molecule can be calculated by the following e
                 <owl:someValuesFrom rdf:resource="&obo;CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:description>Oxidation state is an atomic descriptor that gives the degree of oxidation of an atom in terms of counting electrons. The higher the oxidation state (OS) of a given atom, the greater is its degree of oxidation
-. [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.O04365]</dc:description>
+        <dc:description>Oxidation state is an atomic descriptor that gives the degree of oxidation of an atom in terms of counting electrons. The higher the oxidation state (OS) of a given atom, the greater is its degree of oxidation. [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.O04365]</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001102 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001102">
+        <rdfs:label>reactivity</rdfs:label>
+        <dcterms:source>https://doi.org/10.1351/goldbook.R05180</dcterms:source>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000031"/>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000108"/>
+        <dc:description>As applied to a chemical species, the term expresses a kinetic property. A species is said to be more reactive or to have a higher reactivity in some given context than some other (reference) species if it has a larger rate constant for a specified elementary reaction [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.R05180]</dc:description>
+    </owl:Class>
+
+    <!-- http://semanticscience.org/resource/CHEMINF_001103 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001103">
+        <rdfs:label>photoreactivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_001102"/>
+        <dc:description>Property by which a chemical species becomes reactive upon exposure to UV or visible light</dc:description>
     </owl:Class>
 
 
