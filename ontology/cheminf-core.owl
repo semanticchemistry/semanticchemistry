@@ -4850,6 +4850,7 @@ The formal charge of any atom in a molecule can be calculated by the following e
     <owl:Class rdf:about="&resource;CHEMINF_001101">
         <rdfs:label>oxidation state</rdfs:label>
         <dcterms:source>https://doi.org/10.1351/goldbook.O04365</dcterms:source>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000087"/>
         <rdfs:subClassOf rdf:resource="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
