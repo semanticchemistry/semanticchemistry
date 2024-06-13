@@ -21,6 +21,7 @@
     <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
     <!ENTITY cheminf "http://semanticscience.org/ontology/cheminf.owl#" >
     <!ENTITY chebi "http://purl.obolibrary.org/obo/chebi#" >
+    <!ENTITY skos "https://www.w3.org/2009/08/skos-reference/skos.html#">
 ]>
 
 
@@ -44,6 +45,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
+     xmlns:skos="https://www.w3.org/2009/08/skos-reference/skos.html#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl">
         <owl:versionInfo rdf:datatype="&xsd;string">2.1.0</owl:versionInfo>
@@ -4724,6 +4726,43 @@ where p is the partial pressure of the solute in the gas above the solution, c i
         <rdfs:label>RTECS identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
 	<dc:description>Identifier used by the RTECS database (http://www.cdc.gov/niosh/rtecs/).</dc:description>
+    </owl:Class>
+
+
+    <!-- http://semanticscience.org/resource/CHEMINF_0000574 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_0000574">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000028"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
+                        <owl:someValuesFrom rdf:resource="&resource;CHEMINF_000085"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000028"/>
+        <obo:IAO_0000112>In publications of chemical reseach the chemical structure descriptors, e.g. chamical graphs, are often labeled with short names, the local chemical structure symbols, to be more easily referenced in other sections of the publication or supplementary data.</obo:IAO_0000112>
+        <obo:IAO_0000115>A symbol that is used within a particular local context to denote the descriptor, e.g. a chemical graph, that is used within this context to refer to a specific chemical structure.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-1595-3213"/>
+        <obo:IAO_0000118>local chemical structure identifier</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">local chemical structure symbol</rdfs:label>
+        <skos:broadMatch rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0000919"/>
+    </owl:Class>
+    
+
+    <!-- http://semanticscience.org/resource/CHEMINF_0000575 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_0000575">
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000028"/>
+        <obo:IAO_0000112>The letter-code and number in your lab journal, used to denote a sample.</obo:IAO_0000112>
+        <obo:IAO_0000115>A symbol that is used to denote a chemical sample within a local context.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-1595-3213"/>
+        <obo:IAO_0000118>local chemical sample identifier</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">local chemical sample symbol</rdfs:label>
+        <skos:broadMatch rdf:resource="http://purl.allotrope.org/ontologies/result#AFR_0001118"/>
     </owl:Class>
 
 
