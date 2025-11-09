@@ -547,6 +547,16 @@ AutoID - digit count = 6, prefix = CHEMINF_</rdfs:comment>
     
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_001104 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_001104">
+        <rdfs:label>connectivity SMILES descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000018"/>
+        <dc:description>A connectivity SMILES descriptor is a SMILES descriptor that does not include any stereochemical or isotopic information.</dc:description>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/CHEMINF_000008 -->
 
     <owl:Class rdf:about="&resource;CHEMINF_000008">
