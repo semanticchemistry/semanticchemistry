@@ -1,0 +1,56 @@
+## ontology metadata ##
+id: cheminf
+title: chemical information ontology (cheminf) - information entities about chemical entities
+description: "The chemical information ontology (cheminf) describes information entities about chemical entities. It provides qualitative and quantitative attributes to richly describe chemicals. Includes terms for the descriptors commonly used in cheminformatics software applications and the algorithms which generate them."
+contact:  javier.millanacosta [at] maastrichtuniversity [.] nl
+creators:
+  - Colin Batchelor
+  - Cristian Munteanu
+  - Evan Bolton
+  - Gang Fu
+  - Leonid Chepelev
+  - Mark Davies
+  - Egon Willighagen
+  - Janna Hastings
+  - Michel Dumontier
+license: http://creativecommons.org/publicdomain/zero/1.0/
+
+## general ODK Settings ##
+repo: semanticchemistry
+git_main_branch: main
+github_org: semanticchemistry
+ci:
+  - github_actions
+documentation:
+  documentation_system: mkdocs
+export_formats:
+  - owl
+  - ttl
+  - obo
+reasoner: ELK
+release_artefacts:
+  - full
+  - base
+robot_java_args: '-Xmx8G'  # max RAM to be used by Robot in ODK
+
+## CHEMINF specific Settings ##
+import_group:
+  products:
+    - id: bfo
+      module_type: mirror
+    - id: ro
+      use_base: true
+      slme_individuals: exclude
+    - id: omo
+      module_type: mirror
+    - id: iao
+      make_base: true
+    - id: obi
+    - id: uo
+    - id: pato
+    - id: go
+    - id: apollo_sv
+    - id: chebi
+      is_large: true
+      use_gzipped: true
+      make_base: true
