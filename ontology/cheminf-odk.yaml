@@ -4,15 +4,15 @@ title: chemical information ontology (cheminf) - information entities about chem
 description: "The chemical information ontology (cheminf) describes information entities about chemical entities. It provides qualitative and quantitative attributes to richly describe chemicals. Includes terms for the descriptors commonly used in cheminformatics software applications and the algorithms which generate them."
 contact:  javier.millanacosta [at] maastrichtuniversity [.] nl
 creators:
-  - Colin Batchelor
-  - Cristian Munteanu
-  - Evan Bolton
+  - https://orcid.org/0000-0001-5985-7429
+  - https://orcid.org/0000-0002-5628-2268
+  - https://orcid.org/0000-0002-5959-6190
   - Gang Fu
   - Leonid Chepelev
   - Mark Davies
-  - Egon Willighagen
-  - Janna Hastings
-  - Michel Dumontier
+  - https://orcid.org/0000-0001-7542-0286
+  - https://orcid.org/0000-0002-3469-4923
+  - https://orcid.org/0000-0003-4727-9435
 license: http://creativecommons.org/publicdomain/zero/1.0/
 
 ## general ODK Settings ##
