@@ -8,16 +8,16 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
-Ontology(<http://semanticscience.org/ontology//cheminf.owl>
+Ontology(<http://semanticscience.org/ontology/cheminf.owl>
 
-Import(<http://semanticscience.org/ontology//cheminf/imports/bfo_import.owl>)
-Import(<http://semanticscience.org/ontology//cheminf/imports/ro_import.owl>)
-Import(<http://semanticscience.org/ontology//cheminf/imports/omo_import.owl>)
-Import(<http://semanticscience.org/ontology//cheminf/imports/iao_import.owl>)
-Import(<http://semanticscience.org/ontology//cheminf/imports/obi_import.owl>)
-Import(<http://semanticscience.org/ontology//cheminf/imports/pato_import.owl>)
-Import(<http://semanticscience.org/ontology//cheminf/imports/apollo_sv_import.owl>)
-Import(<http://semanticscience.org/ontology//cheminf/imports/chebi_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/ro_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/iao_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/obi_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/pato_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/apollo_sv_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl>)
 
 
 Annotation(dcterms:description "The chemical information ontology (cheminf) describes information entities about chemical entities. It provides qualitative and quantitative attributes to richly describe chemicals. Includes terms for the descriptors commonly used in cheminformatics software applications and the algorithms which generate them.")
@@ -25,7 +25,7 @@ Annotation(dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "chemical information ontology (cheminf) - information entities about chemical entities")
 
 
-Declaration(Class(<http://semanticscience.org/ontology//CHEMINF_0000000>))
+Declaration(Class(<http://semanticscience.org/ontology/CHEMINF_0000000>))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
