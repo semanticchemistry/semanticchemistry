@@ -21,9 +21,9 @@ license: http://creativecommons.org/publicdomain/zero/1.0/
 repo: semanticchemistry
 git_main_branch: main
 github_org: semanticchemistry
-uribase: http://semanticscience.org/ontology/
+uribase: http://semanticscience.org/ontology
 namespaces:
-  - http://semanticscience.org/resource/
+  - http://semanticscience.org/resource
 ci:
   - github_actions
 documentation:
