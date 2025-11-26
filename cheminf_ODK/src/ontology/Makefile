@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                a2e68c37ed4096f311bdce8ede6563af2ea9e107d7aa25a1b1a2e2259cedfdfb
+CONFIG_HASH=                a7572f1eb980b6b49452d68369777697a55772157bfc2d53fd86b9f94484ca8a
 
 
 # ----------------------------------------
@@ -19,9 +19,9 @@ CONFIG_HASH=                a2e68c37ed4096f311bdce8ede6563af2ea9e107d7aa25a1b1a2
 # these can be overwritten on the command line
 
 OBOBASE=                    http://purl.obolibrary.org/obo
-URIBASE=                    http://semanticscience.org/ontology/
+URIBASE=                    http://semanticscience.org/ontology
 ONT=                        cheminf
-ONTBASE=                    http://semanticscience.org/ontology//cheminf
+ONTBASE=                    http://semanticscience.org/ontology/cheminf
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
@@ -273,10 +273,10 @@ endif
 # ----------------------------------------
 
 $(REPORTDIR)/$(SRC)-obo-report.tsv: $(SRCMERGED) | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri http://semanticscience.org/resource/ --print 5 -o $@
+	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri http://semanticscience.org/resource --print 5 -o $@
 
 $(REPORTDIR)/%-obo-report.tsv: % | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri http://semanticscience.org/resource/ --print 5 -o $@
+	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri http://semanticscience.org/resource --print 5 -o $@
 
 check_for_robot_updates:
 	echo "You are not using a custom profile, so you are getting the joy of the latest ROBOT report!"
@@ -402,7 +402,7 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        --term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
 		        --select complement --select annotation-properties \
-		 odk:normalize --base-iri http://semanticscience.org/ontology/ \
+		 odk:normalize --base-iri http://semanticscience.org/ontology \
 		               --subset-decls true --synonym-decls true \
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
@@ -412,7 +412,7 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 ## Module for ontology: bfo (mirror)
 $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri http://semanticscience.org/ontology/ \
+		 odk:normalize --base-iri http://semanticscience.org/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -421,7 +421,7 @@ $(IMPORTDIR)/bfo_import.owl: $(MIRRORDIR)/bfo.owl | all_robot_plugins
 ## Module for ontology: omo (mirror)
 $(IMPORTDIR)/omo_import.owl: $(MIRRORDIR)/omo.owl | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
-		 odk:normalize --base-iri http://semanticscience.org/ontology/ \
+		 odk:normalize --base-iri http://semanticscience.org/ontology \
 		               --subset-decls true --synonym-decls true \
 		               --add-source true \
 		 repair --merge-axiom-annotations true \
@@ -442,7 +442,7 @@ $(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms.t
 		        --term OMO:0002000 \
 		        --term-file $(IMPORTDIR)/chebi_terms.txt $(T_IMPORTSEED) \
 		        --select complement --select annotation-properties \
-		 odk:normalize --base-iri http://semanticscience.org/ontology/ \
+		 odk:normalize --base-iri http://semanticscience.org/ontology \
 		               --subset-decls true --synonym-decls true \
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
@@ -637,7 +637,7 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms false \
 	relax $(RELAX_OPTIONS) \
 	reduce -r $(REASONER) $(REDUCE_OPTIONS) \
-	remove --base-iri http://semanticscience.org/resource/ --axioms external --preserve-structure false --trim false \
+	remove --base-iri http://semanticscience.org/resource --axioms external --preserve-structure false --trim false \
 	$(SHARED_ROBOT_COMMANDS) \
 	annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
 		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \

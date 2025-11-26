@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="odk-managed-catalog" prefer="public">
-        <uri name="http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
-        <uri name="http://semanticscience.org/ontology/cheminf/imports/ro_import.owl" uri="imports/ro_import.owl"/>
-        <uri name="http://semanticscience.org/ontology/cheminf/imports/omo_import.owl" uri="imports/omo_import.owl"/>
-        <uri name="http://semanticscience.org/ontology/cheminf/imports/iao_import.owl" uri="imports/iao_import.owl"/>
-        <uri name="http://semanticscience.org/ontology/cheminf/imports/obi_import.owl" uri="imports/obi_import.owl"/>
-        <uri name="http://semanticscience.org/ontology/cheminf/imports/pato_import.owl" uri="imports/pato_import.owl"/>
-        <uri name="http://semanticscience.org/ontology/cheminf/imports/apollo_sv_import.owl" uri="imports/apollo_sv_import.owl"/>
-        <uri name="http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl" uri="imports/chebi_import.owl"/>
-    </group>
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <group id="odk-managed-catalog" prefer="public">
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl" uri="imports/bfo_import.owl" />
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/ro_import.owl" uri="imports/ro_import.owl" />
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/omo_import.owl" uri="imports/omo_import.owl" />
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/iao_import.owl" uri="imports/iao_import.owl" />
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/obi_import.owl" uri="imports/obi_import.owl" />
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/pato_import.owl" uri="imports/pato_import.owl" />
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/apollo_sv_import.owl" uri="imports/apollo_sv_import.owl" />
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl" uri="imports/chebi_import.owl" />
+  </group>
 </catalog>
