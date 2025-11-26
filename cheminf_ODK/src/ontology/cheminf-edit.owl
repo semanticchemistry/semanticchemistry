@@ -1,50 +1,143 @@
-Prefix(:=<http://semanticscience.org/ontology//cheminf.owl#>)
+Prefix(:=<http://semanticscience.org/ontology/cheminf.owl#>)
+Prefix(ro:=<http://www.obofoundry.org/ro/ro.owl#>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(dct:=<http://purl.org/dc/terms/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(bibo:=<http://purl.org/ontology/bibo/>)
+Prefix(obo2:=<http://purl.obolibrary.org/obo#>)
+Prefix(purl:=<http://purl.obofoundry.org/>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<https://www.w3.org/2009/08/skos-reference/skos.html#>)
+Prefix(chebi:=<http://purl.obolibrary.org/obo/chebi#>)
+Prefix(OBO_REL:=<http://purl.org/obo/owl/OBO_REL#>)
+Prefix(cheminf:=<http://semanticscience.org/ontology/cheminf.owl#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
-
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(resource:=<http://semanticscience.org/resource/>)
+Prefix(ontologies:=<http://www.semanticweb.org/ontologies/>)
 
 Ontology(<http://semanticscience.org/ontology/cheminf.owl>
-
+Import(<http://semanticscience.org/ontology/cheminf/imports/apollo_sv_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl>)
-Import(<http://semanticscience.org/ontology/cheminf/imports/ro_import.owl>)
-Import(<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/iao_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/obi_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/pato_import.owl>)
-Import(<http://semanticscience.org/ontology/cheminf/imports/apollo_sv_import.owl>)
-Import(<http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl>)
-
-
+Import(<http://semanticscience.org/ontology/cheminf/imports/ro_import.owl>)
+Annotation(dce:contributor "Gang Fu")
+Annotation(dce:contributor "Gang Fu")
+Annotation(dce:format "application/rdf+xml")
+Annotation(dce:language "en")
+Annotation(dcterms:contributor <https://orcid.org/0000-0001-5985-7429>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0001-6966-0814>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0001-7010-3812>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0001-7542-0286>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0002-1595-3213>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0002-3469-4923>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0002-4166-7093>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0002-5628-2268>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0002-5959-6190>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0002-8011-0300>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0003-3136-1338>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0003-4727-9435>)
 Annotation(dcterms:description "The chemical information ontology (cheminf) describes information entities about chemical entities. It provides qualitative and quantitative attributes to richly describe chemicals. Includes terms for the descriptors commonly used in cheminformatics software applications and the algorithms which generate them.")
 Annotation(dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "chemical information ontology (cheminf) - information entities about chemical entities")
+Annotation(owl:versionInfo "v26-11-2025_ODK_alpha")
 
-
-Declaration(Class(<http://semanticscience.org/ontology/CHEMINF_0000000>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0001-5985-7429>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0001-6966-0814>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0001-7010-3812>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0001-7542-0286>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0002-1595-3213>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0002-3469-4923>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0002-4166-7093>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0002-5628-2268>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0002-5959-6190>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0002-8011-0300>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0003-3136-1338>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0003-4727-9435>))
+Declaration(AnnotationProperty(dce:contributor))
+Declaration(AnnotationProperty(dce:format))
+Declaration(AnnotationProperty(dce:language))
+Declaration(AnnotationProperty(dcterms:contributor))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
-
 ############################
 #   Annotation Properties
 ############################
 
+# Annotation Property: dcterms:description (description)
+
 AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (license)
+
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (title)
+
 AnnotationAssertion(rdfs:label dcterms:title "title")
 
+
+
 ############################
-#   Classes
+#   Named Individuals
 ############################
 
-# Class: <http://semanticscience.org/ontology//CHEMINF_0000000> (root node)
+# Individual: <https://orcid.org/0000-0001-5985-7429> (Colin Batchelor)
 
-AnnotationAssertion(rdfs:label <http://semanticscience.org/ontology//CHEMINF_0000000> "root node"@en)
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-5985-7429> "Colin Batchelor")
+
+# Individual: <https://orcid.org/0000-0001-6966-0814> (Nico Adams)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-6966-0814> "Nico Adams")
+
+# Individual: <https://orcid.org/0000-0001-7010-3812> (Leonid Chepelev)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7010-3812> "Leonid Chepelev")
+
+# Individual: <https://orcid.org/0000-0001-7542-0286> (Egon Willighagen)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7542-0286> "Egon Willighagen")
+
+# Individual: <https://orcid.org/0000-0002-1595-3213> (Philip Strömert)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-1595-3213> "Philip Strömert")
+
+# Individual: <https://orcid.org/0000-0002-3469-4923> (Janna Hastings)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-3469-4923> "Janna Hastings")
+
+# Individual: <https://orcid.org/0000-0002-4166-7093> (Javier Millán Acosta)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-4166-7093> "Javier Millán Acosta")
+
+# Individual: <https://orcid.org/0000-0002-5628-2268> (Cristian Munteanu)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-5628-2268> "Cristian Munteanu")
+
+# Individual: <https://orcid.org/0000-0002-5959-6190> (Evan Bolton)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-5959-6190> "Evan Bolton")
+
+# Individual: <https://orcid.org/0000-0002-8011-0300> (Mark Davies)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-8011-0300> "Mark Davies")
+
+# Individual: <https://orcid.org/0000-0003-3136-1338> (Christoph Steinbeck)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-3136-1338> "Christoph Steinbeck")
+
+# Individual: <https://orcid.org/0000-0003-4727-9435> (Michel Dumontier)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-4727-9435> "Michel Dumontier")
 
 
 )
