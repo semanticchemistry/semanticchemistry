@@ -11,12 +11,12 @@ Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: idrange: <http://purl.obolibrary.org/obo/ro/idrange/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 
-Ontology: <http://semanticscience.org/ontology//cheminf/cheminf-idranges.owl>
+Ontology: <http://semanticscience.org/ontology/cheminf/cheminf-idranges.owl>
 
 
 Annotations: 
     idsfor: "CHEMINF",
-    idprefix: "http://semanticscience.org/ontology//CHEMINF_",
+    idprefix: "http://semanticscience.org/resource/CHEMINF_",
     iddigits: 7
 
 AnnotationProperty: idprefix:
