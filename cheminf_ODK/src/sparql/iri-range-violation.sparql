@@ -13,6 +13,6 @@ WHERE {
     oboInOwl:inSubset
     dcterms:contributor  }
   ?term ?property ?value .
-  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://semanticscience.org/resource/")))
+  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://semanticscience.org/resource")))
   FILTER (!isIRI(?value))
 }

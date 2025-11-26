@@ -7,5 +7,5 @@ SELECT ?term WHERE {
   { ?term owl:equivalentClass [ owl:intersectionOf [ rdf:rest*/rdf:first ?term ] ] }
     UNION
   { ?term owl:equivalentClass [ owl:intersectionOf [ rdf:rest*/rdf:first [ owl:someValuesFrom ?term ] ] ] }
-  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://semanticscience.org/resource/")))
+  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://semanticscience.org/resource")))
 }

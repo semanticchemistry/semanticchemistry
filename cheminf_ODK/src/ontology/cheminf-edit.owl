@@ -20,6 +20,7 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Prefix(resource:=<http://semanticscience.org/resource/>)
 Prefix(ontologies:=<http://www.semanticweb.org/ontologies/>)
 
+
 Ontology(<http://semanticscience.org/ontology/cheminf.owl>
 Import(<http://semanticscience.org/ontology/cheminf/imports/apollo_sv_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl>)
