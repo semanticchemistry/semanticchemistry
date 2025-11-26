@@ -1,4 +1,4 @@
-Prefix(:=<http://semanticscience.org/ontology//cheminf/imports/omo_import.owl#>)
+Prefix(:=<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl#>)
 Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -11,8 +11,8 @@ Prefix(protege:=<http://protege.stanford.edu/plugins/owl/protege#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-Ontology(<http://semanticscience.org/ontology//cheminf/imports/omo_import.owl>
-<http://semanticscience.org/ontology//cheminf/releases/2025-11-26/imports/omo_import.owl>
+Ontology(<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl>
+<http://semanticscience.org/ontology/cheminf/releases/2025-11-26/imports/omo_import.owl>
 Annotation(dc:source <http://purl.obolibrary.org/obo/omo/releases/2025-06-18/omo.owl>)
 Annotation(owl:versionInfo "2025-11-26")
 

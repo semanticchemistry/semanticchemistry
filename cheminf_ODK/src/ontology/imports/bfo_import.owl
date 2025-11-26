@@ -1,4 +1,4 @@
-Prefix(:=<http://semanticscience.org/ontology//cheminf/imports/bfo_import.owl#>)
+Prefix(:=<http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl#>)
 Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -10,8 +10,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(terms:=<http://purl.org/dc/terms/>)
 
 
-Ontology(<http://semanticscience.org/ontology//cheminf/imports/bfo_import.owl>
-<http://semanticscience.org/ontology//cheminf/releases/2025-11-26/imports/bfo_import.owl>
+Ontology(<http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl>
+<http://semanticscience.org/ontology/cheminf/releases/2025-11-26/imports/bfo_import.owl>
 Annotation(dc:source <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl>)
 Annotation(owl:versionInfo "2025-11-26")
 
