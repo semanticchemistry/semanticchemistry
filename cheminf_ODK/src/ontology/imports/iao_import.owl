@@ -1,0 +1,203 @@
+Prefix(:=<http://semanticscience.org/ontology//cheminf/imports/iao_import.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://semanticscience.org/ontology//cheminf/imports/iao_import.owl>
+<http://semanticscience.org/ontology//cheminf/releases/2025-11-26/imports/iao_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl>)
+Annotation(owl:versionInfo "2025-11-26")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000031>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000102>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000225>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000409>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000002>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000103>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000120>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000121>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000122>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000123>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000124>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000125>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000226>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000227>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000228>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000229>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000410>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000420>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000421>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000423>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000428>))
+Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/OMO_0001000>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/IAO_0000136> (is about)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000136> "A (currently) primitive relation that relates an information artifact to an entity."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000136> "is about"@en)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/IAO_0000136> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000027> (data item)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000027> "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000027> "data item"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000027> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000030> (information content entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000030> "A generically dependent continuant that is about some thing."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000030> "information content entity"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000030> <http://purl.obolibrary.org/obo/BFO_0000031>)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <http://purl.obolibrary.org/obo/BFO_0000001>))
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000078> (curation status specification)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000078> "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000078> "curation status specification"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000078> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000002> <http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/IAO_0000121> <http://purl.obolibrary.org/obo/IAO_0000122> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/IAO_0000124> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/IAO_0000423> <http://purl.obolibrary.org/obo/IAO_0000428>))
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000102>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000102> (data about an ontology part)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000102> "Data about an ontology part is a data item about a part of an ontology, for example a term"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000102> "data about an ontology part"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000102> <http://purl.obolibrary.org/obo/IAO_0000027>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000225> (obsolescence reason specification)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000225> "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000225> "obsolescence reason specification"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000225> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000103> <http://purl.obolibrary.org/obo/IAO_0000226> <http://purl.obolibrary.org/obo/IAO_0000227> <http://purl.obolibrary.org/obo/IAO_0000228> <http://purl.obolibrary.org/obo/IAO_0000229> <http://purl.obolibrary.org/obo/OMO_0001000>))
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000102>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000409> (denotator type)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000409> "A denotator type indicates how a term should be interpreted from an ontological perspective."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000409> "denotator type"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000409> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000410> <http://purl.obolibrary.org/obo/IAO_0000420> <http://purl.obolibrary.org/obo/IAO_0000421>))
+SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000409> <http://purl.obolibrary.org/obo/IAO_0000102>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000002> (example to be eventually removed)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000002> "example to be eventually removed"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000002>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000103> (failed exploratory term)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000103> "The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000103> "failed exploratory term"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000103>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000120> (metadata complete)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000120> "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000120> "metadata complete"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000120>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000121> (organizational term)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000121> "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000121> "organizational term"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000121>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000122> (ready for release)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000122> "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\""@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000122> "ready for release"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000122>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000123> (metadata incomplete)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000123> "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000123> "metadata incomplete"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000123>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000124> (uncurated)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000124> "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000124> "uncurated"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000124>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000125> (pending final vetting)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000125> "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000125> "pending final vetting"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000125>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000226> (placeholder removed)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000226> "placeholder removed"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000226>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000227> (terms merged)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000227> "terms merged"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000227>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000228> (term imported)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000228> "term imported"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000228>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000229> (term split)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000229> "term split"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000225> <http://purl.obolibrary.org/obo/IAO_0000229>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000410> (universal)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000410> "universal"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000409> <http://purl.obolibrary.org/obo/IAO_0000410>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000420> (defined class)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000420> "A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000420> "defined class"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000409> <http://purl.obolibrary.org/obo/IAO_0000420>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000421> (named class expression)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000421> "A named class expression is a logical expression that is given a name. The name can be used in place of the expression."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000421> "named class expression"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000409> <http://purl.obolibrary.org/obo/IAO_0000421>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000423> (to be replaced with external ontology term)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000423> "Terms with this status should eventually replaced with a term from another ontology."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000423> "to be replaced with external ontology term"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000423>)
+
+# Individual: <http://purl.obolibrary.org/obo/IAO_0000428> (requires discussion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000428> "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000428> "requires discussion"@en)
+ClassAssertion(<http://purl.obolibrary.org/obo/IAO_0000078> <http://purl.obolibrary.org/obo/IAO_0000428>)
+
+
+)

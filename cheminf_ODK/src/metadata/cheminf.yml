@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/cheminf
+
+idspace: CHEMINF
+base_url: /obo/cheminf
+
+products:
+- cheminf.owl: https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/main/cheminf.owl
+- cheminf.obo: https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/main/cheminf.obo
+
+term_browser: ontobee
+example_terms:
+- CHEMINF_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/v
+
+- prefix: /tracker/
+  replacement: https://github.com/semanticchemistry/semanticchemistry/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/CHEMINF?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/main/
+

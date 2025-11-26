@@ -1,0 +1,61 @@
+## ontology metadata ##
+id: cheminf
+title: chemical information ontology (cheminf) - information entities about chemical entities
+description: "The chemical information ontology (cheminf) describes information entities about chemical entities. It provides qualitative and quantitative attributes to richly describe chemicals. Includes terms for the descriptors commonly used in cheminformatics software applications and the algorithms which generate them."
+contact:  javier.millanacosta [at] maastrichtuniversity [.] nl
+creators:
+  - https://orcid.org/0000-0001-5985-7429
+  - https://orcid.org/0000-0002-5628-2268
+  - https://orcid.org/0000-0002-5959-6190
+  - Gang Fu
+  - https://orcid.org/0000-0001-7010-3812
+  - https://orcid.org/0000-0002-8011-0300
+  - https://orcid.org/0000-0001-7542-0286
+  - https://orcid.org/0000-0002-3469-4923
+  - https://orcid.org/0000-0003-4727-9435
+  - https://orcid.org/0000-0001-6966-0814
+  - https://orcid.org/0000-0003-3136-1338
+license: http://creativecommons.org/publicdomain/zero/1.0/
+
+## general ODK Settings ##
+repo: semanticchemistry
+git_main_branch: main
+github_org: semanticchemistry
+uribase: http://semanticscience.org/ontology/
+namespaces:
+  - http://semanticscience.org/resource/
+ci:
+  - github_actions
+documentation:
+  documentation_system: mkdocs
+export_formats:
+  - owl
+  - ttl
+  - obo
+reasoner: ELK
+release_artefacts:
+  - full
+  - base
+robot_java_args: '-Xmx8G'  # max RAM to be used by Robot in ODK
+release_diff: true  # When enabled, a diff is generated between the current release and the new one. Default: false.
+
+## CHEMINF specific Settings ##
+import_group:
+  products:
+    - id: bfo
+      module_type: mirror
+    - id: ro
+      use_base: true
+      slme_individuals: exclude
+    - id: omo
+      module_type: mirror
+    - id: iao
+      make_base: true
+    - id: obi
+    # - id: uo
+    - id: pato
+    - id: apollo_sv
+    - id: chebi
+      is_large: true
+      use_gzipped: true
+      make_base: true
