@@ -7,11 +7,12 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://semanticscience.org/ontology/cheminf/imports/ro_import.owl>
-<http://semanticscience.org/ontology/cheminf/releases/2025-11-26/imports/ro_import.owl>
+<http://semanticscience.org/ontology/cheminf/releases/2025-11-27/imports/ro_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/ro/releases/2025-06-24/ro-base.owl>)
-Annotation(owl:versionInfo "2025-11-26")
+Annotation(owl:versionInfo "2025-11-27")
 
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))

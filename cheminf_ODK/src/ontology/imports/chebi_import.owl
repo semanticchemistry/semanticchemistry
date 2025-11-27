@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl>
-<http://semanticscience.org/ontology/cheminf/releases/2025-11-26/imports/chebi_import.owl>
-Annotation(owl:versionInfo "2025-11-26")
+<http://semanticscience.org/ontology/cheminf/releases/2025-11-27/imports/chebi_import.owl>
+Annotation(owl:versionInfo "2025-11-27")
 
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))

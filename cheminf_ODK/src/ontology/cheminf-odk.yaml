@@ -51,10 +51,15 @@ import_group:
       module_type: mirror
     - id: iao
       make_base: true
+      module_type: custom
     - id: obi
-    # - id: uo
+      use_base: true
+      module_type: custom
+    # - id: uo  # for why see: https://github.com/semanticchemistry/semanticchemistry/issues/72
     - id: pato
     - id: apollo_sv
+      make_base: true
+      module_type: custom
     - id: chebi
       is_large: true
       use_gzipped: true
