@@ -12,9 +12,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl>
-<http://semanticscience.org/ontology/cheminf/releases/2025-11-26/imports/omo_import.owl>
+<http://semanticscience.org/ontology/cheminf/releases/2025-11-27/imports/omo_import.owl>
 Annotation(dc:source <http://purl.obolibrary.org/obo/omo/releases/2025-06-18/omo.owl>)
-Annotation(owl:versionInfo "2025-11-26")
+Annotation(owl:versionInfo "2025-11-27")
 
 Declaration(Class(obo:IAO_0000027))
 Declaration(Class(obo:IAO_0000030))

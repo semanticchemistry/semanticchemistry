@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                a7572f1eb980b6b49452d68369777697a55772157bfc2d53fd86b9f94484ca8a
+CONFIG_HASH=                707fb5e7f34dae84f73f42443c7f9dd4abb5f29b17e48cf9b408e96b98967dfc
 
 
 # ----------------------------------------
@@ -427,6 +427,24 @@ $(IMPORTDIR)/omo_import.owl: $(MIRRORDIR)/omo.owl | all_robot_plugins
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
 
+## Module for ontology: iao (custom)
+$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl
+	@echo "ERROR: You have configured iao as a custom module;"
+	@echo "       This rule needs to be overwritten in cheminf.Makefile!"
+	@false
+
+## Module for ontology: obi (custom)
+$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl
+	@echo "ERROR: You have configured obi as a custom module;"
+	@echo "       This rule needs to be overwritten in cheminf.Makefile!"
+	@false
+
+## Module for ontology: apollo_sv (custom)
+$(IMPORTDIR)/apollo_sv_import.owl: $(MIRRORDIR)/apollo_sv.owl
+	@echo "ERROR: You have configured apollo_sv as a custom module;"
+	@echo "       This rule needs to be overwritten in cheminf.Makefile!"
+	@false
+
 ## Module for ontology: chebi (slme)
 ifeq ($(IMP_LARGE),true)
 $(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms.txt $(IMPORTSEED) | all_robot_plugins
@@ -517,7 +535,7 @@ mirror-iao: | $(TMPDIR)
 .PHONY: mirror-obi
 .PRECIOUS: $(MIRRORDIR)/obi.owl
 mirror-obi: | $(TMPDIR)
-	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/obi/obi-base.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -534,7 +552,7 @@ mirror-pato: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/apollo_sv.owl
 mirror-apollo_sv: | $(TMPDIR)
 	curl -L $(OBOBASE)/apollo_sv.owl --create-dirs -o $(TMPDIR)/apollo_sv-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/apollo_sv-download.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -i $(TMPDIR)/apollo_sv-download.owl --base-iri http://purl.obolibrary.org/obo/APOLLO_SV --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: chebi
