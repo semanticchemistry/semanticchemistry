@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                707fb5e7f34dae84f73f42443c7f9dd4abb5f29b17e48cf9b408e96b98967dfc
+CONFIG_HASH=                b5752966316a39d9d8c832a4f8cdb878d8d8bfe68128e256ed29f8fde5f06caa
 
 
 # ----------------------------------------
@@ -187,7 +187,6 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo ro omo iao obi pato apollo_sv chebi
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -439,12 +438,6 @@ $(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl
 	@echo "       This rule needs to be overwritten in cheminf.Makefile!"
 	@false
 
-## Module for ontology: apollo_sv (custom)
-$(IMPORTDIR)/apollo_sv_import.owl: $(MIRRORDIR)/apollo_sv.owl
-	@echo "ERROR: You have configured apollo_sv as a custom module;"
-	@echo "       This rule needs to be overwritten in cheminf.Makefile!"
-	@false
-
 ## Module for ontology: chebi (slme)
 ifeq ($(IMP_LARGE),true)
 $(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms.txt $(IMPORTSEED) | all_robot_plugins
@@ -547,12 +540,6 @@ mirror-pato: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/pato-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: apollo_sv
-.PHONY: mirror-apollo_sv
-.PRECIOUS: $(MIRRORDIR)/apollo_sv.owl
-mirror-apollo_sv: | $(TMPDIR)
-	curl -L $(OBOBASE)/apollo_sv.owl --create-dirs -o $(TMPDIR)/apollo_sv-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/apollo_sv-download.owl --base-iri http://purl.obolibrary.org/obo/APOLLO_SV --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: chebi
