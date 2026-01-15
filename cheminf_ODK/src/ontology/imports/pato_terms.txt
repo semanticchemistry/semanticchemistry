@@ -1,0 +1,3 @@
+http://purl.obolibrary.org/obo/PATO_0000122 # length
+http://purl.obolibrary.org/obo/PATO_0000125 # mass
+http://purl.obolibrary.org/obo/PATO_0001708 # '1-D extent'

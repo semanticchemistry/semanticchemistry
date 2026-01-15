@@ -57,6 +57,7 @@ import_group:
       module_type: custom
     # - id: uo  # for why see: https://github.com/semanticchemistry/semanticchemistry/issues/72
     - id: pato
+      use_base: true
       make_base: true
       module_type: custom
     - id: chebi
