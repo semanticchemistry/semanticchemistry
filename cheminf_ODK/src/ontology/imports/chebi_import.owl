@@ -10,9 +10,138 @@ Ontology(<http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl>
 <http://semanticscience.org/ontology/cheminf/releases/2025-11-27/imports/chebi_import.owl>
 Annotation(owl:versionInfo "2025-11-27")
 
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_10545>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_23367>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24433>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33233>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33250>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33252>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33253>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36338>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36339>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36340>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36342>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36343>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36344>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36347>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_36357>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_10545> (electron)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_10545> "Elementary particle not affected by the strong force having a spin ½, a negative elementary charge and a rest mass of 0.000548579903(13) u, or 0.51099906(15) MeV.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_10545> "electron")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_10545> <http://purl.obolibrary.org/obo/CHEBI_36338>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_23367> (molecular entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_23367> "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_23367> "molecular entity")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_23367> <http://purl.obolibrary.org/obo/CHEBI_24431>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_24431> (chemical entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_24431> "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_24431> "chemical entity")
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_24433> (group)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_24433> "A defined linked collection of atoms or a single atom within a molecular entity.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_24433> "group")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_24433> <http://purl.obolibrary.org/obo/CHEBI_24431>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_24433> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_33250>))
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_33233> (fundamental particle)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33233> "A particle not known to have substructure.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33233> "fundamental particle")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33233> <http://purl.obolibrary.org/obo/CHEBI_36342>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_33250> (atom)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33250> "A chemical entity constituting the smallest component of an element having the chemical properties of the element.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/CHEBI_33250> "CHEBI:22671")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/CHEBI_33250> "CHEBI:23907")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33250> "atom")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33250> <http://purl.obolibrary.org/obo/CHEBI_24431>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33250> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_10545>))
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33250> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_33252>))
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_33252> (atomic nucleus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33252> "A nucleus is the positively charged central portion of an atom, excluding the orbital electrons.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33252> "atomic nucleus")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33252> <http://purl.obolibrary.org/obo/CHEBI_36347>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33252> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_33253>))
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_33253> (nucleon)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33253> "Heavy nuclear particle: proton or neutron.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33253> "nucleon")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33253> <http://purl.obolibrary.org/obo/CHEBI_36339>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33253> <http://purl.obolibrary.org/obo/CHEBI_36347>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_36338> (lepton)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36338> "Lepton is a fermion that does not experience the strong force (strong interaction). The term is derived from the Greek λεπτοσ (small, thin).")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36338> "lepton")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36338> <http://purl.obolibrary.org/obo/CHEBI_33233>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36338> <http://purl.obolibrary.org/obo/CHEBI_36340>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_36339> (baryon)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36339> "Baryon is a fermion that does experience the strong force (strong interaction). The term is derived from the Greek βαρυσ (heavy).")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36339> "baryon")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36339> <http://purl.obolibrary.org/obo/CHEBI_36340>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36339> <http://purl.obolibrary.org/obo/CHEBI_36344>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_36340> (fermion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36340> "Particle of half-integer spin quantum number following Fermi-Dirac statistics. Fermions are named after Enrico Fermi.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36340> "fermion")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36340> <http://purl.obolibrary.org/obo/CHEBI_36342>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_36342> (subatomic particle)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36342> "A particle smaller than an atom.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36342> "subatomic particle")
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_36343> (composite particle)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36343> "A subatomic particle known to have substructure (i.e. consisting of smaller particles).")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36343> "composite particle")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36343> <http://purl.obolibrary.org/obo/CHEBI_36342>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_36344> (hadron)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36344> "Hadron is a subatomic particle which experiences the strong force.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36344> "hadron")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36344> <http://purl.obolibrary.org/obo/CHEBI_36343>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_36347> (nuclear particle)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36347> "A nucleus or any of its constituents in any of their energy states.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36347> "nuclear particle")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36347> <http://purl.obolibrary.org/obo/CHEBI_36342>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_36357> (polyatomic entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_36357> "Any molecular entity consisting of more than one atom.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_36357> "polyatomic entity")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36357> <http://purl.obolibrary.org/obo/CHEBI_23367>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_36357> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CHEBI_24433>))
 
 
 )
