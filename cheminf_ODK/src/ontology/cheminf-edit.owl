@@ -24,6 +24,7 @@ Import(<http://semanticscience.org/ontology/cheminf/imports/iao_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/obi_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/pato_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/pr_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/ro_import.owl>)
 Annotation(dce:contributor "Gang Fu")
 Annotation(dce:format "application/rdf+xml")
@@ -45,6 +46,9 @@ Annotation(dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "chemical information ontology (cheminf) - information entities about chemical entities")
 Annotation(owl:versionInfo "v26-11-2025_ODK_alpha")
 
+Declaration(Class(obo:GO_0005515))
+Declaration(Class(resource:CDK_000001))
+Declaration(Class(resource:CDK_000100))
 Declaration(Class(resource:CHEMINF_000000))
 Declaration(Class(resource:CHEMINF_000001))
 Declaration(Class(resource:CHEMINF_000002))
@@ -616,7 +620,9 @@ Declaration(Class(resource:CHEMINF_001543))
 Declaration(Class(resource:CHEMINF_001544))
 Declaration(Class(resource:CHEMINF_001545))
 Declaration(Class(resource:CHEMINF_001546))
-
+Declaration(Class(<http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor>))
+Declaration(ObjectProperty(chebi:is_tautomer_of))
+Declaration(ObjectProperty(OBO_REL:bearer_of))
 Declaration(ObjectProperty(resource:CHEMINF_000047))
 Declaration(ObjectProperty(resource:CHEMINF_000143))
 Declaration(ObjectProperty(resource:CHEMINF_000145))
@@ -657,8 +663,11 @@ Declaration(ObjectProperty(resource:CHEMINF_000498))
 Declaration(ObjectProperty(resource:CHEMINF_000499))
 Declaration(ObjectProperty(resource:CHEMINF_000514))
 Declaration(ObjectProperty(resource:CHEMINF_000606))
-
-
+Declaration(ObjectProperty(ro:has_proper_part))
+Declaration(ObjectProperty(ontologies:is_output_of))
+Declaration(ObjectProperty(rdfs:subClassOf))
+Declaration(DataProperty(resource:CHEMINF_000009))
+Declaration(DataProperty(resource:CHEMINF_000012))
 Declaration(NamedIndividual(<https://orcid.org/0000-0001-5985-7429>))
 Declaration(NamedIndividual(<https://orcid.org/0000-0001-6966-0814>))
 Declaration(NamedIndividual(<https://orcid.org/0000-0001-7010-3812>))
@@ -678,6 +687,14 @@ Declaration(AnnotationProperty(dcterms:contributor))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
+Declaration(AnnotationProperty(bibo:doi))
+Declaration(AnnotationProperty(<http://semanticscience.org/ontology/cheminf-core.owl#short_name>))
+Declaration(AnnotationProperty(oboInOwl:hasSynonym))
+Declaration(AnnotationProperty(ro:part_of))
+Declaration(AnnotationProperty(<http://www.semanticweb.org/ontologies/cheminf.owl#short_name>))
+Declaration(AnnotationProperty(owl:sameAs))
+Declaration(AnnotationProperty(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source>))
+Declaration(AnnotationProperty(skos:broadMatch))
 ############################
 #   Annotation Properties
 ############################
@@ -693,6 +710,7 @@ AnnotationAssertion(rdfs:label dcterms:license "license")
 # Annotation Property: dcterms:title (title)
 
 AnnotationAssertion(rdfs:label dcterms:title "title")
+
 
 ############################
 #   Object Properties
@@ -999,6 +1017,7 @@ AnnotationAssertion(rdfs:label resource:CHEMINF_000606 "is execution output of")
 ObjectPropertyDomain(resource:CHEMINF_000606 obo:IAO_0000027)
 ObjectPropertyRange(resource:CHEMINF_000606 obo:IAO_0000064)
 
+
 ############################
 #   Data Properties
 ############################
@@ -1016,9 +1035,22 @@ DataPropertyRange(resource:CHEMINF_000009 xsd:float)
 AnnotationAssertion(rdfs:label resource:CHEMINF_000012 "has value")
 DataPropertyDomain(resource:CHEMINF_000012 obo:IAO_0000027)
 
+
+
 ############################
 #   Classes
 ############################
+
+# Class: resource:CDK_000001 (The Chemistry Development Kit Library)
+
+AnnotationAssertion(rdfs:label resource:CDK_000001 "The Chemistry Development Kit Library")
+SubClassOf(resource:CDK_000001 resource:CHEMINF_000342)
+
+# Class: resource:CDK_000100 (org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor)
+
+AnnotationAssertion(ro:part_of resource:CDK_000100 ontologies:CDK_000001)
+AnnotationAssertion(rdfs:label resource:CDK_000100 "org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor")
+EquivalentClasses(resource:CDK_000100 ObjectIntersectionOf(resource:CHEMINF_000451 ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_001000)))
 
 # Class: resource:CHEMINF_000000 (chemical entity)
 
@@ -2531,7 +2563,6 @@ AnnotationAssertion(dcterms:description resource:CHEMINF_000238 "The meltability
 AnnotationAssertion(oboInOwl:hasSynonym resource:CHEMINF_000238 "fusibility")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000238 "meltability")
 SubClassOf(resource:CHEMINF_000238 resource:CHEMINF_000404)
-
 
 # Class: resource:CHEMINF_000239 (formation Gibbs energy descriptor)
 
@@ -4915,6 +4946,7 @@ AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-3136-1338> "Christop
 # Individual: <https://orcid.org/0000-0003-4727-9435> (Michel Dumontier)
 
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-4727-9435> "Michel Dumontier")
+
 
 DisjointClasses(resource:CHEMINF_000133 resource:CHEMINF_000134 resource:CHEMINF_000135)
 SubObjectPropertyOf(ObjectPropertyChain(resource:CHEMINF_000453 resource:CHEMINF_000452) resource:CHEMINF_000454)
