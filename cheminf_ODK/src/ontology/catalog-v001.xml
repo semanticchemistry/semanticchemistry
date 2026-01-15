@@ -7,6 +7,7 @@
     <uri name="http://semanticscience.org/ontology/cheminf/imports/iao_import.owl" uri="imports/iao_import.owl" />
     <uri name="http://semanticscience.org/ontology/cheminf/imports/obi_import.owl" uri="imports/obi_import.owl" />
     <uri name="http://semanticscience.org/ontology/cheminf/imports/pato_import.owl" uri="imports/pato_import.owl" />
+    <uri name="http://semanticscience.org/ontology/cheminf/imports/pr_import.owl" uri="imports/pr_import.owl" />
     <uri name="http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl" uri="imports/chebi_import.owl" />
   </group>
 </catalog>

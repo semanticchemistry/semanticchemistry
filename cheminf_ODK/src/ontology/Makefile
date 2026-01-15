@@ -187,6 +187,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
+IMPORTS =  bfo ro omo iao obi pato pr chebi
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -540,6 +541,12 @@ mirror-pato: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/pato-download.owl -o $(TMPDIR)/$@.owl
 
 
+## ONTOLOGY: pr
+.PHONY: mirror-pr
+.PRECIOUS: $(MIRRORDIR)/pr.owl
+mirror-pr: | $(TMPDIR)
+	curl -L $(OBOBASE)/pr.owl --create-dirs -o $(TMPDIR)/pr-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/pr-download.owl --base-iri http://purl.obolibrary.org/obo/PR --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: chebi
