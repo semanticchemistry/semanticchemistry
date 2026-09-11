@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                66e3f08159d87f2c195f79adae2e35fe6de1399c655b295346d937936694bbe8
+CONFIG_HASH=                d027402b4f459a1f8171c7c1bfd6ab45070bf8b68d93dcc429a9be48b9e6345d
 
 
 # ----------------------------------------
@@ -187,7 +187,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo ro omo iao obi pato pr chebi bodo-descriptor
+IMPORTS =  bfo ro omo iao obi pato pr chebi cob bodo-descriptor
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -457,6 +457,12 @@ $(IMPORTDIR)/chebi_import.owl: $(MIRRORDIR)/chebi.owl $(IMPORTDIR)/chebi_terms.t
 		 $(ANNOTATE_CONVERT_FILE)
 endif # IMP_LARGE=true
 
+## Module for ontology: cob (custom)
+$(IMPORTDIR)/cob_import.owl: $(MIRRORDIR)/cob.owl
+	@echo "ERROR: You have configured cob as a custom module;"
+	@echo "       This rule needs to be overwritten in cheminf.Makefile!"
+	@false
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -554,6 +560,14 @@ mirror-chebi: | $(TMPDIR)
 	curl -L $(OBOBASE)/chebi.owl.gz --create-dirs -o $(MIRRORDIR)/chebi.owl.gz --retry 4 --max-time 200 && \
 	$(ROBOT) remove -i $(MIRRORDIR)/chebi.owl.gz --base-iri http://purl.obolibrary.org/obo/CHEBI --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 endif
+
+
+## ONTOLOGY: cob
+.PHONY: mirror-cob
+.PRECIOUS: $(MIRRORDIR)/cob.owl
+mirror-cob: | $(TMPDIR)
+	curl -L $(OBOBASE)/cob.owl --create-dirs -o $(TMPDIR)/cob-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/cob-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: bodo-descriptor

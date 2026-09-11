@@ -42,10 +42,8 @@ $(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt \
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
 
-# IAO import module
-# this ROBOT extract code only deviates from the ODK default in that it excludes individuals
-# which had to be done, since the `slme_individuals: exclude` flag
-# did not work in the cheminf-odk.yaml
+## Module for ontology: iao
+
 $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt \
 			   $(IMPORTSEED) | all_robot_plugins
 	$(ROBOT) annotate --input $< --remove-annotations \
@@ -61,3 +59,22 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt \
 		               --subset-decls true --synonym-decls true \
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
+
+## Module for ontology: cob
+
+$(IMPORTDIR)/cob_import.owl: $(IMPORTDIR)/cob_terms.txt $(IMPORTSEED) | all_robot_plugins
+	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) \
+	annotate --input $(MIRRORDIR)/cob.owl --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/cob_terms.txt $(T_IMPORTSEED) \
+		         --force true --copy-ontology-annotations true \
+		         --individuals exclude \
+		         --method BOT \
+		 remove -T $(IMPORTDIR)/cob_remove_list.txt --select "self descendants instances" \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/cob_terms.txt $(T_IMPORTSEED) \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo/cob.owl \
+                --subset-decls true --synonym-decls true \
+         repair --merge-axiom-annotations true \
+         $(ANNOTATE_CONVERT_FILE); fi 
