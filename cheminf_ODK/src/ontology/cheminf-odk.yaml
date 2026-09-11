@@ -52,7 +52,6 @@ import_group:
     - id: omo
       module_type: mirror
     - id: iao
-      make_base: true
       module_type: custom
     - id: obi
       use_base: true
