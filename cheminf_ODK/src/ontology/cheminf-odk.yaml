@@ -43,7 +43,7 @@ release_diff: true  # When enabled, a diff is generated between the current rele
 import_group:
   products:
     - id: bfo
-      module_type: mirror
+      module_type: custom
     - id: ro
       use_base: true
       slme_individuals: exclude

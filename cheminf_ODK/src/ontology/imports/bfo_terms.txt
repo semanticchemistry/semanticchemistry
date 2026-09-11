@@ -1,0 +1,4 @@
+http://purl.obolibrary.org/obo/BFO_0000031 # generically dependent continuant 
+http://purl.obolibrary.org/obo/BFO_0000015 # process
+http://purl.obolibrary.org/obo/BFO_0000018 # zero-dimensional spatial region
+http://purl.obolibrary.org/obo/BFO_0000028 # three-dimensional spatial region
