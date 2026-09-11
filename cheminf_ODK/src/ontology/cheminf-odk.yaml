@@ -65,6 +65,7 @@ import_group:
       is_large: true
       use_gzipped: true
       make_base: true
+      module_type: custom
     - id: go
       is_large: true
       use_base: true
