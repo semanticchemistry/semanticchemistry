@@ -1,0 +1,2 @@
+http://purl.obolibrary.org/obo/COB_0000035  # completely executed planned process
+http://purl.obolibrary.org/obo/COB_0000082  # planned process

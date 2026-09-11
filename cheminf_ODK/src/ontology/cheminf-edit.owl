@@ -21,6 +21,7 @@ Ontology(<http://semanticscience.org/ontology/cheminf.owl>
 Import(<http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/bodo-descriptor_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/cob_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/iao_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/obi_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl>)
@@ -1954,7 +1955,7 @@ SubClassOf(resource:CHEMINF_000137 resource:CHEMINF_000092)
 
 AnnotationAssertion(rdfs:comment resource:CHEMINF_000138 "software execution is a process in which the instruction set that comprises the software program is executed on a machine.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000138 "software execution")
-SubClassOf(resource:CHEMINF_000138 obo:OBI_0000011)
+SubClassOf(resource:CHEMINF_000138 obo:COB_0000082)
 SubClassOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 resource:CHEMINF_000343))
 
 # Class: resource:CHEMINF_000139 (software implementation)
@@ -4043,7 +4044,7 @@ SubClassOf(resource:CHEMINF_000470 ObjectSomeValuesFrom(obo:RO_0000057 resource:
 AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000471 "A planned process in which a person bearing a curator role modifies a CRID registry.")
 AnnotationAssertion(obo:IAO_0000117 resource:CHEMINF_000471 "Person: Colin Batchelor")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000471 "CRID registry curation")
-SubClassOf(resource:CHEMINF_000471 obo:OBI_0000011)
+SubClassOf(resource:CHEMINF_000471 obo:COB_0000082)
 SubClassOf(resource:CHEMINF_000471 ObjectSomeValuesFrom(obo:RO_0000057 obo:IAO_0000579))
 
 # Class: resource:CHEMINF_000472 (chemical name validation)
