@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://semanticscience.org/ontology/cheminf/imports/ro_import.owl>
-<http://semanticscience.org/ontology/cheminf/releases/2025-11-28/imports/ro_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/ro/releases/2025-06-24/ro-base.owl>)
-Annotation(owl:versionInfo "2025-11-28")
+<http://semanticscience.org/ontology/cheminf/releases/2026-09-11/imports/ro_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/ro/releases/2026-09-04/ro-base.owl>)
+Annotation(owl:versionInfo "2026-09-11")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
@@ -25,13 +25,50 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000055>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000062>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000063>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000058>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000059>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002086>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002087>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002090>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002218>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002222>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002234>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002323>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002328>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002350>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002352>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002353>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002404>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002405>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002410>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002411>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002412>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002413>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002414>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002418>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002427>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002500>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002501>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002595>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002608>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004007>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004009>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004028>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0004047>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0009501>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0018030>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0018033>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0018034>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0018036>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0018037>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0018040>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000112>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000117>))
@@ -94,6 +131,28 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000055> "rea
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/BFO_0000015>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/BFO_0000017>)
 
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000062> (preceded by)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000062> "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/BFO_0000062> "is preceded by"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/BFO_0000062> "preceded_by"@en)
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://purl.obolibrary.org/obo/BFO_0000062> "http://www.obofoundry.org/ro/#OBO_REL:preceded_by")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000062> "preceded by"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/RO_0002086>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/BFO_0000063>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000062>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/BFO_0000003>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000062> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000063> (precedes)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BFO_0000063> "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000063> "precedes"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000063> <http://purl.obolibrary.org/obo/RO_0002222>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000063>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BFO_0000063> <http://purl.obolibrary.org/obo/BFO_0000003>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BFO_0000063> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
 # Object Property: <http://purl.obolibrary.org/obo/RO_0000056> (participates in)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0000056> "this blood clot participates in this blood coagulation"@en)
@@ -137,6 +196,29 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000059> "conc
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0000059> ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000020>))
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0000059> <http://purl.obolibrary.org/obo/BFO_0000031>)
 
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002086> (ends after)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002086> <https://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002086> "ends after"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002086> <http://purl.obolibrary.org/obo/RO_0002222>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002086>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002087> (immediately preceded by)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002087> <https://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002087> "starts_at_end_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002087> "immediately preceded by"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002087> <http://purl.obolibrary.org/obo/BFO_0000062>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002087> <http://purl.obolibrary.org/obo/RO_0002090>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002090> (immediately precedes)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002090> <https://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002090> "ends_at_start_of")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002090> "meets")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002090> "immediately precedes"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002090> <http://purl.obolibrary.org/obo/BFO_0000063>)
+
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002131> (overlaps)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002131> "x overlaps y if and only if there exists some z such that x has part z and z part of y")
@@ -151,11 +233,279 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002218> "has agent")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002218> "obsolete has active participant")
 
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002222> (temporally related to)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002222> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://purl.obolibrary.org/obo/RO_0002222> "https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002222> "temporally related to"@en)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002222> <http://purl.obolibrary.org/obo/BFO_0000003>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002222> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002233> (has input)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002233> "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002233> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002233> "consumes")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002233> "has input"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/RO_0000057>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/RO_0002352>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002234> (has output)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002234> "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002234> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002234> "produces")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002234> "has output"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0000057>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0002353>)
+
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002323> (mereotopologically related to)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002323> "A mereological relationship or a topological relationship")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002323> <https://orcid.org/0000-0002-6601-2165>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002323> "mereotopologically related to"@en)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002328> (functionally related to)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002328> "A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002328> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002328> "functionally related to"@en)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002350> (member of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0002350> "An organism that is a member of a population of organisms")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002350> "is member of is a mereological relation between a item and a collection.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002350> "is member of")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002350> "member part of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002350> "member of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002350> <http://purl.obolibrary.org/obo/BFO_0000050>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002350> <http://purl.obolibrary.org/obo/RO_0002351>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002351> (has member)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002351> "has member is a mereological relation between a collection and an item.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002351> "has member"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002351> <http://purl.obolibrary.org/obo/BFO_0000051>)
+IrreflexiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002352> (input of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002352> "inverse of has input")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002352> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002352> "input of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002352> <http://purl.obolibrary.org/obo/RO_0000056>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002352> <http://purl.obolibrary.org/obo/RO_0002328>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002353> (output of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002353> "inverse of has output")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002353> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002353> "output of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002353> <http://purl.obolibrary.org/obo/RO_0000056>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002353> <http://purl.obolibrary.org/obo/RO_0002328>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002404> (causally downstream of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002404> "inverse of upstream of")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002404> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002404> "causally downstream of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002404> <http://purl.obolibrary.org/obo/BFO_0000062>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002404> <http://purl.obolibrary.org/obo/RO_0002427>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002404> <http://purl.obolibrary.org/obo/RO_0002411>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002405> (immediately causally downstream of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002405> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002405> "immediately causally downstream of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002405> <http://purl.obolibrary.org/obo/RO_0002087>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002405> <http://purl.obolibrary.org/obo/RO_0002404>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002405> <http://purl.obolibrary.org/obo/RO_0002412>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002410> (causally related to)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002410> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002410> "causally related to"@en)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002411> (causally upstream of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002411> "p is causally upstream of q iff p is causally related to q, the end of p precedes the end of q, and p is not an occurrent part of q.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002411> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002411> "causally upstream of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/BFO_0000063>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002418>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002411>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002412> (immediately causally upstream of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002412> "p is immediately causally upstream of q iff p is causally upstream of q, and the end of p is coincident with the beginning of q.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002412> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002412> "immediately causally upstream of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002412> <http://purl.obolibrary.org/obo/RO_0002090>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002412> <http://purl.obolibrary.org/obo/RO_0002411>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002413> (provides input for)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002413> "p provides input for q iff p is immediately causally upstream of q, and there exists some c such that p has_output c and q has_input c.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002413> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002413> "directly provides input for")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002413> "provides input for"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002413> <http://purl.obolibrary.org/obo/RO_0002412>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002413> <http://purl.obolibrary.org/obo/RO_0002414>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002414> (transitively provides input for)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002414> "transitive form of directly_provides_input_for")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002414> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002414> "transitively provides input for"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002414> <http://purl.obolibrary.org/obo/RO_0004047>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002414>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002414> <http://purl.obolibrary.org/obo/BFO_0000015>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002414> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002418> (causally upstream of or within)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002418> "p is 'causally upstream or within' q iff p is causally related to q, and the end of p precedes, or is coincident with, the end of q.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002418> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/RO_0002418> "influences (processual)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002418> "causally upstream of or within")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/RO_0002501>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/RO_0002427>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002418>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002427> (causally downstream of or within)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002427> "inverse of causally upstream of or within")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002427> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002427> "causally downstream of or within")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002427> <http://purl.obolibrary.org/obo/RO_0002501>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002427>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002500> (causal agent in process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002500> "A relationship between a material entity and a process where the material entity has some causal role that influences the process")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002500> "causal agent in process")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002500> <http://purl.obolibrary.org/obo/RO_0002595>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002500> <http://purl.obolibrary.org/obo/RO_0002608>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002501> (causal relation between processes)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002501> "p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one where the execution of p influences the execution of q. p may be upstream, downstream, part of, or a container of q.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002501> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002501> "causal relation between processes")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002501> <http://purl.obolibrary.org/obo/RO_0002410>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002501> <http://purl.obolibrary.org/obo/BFO_0000003>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002501> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002595> (causal relation between material entity and a process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002595> "A relationship that holds between a material entity and a process in which causality is involved, with either the material entity or some part of the material entity exerting some influence over the process, or the process influencing some aspect of the material entity.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/RO_0002595> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002595> "causal relation between material entity and a process")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002595> <http://purl.obolibrary.org/obo/RO_0002410>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002595> <http://purl.obolibrary.org/obo/BFO_0000040>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002595> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002608> (process has causal agent)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002608> "Inverse of 'causal agent in process'")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002608> "process has causal agent")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002608> <http://purl.obolibrary.org/obo/RO_0002410>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004007> (has primary input or output)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0004007> "p 'has primary input ot output' c iff either (a) p 'has primary input' c or (b) p 'has primary output' c.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0004007> "has primary input or output")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0004007> <http://purl.obolibrary.org/obo/RO_0000057>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004009> (has primary input)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0004009> "has primary input")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/RO_0002233>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0004009> <http://purl.obolibrary.org/obo/RO_0004007>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004028> (realized in response to stimulus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0004028> "A relationship between a realizable entity R (e.g. function or disposition) and a material entity M where R is realized in response to a process that has an input stimulus of M.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0004028> "realized in response to stimulus")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0004028> <http://purl.obolibrary.org/obo/RO_0002410>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0004028> <http://purl.obolibrary.org/obo/BFO_0000017>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0004028> <http://purl.obolibrary.org/obo/BFO_0000040>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0004047> (causally upstream of or within, positive effect)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0004047> "causally upstream of or within, positive effect")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0004047> <http://purl.obolibrary.org/obo/RO_0002418>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0009501> (realized in response to)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0009501> "A drought sensitivity trait that inheres in a whole plant is realized in a systemic response process in response to exposure to drought conditions.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0009501> "An inflammatory disease that is realized in response to an inflammatory process occurring in the gut (which is itself the realization of a process realized in response to harmful stimuli in the mucosal lining of th gut)")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0009501> "Environmental polymorphism in butterflies: These butterflies have a 'responsivity to day length trait' that is realized in response to the duration of the day, and is realized in developmental processes that lead to increased or decreased pigmentation in the adult morph.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0009501> "r 'realized in response to' s iff, r is a realizable (e.g. a plant trait such as responsivity to drought), s is an environmental stimulus (a process), and s directly causes the realization of r.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/RO_0009501> <https://orcid.org/0000-0001-6996-0040>)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/RO_0009501> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/RO_0009501> <https://orcid.org/0000-0002-7073-9172>)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/RO_0009501> <https://orcid.org/0000-0002-8461-9745>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0009501> "realized in response to"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0009501> <http://purl.obolibrary.org/obo/RO_0002410>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0009501> <http://purl.obolibrary.org/obo/BFO_0000017>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0009501> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0018030> (chemical relationship)
+
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obolibrary.org/obo/RO_0018030> <https://orcid.org/0000-0003-4423-4370>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0018030> "chemical relationship")
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0018033> (is deprotonated form of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0018033> "(E)-cinnamoyl-CoA(4-) (CHEBI:57252) is a deprotonated form (E)-cinnamoyl-CoA (CHEBI:10956), which involves removing four protons.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0018033> "A is a deprotonated form of B if and only if A is chemical entity that is a Brønsted–Lowry Base (i.e., can receive a proton) and by adding some nonzero number of protons transforms it into B.
+
+This is a transitive relationship and follows this design pattern: https://oborel.github.io/obo-relations/direct-and-indirect-relations.")
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obolibrary.org/obo/RO_0018033> <https://orcid.org/0000-0003-4423-4370>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0018033> "is deprotonated form of")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0018033> <http://purl.obolibrary.org/obo/RO_0018030>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0018033> <http://purl.obolibrary.org/obo/RO_0018034>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0018033>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0018034> (is protonated form of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/RO_0018034> "(E)-cinnamoyl-CoA (CHEBI:10956) is a protonated form of (E)-cinnamoyl-CoA(4-) (CHEBI:57252), which involves adding four protons.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0018034> "A is a protonated form of B if and only if A is chemical entity that is a Brønsted–Lowry Acid (i.e., can give up a proton) and by removing some nonzero number of protons transforms it into B.
+
+This is a transitive relationship and follows this design pattern: https://oborel.github.io/obo-relations/direct-and-indirect-relations.")
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obolibrary.org/obo/RO_0018034> <https://orcid.org/0000-0003-4423-4370>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0018034> "is protonated form of")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0018034> <http://purl.obolibrary.org/obo/RO_0018030>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0018034>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0018036> (is tautomer of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0018036> "Two chemicals are tautomers if they can be readily interconverted.
+
+This commonly refers to prototropy in which a hydrogen's position is changed, such as between ketones and enols. This is also often observed in heterocyclic rings, e.g., ones containing nitrogens and/or have aryl functional groups containing heteroatoms.")
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obolibrary.org/obo/RO_0018036> <https://orcid.org/0000-0003-4423-4370>)
+AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/RO_0018036> "2023-03-18T23:49:31Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0018036> "is tautomer of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0018036> <http://purl.obolibrary.org/obo/RO_0018030>)
+SymmetricObjectProperty(<http://purl.obolibrary.org/obo/RO_0018036>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0018037> (is substitutent group from)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0018037> "Group A is a substituent group from Chemical B if A represents the functional part of A and includes information about where it is connected. A is not itself a chemical with a fully formed chemical graph, but is rather a partial graph with one or more connection points that can be used to attach to another chemical graph, typically as a functionalization.")
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obolibrary.org/obo/RO_0018037> <https://orcid.org/0000-0003-4423-4370>)
+AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/RO_0018037> "2023-03-18T23:49:31Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0018037> "is substitutent group from"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0018037> <http://purl.obolibrary.org/obo/RO_0018030>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0018040> (has parent hydride)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0018040> "Chemical A has parent hydride Chemical B if there exists a molecular graphical transformation where functional groups on A are replaced with hydrogens in order to yield B.")
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <http://purl.obolibrary.org/obo/RO_0018040> <https://orcid.org/0000-0003-4423-4370>)
+AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/RO_0018040> "2023-03-18T23:49:31Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0018040> "has parent hydride"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0018040> <http://purl.obolibrary.org/obo/RO_0018030>)
 
 
 
@@ -198,7 +548,13 @@ SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000031> ObjectAllValuesFrom(<htt
 
 
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002131>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000062>) <http://purl.obolibrary.org/obo/BFO_0000062>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000063>) <http://purl.obolibrary.org/obo/BFO_0000063>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0000057>) <http://purl.obolibrary.org/obo/RO_0000057>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0002131>) <http://purl.obolibrary.org/obo/RO_0002131>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000054> <http://purl.obolibrary.org/obo/RO_0002404>) <http://purl.obolibrary.org/obo/RO_0009501>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002131>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002234> <http://purl.obolibrary.org/obo/RO_0002233>) <http://purl.obolibrary.org/obo/RO_0002413>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002418>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0009501> <http://purl.obolibrary.org/obo/RO_0002233>) <http://purl.obolibrary.org/obo/RO_0004028>)
 )
