@@ -1,0 +1,9 @@
+http://purl.obolibrary.org/obo/OBI_0000112 # specimen role
+http://purl.obolibrary.org/obo/OBI_0000293 # has specified input
+http://purl.obolibrary.org/obo/OBI_0000295 # is specified input of
+http://purl.obolibrary.org/obo/OBI_0000417 # achieves_planned_objective
+http://purl.obolibrary.org/obo/OBI_0000659 # specimen collection process
+http://purl.obolibrary.org/obo/OBI_0000684 # specimen collection objective
+http://purl.obolibrary.org/obo/OBI_0000833 # objective_achieved_by
+http://purl.obolibrary.org/obo/OBI_0002076 # collection of specimens
+http://purl.obolibrary.org/obo/OBI_0100051 # specimen

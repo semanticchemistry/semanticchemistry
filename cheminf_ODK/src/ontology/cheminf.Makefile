@@ -22,25 +22,24 @@ $(IMPORTDIR)/bfo_import.owl: $(IMPORTDIR)/bfo_terms.txt $(IMPORTSEED) | all_robo
          repair --merge-axiom-annotations true \
          $(ANNOTATE_CONVERT_FILE); fi 
 
-# OBI import module
-# this ROBOT extract code only deviates from the ODK default in that it excludes individuals
-# which had to be done, since the `slme_individuals: exclude` flag
-# did not work in the cheminf-odk.yaml
-$(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt \
-			   $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
+## Module for ontology: obi
+
+$(IMPORTDIR)/obi_import.owl: $(IMPORTDIR)/obi_terms.txt $(IMPORTSEED) | all_robot_plugins
+	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) \
+	annotate --input $(MIRRORDIR)/obi.owl --remove-annotations \
 		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/obi_terms.txt $(T_IMPORTSEED) \
 		         --force true --copy-ontology-annotations true \
 		         --individuals exclude \
 		         --method BOT \
+		 remove -T $(IMPORTDIR)/obi_remove_list.txt --select "self descendants instances" --signature true \
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        --term-file $(IMPORTDIR)/obi_terms.txt $(T_IMPORTSEED) \
 		        --select complement --select annotation-properties \
-		 odk:normalize --base-iri http://semanticscience.org/ontology \
-		               --subset-decls true --synonym-decls true \
-		 repair --merge-axiom-annotations true \
-		 $(ANNOTATE_CONVERT_FILE)
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo/obi.owl \
+                --subset-decls true --synonym-decls true \
+         repair --merge-axiom-annotations true \
+         $(ANNOTATE_CONVERT_FILE); fi 
 
 ## Module for ontology: iao
 
