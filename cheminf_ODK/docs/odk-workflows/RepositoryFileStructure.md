@@ -23,7 +23,7 @@ These are the current imports in CHEMINF
 | obi | http://purl.obolibrary.org/obo/obi.owl | custom |
 | pato | http://purl.obolibrary.org/obo/pato.owl | slme |
 | pr | http://purl.obolibrary.org/obo/pr.owl | slme |
-| chebi | http://purl.obolibrary.org/obo/chebi.owl | slme |
+| chebi | http://purl.obolibrary.org/obo/chebi.owl | custom |
 | go | http://purl.obolibrary.org/obo/go.owl | slme |
 | cob | http://purl.obolibrary.org/obo/cob.owl | custom |
 | bodo-descriptor | https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/main/ontology/bodo-descriptor.owl | slme |
