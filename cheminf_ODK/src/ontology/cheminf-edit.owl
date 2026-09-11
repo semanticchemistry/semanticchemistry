@@ -730,19 +730,22 @@ SubObjectPropertyOf(resource:CHEMINF_000143 obo:IAO_0000136)
 ObjectPropertyDomain(resource:CHEMINF_000143 obo:IAO_0000027)
 ObjectPropertyRange(resource:CHEMINF_000143 obo:BFO_0000020)
 
-# Object Property: resource:CHEMINF_000145 (has output)
+# Object Property: resource:CHEMINF_000145 (obsolete_has output)
 
-AnnotationAssertion(rdfs:label resource:CHEMINF_000145 "has output")
-SubObjectPropertyOf(resource:CHEMINF_000145 obo:RO_0000057)
+AnnotationAssertion(obo:IAO_0000116 resource:CHEMINF_000145 "Deprecated in favor of RO:has output")
+AnnotationAssertion(obo:IAO_0000231 resource:CHEMINF_000145 obo:IAO_0000228)
+AnnotationAssertion(obo:IAO_0100001 resource:CHEMINF_000145 obo:RO_0002234)
+AnnotationAssertion(rdfs:label resource:CHEMINF_000145 "obsolete_has output")
+AnnotationAssertion(owl:deprecated resource:CHEMINF_000145 "true"^^xsd:boolean)
 InverseObjectProperties(resource:CHEMINF_000145 ontologies:is_output_of)
-ObjectPropertyDomain(resource:CHEMINF_000145 obo:BFO_0000015)
 
-# Object Property: resource:CHEMINF_000148 (has input)
+# Object Property: resource:CHEMINF_000148 (obsolete_has input)
 
-AnnotationAssertion(rdfs:label resource:CHEMINF_000148 "has input")
-SubObjectPropertyOf(resource:CHEMINF_000148 obo:RO_0000057)
-ObjectPropertyDomain(resource:CHEMINF_000148 obo:BFO_0000015)
-ObjectPropertyRange(resource:CHEMINF_000148 owl:Thing)
+AnnotationAssertion(obo:IAO_0000116 resource:CHEMINF_000148 "Deprecated in favor of RO:has input")
+AnnotationAssertion(obo:IAO_0000231 resource:CHEMINF_000148 obo:IAO_0000228)
+AnnotationAssertion(obo:IAO_0100001 resource:CHEMINF_000148 obo:RO_0002233)
+AnnotationAssertion(rdfs:label resource:CHEMINF_000148 "obsolete_has input")
+AnnotationAssertion(owl:deprecated resource:CHEMINF_000148 "true"^^xsd:boolean)
 
 # Object Property: resource:CHEMINF_000200 (has attribute)
 
@@ -1990,8 +1993,8 @@ SubClassOf(resource:CHEMINF_000146 resource:CHEMINF_000229)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000147 "parameterized software execution")
 SubClassOf(resource:CHEMINF_000147 resource:CHEMINF_000138)
-SubClassOf(resource:CHEMINF_000147 ObjectSomeValuesFrom(resource:CHEMINF_000145 obo:IAO_0000027))
-SubClassOf(resource:CHEMINF_000147 ObjectSomeValuesFrom(resource:CHEMINF_000148 resource:CHEMINF_000500))
+SubClassOf(resource:CHEMINF_000147 ObjectSomeValuesFrom(obo:RO_0002233 resource:CHEMINF_000500))
+SubClassOf(resource:CHEMINF_000147 ObjectSomeValuesFrom(obo:RO_0002234 obo:IAO_0000027))
 
 # Class: resource:CHEMINF_000149 (generic SMILES descriptor)
 
