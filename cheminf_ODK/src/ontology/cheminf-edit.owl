@@ -3165,7 +3165,7 @@ AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000324 "Most acidic pKa of 
 ")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000324 "most acidic pKa calculated by ACD/Labs PhysChem software library")
 SubClassOf(resource:CHEMINF_000324 resource:CHEMINF_000195)
-SubClassOf(resource:CHEMINF_000324 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0002500 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000328))))))
+SubClassOf(resource:CHEMINF_000324 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057  ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000328))))))
 
 # Class: resource:CHEMINF_000325 (most basic pKa calculated by ACD/Labs PhysChem software library)
 
