@@ -4,7 +4,6 @@ http://purl.obolibrary.org/obo/RO_0000059 # concretizes
 http://purl.obolibrary.org/obo/RO_0002233 # has input
 http://purl.obolibrary.org/obo/RO_0002234 # has output 
 http://purl.obolibrary.org/obo/RO_0002351 # has member
-http://purl.obolibrary.org/obo/RO_0002500 # causal agent in process
 http://purl.obolibrary.org/obo/RO_0004009 # has primary input
 http://purl.obolibrary.org/obo/RO_0018033 # is deprotonated form of 
 http://purl.obolibrary.org/obo/RO_0018034 # is protonated form of
