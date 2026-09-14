@@ -71,5 +71,3 @@ import_group:
       use_base: true
     - id: cob
       module_type: custom
-    - id: bodo-descriptor
-      mirror_from: https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/main/ontology/bodo-descriptor.owl

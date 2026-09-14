@@ -19,7 +19,6 @@ Prefix(ontologies:=<http://www.semanticweb.org/ontologies/>)
 
 Ontology(<http://semanticscience.org/ontology/cheminf.owl>
 Import(<http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl>)
-Import(<http://semanticscience.org/ontology/cheminf/imports/bodo-descriptor_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/cob_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/go_import.owl>)
@@ -623,7 +622,6 @@ Declaration(Class(resource:CHEMINF_001543))
 Declaration(Class(resource:CHEMINF_001544))
 Declaration(Class(resource:CHEMINF_001545))
 Declaration(Class(resource:CHEMINF_001546))
-Declaration(Class(<http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor>))
 Declaration(ObjectProperty(chebi:is_tautomer_of))
 Declaration(ObjectProperty(OBO_REL:bearer_of))
 Declaration(ObjectProperty(resource:CHEMINF_000047))
@@ -1871,7 +1869,7 @@ SubClassOf(resource:CHEMINF_000122 ObjectSomeValuesFrom(resource:CHEMINF_000143 
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000123 "A chemical descriptor is a data item (quantity or value) about a chemical entity that conforms to a specification for how it is calculated, measured or recorded.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000123 "chemical descriptor")
-SubClassOf(resource:CHEMINF_000123 <http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#Descriptor>)
+SubClassOf(resource:CHEMINF_000123 obo:IAO_0000027)
 SubClassOf(resource:CHEMINF_000123 ObjectSomeValuesFrom(obo:IAO_0000136 resource:CHEMINF_000000))
 SubClassOf(resource:CHEMINF_000123 ObjectSomeValuesFrom(resource:CHEMINF_000143 obo:BFO_0000020))
 SubClassOf(resource:CHEMINF_000123 ObjectSomeValuesFrom(resource:CHEMINF_000143 ObjectUnionOf(resource:CHEMINF_000086 resource:CHEMINF_000404)))
@@ -4525,7 +4523,6 @@ AnnotationAssertion(dcterms:description resource:CHEMINF_001101 "Oxidation state
 AnnotationAssertion(rdfs:label resource:CHEMINF_001101 "oxidation state")
 AnnotationAssertion(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source> resource:CHEMINF_001101 "https://doi.org/10.1351/goldbook.O04365")
 SubClassOf(resource:CHEMINF_001101 resource:CHEMINF_000087)
-SubClassOf(resource:CHEMINF_001101 <http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor>)
 SubClassOf(resource:CHEMINF_001101 ObjectSomeValuesFrom(obo:IAO_0000136 obo:CHEBI_33250))
 
 # Class: resource:CHEMINF_001102 (reactivity)
@@ -4907,11 +4904,6 @@ AnnotationAssertion(<http://www.semanticweb.org/ontologies/cheminf.owl#short_nam
 AnnotationAssertion(rdfs:comment resource:CHEMINF_001546 "Pi electronegativity is given by X = a + b q + c ( q 2 ) , where a, b and c are Gasteiger Marsili parameters, and q is the sigma charge. Other short_name: elecPiA.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_001546 "pi electronegativity"@en)
 SubClassOf(resource:CHEMINF_001546 resource:CHEMINF_000087)
-
-# Class: <http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#Descriptor> (<http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#Descriptor>)
-
-SubClassOf(<http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#Descriptor> obo:IAO_0000027)
-
 
 ############################
 #   Named Individuals

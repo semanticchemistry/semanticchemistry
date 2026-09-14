@@ -26,7 +26,6 @@ These are the current imports in CHEMINF
 | chebi | http://purl.obolibrary.org/obo/chebi.owl | custom |
 | go | http://purl.obolibrary.org/obo/go.owl | slme |
 | cob | http://purl.obolibrary.org/obo/cob.owl | custom |
-| bodo-descriptor | https://raw.githubusercontent.com/semanticchemistry/semanticchemistry/main/ontology/bodo-descriptor.owl | slme |
 ## Components
 Components, in contrast to imports, are considered full members of the ontology. This means that any axiom in a component is also included in the ontology base - which means it is considered _native_ to the ontology. While this sounds complicated, consider this: conceptually, no component should be part of more than one ontology. If that seems to be the case, we are most likely talking about an import. Components are often not needed for ontologies, but there are some use cases:
 
