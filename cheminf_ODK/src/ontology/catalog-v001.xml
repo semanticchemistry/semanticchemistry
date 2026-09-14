@@ -11,6 +11,5 @@
     <uri name="http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl" uri="imports/chebi_import.owl" />
     <uri name="http://semanticscience.org/ontology/cheminf/imports/go_import.owl" uri="imports/go_import.owl" />
     <uri name="http://semanticscience.org/ontology/cheminf/imports/cob_import.owl" uri="imports/cob_import.owl" />
-    <uri name="http://semanticscience.org/ontology/cheminf/imports/bodo-descriptor_import.owl" uri="imports/bodo-descriptor_import.owl" />
   </group>
 </catalog>
