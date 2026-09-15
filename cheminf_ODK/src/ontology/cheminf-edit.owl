@@ -664,7 +664,6 @@ Declaration(ObjectProperty(resource:CHEMINF_000498))
 Declaration(ObjectProperty(resource:CHEMINF_000499))
 Declaration(ObjectProperty(resource:CHEMINF_000514))
 Declaration(ObjectProperty(resource:CHEMINF_000606))
-Declaration(ObjectProperty(ro:has_proper_part))
 Declaration(ObjectProperty(ontologies:is_output_of))
 Declaration(ObjectProperty(rdfs:subClassOf))
 Declaration(DataProperty(resource:CHEMINF_000009))
@@ -691,7 +690,6 @@ Declaration(AnnotationProperty(dcterms:title))
 Declaration(AnnotationProperty(bibo:doi))
 Declaration(AnnotationProperty(<http://semanticscience.org/ontology/cheminf-core.owl#short_name>))
 Declaration(AnnotationProperty(oboInOwl:hasSynonym))
-Declaration(AnnotationProperty(ro:part_of))
 Declaration(AnnotationProperty(<http://www.semanticweb.org/ontologies/cheminf.owl#short_name>))
 Declaration(AnnotationProperty(owl:sameAs))
 Declaration(AnnotationProperty(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source>))
@@ -1068,7 +1066,7 @@ SubClassOf(resource:CDK_000001 resource:CHEMINF_000342)
 
 # Class: resource:CDK_000100 (org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor)
 
-AnnotationAssertion(ro:part_of resource:CDK_000100 ontologies:CDK_000001)
+AnnotationAssertion(obo:BFO_0000050 resource:CDK_000100 ontologies:CDK_000001)
 AnnotationAssertion(rdfs:label resource:CDK_000100 "org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor")
 EquivalentClasses(resource:CDK_000100 ObjectIntersectionOf(resource:CHEMINF_000451 ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_001000)))
 
@@ -2210,7 +2208,7 @@ SubClassOf(resource:CHEMINF_000177 resource:CHEMINF_000085)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000178 "collection of 3D atomic coordinates")
 SubClassOf(resource:CHEMINF_000178 resource:CHEMINF_000177)
-SubClassOf(resource:CHEMINF_000178 ObjectSomeValuesFrom(ro:has_proper_part obo:IAO_0000403))
+SubClassOf(resource:CHEMINF_000178 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000403))
 
 # Class: resource:CHEMINF_000179 (molecular polarizability)
 
@@ -2337,7 +2335,7 @@ SubClassOf(resource:CHEMINF_000196 resource:CHEMINF_000197)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000197 "A substructure is a contiguous part of a molecule composed of at least two atoms and a bond.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000197 "substructure")
 SubClassOf(resource:CHEMINF_000197 resource:CHEMINF_000000)
-SubClassOf(resource:CHEMINF_000197 ObjectSomeValuesFrom(ro:has_proper_part obo:CHEBI_33250))
+SubClassOf(resource:CHEMINF_000197 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CHEBI_33250))
 
 # Class: resource:CHEMINF_000198 (molecular weight calculated by pipeline pilot)
 
