@@ -1021,6 +1021,14 @@ AnnotationAssertion(rdfs:label resource:CHEMINF_000606 "is execution output of")
 ObjectPropertyDomain(resource:CHEMINF_000606 obo:IAO_0000027)
 ObjectPropertyRange(resource:CHEMINF_000606 obo:IAO_0000064)
 
+# Object Property: ontologies:is_output_of (obsolete_is_output_of)
+
+AnnotationAssertion(obo:IAO_0000116 ontologies:is_output_of "This relation was declared as inverse of the now obsoleted 'has output' it must thus also be deprecated because a better semantic equivalent exists in RO and its IRI was not resolvable anyway, which speaks for an oversight and/or this being just a placeholder term.")
+AnnotationAssertion(obo:IAO_0000231 ontologies:is_output_of obo:IAO_0000228)
+AnnotationAssertion(obo:IAO_0100001 ontologies:is_output_of obo:RO_0002353)
+AnnotationAssertion(rdfs:label ontologies:is_output_of "obsolete_is_output_of")
+AnnotationAssertion(owl:deprecated ontologies:is_output_of "true"^^xsd:boolean)
+
 
 ############################
 #   Data Properties
