@@ -622,7 +622,6 @@ Declaration(Class(resource:CHEMINF_001543))
 Declaration(Class(resource:CHEMINF_001544))
 Declaration(Class(resource:CHEMINF_001545))
 Declaration(Class(resource:CHEMINF_001546))
-Declaration(ObjectProperty(chebi:is_tautomer_of))
 Declaration(ObjectProperty(OBO_REL:bearer_of))
 Declaration(ObjectProperty(resource:CHEMINF_000047))
 Declaration(ObjectProperty(resource:CHEMINF_000143))
@@ -928,7 +927,7 @@ SubObjectPropertyOf(resource:CHEMINF_000483 resource:CHEMINF_000481)
 
 AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000486 "A exists in an equilibrium with B at pH 7.4 and physiological temperature and B is the dominant isomer.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000486 "has major tautomer at pH 7.4")
-SubObjectPropertyOf(resource:CHEMINF_000486 chebi:is_tautomer_of)
+SubObjectPropertyOf(resource:CHEMINF_000486 obo:RO_0018036)
 InverseObjectProperties(resource:CHEMINF_000486 resource:CHEMINF_000493)
 
 # Object Property: resource:CHEMINF_000489 (is_isotopically_unspecified_parent_of)
@@ -957,7 +956,7 @@ AnnotationAssertion(rdfs:label resource:CHEMINF_000492 "is component with unchar
 
 AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000493 "A exists in an equilibrium with B at pH 7.4 and physiological temperature and A is the dominant isomer.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000493 "is major tautomer at pH 7.4 of"@en)
-SubObjectPropertyOf(resource:CHEMINF_000493 chebi:is_tautomer_of)
+SubObjectPropertyOf(resource:CHEMINF_000493 obo:RO_0018036)
 
 # Object Property: resource:CHEMINF_000494 (is OPS normalized counterpart of)
 
@@ -998,7 +997,7 @@ AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000499 "If A 'has ChemAxon 
 AnnotationAssertion(obo:IAO_0000117 resource:CHEMINF_000499 "Colin Batchelor")
 AnnotationAssertion(rdfs:comment resource:CHEMINF_000499 "A and B can be identical.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000499 "has ChemAxon canonicalised tautomer"@en)
-SubObjectPropertyOf(resource:CHEMINF_000499 chebi:is_tautomer_of)
+SubObjectPropertyOf(resource:CHEMINF_000499 obo:RO_0018036)
 InverseObjectProperties(resource:CHEMINF_000499 resource:CHEMINF_000514)
 ObjectPropertyDomain(resource:CHEMINF_000499 obo:CHEBI_23367)
 ObjectPropertyRange(resource:CHEMINF_000499 obo:CHEBI_23367)
@@ -1009,7 +1008,7 @@ AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000514 "If B 'has ChemAxon 
 AnnotationAssertion(obo:IAO_0000117 resource:CHEMINF_000514 "Colin Batchelor")
 AnnotationAssertion(rdfs:comment resource:CHEMINF_000514 "A and B can be identical.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000514 "is ChemAxon canonicalised tautomer of"@en)
-SubObjectPropertyOf(resource:CHEMINF_000514 chebi:is_tautomer_of)
+SubObjectPropertyOf(resource:CHEMINF_000514 obo:RO_0018036)
 ObjectPropertyDomain(resource:CHEMINF_000514 obo:CHEBI_23367)
 ObjectPropertyRange(resource:CHEMINF_000514 obo:CHEBI_23367)
 
