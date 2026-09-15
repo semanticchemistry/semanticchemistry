@@ -10,6 +10,7 @@ http://purl.obolibrary.org/obo/RO_0018034 # is protonated form of
 http://purl.obolibrary.org/obo/RO_0018036 # is tautomer of
 http://purl.obolibrary.org/obo/RO_0018037 # is substitutent group from
 http://purl.obolibrary.org/obo/RO_0018040 # has parent hydride
+http://purl.obolibrary.org/obo/RO_0018036 # is tautomer of 
 
 # Import BFO Object Properties not mirrored in bfo_import.owl:
 # For historic reasons, RO has made use of a small number of relations with BFO IDs. These are RO relations, not BFO relations - they are defined in the RO, and will be maintained in the RO. Note that the URIs for these classes resolve to RO, as per agreement with the BFO developers.For more details, see https://oborel.github.io/obo-relations/ro-and-bfo/
