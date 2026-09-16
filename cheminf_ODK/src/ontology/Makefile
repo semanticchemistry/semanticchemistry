@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                4138dbdcab1042c721da1859e8dc37e709e306428d897978b4af40735c2766e8
+CONFIG_HASH=                d06ddd766b1aa1958cbc51b63c5abecf4dca6e7ddc29b4d90c0c8bf3e76c54a9
 
 
 # ----------------------------------------
@@ -557,8 +557,7 @@ mirror-pato: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 ifeq ($(IMP_LARGE),true)
 mirror-chebi: | $(TMPDIR)
-	curl -L $(OBOBASE)/chebi.owl.gz --create-dirs -o $(MIRRORDIR)/chebi.owl.gz --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(MIRRORDIR)/chebi.owl.gz --base-iri http://purl.obolibrary.org/obo/CHEBI --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I http://purl.obolibrary.org/obo/upheno/chebi_slim.owl --base-iri http://purl.obolibrary.org/obo/CHEBI  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 endif
 
 

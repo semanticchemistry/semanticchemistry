@@ -22,7 +22,7 @@ These are the current imports in CHEMINF
 | iao | http://purl.obolibrary.org/obo/iao.owl | custom |
 | obi | http://purl.obolibrary.org/obo/obi.owl | custom |
 | pato | http://purl.obolibrary.org/obo/pato.owl | slme |
-| chebi | http://purl.obolibrary.org/obo/chebi.owl | custom |
+| chebi | http://purl.obolibrary.org/obo/upheno/chebi_slim.owl | custom |
 | go | http://purl.obolibrary.org/obo/go.owl | slme |
 | cob | http://purl.obolibrary.org/obo/cob.owl | custom |
 ## Components
