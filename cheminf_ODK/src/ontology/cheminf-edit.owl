@@ -1060,9 +1060,9 @@ SubClassOf(resource:CDK_000001 resource:CHEMINF_000342)
 
 # Class: resource:CDK_000100 (org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor)
 
-AnnotationAssertion(obo:BFO_0000050 resource:CDK_000100 ontologies:CDK_000001)
 AnnotationAssertion(rdfs:label resource:CDK_000100 "org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor")
 EquivalentClasses(resource:CDK_000100 ObjectIntersectionOf(resource:CHEMINF_000451 ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_001000)))
+SubClassOf(resource:CDK_000100 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CDK_000001))
 
 # Class: resource:CHEMINF_000000 (chemical entity)
 
