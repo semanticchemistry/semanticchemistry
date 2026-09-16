@@ -64,6 +64,7 @@ import_group:
       use_gzipped: true
       make_base: true
       module_type: custom
+      mirror_from: http://purl.obolibrary.org/obo/upheno/chebi_slim.owl
     - id: go
       is_large: true
       use_base: true
