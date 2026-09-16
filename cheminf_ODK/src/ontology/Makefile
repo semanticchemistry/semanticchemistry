@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                561cf2f9635a650c9e4771cb8b5a6f1d9c134dfd94c86b9ef5e387a12d31f7b4
+CONFIG_HASH=                4138dbdcab1042c721da1859e8dc37e709e306428d897978b4af40735c2766e8
 
 
 # ----------------------------------------
@@ -187,7 +187,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  bfo ro omo iao obi pato pr chebi go cob
+IMPORTS =  bfo ro omo iao obi pato chebi go cob
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -550,14 +550,6 @@ mirror-obi: | $(TMPDIR)
 mirror-pato: | $(TMPDIR)
 	curl -L $(OBOBASE)/pato/pato-base.owl --create-dirs -o $(TMPDIR)/pato-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/pato-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: pr
-.PHONY: mirror-pr
-.PRECIOUS: $(MIRRORDIR)/pr.owl
-mirror-pr: | $(TMPDIR)
-	curl -L $(OBOBASE)/pr.owl --create-dirs -o $(TMPDIR)/pr-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/pr-download.owl --base-iri http://purl.obolibrary.org/obo/PR --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: chebi
