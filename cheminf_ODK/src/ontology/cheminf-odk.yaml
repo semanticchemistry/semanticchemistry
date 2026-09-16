@@ -59,8 +59,6 @@ import_group:
     # - id: uo  # for why see: https://github.com/semanticchemistry/semanticchemistry/issues/72
     - id: pato
       use_base: true
-    - id: pr
-      make_base: true
     - id: chebi
       is_large: true
       use_gzipped: true
@@ -69,5 +67,8 @@ import_group:
     - id: go
       is_large: true
       use_base: true
+    # We don't use the base release of COB to get the `PR:protein` class from it, which is used in CHEMINF. 
+    # Otherwise, it would mean having PR as a dependency, which is to big for just this one needed class and 
+    # would pull in too much other unneeded terms
     - id: cob
       module_type: custom
