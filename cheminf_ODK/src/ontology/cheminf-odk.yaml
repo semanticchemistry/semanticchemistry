@@ -56,7 +56,9 @@ import_group:
     - id: obi
       make_base: true
       module_type: custom
-    # - id: uo  # for why see: https://github.com/semanticchemistry/semanticchemistry/issues/72
+    # We're importing UO indirectly via IAO, which is the only dependency needing UO so far,
+    # and since it only uses one UO class ('length unit') & subsumes it correctly.
+    #- id: uo
     - id: pato
       use_base: true
     - id: chebi

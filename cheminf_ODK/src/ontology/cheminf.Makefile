@@ -40,6 +40,13 @@ $(IMPORTDIR)/obi_import.owl: $(IMPORTDIR)/obi_terms.txt $(IMPORTSEED) | all_robo
          $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: iao
+# This is basically the default SLME-BOT code from ODK with two additional 
+# remove steps (the second and third ROBOT remove command). 
+# The first additional remove step allows us to make a base release of IAO, 
+# meaning it only contains the wanted IAO terms and axioms, plus one UO class ('length unit')'. 
+# We want this UO class in the IAO module, because it is properly subsumed in IAO, 
+# whereas UO is not BFO/IAO aligned. The second remove step removes currently unused IAO classes,
+# which would otherwise be pulled in by the ROBOT extract step.
 
 $(IMPORTDIR)/iao_import.owl: $(IMPORTDIR)/iao_terms.txt $(IMPORTSEED) | all_robot_plugins
 	$(ROBOT) annotate --input $(MIRRORDIR)/iao.owl --remove-annotations \
@@ -51,6 +58,8 @@ $(IMPORTDIR)/iao_import.owl: $(IMPORTDIR)/iao_terms.txt $(IMPORTSEED) | all_robo
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        --term-file $(IMPORTDIR)/iao_terms.txt $(T_IMPORTSEED) \
 		        --select complement --select annotation-properties \
+		 remove --base-iri IAO --base-iri UO --axioms external --preserve-structure false --trim false \
+		 remove -T $(IMPORTDIR)/iao_remove_list.txt --select "self descendants" --signature true \
 		 odk:normalize --base-iri http://semanticscience.org/ontology \
 		               --subset-decls true --synonym-decls true \
 		 repair --merge-axiom-annotations true \
