@@ -1026,6 +1026,26 @@ AnnotationAssertion(owl:deprecated ontologies:is_output_of "true"^^xsd:boolean)
 #   Data Properties
 ############################
 
+# Data Property: obo:IAO_0000004 (has measurement value)
+
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000004 "We had to make this data property functional in the CHEMINF editor file again, since the ROBOT code used to build the IAO import module dropped this axiom for seemingly no understandable reason (see cheminf.Makefile L61 - where `remove` is used to build a base module of IAO)."@en)
+FunctionalDataProperty(obo:IAO_0000004)
+
+# Data Property: obo:IAO_0000404 (has x coordinate value)
+
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000404 "We had to make this data property functional in the CHEMINF editor file again, since the ROBOT code used to build the IAO import module dropped this axiom for seemingly no understandable reason (see cheminf.Makefile L61 - where `remove` is used to build a base module of IAO)."@en)
+FunctionalDataProperty(obo:IAO_0000404)
+
+# Data Property: obo:IAO_0000405 (has z coordinate value)
+
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000405 "We had to make this data property functional in the CHEMINF editor file again, since the ROBOT code used to build the IAO import module dropped this axiom for seemingly no understandable reason (see cheminf.Makefile L61 - where `remove` is used to build a base module of IAO)."@en)
+FunctionalDataProperty(obo:IAO_0000405)
+
+# Data Property: obo:IAO_0000406 (has y coordinate value)
+
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000406 "We had to make this data property functional in the CHEMINF editor file again, since the ROBOT code used to build the IAO import module dropped this axiom for seemingly no understandable reason (see cheminf.Makefile L61 - where `remove`is used to build a base module of IAO)."@en)
+FunctionalDataProperty(obo:IAO_0000406)
+
 # Data Property: resource:CHEMINF_000009 (has uncertainty value)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000009 "has uncertainty value")
