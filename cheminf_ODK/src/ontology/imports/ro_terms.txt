@@ -1,6 +1,8 @@
+http://purl.obolibrary.org/obo/RO_0000052 # characteristic of
 http://purl.obolibrary.org/obo/RO_0000056 # participates in
 http://purl.obolibrary.org/obo/RO_0000057 # has participant
 http://purl.obolibrary.org/obo/RO_0000059 # concretizes
+http://purl.obolibrary.org/obo/RO_0000087 # has role <-- gets pulled in by OBI module creation, although it's not used, thus importing here to avoid dangling relations 
 http://purl.obolibrary.org/obo/RO_0002233 # has input
 http://purl.obolibrary.org/obo/RO_0002234 # has output 
 http://purl.obolibrary.org/obo/RO_0002351 # has member
