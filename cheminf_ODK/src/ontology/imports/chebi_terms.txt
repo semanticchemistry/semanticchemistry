@@ -1,3 +1,4 @@
-CHEBI_23367
-CHEBI_33250
-CHEBI_36357
+http://purl.obolibrary.org/obo/CHEBI_23367  # molecular entity
+http://purl.obolibrary.org/obo/CHEBI_33250 # atom
+http://purl.obolibrary.org/obo/CHEBI_36080 # protein
+http://purl.obolibrary.org/obo/CHEBI_36357 # polyatomic entity

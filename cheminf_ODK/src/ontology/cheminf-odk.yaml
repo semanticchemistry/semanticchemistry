@@ -43,24 +43,35 @@ release_diff: true  # When enabled, a diff is generated between the current rele
 import_group:
   products:
     - id: bfo
-      module_type: mirror
+      module_type: custom
     - id: ro
+      module_type: slme
+      module_type_slme: BOT
       use_base: true
       slme_individuals: exclude
     - id: omo
       module_type: mirror
     - id: iao
-      make_base: true
       module_type: custom
     - id: obi
-      use_base: true
+      make_base: true
       module_type: custom
-    # - id: uo  # for why see: https://github.com/semanticchemistry/semanticchemistry/issues/72
+    # We're importing UO indirectly via IAO, which is the only dependency needing UO so far,
+    # and since it only uses one UO class ('length unit') & subsumes it correctly.
+    #- id: uo
     - id: pato
       use_base: true
-    - id: pr
-      make_base: true
     - id: chebi
       is_large: true
       use_gzipped: true
       make_base: true
+      module_type: custom
+      mirror_from: http://purl.obolibrary.org/obo/upheno/chebi_slim.owl
+    - id: go
+      is_large: true
+      use_base: true
+    # We don't use the base release of COB to get the `PR:protein` class from it, which is used in CHEMINF. 
+    # Otherwise, it would mean having PR as a dependency, which is to big for just this one needed class and 
+    # would pull in too much other unneeded terms
+    - id: cob
+      module_type: custom

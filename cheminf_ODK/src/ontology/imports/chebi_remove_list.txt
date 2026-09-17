@@ -1,0 +1,25 @@
+http://purl.obolibrary.org/obo/CHEBI_24651  # hydroxides
+http://purl.obolibrary.org/obo/CHEBI_24835  # inorganic molecular entity
+http://purl.obolibrary.org/obo/CHEBI_24870  # ion
+http://purl.obolibrary.org/obo/CHEBI_25367  # molecule
+http://purl.obolibrary.org/obo/CHEBI_25585  # nonmetal atom
+http://purl.obolibrary.org/obo/CHEBI_25741  # oxide
+http://purl.obolibrary.org/obo/CHEBI_28616  # carbamic acid
+http://purl.obolibrary.org/obo/CHEBI_33246  # inorganic group
+http://purl.obolibrary.org/obo/CHEBI_33247  # organic group
+http://purl.obolibrary.org/obo/CHEBI_33318  # main group element atom
+http://purl.obolibrary.org/obo/CHEBI_33559  # s-block element atom
+http://purl.obolibrary.org/obo/CHEBI_33674  # s-block molecular entity
+http://purl.obolibrary.org/obo/CHEBI_33709  # amino acid
+http://purl.obolibrary.org/obo/CHEBI_35605  # carbon oxoacid
+http://purl.obolibrary.org/obo/CHEBI_35881  # pnictogen hydride
+http://purl.obolibrary.org/obo/CHEBI_36586  # carbonyl compound
+http://purl.obolibrary.org/obo/CHEBI_37022  # amino-acid anion
+http://purl.obolibrary.org/obo/CHEBI_37577  # heteroatomic molecular entity
+http://purl.obolibrary.org/obo/CHEBI_50906  # role
+http://purl.obolibrary.org/obo/CHEBI_64708  # one-carbon compound
+http://purl.obolibrary.org/obo/CHEBI_64709  # organic acid
+http://purl.obolibrary.org/obo/CHEBI_64766  # cationic group
+http://purl.obolibrary.org/obo/CHEBI_64767  # anionic group
+http://purl.obolibrary.org/obo/CHEBI_72695  # organic molecule
+http://purl.obolibrary.org/obo/CHEBI_138675 # gas molecular entity

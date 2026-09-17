@@ -1,0 +1,10 @@
+http://purl.obolibrary.org/obo/BFO_0000008 # temporal region
+http://purl.obolibrary.org/obo/BFO_0000011 # spatiotemporal region
+http://purl.obolibrary.org/obo/BFO_0000024 # fiat object part
+http://purl.obolibrary.org/obo/BFO_0000027 # object aggregate
+http://purl.obolibrary.org/obo/BFO_0000029 # site
+http://purl.obolibrary.org/obo/BFO_0000030 # object
+http://purl.obolibrary.org/obo/BFO_0000034 # function
+http://purl.obolibrary.org/obo/BFO_0000035 # process boundary
+http://purl.obolibrary.org/obo/BFO_0000140 # continuant fiat boundary
+http://purl.obolibrary.org/obo/BFO_0000145 # relational quality

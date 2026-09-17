@@ -16,14 +16,15 @@ These are the current imports in CHEMINF
 
 | Import | URL | Type |
 | ------ | --- | ---- |
-| bfo | http://purl.obolibrary.org/obo/bfo.owl | mirror |
+| bfo | http://purl.obolibrary.org/obo/bfo.owl | custom |
 | ro | http://purl.obolibrary.org/obo/ro.owl | slme |
 | omo | http://purl.obolibrary.org/obo/omo.owl | mirror |
 | iao | http://purl.obolibrary.org/obo/iao.owl | custom |
 | obi | http://purl.obolibrary.org/obo/obi.owl | custom |
 | pato | http://purl.obolibrary.org/obo/pato.owl | slme |
-| pr | http://purl.obolibrary.org/obo/pr.owl | slme |
-| chebi | http://purl.obolibrary.org/obo/chebi.owl | slme |
+| chebi | http://purl.obolibrary.org/obo/upheno/chebi_slim.owl | custom |
+| go | http://purl.obolibrary.org/obo/go.owl | slme |
+| cob | http://purl.obolibrary.org/obo/cob.owl | custom |
 ## Components
 Components, in contrast to imports, are considered full members of the ontology. This means that any axiom in a component is also included in the ontology base - which means it is considered _native_ to the ontology. While this sounds complicated, consider this: conceptually, no component should be part of more than one ontology. If that seems to be the case, we are most likely talking about an import. Components are often not needed for ontologies, but there are some use cases:
 

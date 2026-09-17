@@ -1,5 +1,4 @@
 Prefix(:=<http://semanticscience.org/ontology/cheminf.owl#>)
-Prefix(ro:=<http://www.obofoundry.org/ro/ro.owl#>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -9,8 +8,6 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(bibo:=<http://purl.org/ontology/bibo/>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(skos:=<https://www.w3.org/2009/08/skos-reference/skos.html#>)
-Prefix(chebi:=<http://purl.obolibrary.org/obo/chebi#>)
-Prefix(OBO_REL:=<http://purl.org/obo/owl/OBO_REL#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Prefix(resource:=<http://semanticscience.org/resource/>)
@@ -20,11 +17,12 @@ Prefix(ontologies:=<http://www.semanticweb.org/ontologies/>)
 Ontology(<http://semanticscience.org/ontology/cheminf.owl>
 Import(<http://semanticscience.org/ontology/cheminf/imports/bfo_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/chebi_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/cob_import.owl>)
+Import(<http://semanticscience.org/ontology/cheminf/imports/go_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/iao_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/obi_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/omo_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/pato_import.owl>)
-Import(<http://semanticscience.org/ontology/cheminf/imports/pr_import.owl>)
 Import(<http://semanticscience.org/ontology/cheminf/imports/ro_import.owl>)
 Annotation(dce:contributor "Gang Fu")
 Annotation(dce:format "application/rdf+xml")
@@ -620,9 +618,6 @@ Declaration(Class(resource:CHEMINF_001543))
 Declaration(Class(resource:CHEMINF_001544))
 Declaration(Class(resource:CHEMINF_001545))
 Declaration(Class(resource:CHEMINF_001546))
-Declaration(Class(<http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor>))
-Declaration(ObjectProperty(chebi:is_tautomer_of))
-Declaration(ObjectProperty(OBO_REL:bearer_of))
 Declaration(ObjectProperty(resource:CHEMINF_000047))
 Declaration(ObjectProperty(resource:CHEMINF_000143))
 Declaration(ObjectProperty(resource:CHEMINF_000145))
@@ -663,7 +658,6 @@ Declaration(ObjectProperty(resource:CHEMINF_000498))
 Declaration(ObjectProperty(resource:CHEMINF_000499))
 Declaration(ObjectProperty(resource:CHEMINF_000514))
 Declaration(ObjectProperty(resource:CHEMINF_000606))
-Declaration(ObjectProperty(ro:has_proper_part))
 Declaration(ObjectProperty(ontologies:is_output_of))
 Declaration(ObjectProperty(rdfs:subClassOf))
 Declaration(DataProperty(resource:CHEMINF_000009))
@@ -690,7 +684,6 @@ Declaration(AnnotationProperty(dcterms:title))
 Declaration(AnnotationProperty(bibo:doi))
 Declaration(AnnotationProperty(<http://semanticscience.org/ontology/cheminf-core.owl#short_name>))
 Declaration(AnnotationProperty(oboInOwl:hasSynonym))
-Declaration(AnnotationProperty(ro:part_of))
 Declaration(AnnotationProperty(<http://www.semanticweb.org/ontologies/cheminf.owl#short_name>))
 Declaration(AnnotationProperty(owl:sameAs))
 Declaration(AnnotationProperty(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source>))
@@ -729,19 +722,22 @@ SubObjectPropertyOf(resource:CHEMINF_000143 obo:IAO_0000136)
 ObjectPropertyDomain(resource:CHEMINF_000143 obo:IAO_0000027)
 ObjectPropertyRange(resource:CHEMINF_000143 obo:BFO_0000020)
 
-# Object Property: resource:CHEMINF_000145 (has output)
+# Object Property: resource:CHEMINF_000145 (obsolete_has output)
 
-AnnotationAssertion(rdfs:label resource:CHEMINF_000145 "has output")
-SubObjectPropertyOf(resource:CHEMINF_000145 obo:RO_0000057)
+AnnotationAssertion(obo:IAO_0000116 resource:CHEMINF_000145 "Deprecated in favor of RO:has output")
+AnnotationAssertion(obo:IAO_0000231 resource:CHEMINF_000145 obo:IAO_0000228)
+AnnotationAssertion(obo:IAO_0100001 resource:CHEMINF_000145 obo:RO_0002234)
+AnnotationAssertion(rdfs:label resource:CHEMINF_000145 "obsolete_has output")
+AnnotationAssertion(owl:deprecated resource:CHEMINF_000145 "true"^^xsd:boolean)
 InverseObjectProperties(resource:CHEMINF_000145 ontologies:is_output_of)
-ObjectPropertyDomain(resource:CHEMINF_000145 obo:BFO_0000015)
 
-# Object Property: resource:CHEMINF_000148 (has input)
+# Object Property: resource:CHEMINF_000148 (obsolete_has input)
 
-AnnotationAssertion(rdfs:label resource:CHEMINF_000148 "has input")
-SubObjectPropertyOf(resource:CHEMINF_000148 obo:RO_0000057)
-ObjectPropertyDomain(resource:CHEMINF_000148 obo:BFO_0000015)
-ObjectPropertyRange(resource:CHEMINF_000148 owl:Thing)
+AnnotationAssertion(obo:IAO_0000116 resource:CHEMINF_000148 "Deprecated in favor of RO:has input")
+AnnotationAssertion(obo:IAO_0000231 resource:CHEMINF_000148 obo:IAO_0000228)
+AnnotationAssertion(obo:IAO_0100001 resource:CHEMINF_000148 obo:RO_0002233)
+AnnotationAssertion(rdfs:label resource:CHEMINF_000148 "obsolete_has input")
+AnnotationAssertion(owl:deprecated resource:CHEMINF_000148 "true"^^xsd:boolean)
 
 # Object Property: resource:CHEMINF_000200 (has attribute)
 
@@ -926,7 +922,7 @@ SubObjectPropertyOf(resource:CHEMINF_000483 resource:CHEMINF_000481)
 
 AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000486 "A exists in an equilibrium with B at pH 7.4 and physiological temperature and B is the dominant isomer.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000486 "has major tautomer at pH 7.4")
-SubObjectPropertyOf(resource:CHEMINF_000486 chebi:is_tautomer_of)
+SubObjectPropertyOf(resource:CHEMINF_000486 obo:RO_0018036)
 InverseObjectProperties(resource:CHEMINF_000486 resource:CHEMINF_000493)
 
 # Object Property: resource:CHEMINF_000489 (is_isotopically_unspecified_parent_of)
@@ -955,7 +951,7 @@ AnnotationAssertion(rdfs:label resource:CHEMINF_000492 "is component with unchar
 
 AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000493 "A exists in an equilibrium with B at pH 7.4 and physiological temperature and A is the dominant isomer.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000493 "is major tautomer at pH 7.4 of"@en)
-SubObjectPropertyOf(resource:CHEMINF_000493 chebi:is_tautomer_of)
+SubObjectPropertyOf(resource:CHEMINF_000493 obo:RO_0018036)
 
 # Object Property: resource:CHEMINF_000494 (is OPS normalized counterpart of)
 
@@ -996,7 +992,7 @@ AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000499 "If A 'has ChemAxon 
 AnnotationAssertion(obo:IAO_0000117 resource:CHEMINF_000499 "Colin Batchelor")
 AnnotationAssertion(rdfs:comment resource:CHEMINF_000499 "A and B can be identical.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000499 "has ChemAxon canonicalised tautomer"@en)
-SubObjectPropertyOf(resource:CHEMINF_000499 chebi:is_tautomer_of)
+SubObjectPropertyOf(resource:CHEMINF_000499 obo:RO_0018036)
 InverseObjectProperties(resource:CHEMINF_000499 resource:CHEMINF_000514)
 ObjectPropertyDomain(resource:CHEMINF_000499 obo:CHEBI_23367)
 ObjectPropertyRange(resource:CHEMINF_000499 obo:CHEBI_23367)
@@ -1007,7 +1003,7 @@ AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000514 "If B 'has ChemAxon 
 AnnotationAssertion(obo:IAO_0000117 resource:CHEMINF_000514 "Colin Batchelor")
 AnnotationAssertion(rdfs:comment resource:CHEMINF_000514 "A and B can be identical.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000514 "is ChemAxon canonicalised tautomer of"@en)
-SubObjectPropertyOf(resource:CHEMINF_000514 chebi:is_tautomer_of)
+SubObjectPropertyOf(resource:CHEMINF_000514 obo:RO_0018036)
 ObjectPropertyDomain(resource:CHEMINF_000514 obo:CHEBI_23367)
 ObjectPropertyRange(resource:CHEMINF_000514 obo:CHEBI_23367)
 
@@ -1017,10 +1013,38 @@ AnnotationAssertion(rdfs:label resource:CHEMINF_000606 "is execution output of")
 ObjectPropertyDomain(resource:CHEMINF_000606 obo:IAO_0000027)
 ObjectPropertyRange(resource:CHEMINF_000606 obo:IAO_0000064)
 
+# Object Property: ontologies:is_output_of (obsolete_is_output_of)
+
+AnnotationAssertion(obo:IAO_0000116 ontologies:is_output_of "This relation was declared as inverse of the now obsoleted 'has output' it must thus also be deprecated because a better semantic equivalent exists in RO and its IRI was not resolvable anyway, which speaks for an oversight and/or this being just a placeholder term.")
+AnnotationAssertion(obo:IAO_0000231 ontologies:is_output_of obo:IAO_0000228)
+AnnotationAssertion(obo:IAO_0100001 ontologies:is_output_of obo:RO_0002353)
+AnnotationAssertion(rdfs:label ontologies:is_output_of "obsolete_is_output_of")
+AnnotationAssertion(owl:deprecated ontologies:is_output_of "true"^^xsd:boolean)
+
 
 ############################
 #   Data Properties
 ############################
+
+# Data Property: obo:IAO_0000004 (has measurement value)
+
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000004 "We had to make this data property functional in the CHEMINF editor file again, since the ROBOT code used to build the IAO import module dropped this axiom for seemingly no understandable reason (see cheminf.Makefile L61 - where `remove` is used to build a base module of IAO)."@en)
+FunctionalDataProperty(obo:IAO_0000004)
+
+# Data Property: obo:IAO_0000404 (has x coordinate value)
+
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000404 "We had to make this data property functional in the CHEMINF editor file again, since the ROBOT code used to build the IAO import module dropped this axiom for seemingly no understandable reason (see cheminf.Makefile L61 - where `remove` is used to build a base module of IAO)."@en)
+FunctionalDataProperty(obo:IAO_0000404)
+
+# Data Property: obo:IAO_0000405 (has z coordinate value)
+
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000405 "We had to make this data property functional in the CHEMINF editor file again, since the ROBOT code used to build the IAO import module dropped this axiom for seemingly no understandable reason (see cheminf.Makefile L61 - where `remove` is used to build a base module of IAO)."@en)
+FunctionalDataProperty(obo:IAO_0000405)
+
+# Data Property: obo:IAO_0000406 (has y coordinate value)
+
+AnnotationAssertion(obo:IAO_0000116 obo:IAO_0000406 "We had to make this data property functional in the CHEMINF editor file again, since the ROBOT code used to build the IAO import module dropped this axiom for seemingly no understandable reason (see cheminf.Makefile L61 - where `remove`is used to build a base module of IAO)."@en)
+FunctionalDataProperty(obo:IAO_0000406)
 
 # Data Property: resource:CHEMINF_000009 (has uncertainty value)
 
@@ -1041,6 +1065,10 @@ DataPropertyDomain(resource:CHEMINF_000012 obo:IAO_0000027)
 #   Classes
 ############################
 
+# Class: obo:CHEBI_36342 (subatomic particle)
+
+SubClassOf(obo:CHEBI_36342 obo:BFO_0000040)
+
 # Class: resource:CDK_000001 (The Chemistry Development Kit Library)
 
 AnnotationAssertion(rdfs:label resource:CDK_000001 "The Chemistry Development Kit Library")
@@ -1048,9 +1076,9 @@ SubClassOf(resource:CDK_000001 resource:CHEMINF_000342)
 
 # Class: resource:CDK_000100 (org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor)
 
-AnnotationAssertion(ro:part_of resource:CDK_000100 ontologies:CDK_000001)
 AnnotationAssertion(rdfs:label resource:CDK_000100 "org.openscience.cdk.qsar.descriptors.molecular.AtomCountDescriptor")
 EquivalentClasses(resource:CDK_000100 ObjectIntersectionOf(resource:CHEMINF_000451 ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_001000)))
+SubClassOf(resource:CDK_000100 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CDK_000001))
 
 # Class: resource:CHEMINF_000000 (chemical entity)
 
@@ -1243,7 +1271,7 @@ SubClassOf(resource:CHEMINF_000030 resource:CHEMINF_000029)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000031 "A molecular entity quality is a quality which inheres in a molecular entity.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000031 "molecular entity quality")
 SubClassOf(resource:CHEMINF_000031 resource:CHEMINF_000086)
-SubClassOf(resource:CHEMINF_000031 ObjectSomeValuesFrom(ObjectInverseOf(OBO_REL:bearer_of) obo:CHEBI_23367))
+SubClassOf(resource:CHEMINF_000031 ObjectSomeValuesFrom(obo:RO_0000052 obo:CHEBI_23367))
 
 # Class: resource:CHEMINF_000032 (isomeric SMILES descriptor)
 
@@ -1709,7 +1737,7 @@ SubClassOf(resource:CHEMINF_000100 resource:CHEMINF_000035)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000101 "A chemical substance quality is a quality that inheres in an aggregate molecular substance, such as a portion of solid or liquid matter.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000101 "chemical substance quality")
 SubClassOf(resource:CHEMINF_000101 resource:CHEMINF_000086)
-SubClassOf(resource:CHEMINF_000101 ObjectSomeValuesFrom(ObjectInverseOf(OBO_REL:bearer_of) resource:CHEMINF_000266))
+SubClassOf(resource:CHEMINF_000101 ObjectSomeValuesFrom(obo:RO_0000052 resource:CHEMINF_000266))
 
 # Class: resource:CHEMINF_000102 (crystal structure)
 
@@ -1755,7 +1783,7 @@ SubClassOf(resource:CHEMINF_000107 resource:CHEMINF_000106)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000108 "An atomic quality is a molecular entity quality which inheres in an atom.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000108 "atomic quality")
 SubClassOf(resource:CHEMINF_000108 resource:CHEMINF_000031)
-SubClassOf(resource:CHEMINF_000108 ObjectSomeValuesFrom(ObjectInverseOf(OBO_REL:bearer_of) obo:CHEBI_33250))
+SubClassOf(resource:CHEMINF_000108 ObjectSomeValuesFrom(obo:RO_0000052 obo:CHEBI_33250))
 
 # Class: resource:CHEMINF_000109 (trivial name)
 
@@ -1950,7 +1978,7 @@ SubClassOf(resource:CHEMINF_000137 resource:CHEMINF_000092)
 
 AnnotationAssertion(rdfs:comment resource:CHEMINF_000138 "software execution is a process in which the instruction set that comprises the software program is executed on a machine.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000138 "software execution")
-SubClassOf(resource:CHEMINF_000138 obo:OBI_0000011)
+SubClassOf(resource:CHEMINF_000138 obo:COB_0000082)
 SubClassOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 resource:CHEMINF_000343))
 
 # Class: resource:CHEMINF_000139 (software implementation)
@@ -1989,8 +2017,8 @@ SubClassOf(resource:CHEMINF_000146 resource:CHEMINF_000229)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000147 "parameterized software execution")
 SubClassOf(resource:CHEMINF_000147 resource:CHEMINF_000138)
-SubClassOf(resource:CHEMINF_000147 ObjectSomeValuesFrom(resource:CHEMINF_000145 obo:IAO_0000027))
-SubClassOf(resource:CHEMINF_000147 ObjectSomeValuesFrom(resource:CHEMINF_000148 resource:CHEMINF_000500))
+SubClassOf(resource:CHEMINF_000147 ObjectSomeValuesFrom(obo:RO_0002233 resource:CHEMINF_000500))
+SubClassOf(resource:CHEMINF_000147 ObjectSomeValuesFrom(obo:RO_0002234 obo:IAO_0000027))
 
 # Class: resource:CHEMINF_000149 (generic SMILES descriptor)
 
@@ -2190,7 +2218,7 @@ SubClassOf(resource:CHEMINF_000177 resource:CHEMINF_000085)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000178 "collection of 3D atomic coordinates")
 SubClassOf(resource:CHEMINF_000178 resource:CHEMINF_000177)
-SubClassOf(resource:CHEMINF_000178 ObjectSomeValuesFrom(ro:has_proper_part obo:IAO_0000403))
+SubClassOf(resource:CHEMINF_000178 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000403))
 
 # Class: resource:CHEMINF_000179 (molecular polarizability)
 
@@ -2317,14 +2345,14 @@ SubClassOf(resource:CHEMINF_000196 resource:CHEMINF_000197)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000197 "A substructure is a contiguous part of a molecule composed of at least two atoms and a bond.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000197 "substructure")
 SubClassOf(resource:CHEMINF_000197 resource:CHEMINF_000000)
-SubClassOf(resource:CHEMINF_000197 ObjectSomeValuesFrom(ro:has_proper_part obo:CHEBI_33250))
+SubClassOf(resource:CHEMINF_000197 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CHEBI_33250))
 
 # Class: resource:CHEMINF_000198 (molecular weight calculated by pipeline pilot)
 
 AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000198 "A molecular weight descriptor calculated by a relevant module of the Pipeline Pilot software tool. ")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000198 "molecular weight calculated by pipeline pilot")
 SubClassOf(resource:CHEMINF_000198 resource:CHEMINF_000216)
-SubClassOf(resource:CHEMINF_000198 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
+SubClassOf(resource:CHEMINF_000198 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
 
 # Class: resource:CHEMINF_000199 (absolute SMILES descriptor)
 
@@ -2998,7 +3026,7 @@ SubClassOf(resource:CHEMINF_000304 resource:CHEMINF_000464)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000305 "ALogP calculated by Pipeline Pilot")
 SubClassOf(resource:CHEMINF_000305 resource:CHEMINF_000295)
-SubClassOf(resource:CHEMINF_000305 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000142) ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_000221))))))
+SubClassOf(resource:CHEMINF_000305 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000142) ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_000221))))))
 
 # Class: resource:CHEMINF_000306 (Ertl polar surface area calculation algorithm)
 
@@ -3016,25 +3044,25 @@ SubClassOf(resource:CHEMINF_000307 resource:CHEMINF_000229)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000308 "polar surface area descriptor calculated by Pipeline Pilot")
 SubClassOf(resource:CHEMINF_000308 resource:CHEMINF_000307)
-SubClassOf(resource:CHEMINF_000308 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329) ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_000306))))))
+SubClassOf(resource:CHEMINF_000308 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329) ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_000306))))))
 
 # Class: resource:CHEMINF_000309 (hydrogen bond acceptor count calculated by pipeline pilot)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000309 "hydrogen bond acceptor count calculated by pipeline pilot")
 SubClassOf(resource:CHEMINF_000309 resource:CHEMINF_000245)
-SubClassOf(resource:CHEMINF_000309 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
+SubClassOf(resource:CHEMINF_000309 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
 
 # Class: resource:CHEMINF_000310 (hydrogen bond donor count calculated by pipeline pilot)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000310 "hydrogen bond donor count calculated by pipeline pilot")
 SubClassOf(resource:CHEMINF_000310 resource:CHEMINF_000244)
-SubClassOf(resource:CHEMINF_000310 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
+SubClassOf(resource:CHEMINF_000310 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
 
 # Class: resource:CHEMINF_000311 (rotatable bond count calculated by pipeline pilot)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000311 "rotatable bond count calculated by pipeline pilot")
 SubClassOf(resource:CHEMINF_000311 resource:CHEMINF_000254)
-SubClassOf(resource:CHEMINF_000311 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
+SubClassOf(resource:CHEMINF_000311 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
 
 # Class: resource:CHEMINF_000312 (rule of five violations descriptor)
 
@@ -3057,7 +3085,7 @@ SubClassOf(resource:CHEMINF_000313 resource:CHEMINF_000450)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000314 "rule of five violations calculated by pipeline pilot")
 SubClassOf(resource:CHEMINF_000314 resource:CHEMINF_000312)
-SubClassOf(resource:CHEMINF_000314 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329) ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_000313))))))
+SubClassOf(resource:CHEMINF_000314 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329) ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_000313))))))
 
 # Class: resource:CHEMINF_000315 (rule of three passes descriptor)
 
@@ -3084,7 +3112,7 @@ SubClassOf(resource:CHEMINF_000316 resource:CHEMINF_000450)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000317 "rule of three passes calculated by pipeline pilot")
 SubClassOf(resource:CHEMINF_000317 resource:CHEMINF_000315)
-SubClassOf(resource:CHEMINF_000317 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329) ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_000316))))))
+SubClassOf(resource:CHEMINF_000317 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329) ObjectSomeValuesFrom(resource:CHEMINF_000047 resource:CHEMINF_000316))))))
 
 # Class: resource:CHEMINF_000318 (medchem friendly descriptor)
 
@@ -3119,7 +3147,7 @@ SubClassOf(resource:CHEMINF_000318 resource:CHEMINF_000025)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000319 "medchem friendly descriptor calculated by pipeline pilot")
 SubClassOf(resource:CHEMINF_000319 resource:CHEMINF_000318)
-SubClassOf(resource:CHEMINF_000319 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
+SubClassOf(resource:CHEMINF_000319 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000329))))))
 
 # Class: resource:CHEMINF_000320 (ACD/Labs PhysChem software library)
 
@@ -3131,7 +3159,7 @@ SubClassOf(resource:CHEMINF_000320 resource:CHEMINF_000342)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000321 "logP calculated by ACD/Labs PhysChem software")
 SubClassOf(resource:CHEMINF_000321 resource:CHEMINF_000251)
-SubClassOf(resource:CHEMINF_000321 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000321 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000322 (logD descriptor)
 
@@ -3145,7 +3173,7 @@ AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000323 "ACD_LogD(pH7.4)
 Distribution Coefficient calculated at pH7.4")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000323 "logD calculated at pH 7.4 by ACD/Labs PhysChem software")
 SubClassOf(resource:CHEMINF_000323 resource:CHEMINF_000322)
-SubClassOf(resource:CHEMINF_000323 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000323 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000324 (most acidic pKa calculated by ACD/Labs PhysChem software library)
 
@@ -3153,7 +3181,7 @@ AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000324 "Most acidic pKa of 
 ")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000324 "most acidic pKa calculated by ACD/Labs PhysChem software library")
 SubClassOf(resource:CHEMINF_000324 resource:CHEMINF_000195)
-SubClassOf(resource:CHEMINF_000324 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0002218 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000328))))))
+SubClassOf(resource:CHEMINF_000324 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000328))))))
 
 # Class: resource:CHEMINF_000325 (most basic pKa calculated by ACD/Labs PhysChem software library)
 
@@ -3178,7 +3206,7 @@ Zwitterion (ZW)	ACD_MOST_ApKa <6.5 and ACD_MOST_BpKa>8.5
 ")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000327 "molecular species at pH 7.4 calculated by ACD/Labs PhysChem software")
 SubClassOf(resource:CHEMINF_000327 resource:CHEMINF_000326)
-SubClassOf(resource:CHEMINF_000327 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000327 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000328 (ACD/Labs PhysChem software library version 12.01)
 
@@ -3205,31 +3233,31 @@ SubClassOf(resource:CHEMINF_000333 resource:CHEMINF_000332)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000334 "molecular weight calculated by the pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000334 resource:CHEMINF_000216)
-SubClassOf(resource:CHEMINF_000334 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000334 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000335 (molecular formula calculated by the pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000335 "molecular formula calculated by the pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000335 resource:CHEMINF_000042)
-SubClassOf(resource:CHEMINF_000335 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000335 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000336 (total formal charge calculated by the pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000336 "total formal charge calculated by the pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000336 resource:CHEMINF_000268)
-SubClassOf(resource:CHEMINF_000336 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000336 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000337 (monoisotopic mass calculated by the pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000337 "monoisotopic mass calculated by the pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000337 resource:CHEMINF_000218)
-SubClassOf(resource:CHEMINF_000337 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000337 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000338 (exact mass calculated by pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000338 "exact mass calculated by pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000338 resource:CHEMINF_000217)
-SubClassOf(resource:CHEMINF_000338 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000338 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000339 (pubchem depositor-supplied molecular entity name)
 
@@ -3272,28 +3300,28 @@ SubClassOf(resource:CHEMINF_000343 resource:CHEMINF_000139)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000344 "Octanol-water distribution coefficient calculated at pH 5.5 by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000344 "logD calculated at pH 5.5 by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000344 resource:CHEMINF_000322)
-SubClassOf(resource:CHEMINF_000344 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000344 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000345 (hydrogen bond acceptor count calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000345 "Hydrogen bond acceptor count that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000345 "hydrogen bond acceptor count calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000345 resource:CHEMINF_000245)
-SubClassOf(resource:CHEMINF_000345 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000345 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000346 (hydrogen bond donor count calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000346 "Hydrogen bond donor count that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000346 "hydrogen bond donor count calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000346 resource:CHEMINF_000244)
-SubClassOf(resource:CHEMINF_000346 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000346 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000347 (Boiling point at 760 mmHg pressure calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000347 "The boiling point of a substance at 760 mmHg pressure that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000347 "Boiling point at 760 mmHg pressure calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000347 resource:CHEMINF_000257)
-SubClassOf(resource:CHEMINF_000347 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000347 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000348 (number of freely rotating bonds calculated by ACD/Labs PhysChem software library version 12.01)
 
@@ -3306,7 +3334,7 @@ SubClassOf(resource:CHEMINF_000348 resource:CHEMINF_000254)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000349 "Polar surface area that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000349 "polar surface area calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000349 resource:CHEMINF_000307)
-SubClassOf(resource:CHEMINF_000349 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000349 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000350 (molecular weight of the corresponding free base)
 
@@ -3325,14 +3353,14 @@ SubClassOf(resource:CHEMINF_000351 resource:CHEMINF_000001)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000352 "Index of refraction that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000352 "index of refraction calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000352 resource:CHEMINF_000253)
-SubClassOf(resource:CHEMINF_000352 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000352 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000353 (polarizability calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000353 "Polarizability that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000353 "polarizability calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000353 resource:CHEMINF_000089)
-SubClassOf(resource:CHEMINF_000353 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000353 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000354 (execution of ACD/Labs PhysChem software library version 12.01)
 
@@ -3364,125 +3392,125 @@ EquivalentClasses(resource:CHEMINF_000357 ObjectIntersectionOf(resource:CHEMINF_
 AnnotationAssertion(dcterms:description resource:CHEMINF_000358 "Molar volume that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000358 "molar volume calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000358 resource:CHEMINF_000415)
-SubClassOf(resource:CHEMINF_000358 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000358 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000359 (density calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000359 "Density that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000359 "density calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000359 resource:CHEMINF_000416)
-SubClassOf(resource:CHEMINF_000359 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000359 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000360 (flash point calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000360 "Flash point that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000360 "flash point calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000360 resource:CHEMINF_000417)
-SubClassOf(resource:CHEMINF_000360 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000360 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000361 (enthalpy of vaporization calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000361 "Enthalpy of vaporization that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000361 "enthalpy of vaporization calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000361 resource:CHEMINF_000418)
-SubClassOf(resource:CHEMINF_000361 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000361 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000362 (vapour pressure calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000362 "Vapour pressure that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000362 "vapour pressure calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000362 resource:CHEMINF_000419)
-SubClassOf(resource:CHEMINF_000362 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000362 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000363 (organic carbon adsorption coefficient at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000363 "Organic carbon adsorption coefficient at pH 5.5 that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000363 "organic carbon adsorption coefficient at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000363 resource:CHEMINF_000413)
-SubClassOf(resource:CHEMINF_000363 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000363 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000364 (organic carbon adsorption coefficient at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000364 "Organic carbon adsorption coefficient at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000364 "organic carbon adsorption coefficient at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000364 resource:CHEMINF_000413)
-SubClassOf(resource:CHEMINF_000364 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000364 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000365 (bioconcentration factor at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000365 "Bioconcentration factor at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000365 "bioconcentration factor at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000365 resource:CHEMINF_000414)
-SubClassOf(resource:CHEMINF_000365 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000365 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000366 (bioconcentration factor at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000366 "Bioconcentration factor at pH 7.4 that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000366 "bioconcentration factor at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000366 resource:CHEMINF_000414)
-SubClassOf(resource:CHEMINF_000366 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000366 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000367 (number of rule of five violations calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000367 "Number of rule of five violations for a chemical structure that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000367 "number of rule of five violations calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000367 resource:CHEMINF_000312)
-SubClassOf(resource:CHEMINF_000367 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000367 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000368 (surface tension calculated by ACD/Labs PhysChem software library version 12.01)
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_000368 "Surface tension, in dyne per centimetre, that has been calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000368 "surface tension calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000368 resource:CHEMINF_000420)
-SubClassOf(resource:CHEMINF_000368 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000368 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000369 (covalent unit count generated by pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000369 "covalent unit count generated by pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000369 resource:CHEMINF_000280)
-SubClassOf(resource:CHEMINF_000369 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000369 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000370 (defined atom stereocenter count generated by the pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000370 "defined atom stereocenter count generated by the pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000370 resource:CHEMINF_000206)
-SubClassOf(resource:CHEMINF_000370 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000370 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000371 (defined bond stereocenter count generated by pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000371 "defined bond stereocenter count generated by pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000371 resource:CHEMINF_000214)
-SubClassOf(resource:CHEMINF_000371 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000371 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000372 (isotope atom count generated by pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000372 "isotope atom count generated by pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000372 resource:CHEMINF_000301)
-SubClassOf(resource:CHEMINF_000372 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000372 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000373 (heavy atom count generated by pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000373 "heavy atom count generated by pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000373 resource:CHEMINF_000300)
-SubClassOf(resource:CHEMINF_000373 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000373 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000374 (undefined atom stereocenter count generated by the pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000374 "undefined atom stereocenter count generated by the pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000374 resource:CHEMINF_000212)
-SubClassOf(resource:CHEMINF_000374 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000374 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000375 (undefined bond stereocenter count generated by the pubchem software library)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000375 "undefined bond stereocenter count generated by the pubchem software library"@en)
 SubClassOf(resource:CHEMINF_000375 resource:CHEMINF_000215)
-SubClassOf(resource:CHEMINF_000375 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
+SubClassOf(resource:CHEMINF_000375 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000333))))))
 
 # Class: resource:CHEMINF_000376 (canonical smiles generated by OEChem)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000376 "canonical smiles generated by OEChem"@en)
 SubClassOf(resource:CHEMINF_000376 resource:CHEMINF_000007)
-SubClassOf(resource:CHEMINF_000376 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000378))))))
+SubClassOf(resource:CHEMINF_000376 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000378))))))
 
 # Class: resource:CHEMINF_000377 (OEChem software library)
 
@@ -3499,7 +3527,7 @@ SubClassOf(resource:CHEMINF_000378 resource:CHEMINF_000377)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000379 "isomeric SMILES generated by OEChem"@en)
 SubClassOf(resource:CHEMINF_000379 resource:CHEMINF_000032)
-SubClassOf(resource:CHEMINF_000379 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000378))))))
+SubClassOf(resource:CHEMINF_000379 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000378))))))
 
 # Class: resource:CHEMINF_000380 (cycle count)
 
@@ -3518,7 +3546,7 @@ SubClassOf(resource:CHEMINF_000381 resource:CHEMINF_000380)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000382 "IUPAC Name generated by LexiChem"@en)
 SubClassOf(resource:CHEMINF_000382 resource:CHEMINF_000107)
-SubClassOf(resource:CHEMINF_000382 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000384))))))
+SubClassOf(resource:CHEMINF_000382 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000384))))))
 
 # Class: resource:CHEMINF_000383 (LexiChem)
 
@@ -3546,37 +3574,37 @@ SubClassOf(resource:CHEMINF_000386 resource:CHEMINF_000385)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000387 "hydrogen bond donor count calculated by cactvs"@en)
 SubClassOf(resource:CHEMINF_000387 resource:CHEMINF_000244)
-SubClassOf(resource:CHEMINF_000387 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
+SubClassOf(resource:CHEMINF_000387 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
 
 # Class: resource:CHEMINF_000388 (hydrogen bond acceptor count calculated by cactvs)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000388 "hydrogen bond acceptor count calculated by cactvs"@en)
 SubClassOf(resource:CHEMINF_000388 resource:CHEMINF_000245)
-SubClassOf(resource:CHEMINF_000388 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
+SubClassOf(resource:CHEMINF_000388 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
 
 # Class: resource:CHEMINF_000389 (rotatable bond count calculated by cactvs)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000389 "rotatable bond count calculated by cactvs"@en)
 SubClassOf(resource:CHEMINF_000389 resource:CHEMINF_000254)
-SubClassOf(resource:CHEMINF_000389 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
+SubClassOf(resource:CHEMINF_000389 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
 
 # Class: resource:CHEMINF_000390 (structure complexity calculated by cactvs)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000390 "structure complexity calculated by cactvs"@en)
 SubClassOf(resource:CHEMINF_000390 resource:CHEMINF_000219)
-SubClassOf(resource:CHEMINF_000390 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
+SubClassOf(resource:CHEMINF_000390 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
 
 # Class: resource:CHEMINF_000391 (tautomer count calculated by cactvs)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000391 "tautomer count calculated by cactvs"@en)
 SubClassOf(resource:CHEMINF_000391 resource:CHEMINF_000202)
-SubClassOf(resource:CHEMINF_000391 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
+SubClassOf(resource:CHEMINF_000391 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
 
 # Class: resource:CHEMINF_000392 (TPSA calculated by cactvs)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000392 "TPSA calculated by cactvs"@en)
 SubClassOf(resource:CHEMINF_000392 resource:CHEMINF_000174)
-SubClassOf(resource:CHEMINF_000392 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
+SubClassOf(resource:CHEMINF_000392 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000386))))))
 
 # Class: resource:CHEMINF_000393 (XLogP3 software library)
 
@@ -3593,13 +3621,13 @@ SubClassOf(resource:CHEMINF_000394 resource:CHEMINF_000393)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000395 "xlogp3 calculated by the xlogp3 software"@en)
 SubClassOf(resource:CHEMINF_000395 resource:CHEMINF_000186)
-SubClassOf(resource:CHEMINF_000395 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000394))))))
+SubClassOf(resource:CHEMINF_000395 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000394))))))
 
 # Class: resource:CHEMINF_000396 (InChI calculated by library version 1.0.4)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000396 "InChI calculated by library version 1.0.4"@en)
 SubClassOf(resource:CHEMINF_000396 resource:CHEMINF_000113)
-SubClassOf(resource:CHEMINF_000396 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000398))))))
+SubClassOf(resource:CHEMINF_000396 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000398))))))
 
 # Class: resource:CHEMINF_000397 (InChI software library)
 
@@ -3616,7 +3644,7 @@ SubClassOf(resource:CHEMINF_000398 resource:CHEMINF_000397)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000399 "InChIKey generated by software version 1.0.4"@en)
 SubClassOf(resource:CHEMINF_000399 resource:CHEMINF_000059)
-SubClassOf(resource:CHEMINF_000399 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000398))))))
+SubClassOf(resource:CHEMINF_000399 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000398))))))
 
 # Class: resource:CHEMINF_000400 (chemical graph)
 
@@ -4039,7 +4067,7 @@ SubClassOf(resource:CHEMINF_000470 ObjectSomeValuesFrom(obo:RO_0000057 resource:
 AnnotationAssertion(obo:IAO_0000115 resource:CHEMINF_000471 "A planned process in which a person bearing a curator role modifies a CRID registry.")
 AnnotationAssertion(obo:IAO_0000117 resource:CHEMINF_000471 "Person: Colin Batchelor")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000471 "CRID registry curation")
-SubClassOf(resource:CHEMINF_000471 obo:OBI_0000011)
+SubClassOf(resource:CHEMINF_000471 obo:COB_0000082)
 SubClassOf(resource:CHEMINF_000471 ObjectSomeValuesFrom(obo:RO_0000057 obo:IAO_0000579))
 
 # Class: resource:CHEMINF_000472 (chemical name validation)
@@ -4113,7 +4141,7 @@ SubClassOf(resource:CHEMINF_000488 resource:CHEMINF_000083)
 AnnotationAssertion(dcterms:description resource:CHEMINF_000490 "Molecular formula for a chemical structure as calculated by ACD/Labs PhysChem software library version 12.01.")
 AnnotationAssertion(rdfs:label resource:CHEMINF_000490 "molecular formula calculated by ACD/Labs PhysChem software library version 12.01")
 SubClassOf(resource:CHEMINF_000490 resource:CHEMINF_000042)
-SubClassOf(resource:CHEMINF_000490 ObjectSomeValuesFrom(ontologies:is_output_of resource:CHEMINF_000354))
+SubClassOf(resource:CHEMINF_000490 ObjectSomeValuesFrom(obo:RO_0002353 resource:CHEMINF_000354))
 
 # Class: resource:CHEMINF_000496 (partition coefficient)
 
@@ -4453,43 +4481,43 @@ SubClassOf(resource:CHEMINF_000801 resource:CHEMINF_000800)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000802 "number of rule of five violations calculated by RDKit software library version 2015_09_2"@en)
 SubClassOf(resource:CHEMINF_000802 resource:CHEMINF_000312)
-SubClassOf(resource:CHEMINF_000802 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
+SubClassOf(resource:CHEMINF_000802 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
 
 # Class: resource:CHEMINF_000803 (hydrogen bond acceptor count calculated by RDKit software library version 2015_09_2)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000803 "hydrogen bond acceptor count calculated by RDKit software library version 2015_09_2"@en)
 SubClassOf(resource:CHEMINF_000803 resource:CHEMINF_000245)
-SubClassOf(resource:CHEMINF_000803 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
+SubClassOf(resource:CHEMINF_000803 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
 
 # Class: resource:CHEMINF_000804 (hydrogen bond donor count calculated by RDKit software library version 2015_09_2)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000804 "hydrogen bond donor count calculated by RDKit software library version 2015_09_2"@en)
 SubClassOf(resource:CHEMINF_000804 resource:CHEMINF_000244)
-SubClassOf(resource:CHEMINF_000804 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
+SubClassOf(resource:CHEMINF_000804 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
 
 # Class: resource:CHEMINF_000805 (logP descriptor calculated by RDKit software library version 2015_09_2)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000805 "logP descriptor calculated by RDKit software library version 2015_09_2"@en)
 SubClassOf(resource:CHEMINF_000805 resource:CHEMINF_000251)
-SubClassOf(resource:CHEMINF_000805 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
+SubClassOf(resource:CHEMINF_000805 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
 
 # Class: resource:CHEMINF_000806 (molecular formula calculated by RDKit software library version 2015_09_2)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000806 "molecular formula calculated by RDKit software library version 2015_09_2"@en)
 SubClassOf(resource:CHEMINF_000806 resource:CHEMINF_000042)
-SubClassOf(resource:CHEMINF_000806 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
+SubClassOf(resource:CHEMINF_000806 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
 
 # Class: resource:CHEMINF_000807 (average molecular weight calculated by RDKit software library version 2015_09_2)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000807 "average molecular weight calculated by RDKit software library version 2015_09_2"@en)
 SubClassOf(resource:CHEMINF_000807 resource:CHEMINF_000216)
-SubClassOf(resource:CHEMINF_000807 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
+SubClassOf(resource:CHEMINF_000807 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
 
 # Class: resource:CHEMINF_000808 (total polar surface area calculated by RDKit software library version 2015_09_2)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_000808 "total polar surface area calculated by RDKit software library version 2015_09_2"@en)
 SubClassOf(resource:CHEMINF_000808 resource:CHEMINF_000307)
-SubClassOf(resource:CHEMINF_000808 ObjectSomeValuesFrom(ontologies:is_output_of ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
+SubClassOf(resource:CHEMINF_000808 ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(resource:CHEMINF_000138 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(resource:CHEMINF_000103 ObjectSomeValuesFrom(obo:BFO_0000050 resource:CHEMINF_000801))))))
 
 # Class: resource:CHEMINF_001000 (atom counting algorithm)
 
@@ -4511,7 +4539,6 @@ AnnotationAssertion(dcterms:description resource:CHEMINF_001101 "Oxidation state
 AnnotationAssertion(rdfs:label resource:CHEMINF_001101 "oxidation state")
 AnnotationAssertion(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source> resource:CHEMINF_001101 "https://doi.org/10.1351/goldbook.O04365")
 SubClassOf(resource:CHEMINF_001101 resource:CHEMINF_000087)
-SubClassOf(resource:CHEMINF_001101 <http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor>)
 SubClassOf(resource:CHEMINF_001101 ObjectSomeValuesFrom(obo:IAO_0000136 obo:CHEBI_33250))
 
 # Class: resource:CHEMINF_001102 (reactivity)

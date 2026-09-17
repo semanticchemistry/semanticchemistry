@@ -1,6 +1,21 @@
-http://purl.obolibrary.org/obo/BFO_0000050 # part of
-http://purl.obolibrary.org/obo/BFO_0000051 # has part
-http://purl.obolibrary.org/obo/BFO_0000055 # realizes
+http://purl.obolibrary.org/obo/RO_0000052 # characteristic of
 http://purl.obolibrary.org/obo/RO_0000056 # participates in
 http://purl.obolibrary.org/obo/RO_0000057 # has participant
 http://purl.obolibrary.org/obo/RO_0000059 # concretizes
+http://purl.obolibrary.org/obo/RO_0000087 # has role <-- gets pulled in by OBI module creation, although it's not used, thus importing here to avoid dangling relations 
+http://purl.obolibrary.org/obo/RO_0002233 # has input
+http://purl.obolibrary.org/obo/RO_0002234 # has output 
+http://purl.obolibrary.org/obo/RO_0002351 # has member
+http://purl.obolibrary.org/obo/RO_0004009 # has primary input
+http://purl.obolibrary.org/obo/RO_0018033 # is deprotonated form of 
+http://purl.obolibrary.org/obo/RO_0018034 # is protonated form of
+http://purl.obolibrary.org/obo/RO_0018036 # is tautomer of
+http://purl.obolibrary.org/obo/RO_0018037 # is substitutent group from
+http://purl.obolibrary.org/obo/RO_0018040 # has parent hydride
+http://purl.obolibrary.org/obo/RO_0018036 # is tautomer of 
+
+# Import BFO Object Properties not mirrored in bfo_import.owl:
+# For historic reasons, RO has made use of a small number of relations with BFO IDs. These are RO relations, not BFO relations - they are defined in the RO, and will be maintained in the RO. Note that the URIs for these classes resolve to RO, as per agreement with the BFO developers.For more details, see https://oborel.github.io/obo-relations/ro-and-bfo/
+http://purl.obolibrary.org/obo/BFO_0000050 # part of 
+http://purl.obolibrary.org/obo/BFO_0000051 # has part
+http://purl.obolibrary.org/obo/BFO_0000055 # realizes
