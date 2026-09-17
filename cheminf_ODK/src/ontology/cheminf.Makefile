@@ -6,8 +6,7 @@
 ## Module for ontology: bfo
 
 $(IMPORTDIR)/bfo_import.owl: $(IMPORTDIR)/bfo_terms.txt $(IMPORTSEED) | all_robot_plugins
-	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) \
-	annotate --input $(MIRRORDIR)/bfo.owl --remove-annotations \
+	$(ROBOT) annotate --input $(MIRRORDIR)/bfo.owl --remove-annotations \
 		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/bfo_terms.txt $(T_IMPORTSEED) \
 		         --force true --copy-ontology-annotations true \
@@ -20,13 +19,12 @@ $(IMPORTDIR)/bfo_import.owl: $(IMPORTDIR)/bfo_terms.txt $(IMPORTSEED) | all_robo
 		 odk:normalize --base-iri http://purl.obolibrary.org/obo/bfo.owl \
                 --subset-decls true --synonym-decls true \
          repair --merge-axiom-annotations true \
-         $(ANNOTATE_CONVERT_FILE); fi 
+         $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: obi
 
 $(IMPORTDIR)/obi_import.owl: $(IMPORTDIR)/obi_terms.txt $(IMPORTSEED) | all_robot_plugins
-	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) \
-	annotate --input $(MIRRORDIR)/obi.owl --remove-annotations \
+	$(ROBOT) annotate --input $(MIRRORDIR)/obi.owl --remove-annotations \
 		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/obi_terms.txt $(T_IMPORTSEED) \
 		         --force true --copy-ontology-annotations true \
@@ -39,13 +37,12 @@ $(IMPORTDIR)/obi_import.owl: $(IMPORTDIR)/obi_terms.txt $(IMPORTSEED) | all_robo
 		 odk:normalize --base-iri http://purl.obolibrary.org/obo/obi.owl \
                 --subset-decls true --synonym-decls true \
          repair --merge-axiom-annotations true \
-         $(ANNOTATE_CONVERT_FILE); fi 
+         $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: iao
 
-$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt \
-			   $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations \
+$(IMPORTDIR)/iao_import.owl: $(IMPORTDIR)/iao_terms.txt $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $(MIRRORDIR)/iao.owl --remove-annotations \
 		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/iao_terms.txt $(T_IMPORTSEED) \
 		         --force true --copy-ontology-annotations true \
@@ -62,8 +59,7 @@ $(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt \
 ## Module for ontology: cob
 
 $(IMPORTDIR)/cob_import.owl: $(IMPORTDIR)/cob_terms.txt $(IMPORTSEED) | all_robot_plugins
-	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) \
-	annotate --input $(MIRRORDIR)/cob.owl --remove-annotations \
+	$(ROBOT) annotate --input $(MIRRORDIR)/cob.owl --remove-annotations \
 		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/cob_terms.txt $(T_IMPORTSEED) \
 		         --force true --copy-ontology-annotations true \
@@ -76,7 +72,7 @@ $(IMPORTDIR)/cob_import.owl: $(IMPORTDIR)/cob_terms.txt $(IMPORTSEED) | all_robo
 		 odk:normalize --base-iri http://purl.obolibrary.org/obo/cob.owl \
                 --subset-decls true --synonym-decls true \
          repair --merge-axiom-annotations true \
-         $(ANNOTATE_CONVERT_FILE); fi 
+         $(ANNOTATE_CONVERT_FILE)
 
 ## Module for ontology: chebi
 
