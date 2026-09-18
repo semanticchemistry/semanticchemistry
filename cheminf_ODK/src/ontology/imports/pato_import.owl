@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://semanticscience.org/ontology/cheminf/imports/pato_import.owl>
-<http://semanticscience.org/ontology/cheminf/releases/2026-09-17/imports/pato_import.owl>
+<http://semanticscience.org/ontology/cheminf/releases/2026-09-18/imports/pato_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/pato/releases/2025-05-14/pato-base.owl>)
-Annotation(owl:versionInfo "2026-09-17")
+Annotation(owl:versionInfo "2026-09-18")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000020>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
