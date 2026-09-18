@@ -39,6 +39,7 @@ Annotation(dcterms:contributor <https://orcid.org/0000-0002-5959-6190>)
 Annotation(dcterms:contributor <https://orcid.org/0000-0002-8011-0300>)
 Annotation(dcterms:contributor <https://orcid.org/0000-0003-3136-1338>)
 Annotation(dcterms:contributor <https://orcid.org/0000-0003-4727-9435>)
+Annotation(dcterms:contributor <https://orcid.org/0009-0001-5998-5030>)
 Annotation(dcterms:description "The chemical information ontology (cheminf) describes information entities about chemical entities. It provides qualitative and quantitative attributes to richly describe chemicals. Includes terms for the descriptors commonly used in cheminformatics software applications and the algorithms which generate them.")
 Annotation(dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(dcterms:title "chemical information ontology (cheminf) - information entities about chemical entities")
@@ -674,6 +675,7 @@ Declaration(NamedIndividual(<https://orcid.org/0000-0002-5959-6190>))
 Declaration(NamedIndividual(<https://orcid.org/0000-0002-8011-0300>))
 Declaration(NamedIndividual(<https://orcid.org/0000-0003-3136-1338>))
 Declaration(NamedIndividual(<https://orcid.org/0000-0003-4727-9435>))
+Declaration(NamedIndividual(<https://orcid.org/0009-0001-5998-5030>))
 Declaration(AnnotationProperty(dce:contributor))
 Declaration(AnnotationProperty(dce:format))
 Declaration(AnnotationProperty(dce:language))
@@ -4975,6 +4977,10 @@ AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-3136-1338> "Christop
 # Individual: <https://orcid.org/0000-0003-4727-9435> (Michel Dumontier)
 
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-4727-9435> "Michel Dumontier")
+
+# Individual: <https://orcid.org/0009-0001-5998-5030> (Noura Rayya)
+
+AnnotationAssertion(rdfs:label <https://orcid.org/0009-0001-5998-5030> "Noura Rayya")
 
 
 DisjointClasses(resource:CHEMINF_000133 resource:CHEMINF_000134 resource:CHEMINF_000135)
