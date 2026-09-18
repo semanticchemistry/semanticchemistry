@@ -1,5 +1,5 @@
 Prefix(:=<http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl#>)
-odPrefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
 Prefix(ro:=<http://www.obofoundry.org/ro/ro.owl#>)
 Prefix(bfo:=<http://purl.obofoundry.org/obo/>)
 Prefix(dct:=<http://purl.org/dc/terms/>)
