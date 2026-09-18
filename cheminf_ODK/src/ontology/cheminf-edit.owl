@@ -1067,7 +1067,7 @@ DataPropertyDomain(resource:CHEMINF_000012 obo:IAO_0000027)
 
 # Class: obo:CHEBI_24431 (chemical entity)
 
-SubClassOf(obo:CHEBI_24431 obo:BFO_0000040)
+SubClassOf(Annotation(rdfs:comment "This subsumption was asserted in CHEMINF based on the the same subsumption found in PATO, ENVO and many other BFO based ontologies.") obo:CHEBI_24431 obo:BFO_0000040)
 
 # Class: obo:CHEBI_36342 (subatomic particle)
 
