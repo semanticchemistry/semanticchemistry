@@ -1065,6 +1065,10 @@ DataPropertyDomain(resource:CHEMINF_000012 obo:IAO_0000027)
 #   Classes
 ############################
 
+# Class: obo:CHEBI_24431 (chemical entity)
+
+SubClassOf(obo:CHEBI_24431 obo:BFO_0000040)
+
 # Class: obo:CHEBI_36342 (subatomic particle)
 
 SubClassOf(obo:CHEBI_36342 obo:BFO_0000040)
