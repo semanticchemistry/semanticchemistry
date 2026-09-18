@@ -5351,6 +5351,16 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
 
 
+    <!-- http://semanticscience.org/resource/CHEMINF_000576 -->
+
+    <owl:Class rdf:about="&resource;CHEMINF_000576">
+        <rdfs:label xml:lang="en">RefMet identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;CHEMINF_000464"/>
+        <dc:description>Identifier used by the RefMet database, a standardized reference nomenclature for metabolites (https://www.metabolomicsworkbench.org/databases/refmet/).</dc:description>
+    </owl:Class>
+
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
 
     <owl:Class rdf:about="&bfo;BFO_0000016"/>
