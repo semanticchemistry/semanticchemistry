@@ -685,7 +685,6 @@ Declaration(AnnotationProperty(bibo:doi))
 Declaration(AnnotationProperty(<http://semanticscience.org/ontology/cheminf-core.owl#short_name>))
 Declaration(AnnotationProperty(oboInOwl:hasSynonym))
 Declaration(AnnotationProperty(<http://www.semanticweb.org/ontologies/cheminf.owl#short_name>))
-Declaration(AnnotationProperty(owl:sameAs))
 Declaration(AnnotationProperty(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source>))
 Declaration(AnnotationProperty(skos:broadMatch))
 ############################
