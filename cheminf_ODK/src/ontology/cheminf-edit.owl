@@ -4522,7 +4522,6 @@ SubClassOf(resource:CHEMINF_000808 ObjectSomeValuesFrom(obo:RO_0002353 ObjectInt
 # Class: resource:CHEMINF_001000 (atom counting algorithm)
 
 AnnotationAssertion(rdfs:label resource:CHEMINF_001000 "atom counting algorithm")
-AnnotationAssertion(owl:sameAs resource:CHEMINF_001000 "")
 EquivalentClasses(resource:CHEMINF_001000 ObjectIntersectionOf(resource:CHEMINF_000450 ObjectSomeValuesFrom(resource:CHEMINF_000331 resource:CHEMINF_000263)))
 
 # Class: resource:CHEMINF_001100 (Bond Polarizabilities)
