@@ -89,6 +89,8 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 #### Removed
 - [+/- stereochemical descriptor](http://semanticscience.org/resource/CHEMINF_000048) SubClassOf [is descriptor of](http://semanticscience.org/resource/CHEMINF_000143) some [chiral](http://semanticscience.org/resource/CHEMINF_000074) 
 
+##### @PStroem Comments:
+I checked and confirmed that this was not dropped --> https://github.com/semanticchemistry/semanticchemistry/blob/main/cheminf_ODK/cheminf.owl#L5103-L5107. Thus, I have no idea, why this is in the diff at all.
 
 
 ### 1-D extent `http://purl.obolibrary.org/obo/PATO_0001708`
@@ -96,6 +98,10 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 - [1-D extent](http://purl.obolibrary.org/obo/PATO_0001708) [description](http://purl.org/dc/elements/1.1/description) "A one dimensional extent is a dimensional extent in only one dimension, e.g. a length." 
 
 - [1-D extent](http://purl.obolibrary.org/obo/PATO_0001708) SubClassOf [dimensional extent quality](http://semanticscience.org/resource/CHEMINF_000211) 
+
+##### @PStroem Comments: 
+* see https://github.com/semanticchemistry/semanticchemistry/issues/85 & https://github.com/semanticchemistry/semanticchemistry/issues/86
+
 
 #### Added
 - [1-D extent](http://purl.obolibrary.org/obo/PATO_0001708) SubClassOf [size](http://purl.obolibrary.org/obo/PATO_0000117) 
@@ -107,7 +113,8 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 
 #### Added
 - [2-D extent](http://semanticscience.org/resource/CHEMINF_000262) [description](http://purl.org/dc/terms/description) "A two dimensional extent is a dimensional extent in two dimensions, e.g. an area." 
-
+##### @PStroem Comments:
+This diff is due to the swap of dc:elements in favor of dc:terms. This will thus be ignored to be commented on in all the following diffs of this type.
 
 ### 2D boundary of `http://purl.obolibrary.org/obo/RO_0002000`
 #### Removed
@@ -135,7 +142,8 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 
 - [2D boundary of](http://purl.obolibrary.org/obo/RO_0002000) InverseOf [has 2D boundary](http://purl.obolibrary.org/obo/RO_0002002) 
 
-
+##### @PStroem Comments: 
+This relation was never used and thus dropped from the RO import module. If it will ever be needed for axiomatization in CHEMINwe can just add it back to the RO import module.
 
 ### 3-D extent `http://semanticscience.org/resource/CHEMINF_000227`
 #### Removed
@@ -189,7 +197,8 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 #### Removed
 - Class: [AtomicDescriptor](http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomicDescriptor) 
 
-
+##### @PStroem Comments:
+This one was dropped on purpose, see also https://github.com/semanticchemistry/semanticchemistry/issues/75 & https://github.com/semanticchemistry/semanticchemistry/commit/7ed57ba68622eb76ef5d4a292c2f123c28d7e1c7
 
 ### BCUT `http://semanticscience.org/resource/CHEMINF_001500`
 #### Removed
@@ -213,7 +222,8 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 
 - [BFO CLIF specification label](http://purl.obolibrary.org/obo/BFO_0000180) SubPropertyOf: [label](http://www.w3.org/2000/01/rdf-schema#label) 
 
-
+##### @PStroem Comments:
+annotation property not imported in BFO module --> this BFO metadata was not considered relevant in the CHEMINF context
 
 ### BFO OWL specification label `http://purl.obolibrary.org/obo/BFO_0000179`
 #### Removed
@@ -227,7 +237,8 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 
 - [BFO OWL specification label](http://purl.obolibrary.org/obo/BFO_0000179) SubPropertyOf: [label](http://www.w3.org/2000/01/rdf-schema#label) 
 
-
+##### @PStroem Comments:
+annotation property not imported in BFO module --> this BFO metadata was not considered relevant in the CHEMINF context
 
 ### Boiling point at 760 mmHg pressure calculated by ACD/Labs PhysChem software library version 12.01 `http://semanticscience.org/resource/CHEMINF_000347`
 #### Removed
@@ -251,6 +262,11 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 - [Bond Polarizabilities](http://semanticscience.org/resource/CHEMINF_001100) [description](http://purl.org/dc/terms/description) "Descriptor that calculates the sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule (including implicit hydrogens)." 
 
 - [Bond Polarizabilities](http://semanticscience.org/resource/CHEMINF_001100) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+##### @PStroem Comments:
+- The "**SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065)**" axiom was added by the ODK release pipeline in the reasoning step as a replacement for the other dropped **SubClassOf [is about](http://purl.obolibrary.org/obo/IAO_0000136) some [molecular entity](http://purl.obolibrary.org/obo/CHEBI_23367)** axiom.
+  - https://github.com/semanticchemistry/semanticchemistry/blob/main/cheminf_ODK/src/ontology/cheminf-edit.owl#L1508 causes [Bond Polarizabilities](http://semanticscience.org/resource/CHEMINF_001100) to be subsumed under [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065), because of the "**SubClassOf [is about](http://purl.obolibrary.org/obo/IAO_0000136) some [molecular entity](http://purl.obolibrary.org/obo/CHEBI_23367)**" axiom asserted on it in the editor file. 
+     - This is a great example of how ODK helps with building a multi-parent hierachy. In the editor file we would want to manually assert only one parent class (the main subsumption axis) but also logically define grouping classes that serve as a different subsumption axis. In order to make sure the latter will be filled with children correctly by a reasoner, editors have to add subclassOf restrictions on these children accordingly. This workflow ensures that editors don't have to manually assert a desired multi-parent hierarchy, which can be quite error prone.
+- see https://github.com/semanticchemistry/semanticchemistry/issues/87 where this is discussed in more detail
 
 
 ### CAS registry number `http://semanticscience.org/resource/CHEMINF_000446`
@@ -276,6 +292,8 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 #### Added
 - [CRID registry curation](http://semanticscience.org/resource/CHEMINF_000471) SubClassOf [planned process](http://purl.obolibrary.org/obo/COB_0000082) 
 
+##### @PStroem Comments:
+Here the successor from COB was used deliberately to replace the now obsoleted OBI class `planned process` . See https://github.com/semanticchemistry/semanticchemistry/commit/92329b0e720093daae12f0a4beffe3e4129247b6
 
 ### ChEBI identifier `http://semanticscience.org/resource/CHEMINF_000407`
 #### Removed
@@ -333,7 +351,8 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 
 - [DEPRECATED bearer of](http://purl.obolibrary.org/obo/RO_0004097) [label](http://www.w3.org/2000/01/rdf-schema#label) "DEPRECATED bearer of"@en 
 
-
+##### @PStroem Comments:
+Was safe to just delete, as it was not used in CHEMINF.
 
 ### DEPRECATED inheres in `http://purl.obolibrary.org/obo/RO_0004096`
 #### Removed
@@ -345,17 +364,20 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 
 - [DEPRECATED inheres in](http://purl.obolibrary.org/obo/RO_0004096) [label](http://www.w3.org/2000/01/rdf-schema#label) "DEPRECATED inheres in"@en 
 
-
+##### @PStroem Comments:
+Was safe to just delete, as it was not used in CHEMINF.
 
 ### DL stereochemical descriptor `http://semanticscience.org/resource/CHEMINF_000051`
 #### Removed
 - [DL stereochemical descriptor](http://semanticscience.org/resource/CHEMINF_000051) SubClassOf [is about](http://purl.obolibrary.org/obo/IAO_0000136) some [molecular entity](http://purl.obolibrary.org/obo/CHEBI_23367) 
 
-- [DL stereochemical descriptor](http://semanticscience.org/resource/CHEMINF_000051) SubClassOf [is descriptor of](http://semanticscience.org/resource/CHEMINF_000143) some [chiral](http://semanticscience.org/resource/CHEMINF_000074) 
+- [DL stereochemical descriptor](http://semanticscience.org/resource/CHEMINF_000051) SubClassOf [is descriptor of](http://semanticscience.org/resource/CHEMINF_000143) some [chiral](http://semanticscience.org/resource/CHEMINF_000074)  
 
 #### Added
-- [DL stereochemical descriptor](http://semanticscience.org/resource/CHEMINF_000051) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+- [DL stereochemical descriptor](http://semanticscience.org/resource/CHEMINF_000051) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065)
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 ### DPSA-1 `http://semanticscience.org/resource/CHEMINF_000154`
 #### Removed
@@ -491,12 +513,15 @@ AutoID - digit count = 6, prefix = CHEMINF_"
 #### Removed
 - [GAZ_00000448](http://purl.obolibrary.org/obo/GAZ_00000448) [imported from](http://purl.obolibrary.org/obo/IAO_0000412) [GAZ](http://purl.obolibrary.org/obo/GAZ) 
 
-
+##### @PStroem Comments:
+GAZ_00000448 was never used in CHEMINF, thus was dropped in the editor file.
 
 ### GGA Indigo `http://semanticscience.org/resource/CHEMINF_000356`
 #### Removed
 - [GGA Indigo](http://semanticscience.org/resource/CHEMINF_000356) SubClassOf [GGA Indigo](http://semanticscience.org/resource/CHEMINF_000356) 
 
+##### @PStroem Comments:
+This tautological axiom was dropped by the reasoning step in the release pipeline. It was preserved correctly in the editor file, see https://github.com/semanticchemistry/semanticchemistry/blob/main/cheminf_ODK/src/ontology/cheminf-edit.owl#L3384
 
 
 ### Ghose/Crippen ALogP calculation algorithm `http://semanticscience.org/resource/CHEMINF_000221`
@@ -547,7 +572,10 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
 #### Added
 - [Highest Occupied Molecular Orbital Energy](http://semanticscience.org/resource/CHEMINF_000291) [description](http://purl.org/dc/terms/description) "A descriptor that the energy of the highest occupied 'molecular' orbital of the chemical entity." 
-
+- 
+##### @PStroem Comments:
+**[Highest Occupied Molecular Orbital Energy](http://semanticscience.org/resource/CHEMINF_000291) SubClassOf [is about](http://purl.obolibrary.org/obo/IAO_0000136) some [chemical entity](http://semanticscience.org/resource/CHEMINF_000000)** was properly copied to the edit file see: https://github.com/semanticchemistry/semanticchemistry/blob/main/cheminf_ODK/src/ontology/cheminf-edit.owl#L2944C1-L2944C98. It was dropped in the reasoning step, because it is already inherited from the grandpartent 'chemical descriptor'. 
+    - --> It can be safely deleted in the editor file!
 
 ### IUPAC Name generated by LexiChem `http://semanticscience.org/resource/CHEMINF_000382`
 #### Removed
@@ -592,6 +620,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
 - [InChI descriptor](http://semanticscience.org/resource/CHEMINF_000113) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+[InChI descriptor](http://semanticscience.org/resource/CHEMINF_000113) SubClassOf [is about](http://purl.obolibrary.org/obo/IAO_0000136) some [molecular entity](http://purl.obolibrary.org/obo/CHEBI_23367)  is in the editor file: https://github.com/semanticchemistry/semanticchemistry/blob/main/cheminf_ODK/src/ontology/cheminf-edit.owl#L1821
+see also https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 ### InChI format specification `http://semanticscience.org/resource/CHEMINF_000038`
 #### Removed
@@ -629,6 +660,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 - [InChIKey](http://semanticscience.org/resource/CHEMINF_000059) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
 - [InChIKey](http://semanticscience.org/resource/CHEMINF_000059) SubClassOf [information about a polyatomic entity](http://semanticscience.org/resource/CHEMINF_000066) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### InChIKey generated by software version 1.0.4 `http://semanticscience.org/resource/CHEMINF_000399`
@@ -730,6 +764,10 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 #### Added
 - [Lowest Unoccupied Molecular Orbital Energy](http://semanticscience.org/resource/CHEMINF_000292) [description](http://purl.org/dc/terms/description) "A descriptor that the energy of the lowest unoccupied 'molecular' orbital of the chemical entity." 
 
+##### @PStroem Comments: 
+SubClassOf [is about](http://purl.obolibrary.org/obo/IAO_0000136) some [chemical entity](http://semanticscience.org/resource/CHEMINF_000000) dropped because it is inherited from superclass
+- --> it can safely be deleted from the editor file
+
 
 ### MLogP descriptor `http://semanticscience.org/resource/CHEMINF_000187`
 #### Removed
@@ -748,6 +786,8 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 #### Added
 - [MOLfile](http://semanticscience.org/resource/CHEMINF_000058) [description](http://purl.org/dc/terms/description) "A MOLfile is a file which contains a MOLfile encoding of a chemical structure representation. It is the concretization of a MOLfile descriptor." 
 
+##### @PStroem Comments: 
+**SubClassOf [is about](http://purl.obolibrary.org/obo/IAO_0000136) some [chemical entity](http://semanticscience.org/resource/CHEMINF_000000)** needs to be asserted on [MOLfile](http://semanticscience.org/resource/CHEMINF_000058) instead of manually asserting **SubClassOf [information about a chemical entity](http://semanticscience.org/resource/CHEMINF_000017)**
 
 ### MOLfile descriptor `http://semanticscience.org/resource/CHEMINF_000114`
 #### Removed
@@ -759,6 +799,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 - [MOLfile descriptor](http://semanticscience.org/resource/CHEMINF_000114) [description](http://purl.org/dc/terms/description) "A MOLfile descriptor is a structure descriptor which conforms to the MOLfile format specification." 
 
 - [MOLfile descriptor](http://semanticscience.org/resource/CHEMINF_000114) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### MOLfile format specification `http://semanticscience.org/resource/CHEMINF_000100`
@@ -820,6 +863,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
 - [NInChI descriptor](http://semanticscience.org/resource/CHEMINF_000517) SubClassOf [chemical substance descriptor](http://semanticscience.org/resource/CHEMINF_000513) 
 
+##### @PStroem Comments: 
+**SubClassOf [is about](http://purl.obolibrary.org/obo/IAO_0000136) some [chemical substance](http://semanticscience.org/resource/CHEMINF_000266)** causes replacement with **SubClassOf [chemical substance descriptor](http://semanticscience.org/resource/CHEMINF_000513)**, due to the logical definition of the latter, see: https://github.com/semanticchemistry/semanticchemistry/blob/main/cheminf_ODK/src/ontology/cheminf-edit.owl#L4239
+- related to: https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 ### NMR instrument `http://purl.obolibrary.org/obo/OBI_0000566`
 #### Removed
@@ -1058,6 +1104,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 
 - [SMARTS descriptor](http://semanticscience.org/resource/CHEMINF_000019) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### SMARTS format specification `http://semanticscience.org/resource/CHEMINF_000021`
 #### Removed
@@ -1077,6 +1126,9 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 - [SMILES descriptor](http://semanticscience.org/resource/CHEMINF_000018) [description](http://purl.org/dc/terms/description) "A SMILES descriptor is a structure descriptor that denotes a molecular structure as a graph." 
 
 - [SMILES descriptor](http://semanticscience.org/resource/CHEMINF_000018) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### SMILES format specification `http://semanticscience.org/resource/CHEMINF_000020`
@@ -1809,6 +1861,9 @@ BAC: Bacterial artificial chromosome; CR: Calretinin; GFAP: Glial fibrillary aci
 
 - [acidic group count](http://semanticscience.org/resource/CHEMINF_000293) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### acknowledgements section `http://purl.obolibrary.org/obo/IAO_0000324`
 #### Removed
@@ -2091,6 +2146,9 @@ BAC: Bacterial artificial chromosome; CR: Calretinin; GFAP: Glial fibrillary aci
 
 - [aromaticity descriptor](http://semanticscience.org/resource/CHEMINF_000056) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### assigning a centrally registered identifier `http://purl.obolibrary.org/obo/IAO_0000574`
 #### Removed
@@ -2191,6 +2249,9 @@ BAC: Bacterial artificial chromosome; CR: Calretinin; GFAP: Glial fibrillary aci
 
 - [atom count](http://semanticscience.org/resource/CHEMINF_000263) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### atom counting algorithm `http://semanticscience.org/resource/CHEMINF_001000`
 #### Removed
@@ -2212,6 +2273,9 @@ BAC: Bacterial artificial chromosome; CR: Calretinin; GFAP: Glial fibrillary aci
 - [atomic QSAR descriptor](http://semanticscience.org/resource/CHEMINF_000112) [description](http://purl.org/dc/terms/description) "An atomic QSAR descriptor is a QSAR descriptor which gives a quantitative value to some aspect of an atom which is part of a molecular entity." 
 
 - [atomic QSAR descriptor](http://semanticscience.org/resource/CHEMINF_000112) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### atomic connectivity index `http://semanticscience.org/resource/CHEMINF_000116`
@@ -2624,6 +2688,9 @@ Project home page:http://krux.googlecode.com"@en
 
 - [basic group count](http://semanticscience.org/resource/CHEMINF_000294) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### bearer_of `http://purl.org/obo/owl/OBO_REL#bearer_of`
 #### Removed
@@ -2723,6 +2790,9 @@ Project home page:http://krux.googlecode.com"@en
 - [bond count](http://semanticscience.org/resource/CHEMINF_000233) [description](http://purl.org/dc/terms/description) "A descriptor that specifies the integer count of bonds in a given molecular entity." 
 
 - [bond count](http://semanticscience.org/resource/CHEMINF_000233) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### bond dissociation Gibbs energy descriptor `http://semanticscience.org/resource/CHEMINF_000224`
@@ -3198,6 +3268,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
 - [charge density descriptor](http://semanticscience.org/resource/CHEMINF_000231) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### charge descriptor `http://semanticscience.org/resource/CHEMINF_000131`
 #### Removed
@@ -3209,6 +3282,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 - [charge descriptor](http://semanticscience.org/resource/CHEMINF_000131) [description](http://purl.org/dc/terms/description) "A charge descriptor is a chemical descriptor which indicates the charge of a chemical entity." 
 
 - [charge descriptor](http://semanticscience.org/resource/CHEMINF_000131) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### charge weighted partial negative surface area `http://semanticscience.org/resource/CHEMINF_000153`
@@ -3237,6 +3313,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 - [chemical connectivity table](http://semanticscience.org/resource/CHEMINF_000055) [description](http://purl.org/dc/terms/description) "A chemical connectivity table is a structure descriptor which consists of a connection table representing bonds between atoms in a molecular entity." 
 
 - [chemical connectivity table](http://semanticscience.org/resource/CHEMINF_000055) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### chemical descriptor `http://semanticscience.org/resource/CHEMINF_000123`
@@ -5478,6 +5557,9 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
 - [formation Gibbs energy descriptor](http://semanticscience.org/resource/CHEMINF_000239) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### formation energy descriptor `http://semanticscience.org/resource/CHEMINF_000207`
 #### Removed
@@ -5498,6 +5580,9 @@ The formal charge of any atom in a molecule can be calculated by the following e
 
 - [formation enthalpy descriptor](http://semanticscience.org/resource/CHEMINF_000241) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### formation entropy descriptor `http://semanticscience.org/resource/CHEMINF_000260`
 #### Removed
@@ -5509,6 +5594,9 @@ The formal charge of any atom in a molecule can be calculated by the following e
 - [formation entropy descriptor](http://semanticscience.org/resource/CHEMINF_000260) [description](http://purl.org/dc/terms/description) "Molecular entity formaiton entropy descriptor captures the entropy associated with the formation of the molecular entity in question, relative to the standard state of constituent atoms. This could be measured or calculated in vacuo or in a specific Solvent, at a particular temperature and pressure. Depends on molecular conformation when computed." 
 
 - [formation entropy descriptor](http://semanticscience.org/resource/CHEMINF_000260) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### fragment complexity descriptor `http://semanticscience.org/resource/CHEMINF_000180`
@@ -5605,6 +5693,9 @@ The formal charge of any atom in a molecule can be calculated by the following e
 - [functional group descriptor](http://semanticscience.org/resource/CHEMINF_000068) [description](http://purl.org/dc/terms/description) "A functional group descriptor is a structural descriptor which describes specific groups of atoms within molecules that are responsible for the characteristic chemical reactions of those molecules." 
 
 - [functional group descriptor](http://semanticscience.org/resource/CHEMINF_000068) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### functionally related to `http://purl.obolibrary.org/obo/RO_0002328`
@@ -5709,6 +5800,9 @@ This study was supported by the International Collaborative Research Grants Sche
 - [fused cycles](http://semanticscience.org/resource/CHEMINF_000110) [description](http://purl.org/dc/terms/description) "The fused cycles in a molecular structure are those cycles from the cycle basis which share at least one bond." 
 
 - [fused cycles](http://semanticscience.org/resource/CHEMINF_000110) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### future directions section `http://purl.obolibrary.org/obo/IAO_0000625`
@@ -6846,6 +6940,9 @@ distribution in terms of occurrence frequencies of different event classes."@en
 
 - [hydrogen bond acceptor count](http://semanticscience.org/resource/CHEMINF_000245) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### hydrogen bond acceptor count calculated by ACD/Labs PhysChem software library version 12.01 `http://semanticscience.org/resource/CHEMINF_000345`
 #### Removed
@@ -6913,6 +7010,9 @@ distribution in terms of occurrence frequencies of different event classes."@en
 - [hydrogen bond donor count](http://semanticscience.org/resource/CHEMINF_000244) [description](http://purl.org/dc/terms/description) "A descriptor that reflects the integer number of hydrogen bond donors in a given molecular entity, as determined by a given method. In highly simplified terms, this is usually the count of all negatively or partially negatively charged heteroatoms (e.g. alcohol oxygen) that have covalently attached to them partially positively charged hydrogen atoms that are capable of participating in a hydrogen bond." 
 
 - [hydrogen bond donor count](http://semanticscience.org/resource/CHEMINF_000244) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### hydrogen bond donor count calculated by ACD/Labs PhysChem software library version 12.01 `http://semanticscience.org/resource/CHEMINF_000346`
@@ -8400,6 +8500,9 @@ Distribution Coefficient calculated at pH7.4"
 #### Added
 - [mass descriptor](http://semanticscience.org/resource/CHEMINF_000083) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### mass measurement datum `http://purl.obolibrary.org/obo/IAO_0000414`
 #### Removed
@@ -8906,6 +9009,9 @@ SC#N
 
 - [molecular QSAR descriptor](http://semanticscience.org/resource/CHEMINF_000104) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### molecular composition `http://semanticscience.org/resource/CHEMINF_000054`
 #### Removed
@@ -8964,6 +9070,9 @@ SC#N
 
 - [molecular entity name](http://semanticscience.org/resource/CHEMINF_000043) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### molecular entity name format specification `http://semanticscience.org/resource/CHEMINF_000039`
 #### Removed
@@ -8995,6 +9104,9 @@ SC#N
 - [molecular formula](http://semanticscience.org/resource/CHEMINF_000042) [description](http://purl.org/dc/terms/description) "A molecular formula is a structure descriptor which identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecule of that compound." 
 
 - [molecular formula](http://semanticscience.org/resource/CHEMINF_000042) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### molecular formula calculated by ACD/Labs PhysChem software library version 12.01 `http://semanticscience.org/resource/CHEMINF_000490`
@@ -11002,6 +11114,9 @@ Between January 1996 and February 2012, we treated 4 patients with interprosthet
 
 - [pi-system size](http://semanticscience.org/resource/CHEMINF_000223) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### placeholder removed `http://purl.obolibrary.org/obo/IAO_0000226`
 #### Removed
@@ -12917,6 +13032,9 @@ then A 'has OPS normalized counterpart' C and B 'has OPS normalized counterpart'
 
 - [size of largest chain](http://semanticscience.org/resource/CHEMINF_000246) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### smallest set of smallest rings `http://semanticscience.org/resource/CHEMINF_000522`
 #### Removed
@@ -13190,6 +13308,9 @@ interpreted by or directly executed by a processing unit."@en
 
 - [solvation Gibbs energy descriptor](http://semanticscience.org/resource/CHEMINF_000225) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### solvation energy descriptor `http://semanticscience.org/resource/CHEMINF_000208`
 #### Removed
@@ -13210,6 +13331,9 @@ interpreted by or directly executed by a processing unit."@en
 
 - [solvation enthalpy descriptor](http://semanticscience.org/resource/CHEMINF_000250) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### solvation entropy descriptor `http://semanticscience.org/resource/CHEMINF_000249`
 #### Removed
@@ -13221,6 +13345,9 @@ interpreted by or directly executed by a processing unit."@en
 - [solvation entropy descriptor](http://semanticscience.org/resource/CHEMINF_000249) [description](http://purl.org/dc/terms/description) "The molecular entity solvation entropy descriptor reflects the entropy associated with the solvation of the molecular entity in question. This could be measured or calculated in vacuo or in a specific solvent, at a particular temperature and pressure. Depends on molecular conformation when computed." 
 
 - [solvation entropy descriptor](http://semanticscience.org/resource/CHEMINF_000249) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### source `http://purl.org/dc/terms/source`
@@ -13850,6 +13977,9 @@ Owing to the nature of a post hoc study, any significant values must be interpre
 - [surface area descriptor](http://semanticscience.org/resource/CHEMINF_000229) [description](http://purl.org/dc/terms/description) "A surface area descriptor is a descriptor which describes a measure or calculation of the surface area of a chemical entity." 
 
 - [surface area descriptor](http://semanticscience.org/resource/CHEMINF_000229) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### surface tension calculated by ACD/Labs PhysChem software library version 12.01 `http://semanticscience.org/resource/CHEMINF_000368`
@@ -14720,6 +14850,9 @@ GO   gene ontology"@en
 #### Added
 - [vertex adjacency matrix descriptor](http://semanticscience.org/resource/CHEMINF_000181) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
 
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
+
 
 ### volume descriptor `http://semanticscience.org/resource/CHEMINF_000242`
 #### Removed
@@ -14731,6 +14864,9 @@ GO   gene ontology"@en
 - [volume descriptor](http://semanticscience.org/resource/CHEMINF_000242) [description](http://purl.org/dc/terms/description) "A volume descriptor is a descriptor which describes a measure or calculation of the volume of a chemical entity." 
 
 - [volume descriptor](http://semanticscience.org/resource/CHEMINF_000242) SubClassOf [molecular entity descriptor](http://semanticscience.org/resource/CHEMINF_000065) 
+
+##### @PStroem Comments:
+see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 
 ### weighted path `http://semanticscience.org/resource/CHEMINF_001528`
