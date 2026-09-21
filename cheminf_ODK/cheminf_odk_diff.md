@@ -184,6 +184,8 @@ This relation was never used and thus dropped from the RO import module. If it w
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot library](http://semanticscience.org/resource/CHEMINF_000142)) and ([conforms to](http://semanticscience.org/resource/CHEMINF_000047) some [Ghose/Crippen ALogP calculation algorithm](http://semanticscience.org/resource/CHEMINF_000221))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### ALogP descriptor `http://semanticscience.org/resource/CHEMINF_000295`
 #### Removed
@@ -251,6 +253,8 @@ annotation property not imported in BFO module --> this BFO metadata was not con
 
 - [Boiling point at 760 mmHg pressure calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000347) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### Bond Polarizabilities `http://semanticscience.org/resource/CHEMINF_001100`
 #### Removed
@@ -588,6 +592,8 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [LexiChem version 2.2.0](http://semanticscience.org/resource/CHEMINF_000384))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### IUPAC name `http://semanticscience.org/resource/CHEMINF_000107`
 #### Removed
@@ -608,6 +614,8 @@ where p is the partial pressure of the solute in the gas above the solution, c i
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [InChI software library version 1.0.4](http://semanticscience.org/resource/CHEMINF_000398))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### InChI descriptor `http://semanticscience.org/resource/CHEMINF_000113`
 #### Removed
@@ -676,6 +684,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [InChI software library version 1.0.4](http://semanticscience.org/resource/CHEMINF_000398))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### International Nonproprietary Name `http://purl.obolibrary.org/obo/OMO_0003010`
 
@@ -1180,6 +1190,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Cactvs software library version 3.408](http://semanticscience.org/resource/CHEMINF_000386))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### TUCAN descriptor `http://semanticscience.org/resource/CHEMINF_000518`
 #### Removed
@@ -2654,6 +2666,8 @@ Project home page:http://krux.googlecode.com"@en
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [RDKit software library version 2015_09_2](http://semanticscience.org/resource/CHEMINF_000801))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### average molecular weight descriptor `http://semanticscience.org/resource/CHEMINF_000216`
 #### Removed
@@ -2723,6 +2737,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 - [bioconcentration factor at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000365) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### bioconcentration factor at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01 `http://semanticscience.org/resource/CHEMINF_000366`
 #### Removed
@@ -2735,6 +2751,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 - [bioconcentration factor at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000366) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### bioconcentration factor descriptor `http://semanticscience.org/resource/CHEMINF_000414`
 #### Removed
@@ -2910,6 +2928,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [OEChem software library version 1.9.0](http://semanticscience.org/resource/CHEMINF_000378))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### caption `http://purl.obolibrary.org/obo/IAO_0000304`
 #### Removed
@@ -4032,6 +4052,8 @@ Written informed consent was obtained from the patient&rsquo;s parents for publi
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### coverage `http://purl.org/dc/elements/1.1/coverage`
 #### Removed
@@ -4321,6 +4343,8 @@ XML document; The instructions in a XSD file&quot;"@en
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### defined bond stereocenter count generated by pubchem software library `http://semanticscience.org/resource/CHEMINF_000371`
 #### Removed
@@ -4333,6 +4357,8 @@ XML document; The instructions in a XSD file&quot;"@en
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### defined by construct `http://purl.obolibrary.org/obo/OMO_0002000`
 #### Removed
@@ -4496,6 +4522,8 @@ every c that is a concretization of g specifically denotes r"@en
 
 - [density calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000359) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### density descriptor `http://semanticscience.org/resource/CHEMINF_000416`
 #### Removed
@@ -5116,6 +5144,8 @@ every c that is a concretization of g specifically denotes r"@en
 
 - [enthalpy of vaporization calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000361) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### enthalpy of vaporization descriptor `http://semanticscience.org/resource/CHEMINF_000418`
 #### Removed
@@ -5230,6 +5260,8 @@ The NHS National Research Ethics Service had previously approved the use of thes
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### exact mass descriptor `http://semanticscience.org/resource/CHEMINF_000217`
 #### Removed
@@ -5487,6 +5519,8 @@ Annotations: IAO_0000424 &quot;http://purl.obolibrary.org/obo/BFO_0000051 some (
 
 - [flash point calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000360) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### flash point descriptor `http://semanticscience.org/resource/CHEMINF_000417`
 #### Removed
@@ -6832,6 +6866,8 @@ two-dimensional map."@en
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### heteroorganic entity `http://purl.obolibrary.org/obo/CHEBI_33285`
 
@@ -6955,6 +6991,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 - [hydrogen bond acceptor count calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000345) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### hydrogen bond acceptor count calculated by RDKit software library version 2015_09_2 `http://semanticscience.org/resource/CHEMINF_000803`
 #### Removed
@@ -6967,6 +7005,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [RDKit software library version 2015_09_2](http://semanticscience.org/resource/CHEMINF_000801))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### hydrogen bond acceptor count calculated by cactvs `http://semanticscience.org/resource/CHEMINF_000388`
 #### Removed
@@ -6979,6 +7019,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Cactvs software library version 3.408](http://semanticscience.org/resource/CHEMINF_000386))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### hydrogen bond acceptor count calculated by pipeline pilot `http://semanticscience.org/resource/CHEMINF_000309`
 #### Removed
@@ -6991,6 +7033,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot Server Version 8.5.0](http://semanticscience.org/resource/CHEMINF_000329))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### hydrogen bond acceptors (Daylight) `http://semanticscience.org/resource/CHEMINF_001513`
 #### Removed
@@ -7026,6 +7070,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 - [hydrogen bond donor count calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000346) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### hydrogen bond donor count calculated by RDKit software library version 2015_09_2 `http://semanticscience.org/resource/CHEMINF_000804`
 #### Removed
@@ -7038,6 +7084,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [RDKit software library version 2015_09_2](http://semanticscience.org/resource/CHEMINF_000801))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### hydrogen bond donor count calculated by cactvs `http://semanticscience.org/resource/CHEMINF_000387`
 #### Removed
@@ -7050,6 +7098,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Cactvs software library version 3.408](http://semanticscience.org/resource/CHEMINF_000386))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### hydrogen bond donor count calculated by pipeline pilot `http://semanticscience.org/resource/CHEMINF_000310`
 #### Removed
@@ -7062,6 +7112,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot Server Version 8.5.0](http://semanticscience.org/resource/CHEMINF_000329))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### hydrogen bond donors (Daylight) `http://semanticscience.org/resource/CHEMINF_001516`
 #### Removed
@@ -7330,6 +7382,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 
 - [index of refraction calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000352) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### information about a chemical entity `http://semanticscience.org/resource/CHEMINF_000017`
 
@@ -7989,6 +8043,8 @@ This commonly refers to prototropy in which a hydrogen's position is changed, su
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [OEChem software library version 1.9.0](http://semanticscience.org/resource/CHEMINF_000378))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### isotope atom count `http://semanticscience.org/resource/CHEMINF_000301`
 #### Removed
@@ -8009,6 +8065,8 @@ This commonly refers to prototropy in which a hydrogen's position is changed, su
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### journal article `http://purl.obolibrary.org/obo/IAO_0000013`
 #### Removed
@@ -8340,6 +8398,8 @@ points together with a line."@en
 
 - [logD calculated at pH 5.5 by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000344) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### logD calculated at pH 7.4 by ACD/Labs PhysChem software `http://semanticscience.org/resource/CHEMINF_000323`
 #### Removed
@@ -8354,6 +8414,8 @@ Distribution Coefficient calculated at pH7.4"
 
 - [logD calculated at pH 7.4 by ACD/Labs PhysChem software](http://semanticscience.org/resource/CHEMINF_000323) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### logP calculated by ACD/Labs PhysChem software `http://semanticscience.org/resource/CHEMINF_000321`
 #### Removed
@@ -8362,6 +8424,8 @@ Distribution Coefficient calculated at pH7.4"
 #### Added
 - [logP calculated by ACD/Labs PhysChem software](http://semanticscience.org/resource/CHEMINF_000321) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### logP descriptor `http://semanticscience.org/resource/CHEMINF_000251`
 #### Removed
@@ -8386,6 +8450,8 @@ Distribution Coefficient calculated at pH7.4"
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [RDKit software library version 2015_09_2](http://semanticscience.org/resource/CHEMINF_000801))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### looking up a centrally registered identifier `http://purl.obolibrary.org/obo/IAO_0000580`
 #### Removed
@@ -8523,6 +8589,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 - [mass measurement datum](http://purl.obolibrary.org/obo/IAO_0000414) SubClassOf ([has measurement unit label](http://purl.obolibrary.org/obo/IAO_0000039) only [mass unit](http://purl.obolibrary.org/obo/UO_0000002)) and ([is quality measurement of](http://purl.obolibrary.org/obo/IAO_0000221) only [mass](http://purl.obolibrary.org/obo/PATO_0000125)) 
 
 
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 ### mass unit `http://purl.obolibrary.org/obo/UO_0000002`
 #### Removed
@@ -8539,6 +8607,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 - [mass unit](http://purl.obolibrary.org/obo/UO_0000002) SubClassOf [measurement unit label](http://purl.obolibrary.org/obo/IAO_0000003) 
 
 
+##### @PStroem Comments:
+This UO term was actually not used in CHEMINF. Its presence in `cheminf_merged.ofn` stems only from its axiomatic use in [mass measurement datum](http://purl.obolibrary.org/obo/IAO_0000414), which was never used in CHEMINF, so this UO term was also dropped from being imported.
 
 ### material entity `http://purl.obolibrary.org/obo/BFO_0000040`
 #### Removed
@@ -8761,6 +8831,8 @@ SC#N
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot Server Version 8.5.0](http://semanticscience.org/resource/CHEMINF_000329))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### melt mass flow rate `http://semanticscience.org/resource/CHEMINF_000057`
 #### Removed
@@ -8989,6 +9061,8 @@ SC#N
 
 - [molar volume calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000358) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### molar volume descriptor `http://semanticscience.org/resource/CHEMINF_000415`
 #### Removed
@@ -9132,6 +9206,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [RDKit software library version 2015_09_2](http://semanticscience.org/resource/CHEMINF_000801))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### molecular formula calculated by the pubchem software library `http://semanticscience.org/resource/CHEMINF_000335`
 #### Removed
@@ -9144,6 +9220,8 @@ see https://github.com/semanticchemistry/semanticchemistry/issues/87
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### molecular mass descriptor `http://semanticscience.org/resource/CHEMINF_000088`
 #### Removed
@@ -9182,6 +9260,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 
 - [molecular species at pH 7.4 calculated by ACD/Labs PhysChem software](http://semanticscience.org/resource/CHEMINF_000327) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### molecular stereochemistry format specification `http://semanticscience.org/resource/CHEMINF_000023`
 #### Removed
@@ -9218,6 +9298,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot Server Version 8.5.0](http://semanticscience.org/resource/CHEMINF_000329))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### molecular weight calculated by the pubchem software library `http://semanticscience.org/resource/CHEMINF_000334`
 #### Removed
@@ -9230,6 +9312,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### molecular weight of the corresponding free base `http://semanticscience.org/resource/CHEMINF_000350`
 #### Removed
@@ -9288,6 +9372,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [PubChem software library version 2.1](http://semanticscience.org/resource/CHEMINF_000333))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### monoisotopic mass descriptor `http://semanticscience.org/resource/CHEMINF_000218`
 #### Removed
@@ -9324,6 +9410,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000328))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### most basic pKa calculated by ACD/Labs PhysChem software library `http://semanticscience.org/resource/CHEMINF_000325`
 #### Removed
@@ -9486,6 +9574,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 
 - [number of rule of five violations calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000367) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### number of rule of five violations calculated by RDKit software library version 2015_09_2 `http://semanticscience.org/resource/CHEMINF_000802`
 #### Removed
@@ -9498,6 +9588,8 @@ Zwitterion (ZW)	ACD_MOST_ApKa &lt;6.5 and ACD_MOST_BpKa&gt;8.5
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [RDKit software library version 2015_09_2](http://semanticscience.org/resource/CHEMINF_000801))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### numeral `http://purl.obolibrary.org/obo/IAO_0000029`
 #### Removed
@@ -10080,6 +10172,9 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
 - [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) [label](http://www.w3.org/2000/01/rdf-schema#label) "obsolete_is_output_of" 
 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
+
 ### obsolete_material_entity `http://purl.obolibrary.org/obo/IAO_0000018`
 #### Removed
 - Class: [obsolete_material_entity](http://purl.obolibrary.org/obo/IAO_0000018) 
@@ -10564,6 +10659,8 @@ Pattern of magnetic domains on scattered pieces of a hard disk platter as mark w
 
 - [organic carbon adsorption coefficient at pH 5.5 calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000363) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### organic carbon adsorption coefficient at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01 `http://semanticscience.org/resource/CHEMINF_000364`
 #### Removed
@@ -10576,6 +10673,8 @@ Pattern of magnetic domains on scattered pieces of a hard disk platter as mark w
 
 - [organic carbon adsorption coefficient at pH 7.4 calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000364) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### organic carbon adsorption descriptor `http://semanticscience.org/resource/CHEMINF_000413`
 #### Removed
@@ -11269,6 +11368,8 @@ Request that IAO either clarify these or change definitions not to use them"@en
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot Server Version 8.5.0](http://semanticscience.org/resource/CHEMINF_000329)) and ([conforms to](http://semanticscience.org/resource/CHEMINF_000047) some [Ertl polar surface area calculation algorithm](http://semanticscience.org/resource/CHEMINF_000306))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### polarity `http://semanticscience.org/resource/CHEMINF_000069`
 #### Removed
@@ -11297,6 +11398,8 @@ Request that IAO either clarify these or change definitions not to use them"@en
 
 - [polarizability calculated by ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000353) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some [execution of ACD/Labs PhysChem software library version 12.01](http://semanticscience.org/resource/CHEMINF_000354) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### polyatomic entity `http://purl.obolibrary.org/obo/CHEBI_36357`
 #### Removed
@@ -11307,6 +11410,8 @@ Request that IAO either clarify these or change definitions not to use them"@en
 
 - [polyatomic entity](http://purl.obolibrary.org/obo/CHEBI_36357) SubClassOf [has part](http://purl.obolibrary.org/obo/BFO_0000051) some [group](http://purl.obolibrary.org/obo/CHEBI_24433) 
 
+##### @PStroem Comments:
+Diff caused by properly importing CHEBI
 
 ### polypeptide `http://purl.obolibrary.org/obo/CHEBI_15841`
 
@@ -12647,6 +12752,8 @@ whole sentence is deleted."@en
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Cactvs software library version 3.408](http://semanticscience.org/resource/CHEMINF_000386))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### rotatable bond count calculated by pipeline pilot `http://semanticscience.org/resource/CHEMINF_000311`
 #### Removed
@@ -12659,6 +12766,8 @@ whole sentence is deleted."@en
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot Server Version 8.5.0](http://semanticscience.org/resource/CHEMINF_000329))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### rule `http://purl.obolibrary.org/obo/IAO_0000055`
 #### Removed
@@ -12686,7 +12795,8 @@ whole sentence is deleted."@en
 
 - [rule](http://purl.obolibrary.org/obo/IAO_0000055) SubClassOf [conditional specification](http://purl.obolibrary.org/obo/IAO_0000001) 
 
-
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 ### rule of five violations calculated by pipeline pilot `http://semanticscience.org/resource/CHEMINF_000314`
 #### Removed
@@ -12699,6 +12809,8 @@ whole sentence is deleted."@en
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot Server Version 8.5.0](http://semanticscience.org/resource/CHEMINF_000329)) and ([conforms to](http://semanticscience.org/resource/CHEMINF_000047) some [Lipinski rule of five violation calculation algorithm](http://semanticscience.org/resource/CHEMINF_000313))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### rule of five violations descriptor `http://semanticscience.org/resource/CHEMINF_000312`
 #### Removed
@@ -12729,6 +12841,8 @@ HBA&gt;=10
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
 ([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [Pipeline Pilot Server Version 8.5.0](http://semanticscience.org/resource/CHEMINF_000329)) and ([conforms to](http://semanticscience.org/resource/CHEMINF_000047) some [rule of three passes calculation algorithm](http://semanticscience.org/resource/CHEMINF_000316))))) 
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### rule of three passes calculation algorithm `http://semanticscience.org/resource/CHEMINF_000316`
 #### Removed
@@ -12780,18 +12894,22 @@ PSA&lt;=60
 
 - [running title](http://purl.obolibrary.org/obo/IAO_0000329) SubClassOf [document title](http://purl.obolibrary.org/obo/IAO_0000305) 
 
-
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 ### sameAs `http://www.w3.org/2002/07/owl#sameAs`
 #### Removed
 - AnnotationProperty: [sameAs](http://www.w3.org/2002/07/owl#sameAs) 
 
-
+##### @PStroem Comments:
+This owl relation was wrongly declared as an annotation property and thus deleted in https://github.com/semanticchemistry/semanticchemistry/commit/d05ec64e62b4235a186d15f35d62faa47a38f42b, as it caused a OWL DL violation (object property and annotation property at the same time)
 
 ### savedBy `http://www.geneontology.org/formats/oboInOwl#savedBy`
 #### Removed
 - AnnotationProperty: [savedBy](http://www.geneontology.org/formats/oboInOwl#savedBy) 
 
+##### @PStroem Comments:
+This term was not used in CHEMINF and thus never imported.
 
 
 ### scalar measurement datum `http://purl.obolibrary.org/obo/IAO_0000032`
@@ -12832,6 +12950,8 @@ this case we explicitly refer to the singular form"@en
 
 - [scatter plot](http://purl.obolibrary.org/obo/IAO_0000184) SubClassOf [graph](http://purl.obolibrary.org/obo/IAO_0000038) 
 
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 
 ### scattered_spatiotemporal_region `http://purl.obolibrary.org/obo/BFO_0000010`
@@ -12848,6 +12968,8 @@ this case we explicitly refer to the singular form"@en
 
 - [scattered_spatiotemporal_region](http://purl.obolibrary.org/obo/BFO_0000010) SubClassOf [spatiotemporal_region](http://purl.obolibrary.org/obo/BFO_0000011) 
 
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 
 ### scattered_temporal_region `http://purl.obolibrary.org/obo/BFO_0000032`
@@ -12862,12 +12984,16 @@ this case we explicitly refer to the singular form"@en
 
 - [scattered_temporal_region](http://purl.obolibrary.org/obo/BFO_0000032) SubClassOf [temporal_region](http://purl.obolibrary.org/obo/BFO_0000008) 
 
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 
 ### seeAlso `http://www.w3.org/2000/01/rdf-schema#seeAlso`
 #### Removed
 - AnnotationProperty: [seeAlso](http://www.w3.org/2000/01/rdf-schema#seeAlso) 
 
+##### @PStroem Comments:
+This diff is probably just a result of comparing the files with different file formats (ofn vs. owl). Whereas we have an annotation property declaration for this one in the `cheminf_merged.ofn`, it is simply used in the ODK built `cheminf.owl` --> see https://github.com/semanticchemistry/semanticchemistry/blob/main/cheminf_ODK/cheminf.owl#L982
 
 
 ### serial number `http://purl.obolibrary.org/obo/IAO_0000131`
@@ -12890,6 +13016,8 @@ this case we explicitly refer to the singular form"@en
 
 - [serial number](http://purl.obolibrary.org/obo/IAO_0000131) SubClassOf [symbol](http://purl.obolibrary.org/obo/IAO_0000028) 
 
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 
 ### setting datum `http://purl.obolibrary.org/obo/IAO_0000140`
@@ -12915,6 +13043,8 @@ Cons sometimes specifies a quality which is not a realizable."@en
 
 - [setting datum](http://purl.obolibrary.org/obo/IAO_0000140) SubClassOf [data entity](http://purl.obolibrary.org/obo/IAO_0000027) 
 
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 
 ### shares OPS normalized parent with `http://semanticscience.org/resource/CHEMINF_000498`
@@ -12931,7 +13061,9 @@ then A 'has OPS normalized counterpart' C and B 'has OPS normalized counterpart'
 #### Removed
 - AnnotationProperty: [short_name](http://semanticscience.org/ontology/cheminf.owl#short_name) 
 
-
+##### @PStroem Comments:
+This annotation property was never used in CHEMINF, instead one with the same name defined in cheminf-core.owl was used and this is also in the ODK release.
+But it should be considered to instead use the IAO alternative, see: 
 
 ### site `http://purl.obolibrary.org/obo/BFO_0000029`
 #### Removed
@@ -14921,7 +15053,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL."
 
 - [written name](http://purl.obolibrary.org/obo/IAO_0000590) SubClassOf [textual entity](http://purl.obolibrary.org/obo/IAO_0000300) 
 
-
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
 
 ### xlogp3 calculated by the xlogp3 software `http://semanticscience.org/resource/CHEMINF_000395`
 #### Removed
@@ -14932,8 +15065,10 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL."
 #### Added
 - [xlogp3 calculated by the xlogp3 software](http://semanticscience.org/resource/CHEMINF_000395) SubClassOf [output of](http://purl.obolibrary.org/obo/RO_0002353) some 
 ([software execution](http://semanticscience.org/resource/CHEMINF_000138) and ([has participant](http://purl.obolibrary.org/obo/RO_0000057) some 
-([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [XLogP3 software library version 3.0](http://semanticscience.org/resource/CHEMINF_000394))))) 
+([software module to calculate a chemical descriptor](http://semanticscience.org/resource/CHEMINF_000103) and ([part of](http://purl.obolibrary.org/obo/BFO_0000050) some [XLogP3 software library version 3.0](http://semanticscience.org/resource/CHEMINF_000394)))))
 
+##### @PStroem Comments:
+Likely placeholder or wrongly defined term (no CHEMINF IRI) [obsolete_is_output_of](http://www.semanticweb.org/ontologies/is_output_of) was obsoleted in https://github.com/semanticchemistry/semanticchemistry/commit/76e36144935d306fe3ac367ce85eac983277c7ed and replaced with [output of](http://purl.obolibrary.org/obo/RO_0002353) in https://github.com/semanticchemistry/semanticchemistry/commit/addd3b5d2f7ae4043b98783050ee6b2714123348
 
 ### zagreb index `http://semanticscience.org/resource/CHEMINF_000046`
 #### Removed
@@ -14976,7 +15111,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL."
 
 - [zero-dimensional continuant fiat boundary](http://purl.obolibrary.org/obo/BFO_0000147) SubClassOf [object_boundary](http://purl.obolibrary.org/obo/BFO_0000140) 
 
-
+##### @PStroem Comments:
+This BFO term was not used in CHEMINF and thus excluded from the BFO import module.
 
 ### zero-dimensional spatial region `http://purl.obolibrary.org/obo/BFO_0000018`
 #### Removed
@@ -15000,7 +15136,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL."
 
 - [zero-dimensional spatial region](http://purl.obolibrary.org/obo/BFO_0000018) DisjointWith [one-dimensional spatial region](http://purl.obolibrary.org/obo/BFO_0000026) 
 
-
+##### @PStroem Comments:
+This BFO term was not used in CHEMINF and thus excluded from the BFO import module.
 
 ### zero-dimensional temporal region `http://purl.obolibrary.org/obo/BFO_0000148`
 #### Removed
@@ -15034,7 +15171,8 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL."
 
 - [zero-dimensional temporal region](http://purl.obolibrary.org/obo/BFO_0000148) SubClassOf [temporal_region](http://purl.obolibrary.org/obo/BFO_0000008) 
 
-
+##### @PStroem Comments:
+This BFO term was not used in CHEMINF and thus excluded from the BFO import module.
 
 ### zone improvement plan code `http://purl.obolibrary.org/obo/IAO_0000648`
 #### Removed
@@ -15051,3 +15189,5 @@ Bickerton GR, Paolini GV, Besnard J, Muresan S, Hopkins AL."
 - [zone improvement plan code](http://purl.obolibrary.org/obo/IAO_0000648) SubClassOf [postal code](http://purl.obolibrary.org/obo/IAO_0000646) 
 
 
+##### @PStroem Comments:
+This IAO term was not used in CHEMINF and thus excluded from the IAO import module.
