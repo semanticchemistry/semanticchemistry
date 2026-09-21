@@ -686,7 +686,6 @@ Declaration(AnnotationProperty(bibo:doi))
 Declaration(AnnotationProperty(<http://semanticscience.org/ontology/cheminf-core.owl#short_name>))
 Declaration(AnnotationProperty(oboInOwl:hasSynonym))
 Declaration(AnnotationProperty(<http://www.semanticweb.org/ontologies/cheminf.owl#short_name>))
-Declaration(AnnotationProperty(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source>))
 Declaration(AnnotationProperty(skos:broadMatch))
 ############################
 #   Annotation Properties
@@ -4538,7 +4537,7 @@ SubClassOf(resource:CHEMINF_001100 ObjectSomeValuesFrom(resource:CHEMINF_000143 
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_001101 "Oxidation state is an atomic descriptor that gives the degree of oxidation of an atom in terms of counting electrons. The higher the oxidation state (OS) of a given atom, the greater is its degree of oxidation. [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.O04365]")
 AnnotationAssertion(rdfs:label resource:CHEMINF_001101 "oxidation state")
-AnnotationAssertion(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source> resource:CHEMINF_001101 "https://doi.org/10.1351/goldbook.O04365")
+AnnotationAssertion(dcterms:source resource:CHEMINF_001101 "https://doi.org/10.1351/goldbook.O04365")
 SubClassOf(resource:CHEMINF_001101 resource:CHEMINF_000087)
 SubClassOf(resource:CHEMINF_001101 ObjectSomeValuesFrom(obo:IAO_0000136 obo:CHEBI_33250))
 
@@ -4546,7 +4545,7 @@ SubClassOf(resource:CHEMINF_001101 ObjectSomeValuesFrom(obo:IAO_0000136 obo:CHEB
 
 AnnotationAssertion(dcterms:description resource:CHEMINF_001102 "As applied to a chemical species, the term expresses a kinetic property. A species is said to be more reactive or to have a higher reactivity in some given context than some other (reference) species if it has a larger rate constant for a specified elementary reaction [source: IUPAC Gold Book - https://doi.org/10.1351/goldbook.R05180]")
 AnnotationAssertion(rdfs:label resource:CHEMINF_001102 "reactivity")
-AnnotationAssertion(<https://www.dublincore.org/specifications/dublin-core/dcmi-terms/source> resource:CHEMINF_001102 "https://doi.org/10.1351/goldbook.R05180")
+AnnotationAssertion(dcterms:source resource:CHEMINF_001102 "https://doi.org/10.1351/goldbook.R05180")
 SubClassOf(resource:CHEMINF_001102 resource:CHEMINF_000031)
 SubClassOf(resource:CHEMINF_001102 resource:CHEMINF_000108)
 
